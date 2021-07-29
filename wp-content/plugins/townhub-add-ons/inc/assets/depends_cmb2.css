@@ -1,0 +1,26 @@
+.cmb2-id--cth-folio-video,
+.cmb2-id--cth-folio-single-style {
+    display:none;
+}
+#folio_column_template {
+	display: none;
+}
+
+.depend_field_hide_1 {
+	display: none;
+}
+.depend_field_show_1 {
+	display: block;
+}
+.depend_field_hide_2 {
+	display: none;
+}
+.depend_field_show_2 {
+	display: block;
+}
+.depend_field_hide_3 {
+	display: none;
+}
+.depend_field_show_3 {
+	display: block;
+}

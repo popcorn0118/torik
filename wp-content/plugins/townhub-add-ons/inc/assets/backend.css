@@ -1,0 +1,33 @@
+.cth-icons-wrap{
+	max-width: 500px;
+}
+.cth-icons-hold {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	background: #fff;
+	max-height: 350px;
+	overflow-y: scroll;
+	padding: 10px;
+	margin-top: 10px;
+	transition: all 0.3s 
+}
+.cth-icons-hold.off_select {
+	display: none;
+}
+.cthicon-select {
+	flex: 0 40px;
+	text-align: center ;
+	cursor: pointer;
+}
+.cthicon-select:hover{
+	color: #4DB7FE; 
+}
+.cthicon-select i{
+	font-size: 1.5em;
+}
+.cth-icon-preview {
+	margin-top: 10px;
+	font-size: 30px;
+	color: #4DB7FE; 
+}

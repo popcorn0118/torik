@@ -1,0 +1,298 @@
+/*--
+	reset
+--*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: none;
+  outline: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+:focus {
+  outline: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  position: relative;
+  color: #000; }
+
+audio, video, canvas {
+  max-width: 100%; }
+
+html {
+  overflow-x: hidden !important;
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 13px;
+  height: 100%;
+  background: #2F3B59;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.66; }
+
+#main-theme {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
+.container {
+  max-width: 1224px;
+  width: 92%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5; }
+
+.small-container {
+  max-width: 1024px; }
+
+.counter-widget {
+  padding: 25px 30px;
+  position: relative; }
+
+p {
+  font-size: 1.154em;
+  line-height: 24px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  color: #878C9F; }
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: repeat;
+  background-origin: content-box; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  z-index: 2; }
+
+.fixed-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+/*------Coming Soon------------------------------------------------*/
+.cs-wrapper {
+  padding: 200px 50px 150px;
+  text-align: center; }
+  .cs-wrapper .countdown {
+    margin: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+.soon-title {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 800; }
+
+.cs-countdown-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 25%;
+          flex: 0 25%;
+  padding: 15px 10px;
+  position: relative; }
+
+.cs-countdown-item:before {
+  content: '';
+  position: absolute;
+  right: -3px;
+  height: 6px;
+  width: 6px;
+  border-radius: 100%;
+  background: #fff;
+  top: 50%;
+  margin-top: -3px; }
+
+.cs-countdown-item:last-child:before {
+  display: none; }
+
+.cs-countdown-item span {
+  color: #fff;
+  font-size: 74px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif; }
+
+.cs-countdown-item p {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 1.230em; }
+
+.cs-social {
+  position: relative;
+  margin-top: 50px; }
+  .cs-social:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    height: 1px;
+    width: 70px;
+    margin-left: -35px;
+    background: rgba(255, 255, 255, 0.21); }
+  .cs-social li {
+    display: inline-block;
+    margin: 0 8px; }
+    .cs-social li a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 100%;
+      color: #fff;
+      font-size: 1.077em; }
+
+.cs-wrapper .subscribe-form form {
+  max-width: 450px;
+  margin: 15px auto;
+  position: relative; }
+  .cs-wrapper .subscribe-form form input {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 30px;
+    -webkit-box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.2); }
+  .cs-wrapper .subscribe-form form .subscribe-button {
+    height: 38px;
+    padding: 0 30px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.077em; }
+
+.cs-wrapper .subscribe-form p {
+  color: #fff;
+  font-size: 1.077em; }
+
+.cs-wrapper p {
+  color: #fff; }
+
+label.subscribe-message {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff; }
+
+.cs-social li a,
+.cs-countdown-item:before,
+.cs-wrapper .subscribe-form form .subscribe-button {
+  background: #4DB7FE; }
+
+.cs-wrapper .subscribe-form form .subscribe-button:hover, .cs-social li a:hover {
+  background: #2C3B5A;
+  color: #fff; }
+
+.cs-wrapper .subscribe-form form .subscribe-agree-label {
+  display: block;
+  margin-top: 15px;
+  color: #fff; }
+  .cs-wrapper .subscribe-form form .subscribe-agree-label a {
+    color: #fff;
+    text-decoration: underline; }
+
+.cs-wrapper .subscribe-form form .subscribe-agree-label input {
+  width: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-right: 10px;
+  height: auto; }
+
+.section-separator {
+  display: block;
+  position: relative;
+  margin: 20px 0;
+  min-height: 1px; }
+  .section-separator:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 4px;
+    margin-left: -25px;
+    width: 50px;
+    border-radius: 3px;
+    background: #4DB7FE; }
+
+@media only screen and (max-width: 1524px) {
+  .cs-wrapper {
+    padding: 120px 50px 100px; } }
+
+@media only screen and (max-width: 768px) {
+  .cs-countdown-item:before {
+    display: none; }
+  .cs-countdown-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 50%;
+            flex: 0 50%; }
+  .cs-wrapper {
+    padding: 100px 20px 50px; }
+  .cs-countdown-item span {
+    font-size: 54px; } }
+
+@media only screen and (max-width: 540px) {
+  .cs-social li {
+    margin: 0 5px; } }

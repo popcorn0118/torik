@@ -1,0 +1,43 @@
+a[data-reset-section-id=thumbnails_options], /*thumbnail options name*/
+.thumbnail_size-hidden-value
+{ 
+	display: none !important;
+}
+.field-thumbnail-size-input {
+	font-size: 0;
+	white-space: nowrap;
+	float: left;
+	display: inline-block;
+	margin-bottom: 6px
+}
+.field-thumbnail-size-input.thumbnail_size-hard_crop {
+	font-size: inherit;
+}
+.field-thumbnail-size-input .ts-add-on {
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: bold;
+	width: auto;
+	padding: 4px;
+	text-align: center;
+}
+.field-thumbnail-size-input .add-on{
+	display: inline-block;
+    min-width: 16px;
+    padding: 3px 4px;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    background-color: #0085ba;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    color: #fff;
+}
+.field-thumbnail-size-input.thumbnail_size-height .add-on i {
+	transform: rotate(90deg);
+}
+.field-thumbnail-size-input input[type="text"] {
+	width: 85px;
+	margin-left: -1px;
+}

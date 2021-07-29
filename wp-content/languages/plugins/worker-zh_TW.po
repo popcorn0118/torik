@@ -1,0 +1,157 @@
+# Translation of Plugins - ManageWP Worker - Development (trunk) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - ManageWP Worker - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-11 23:04:53+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - ManageWP Worker - Development (trunk)\n"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:267
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:297
+msgid "Click the Add site button."
+msgstr "點擊 [Add site] (新增網站) 按鈕。"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:261
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:292
+msgid "Log into your account."
+msgstr "登入專屬帳號。"
+
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:140
+msgid "Invalid site connection specified. Please try again, or, if this keeps happening, contact support."
+msgstr "指定的網站無法連線，請再試一次。如果這個狀況持續發生，請聯絡技術支援。"
+
+#: functions.php:878
+msgid "Every 5 Minutes"
+msgstr "每 5 分鐘"
+
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:154
+msgid "The automatic login token isn't properly signed. Please contact our support for help."
+msgstr "自動登入權杖並未正確簽署，請洽詢我們的技術支援取得協助。"
+
+#: functions.php:1150
+msgid "The site is currently in maintenance mode."
+msgstr "網站目前為 [網站例行性維護] 模式。"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:396
+msgid "Currently loaded keys:"
+msgstr "目前載入的金鑰:"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:379
+msgid "Copy"
+msgstr "複製"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:371
+msgid "Connection key:"
+msgstr "連線金鑰:"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:358
+msgid "Disconnect"
+msgstr "中斷連線"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:339
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:351
+msgid "N/A"
+msgstr "無法使用"
+
+#. translators: the variable is going to contain a human time difference string
+#. like "2 days"
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:336
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:348
+msgid "%s ago"
+msgstr "%s前"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:323
+msgid "Last Used"
+msgstr "最後使用時間"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:319
+msgid "Connected"
+msgstr "已連線"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:315
+msgid "ID"
+msgstr "ID"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:308
+msgid "Here is the list of currently active connections to this plugin:"
+msgstr "這裡列出這個外掛目前進行的連線:"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:301
+msgid "Enter this website's URL. When prompted, paste the connection key."
+msgstr "輸入這個網站的網址。出現提示訊息時，請輸入連線金鑰。"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:287
+msgid "Copy the connection key below."
+msgstr "複製下方的連線金鑰。"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:283
+msgid "Install and activate the <b>Worker</b> plugin."
+msgstr "安裝並啟用 <b>Worker</b> 外掛。"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:278
+msgid "Manual"
+msgstr "手動連線"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:272
+msgid "Enter this website's URL, admin username and password, and the system will take care of everything."
+msgstr "輸入這個網站的網址、網站管理員使用者名稱及密碼後，我們的系統便會處理所有項目。"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:255
+msgid "Automatic"
+msgstr "自動連線"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:250
+msgid "There are two ways to connect your website to the management dashboard:"
+msgstr "這個外掛提供兩種將這個網站連線至管理控制台的方式:"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:203
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:433
+msgid "Connection Management"
+msgstr "連線管理"
+
+#. Author URI of the plugin
+msgid "https://godaddy.com"
+msgstr "https://godaddy.com"
+
+#. Author of the plugin
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Description of the plugin
+msgid "We help you efficiently manage all your WordPress websites. <strong>Updates, backups, 1-click login, migrations, security</strong> and more, on one dashboard. This service comes in two versions: standalone <a href=\"https://managewp.com\">ManageWP</a> service that focuses on website management, and <a href=\"https://godaddy.com/pro\">GoDaddy Pro</a> that includes additional tools for hosting, client management, lead generation, and more."
+msgstr "ManageWP 服務能協助網站管理員管理全部 WordPress 網站，並在同一個控制台中提供<strong>更新、備份、一鍵登入、安全性檢查</strong>以及更多功能。這項服務有兩個版本: 側重於網站管理的 <a href=\"https://managewp.com\">ManageWP</a> 獨立服務，以及包含主機託管、客戶管理、客戶開發等多項額外工具的 <a href=\"https://godaddy.com/pro\">GoDaddy Pro</a>。"
+
+#. Plugin URI of the plugin
+msgid "https://managewp.com"
+msgstr "https://managewp.com"
+
+#. Plugin Name of the plugin
+msgid "ManageWP - Worker"
+msgstr "ManageWP - Worker"
+
+#. translators: the variable in this string is the WordPress username that
+#. could not be found
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:165
+msgid "User <strong>%s</strong> could not be found."
+msgstr "找不到使用者 <strong>%s</strong>。"
+
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:158
+msgid "The automatic login token is invalid. Please check if this website is properly connected with your dashboard, or, if this keeps happening, contact support."
+msgstr "自動登入權杖已使用過，請檢查這個網站是否與 ManageWP 控制台正確連線。如果持續發生相同狀況，請洽詢我們的技術支援。"
+
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:128
+msgid "The automatic login token was already used. Please try again, or, if this keeps happening, contact support."
+msgstr "自動登入權杖已使用過，請再試一次。如果持續發生相同狀況，請洽詢我們的技術支援。"
+
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:126
+msgid "The automatic login token has expired. Please try again, or, if this keeps happening, contact support."
+msgstr "自動登入權杖已過期，請再試一次。如果持續發生相同狀況，請洽詢我們的技術支援。"
+
+#: src/MWP/EventListener/PublicRequest/AutomaticLogin.php:124
+msgid "The automatic login token is invalid. Please try again, or, if this keeps happening, contact support."
+msgstr "自動登入權杖無效，請再試一次。如果持續發生相同狀況，請洽詢我們的技術支援。"

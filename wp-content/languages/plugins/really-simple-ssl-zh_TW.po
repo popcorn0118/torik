@@ -1,0 +1,325 @@
+# Translation of Plugins - Really Simple SSL - Stable (latest release) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-23 06:14:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
+
+#: class-admin.php:3079
+msgid "Or set your wp-config.php to writable and reload this page."
+msgstr "或將這個網站的 wp-config.php 檔案設定為可寫入，並重新載入這個頁面。"
+
+#. Author of the plugin
+msgid "Really Simple Plugins"
+msgstr "Really Simple Plugins"
+
+#: grid/templates/support.php:28
+msgid "Really Simple SSL Pro"
+msgstr "Really Simple SSL Pro"
+
+#: class-admin.php:2455
+msgid "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
+msgstr "你好，Really Simple SSL 已協助維護這個網站的安全性一段時間，效果應該很不錯。如有閒暇，請至 WordPress.org 撰寫評論讓我們知道，我們對任何建議都十分感激。如有任何問題或意見反應，請%s與我們聯絡%s。"
+
+#: class-admin.php:506
+msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server"
+msgstr "來源為引用自未啟用 SSL 憑證的網域的圖片、樣式表或程式碼檔案: 移除這些檔案，或是將這些檔案搬移一份至自有、且已啟用 SSL 憑證的伺服器。"
+
+#: class-admin.php:522
+msgid "Check out Really Simple SSL Pro"
+msgstr "進一步了解 Really Simple SSL Pro"
+
+#: class-admin.php:2465
+msgid "Don't show again"
+msgstr "不再顯示這項訊息"
+
+#: class-admin.php:2944
+msgid "The mixed content fixer could not be detected due to a cURL error: %s. cURL errors are often caused by an outdated version of PHP or cURL and don't affect the front-end of your site. Contact your hosting provider for a fix."
+msgstr "偵測不到混合內容修正程式。原因: cURL 錯誤 %s。cURL 錯誤通常由舊版 PHP 或 cURL 造成，但不會對網站前端產生影響。請聯絡網站主機服務提供商進行修正。進一步瞭解這項警告訊息"
+
+#: class-admin.php:3862
+msgid "Dismiss all Really Simple SSL notices"
+msgstr "關閉 Really Simple SSL 全部通知"
+
+#: class-site-health.php:100
+msgid "301 SSL redirect enabled"
+msgstr "301 SSL 重新導向已啟用"
+
+#: class-site-health.php:108
+msgid "You have set a 301 redirect to SSL. This is important for SEO purposes"
+msgstr "這個網站已設定 301 重新導向至 SSL。這對 SEO 來說非常重要。"
+
+#: class-site-health.php:151
+msgid "301 .htaccess redirect is not enabled."
+msgstr "301 .htaccess 重新導向未啟用"
+
+#: class-admin.php:2973
+msgid "301 redirect to https set: .htaccess redirect."
+msgstr "301 重新導向至 HTTPS 設定: 301 .htaccess 重新導向。"
+
+#: class-admin.php:3042
+msgid "HTTP Strict Transport Security is not enabled %s(Read more)%s."
+msgstr "HTTP 嚴格傳輸安全性 (HTTP Strict Transport Security，HSTS) 尚未啟用。(%s付費版功能%s)"
+
+#: class-admin.php:2805
+msgid "The 'force-deactivate.php' file has to be renamed to .txt. Otherwise your ssl can be deactivated by anyone on the internet."
+msgstr "force-deactivate.php 檔案已預先更名為 force-deactivate.txt，否則網際網路上任何一個人都能停用這個網站的 SSL。"
+
+#: class-multisite.php:1005
+msgid "If the conversion does not proceed after a few minutes, click %shere%s to force the conversion process."
+msgstr "如果轉換程序在幾分鐘後產生停滯狀況，請點擊%s這裡%s以強制進行轉換程序。"
+
+#: class-admin.php:2463
+msgid "Leave a review"
+msgstr "撰寫評論"
+
+#: class-admin.php:2464
+msgid "Maybe later"
+msgstr "稍後再說"
+
+#: class-multisite.php:1003
+msgid "Conversion of websites %s percent complete."
+msgstr "%s&percnt; 的網站已完成轉換。"
+
+#: multisite-cron.php:11
+msgid "Once every minute"
+msgstr "每分鐘一次"
+
+#: class-admin.php:2457
+msgid "Hi, Really Simple SSL has kept your site secure for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
+msgstr "你好，Really Simple SSL 已協助維護這個網站的安全性月餘，效果應該很不錯。如有閒暇，請至 WordPress.org 撰寫評論讓我們知道，我們對任何建議都十分感激。如有任何問題或意見反應，請%s與我們聯絡%s。"
+
+#: class-multisite.php:158
+msgid "Activate SSL per site or install a wildcard certificate to fix this."
+msgstr "為個別網站啟用 SSL 或安裝萬用字元憑證以修正這個問題。"
+
+#: class-multisite.php:156
+msgid "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
+msgstr "將多站網路以子網域方式完成安裝，但整個多站網路卻沒有萬用字元憑證。"
+
+#: class-multisite.php:157
+msgid "This leads to issues when activating SSL networkwide since subdomains will be forced over SSL as well while they don't have a valid certificate."
+msgstr "這會導致在多站網路為所有網站啟用 SSL 時發生問題，這是因為所有子網域網站全都強制使用 SSL，但卻沒有有效的憑證。"
+
+#: class-admin.php:4266
+msgid "Are you sure?"
+msgstr "確定要繼續操作嗎？"
+
+#: class-admin.php:4284
+msgid "Deactivating the plugin while keeping SSL will do the following:"
+msgstr "停用外掛並保留 SSL，會發生以下狀況:"
+
+#: class-admin.php:4299
+msgid "Cancel"
+msgstr "取消"
+
+#: class-admin.php:115
+msgid "Really Simple SSL and Really Simple SSL add-ons do not process any personal identifiable information, so the GDPR does not apply to these plugins or usage of these plugins on your website. You can find our privacy policy <a href=\"%s\" target=\"_blank\">here</a>."
+msgstr "Really Simple SSL 及其附加元件不會處理任何個人可識別資訊，因此 GDPR 並不適用於目前網站上的這些外掛。如需更多資訊，請參閱我們的<a href=\"%s\" target=\"_blank\">隱私權政策</a>。"
+
+#: class-admin.php:3754
+msgid "More info"
+msgstr "進一步了解"
+
+#. Author URI of the plugin
+msgid "https://really-simple-plugins.com"
+msgstr "https://really-simple-plugins.com"
+
+#: class-admin.php:518
+msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!"
+msgstr "透過 Pro 版外掛便可進行自動掃描並處理這些問題，並且還包含付費技術支援，以及透過 HSTS 增加網站安全性等功能。"
+
+#: class-multisite.php:337
+msgid "Enable SSL"
+msgstr "啟用 SSL"
+
+#: class-multisite.php:355
+msgid "networkwide"
+msgstr "全部網站"
+
+#: class-multisite.php:356
+msgid "per site"
+msgstr "個別網站"
+
+#: class-multisite.php:336
+msgid "Select to enable SSL networkwide or per site."
+msgstr "選取要為全部網站或個別網站啟用 SSL。"
+
+#: class-multisite.php:429
+msgid "Options saved."
+msgstr "設定已儲存。"
+
+#: class-admin.php:3969 class-admin.php:3999 class-admin.php:4322
+msgid "This option is enabled on the network menu."
+msgstr "這項設定已啟用於多站網路選單中。"
+
+#: class-admin.php:513
+msgid "You may need to login in again."
+msgstr "如遭系統登出，請再登入一次即可。"
+
+#: class-site-health.php:159 class-admin.php:3845
+msgid "Enable 301 .htaccess redirect"
+msgstr "啟用 301 .htaccess 重新導向"
+
+#: class-admin.php:2961
+msgid "No 301 redirect is set. Enable the WordPress 301 redirect in the settings to get a 301 permanent redirect."
+msgstr "尚未設定 301 重新導向。請在 [設定] 分頁中啟用 WordPress 301 重新導向，便能完成 301 永久重新導向設定。"
+
+#: class-admin.php:2984
+msgid "Enable a .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
+msgstr "在 [設定] 分頁中啟用 .htaccess 重新導向或 WordPress 重新導向，以建立 301 的重新導向方式。"
+
+#: class-admin.php:3851
+msgid "If you want to customize the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
+msgstr "如果需要自訂 Really Simple SSL 在 .htaccess 檔案中的設定，就必須防止它對該檔案的重新寫入。啟用這項設定便能防止 .htaccess 遭到 Really Simple SSL 重新寫入。"
+
+#: class-admin.php:3834
+msgid "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
+msgstr "在多數的案例中，維持啟用這項設定能防止在網站上發生混合內容問題。"
+
+#: class-admin.php:3038
+msgid "HTTP Strict Transport Security was enabled."
+msgstr "HTTP 嚴格傳輸安全性 (HTTP Strict Transport Security，HSTS) 已啟用。"
+
+#: class-multisite.php:548 class-multisite.php:576
+msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support and increased security with HSTS included."
+msgstr "網站管理員可以讓 Pro 版的自動掃瞄功能為網站進行處理，並取得付費技術支援及包含 HSTS 的網站增強安全性。"
+
+#: class-multisite.php:230 class-admin.php:4355
+msgid "Premium Support"
+msgstr "付費技術支援"
+
+#: class-admin.php:752
+msgid "Go ahead, activate SSL!"
+msgstr "繼續啟用 SSL"
+
+#: class-multisite.php:550 class-multisite.php:578
+msgid "Check out Really Simple SSL Premium"
+msgstr "了解 Really Simple SSL 付費功能"
+
+#: class-admin.php:2878
+msgid "SSL is enabled on your site."
+msgstr "這個網站已啟用 SSL。"
+
+#: class-multisite.php:129
+msgid "SSL is not enabled yet"
+msgstr "SSL 尚未啟用。"
+
+#: class-mixed-content-fixer.php:13 class-certificate.php:14
+#: class-site-health.php:12 class-multisite.php:27 class-help.php:9
+#: class-cache.php:10 class-front-end.php:18 class-admin.php:49
+msgid "%s is a singleton class and you cannot create a second instance."
+msgstr "%s 是一個單一類別，因此無法建立次級執行個體。"
+
+#: class-admin.php:492
+msgid "Almost ready to migrate to SSL!"
+msgstr "移轉至 SSL 的工作幾近就緒！"
+
+#: class-multisite.php:546
+msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server."
+msgstr "來源為引用自未啟用 SSL 憑證的網域的圖片、樣式表或程式碼檔案: 移除這些檔案，或是將這些檔案搬移一份至自有、且已啟用 SSL 憑證的伺服器。"
+
+#: class-admin.php:2345
+msgid "System detection encountered issues"
+msgstr "系統偵測遇到問題"
+
+#: class-admin.php:2310
+msgid "A definition of a siteurl or homeurl was detected in your wp-config.php, but the file is not writable."
+msgstr "已在網站的 wp-config.php 中偵測到 siteurl 及 homeurl 的設定值，但是無法寫入檔案。"
+
+#: class-admin.php:2315
+msgid "Your wp-config.php has to be edited, but is not writable."
+msgstr "網站的 wp-config.php 必須進行編輯，但目前這個檔案無法寫入。"
+
+#: class-admin.php:2338
+msgid "Because your server does not pass a variable with which WordPress can detect SSL, WordPress may create redirect loops on SSL."
+msgstr "這個網站的伺服器並未傳遞可供 WordPress 偵測 SSL 的變數，WordPress 可能會因為 SSL 而產生重新導向迴圈。"
+
+#: class-multisite.php:543
+msgid "Some things can't be done automatically. Before you migrate, please check for: "
+msgstr "有幾項修正無法自動完成，在進行移轉前，請先檢查以下項目:"
+
+#: class-multisite.php:555
+msgid "Activate SSL networkwide"
+msgstr "為多站網路中的全部網站啟用 SSL"
+
+#: class-multisite.php:558
+msgid "Activate SSL per site"
+msgstr "讓多站網路中的個別網站自行啟用 SSL"
+
+#: class-multisite.php:561
+msgid "Networkwide activation does not check if a site has an SSL certificate. It just migrates all sites to SSL."
+msgstr "為多站網路中的全部網站啟用 SSL 並不會檢查網站的 SSL 憑證，這項功能僅是將所有網站移轉至 SSL。"
+
+#: class-admin.php:2316
+msgid "Because your site is behind a loadbalancer and is_ssl() returns false, you should add the following line of code to your wp-config.php."
+msgstr "由於這個網站位於負載平衡器後方，且 is_ssl() 傳回的值為 false，所以須要將下方所列的程式碼加入這個網站的 wp-config.php 檔案中。"
+
+#: grid/templates/tips-tricks-footer.php:3 class-multisite.php:441
+#: class-admin.php:2725
+msgid "Documentation"
+msgstr "線上說明"
+
+#. Plugin Name of the plugin
+msgid "Really Simple SSL"
+msgstr "Really Simple SSL"
+
+#. Description of the plugin
+msgid "Lightweight plugin without any setup to make your site SSL proof"
+msgstr "無須進行繁複設定，便能讓網站實現 SSL/HTTPS 加密通訊協定的輕量型外掛。"
+
+#: class-admin.php:3852
+msgid "Stop editing the .htaccess file"
+msgstr "禁止編輯 .htaccess 檔案"
+
+#: grid/templates/settings-footer.php:3
+msgid "Save"
+msgstr "儲存"
+
+#: class-admin.php:2903
+msgid "An SSL certificate was detected on your site."
+msgstr "在這個網站上已偵測到 SSL 憑證。"
+
+#: class-multisite.php:224 class-multisite.php:335 class-multisite.php:382
+#: class-admin.php:2670 class-admin.php:3456 class-admin.php:3832
+#: class-admin.php:4349
+msgid "Settings"
+msgstr "設定"
+
+#: class-admin.php:3835
+msgid "Mixed content fixer"
+msgstr "混合內容修正程式"
+
+#: class-admin.php:2804
+msgid "Major security issue!"
+msgstr "重大安全性問題！"
+
+#: class-admin.php:2806
+msgid "Check again"
+msgstr "再次檢查"
+
+#: class-admin.php:2647
+msgid "SSL settings"
+msgstr "SSL 設定"
+
+#: class-admin.php:2648
+msgid "SSL"
+msgstr "SSL"
+
+#: class-multisite.php:144
+msgid "Because the $_SERVER[\"HTTPS\"] variable is not set, your website may experience redirect loops."
+msgstr "由於變數 $_SERVER[\"HTTPS\"] 尚未進行設定，這個網站可能會產生重新導向迴圈。"
+
+#: class-multisite.php:143
+msgid "You run a Multisite installation with subfolders, which prevents this plugin from fixing your missing server variable in the wp-config.php."
+msgstr "目前的多站網路安裝於子資料夾中，會造成外掛無法修正 wp-config.php 中遺失的伺服器變數。"
+
+#: class-multisite.php:145
+msgid "Activate networkwide to fix this."
+msgstr "為多站網路內的所有網站啟用以修正這個問題。"

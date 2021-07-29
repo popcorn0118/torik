@@ -1,0 +1,40 @@
+<wpml-config>
+    <admin-texts>
+        <key name="townhub_options">
+            <key name="loader_icon">
+                <key name="url"/>
+                <key name="id"/>
+                <key name="height"/>
+                <key name="width"/>
+                <key name="thumbnail"/>
+            </key>
+            <key name="header_info"/>
+            <key name="blog_head_title"/>
+            <key name="blog_head_intro"/>
+            <key name="blog_header_image">
+                <key name="url"/>
+                <key name="id"/>
+                <key name="height"/>
+                <key name="width"/>
+                <key name="thumbnail"/>
+            </key>
+            <key name="footer_widgets"/>
+            <key name="footer_logo">
+                <key name="url"/>
+                <key name="id"/>
+                <key name="height"/>
+                <key name="width"/>
+                <key name="thumbnail"/>
+            </key>
+            <key name="footer_copyright"/>
+            <key name="error404_bg">
+                <key name="url"/>
+                <key name="id"/>
+                <key name="height"/>
+                <key name="width"/>
+                <key name="thumbnail"/>
+            </key> 
+            <key name="error404_msg"/>
+        </key>
+    </admin-texts>
+</wpml-config>

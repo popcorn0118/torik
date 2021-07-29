@@ -1,0 +1,89 @@
+/**
+  * Masonry CSS
+*/
+.listing-items {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 100%;
+	margin: 0 -8px;
+	margin: 0;
+	overflow: hidden;
+}
+
+.listing-item {
+	padding: 0 8px;
+	margin-bottom: 12px;
+}
+
+.listing-item.hidden-listing {
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.listing-item .geodir-category-content,
+.listing-item .geodir-category-img {
+	position: relative;
+}
+
+.listing-item {
+	overflow: hidden;
+}
+
+@media (min-width: 430px) {
+	.listing-item {
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.listing-item {
+		width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.listing-item {
+		width: 33.333333333333336%;
+	}
+
+	.listings-grid-wrap.one-cols .listing-item {
+		width: 100%;
+	}
+
+	.listings-grid-wrap.two-cols .listing-item {
+		width: 50%;
+	}
+
+	.listings-grid-wrap.three-cols .listing-item {
+		width: 33.333333333333336%;
+	}
+
+	.listings-grid-wrap.four-cols .listing-item {
+		width: 25%;
+	}
+
+	.listings-grid-wrap.five-cols .listing-item {
+		width: 20%;
+	}
+
+	.listings-grid-wrap.six-cols .listing-item {
+		width: 16.666666666666668%;
+	}
+
+	.listings-grid-wrap.seven-cols .listing-item {
+		width: 14.285714285714286%;
+	}
+
+	.listings-grid-wrap.eight-cols .listing-item {
+		width: 12.5%;
+	}
+
+	.listings-grid-wrap.nine-cols .listing-item {
+		width: 11.11111111111111%;
+	}
+
+	.listings-grid-wrap.ten-cols .listing-item {
+		width: 10%;
+	}
+}

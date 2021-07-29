@@ -1,0 +1,236 @@
+# Translation of Plugins - Nav Menu Roles - Stable (latest release) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - Nav Menu Roles - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-02 09:10:28+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - Nav Menu Roles - Stable (latest release)\n"
+
+#: inc/customizer.php:74
+msgid "Restrict menu item to minimum role"
+msgstr "能存取這個選單項目的使用者角色"
+
+#: nav-menu-roles.php:92
+msgid "Unserializing instances of this class is forbidden."
+msgstr "禁止取消這個類別執行個體的序列化。"
+
+#: nav-menu-roles.php:83
+msgid "Cloning this object is forbidden."
+msgstr "禁止再製這個物件。"
+
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:157
+msgid "Edit"
+msgstr "編輯"
+
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:157
+msgid "Edit menu item"
+msgstr "編輯選單項目"
+
+#: nav-menu-roles.php:285
+msgid "Donate"
+msgstr "贊助"
+
+#: inc/class-walker-nav-menu-edit-roles.php:189
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:186
+msgid "Open link in a new tab"
+msgstr "在新分頁中開啟連結"
+
+#: nav-menu-roles.php:393
+msgid "Restrict menu item to a minimum role"
+msgstr "能存取這個選單項目的使用者角色"
+
+#: nav-menu-roles.php:284
+msgid "FAQ"
+msgstr "常見問題集"
+
+#. Author URI of the plugin
+msgid "http://www.kathyisawesome.com"
+msgstr "http://www.kathyisawesome.com"
+
+#. Author of the plugin
+msgid "Kathy Darling"
+msgstr "Kathy Darling"
+
+#. Description of the plugin
+msgid "Hide custom menu items based on user roles."
+msgstr "依照使用者角色隱藏或顯示自訂選單項目。"
+
+#. Plugin URI of the plugin
+msgid "http://www.kathyisawesome.com/449/nav-menu-roles/"
+msgstr "https://www.kathyisawesome.com/nav-menu-roles/"
+
+#: nav-menu-roles.php:387 inc/customizer.php:69
+msgid "Everyone"
+msgstr "全部使用者"
+
+#: nav-menu-roles.php:382 inc/customizer.php:65
+msgid "Logged Out Users"
+msgstr "登出的使用者"
+
+#: nav-menu-roles.php:377 inc/customizer.php:61
+msgid "Logged In Users"
+msgstr "登入的使用者"
+
+#: nav-menu-roles.php:371 inc/customizer.php:57
+msgid "Display Mode"
+msgstr "顯示模式"
+
+#: nav-menu-roles.php:174
+msgid "Import <strong>nav menu roles</strong> and other menu item meta skipped by the default importer"
+msgstr "匯入<strong>導覽選單角色設定</strong>及預設匯入程式略過的其他選單項目中繼資料"
+
+#. Plugin Name of the plugin
+#: nav-menu-roles.php:174
+msgid "Nav Menu Roles"
+msgstr "Nav Menu Roles"
+
+#: inc/class-walker-nav-menu-edit-roles.php:258
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:252
+msgid "Cancel"
+msgstr "取消"
+
+#: inc/class-walker-nav-menu-edit-roles.php:246
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:245
+msgid "Remove"
+msgstr "移除"
+
+#: inc/class-walker-nav-menu-edit-roles.php:232
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:229
+msgid "Original: %s"
+msgstr "原始標題: %s"
+
+#: inc/class-walker-nav-menu-edit-roles.php:225
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:222
+msgid "To the top"
+msgstr "成為第一個選單項目"
+
+#: inc/class-walker-nav-menu-edit-roles.php:222
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:219
+msgid "Down one"
+msgstr "下移一位"
+
+#: inc/class-walker-nav-menu-edit-roles.php:221
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:218
+msgid "Up one"
+msgstr "上移一位"
+
+#: inc/class-walker-nav-menu-edit-roles.php:220
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:217
+msgid "Move"
+msgstr "移動選單項目"
+
+#: inc/class-walker-nav-menu-edit-roles.php:208
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:205
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "如果目前使用的佈景主題提供支援，便會在選單中顯示選單項目的內容說明。"
+
+#: inc/class-walker-nav-menu-edit-roles.php:206
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:203
+msgid "Description"
+msgstr "內容說明"
+
+#: inc/class-walker-nav-menu-edit-roles.php:200
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:197
+msgid "Link Relationship (XFN)"
+msgstr "連結目標的人際關係 (XFN)"
+
+#: inc/class-walker-nav-menu-edit-roles.php:194
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:191
+msgid "CSS Classes (optional)"
+msgstr "CSS 類別 (選填)"
+
+#: inc/class-walker-nav-menu-edit-roles.php:182
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:179
+msgid "Title Attribute"
+msgstr "Title 屬性"
+
+#: inc/class-walker-nav-menu-edit-roles.php:176
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:173
+msgid "Navigation Label"
+msgstr "導覽選單項目標籤"
+
+#: inc/class-walker-nav-menu-edit-roles.php:169
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:166
+msgid "URL"
+msgstr "網址"
+
+#: inc/class-walker-nav-menu-edit-roles.php:158
+#: inc/class-walker-nav-menu-edit-roles.php:160
+msgid "Edit Menu Item"
+msgstr "編輯選單項目"
+
+#: inc/class-walker-nav-menu-edit-roles.php:156
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:151
+msgid "Move down"
+msgstr "下移一位"
+
+#: inc/class-walker-nav-menu-edit-roles.php:143
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:136
+msgid "Move up"
+msgstr "上移一位"
+
+#: inc/class-walker-nav-menu-edit-roles.php:128
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:119
+msgid "sub item"
+msgstr "子項目"
+
+#. translators: %s: title of menu item in draft status
+#: inc/class-walker-nav-menu-edit-roles.php:113
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:105
+msgid "%s (Pending)"
+msgstr "%s (待審閱)"
+
+#. translators: %s: title of menu item which is invalid
+#: inc/class-walker-nav-menu-edit-roles.php:109
+#: inc/class-walker-nav-menu-edit-roles-4.5.php:101
+msgid "%s (Invalid)"
+msgstr "%s (無效)"
+
+#: inc/class-nav-menu-roles-import.php:282
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr "選擇要匯入的 WXR 檔案 (副檔名為 .xml)，然後點擊 [上傳檔案並匯入]。"
+
+#: inc/class-nav-menu-roles-import.php:281
+msgid "Re-Upload your normal WordPress eXtended RSS (WXR) file and we&#8217;ll import the Nav Menu Roles and any other missing post meta for the Nav Menu items."
+msgstr "請重新上傳沒有問題的 WordPress eXtended RSS (WXR) 檔案，系統便會為導覽選單項目匯入導覽選單角色設定及任何遺漏的文章中繼資料。"
+
+#: inc/class-nav-menu-roles-import.php:266
+msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
+msgstr "這個匯入程式已有新版本可供更新，請更新至 %s 版以確保與較新版資料匯出檔格式的相容性。"
+
+#: inc/class-nav-menu-roles-import.php:259
+msgid "Import Nav Menu Roles"
+msgstr "匯入導覽選單使用者角色設定"
+
+#: inc/class-nav-menu-roles-import.php:191
+msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
+msgstr "目前版本的匯入程式不支援 %s 版的 WXR 檔案，請考慮更新匯入程式以進行匯入。"
+
+#: inc/class-nav-menu-roles-import.php:175
+msgid "The export file could not be found at %s. It is likely that this was caused by a permissions problem."
+msgstr "在 %s 找不到資料匯出檔，這通常是由權限問題所造成。"
+
+#: inc/class-nav-menu-roles-import.php:154
+msgid "Have fun!"
+msgstr "返回 [控制台]"
+
+#: inc/class-nav-menu-roles-import.php:154
+msgid "All done."
+msgstr "全部完成。"
+
+#: inc/class-nav-menu-roles-import.php:115
+msgid "The file does not exist, please try again."
+msgstr "檔案不存在，請再試一次。"
+
+#: inc/class-nav-menu-roles-import.php:114
+#: inc/class-nav-menu-roles-import.php:123
+#: inc/class-nav-menu-roles-import.php:169
+#: inc/class-nav-menu-roles-import.php:173
+#: inc/class-nav-menu-roles-import.php:183
+msgid "Sorry, there has been an error."
+msgstr "很抱歉，匯入過程發生錯誤。"

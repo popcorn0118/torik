@@ -1,0 +1,25 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1" display-as-translated="1">listing_type</custom-type>
+        <custom-type translate="1" display-as-translated="1">listing</custom-type>
+        <custom-type translate="1" display-as-translated="1">lrooms</custom-type>
+        <custom-type translate="1">lbooking</custom-type>
+        <custom-type translate="1">cthclaim</custom-type>
+        <custom-type translate="1">lmessage</custom-type>
+        <custom-type translate="1">lorder</custom-type>
+        <custom-type translate="1">lplan</custom-type>
+        <custom-type translate="1">cth_testimonial</custom-type>
+        <custom-type translate="1">member</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1" display-as-translated="1">listing_cat</taxonomy>
+        <taxonomy translate="1" display-as-translated="1">listing_feature</taxonomy>
+        <taxonomy translate="1" display-as-translated="1">listing_location</taxonomy>
+        <taxonomy translate="1" display-as-translated="1">listing_tag</taxonomy>
+    </taxonomies>
+    <admin-texts>
+        <key name="townhub-addons-options">
+            <key name="*"/>
+        </key>
+    </admin-texts>
+</wpml-config>

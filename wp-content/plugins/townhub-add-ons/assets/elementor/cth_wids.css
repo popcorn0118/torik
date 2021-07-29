@@ -1,0 +1,9 @@
+.cth-elementor-icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  background: url('../cththemes-logo.png') 0 0 no-repeat;
+  background-size: contain;
+}

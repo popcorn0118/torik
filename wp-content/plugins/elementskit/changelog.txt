@@ -1,0 +1,121 @@
+== Changelog ==
+
+Version: 2.2.3 (10 May, 2021)
+New: Hover Trigger on Advanced Tab Widget.
+Tweak: Improvements for the Instagram API.
+Tweak: Improvements for the Faceebook Feed API.
+Fix: Profile Picture issue for Instagram Widget.
+
+Version: 2.2.2 (29 April, 2021)
+New: Blog Posts Widget Floating Category.
+New: Blog Posts Widget Various Missing Controls.
+New: Dribbble Feed User Info & Header.
+New: Dribbble Feed Various Missing Controls.
+New: Border control to pinterest feed widget.
+New: Follow button icon control to twitter feed widget.
+New: Padding control to twitter feed widget.
+New: Header background control to twitter feed widget.
+New: Share button to twitter feed widget.
+Tweak: SVG icon to elementskit icon to twitter feed widget.
+Tweak: Layout five to behance feed widget.
+Tweak: Replaced deprecated Elementor PHP Methods for Widgets.
+Fix: Category List Widget separator position issue.
+Fix: Google Map Widget static type image issue.
+Fix: Facebook Page Review content alignment issue.
+Fix: Twitter feed read more button.
+Fix: Header Alignment Control for Table Widget.
+Fix: Product Count styles for Woo Category List Widget.
+Fix: Responsive support for Dribbble Feed Widget.
+
+Version: 2.2.1 (14-04-2021)
+Fix: Compatibility issues with Elementor 3.2.0.
+
+Version: 2.2.0 (02-03-2021)
+Improve: Minor bug fix and code improvements.
+Improve: Minor escaping and validation improvements.
+
+Version: 2.1.7 (25-02-2021)
+New: Image Size control for Gallery Widget.
+New: Option to Show/Hide Facebook Messenger Dialog Box.
+New: Image Comparison support for Advanced Tab Widget.
+Fix: Responsive glitch in Timeline Widget.
+
+Version: 2.1.6 (07-02-2021)
+New: Introducing Image Swap Widget - show a different image as the user hovers.
+
+Version: 2.1.5 (27-01-2021)
+Fix: Sticky Module conflict with latest Elementor.
+Fix: Slick Library update support for Latest Elementor update.
+Fix: Woo Category List widget featured style minor CSS grid issue.
+
+Version: 2.1.4 (25-01-2021)
+Tweak: Support W3C validation when using Facebook Messenger.
+Fix: Blog Posts Widget default image size changed to provide clear images.
+
+Version: 2.1.3 (18-01-2021)
+Fix: Instagram api expire time extended.
+Fix: Editor live changes support for Advanced Tooltip.
+
+Version: 2.1.2 (12-01-2021)
+Fix: Advanced Tooltip js conflict in the Elementor editor.
+
+Version: 2.1.1 (10-01-2021)
+New: Introducing Advanced Tooltip - add tooltip to any Widget.
+Fix: Improved Advanced Toggle Widget toggler btn.
+Fix: Missing string translations for Table Widget.
+Fix: List style reset for Gallery Filter.
+
+Version: 2.1.0 (24-12-2020)
+New: Advanced Tab Widget now has option to enable URL hash routing capability.
+New: Option to set popup alignment for Woo Mini Cart Widget.
+Fix: Popup Modal Widget content editor showing same content for multiple widget in the same page.
+Fix: Minor CSS broken issues fixed on Hotspot Widget.
+Fix: Some css broken issues fixed on hotspot
+Fix: added featured category link field 'Woo Category List' widget
+Fix: Buttons white-space are reset to default.
+Fix: Woo Product Carousel and List Widget compatibility with TwentyTwentyOne Theme.
+Fix: CSS ul and ol list style wasn't visible inside widgets.
+
+Version: 2.0.6 (06-12-2020)
+Fix: JS conflict issues fixed with 'Rank Math' plugin.
+Improve: CSS and JS improved.
+
+Version: 2.0.5 (30-11-2020)
+New: Added 'Popup Modal' widget.
+New: Added new instagram widget with Instagram official API.
+New: Added control for keeping one dot always active.
+New: Added Iframe and shortcode support on content.
+Fix: Clicking pointer issues fixed.
+Fix: "Non property" notice in instagram widget.
+Fix: Fixed the line issues when increasing the pointer size.
+Fix: Minor responsive issues fixed.
+
+Version: 2.0.4 (22-11-2020)
+Fix: Timeline's elements was showing after some delay.
+
+Version: 2.0.3 (16-11-2020)
+New: Advanced controls for Conditional Widget.
+New: Cross domain copy-paste module (the long waited feature).
+New: Added default color scheme on Facebook Messenger widget.
+New: Added Locale on Facebook Messenger widget.
+Fix: Caret image missing for Advanced Tab.
+Fix: Ekit button js error when "add section" is clicked.
+Tweak: Instagram feed widget.
+Tweak: Improved CSS & JS.
+
+Version: 2.0.2
+Fix: Facebook feed API.
+Fix: Some spelling mistakes.
+Fix: License activation conflicting.
+
+Version: 2.0.1
+Fix: Instagram's cache issue. Posts were not properly updated.
+
+Version: 2.0.0
+New: New Unfold widget added.
+Fix: Google Map API Script is enqueueing even it's not enabled.
+Fix: Facebook Review Broken issue.
+Fix: HeaderFooter builder compatiblity.
+Added: Pagination to Blog Posts.
+Added: Import & export system for WidgetBuilder module.
+Added: New features: "dribble-feed, facebook-feed, facebook-review, instagram-feed, twitter-feed, trustpilot, unfold, yelp, zoom".

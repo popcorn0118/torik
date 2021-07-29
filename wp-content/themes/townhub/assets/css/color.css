@@ -1,0 +1,267 @@
+/*--
+    Color styles
+--*/
+#cancel-comment-reply-link,
+table a,
+.post-page-numbers.current,
+a.post-page-numbers:hover,
+.post-article > .list-single-main-item.block_box .post-page-numbers.current,
+.post-article > .list-single-main-item.block_box a.post-page-numbers:hover,
+.post-article > .list-single-main-item.block_box .post-opt li a:hover,
+.widget_meta ul a, .widget_rss ul a, .widget_recent_entries ul a, .widget_recent_comments ul a,
+.post-article > .list-single-main-item.block_box .post-opt-title a:hover,
+.nav-holder nav li a.act-link, .nav-holder nav li a:hover, .header-search_btn i, .show-reg-form i, .nice-select:before, .ctb-modal-title span strong, .lost_password a, .custom-form.dark-form label span, .filter-tags input:checked:after, .custom-form .filter-tags input:checked:after, .custom-form .filter-tags label a, .section-subtitle, .footer-social li a, .subfooter-nav li a, #footer-twiit .timePosted a:before, #subscribe-button i, .nice-select .nice-select-search-box:before, .nav-holder nav li a i, .show-lang i, .lang-tooltip a:hover, .main-register-holder .tabs-menu li a i, .header-modal_btn i, .custom-form .log-submit-btn:hover i, .main-search-input-item label i, .header-search-input label i, .location a, .footer-contacts li i, #footer-twiit p.tweet:after, .subscribe-header h3 span, .footer-link i, .footer-widget-posts .widget-posts-date i, .clear-wishlist, .widget-posts-descr-link a:hover, .geodir-category-location a i, .header-modal-top span strong, .cart-btn:hover i, .to-top, .map-popup-location-info i, .infowindow_wishlist-btn, .infobox-raiting_wrap span strong, .map-popup-footer .main-link i, .infoBox-close, .mapnavbtn, .mapzoom-in, .mapzoom-out, .location-btn, .list-main-wrap-title h2 span, .grid-opt li span.act-grid-opt, .reset-filters i, .avatar-tooltip strong, .facilities-list li i, .geodir-opt-list a:hover i, .geodir-js-favorite_btn:hover i, .geodir-category_contacts li span i, .geodir-category_contacts li a:hover, .close_gcc:hover, .listsearch-input-wrap-header i, .listsearch-input-item span.iconn-dec, .more-filter-option-btn i, .clear-filter-btn i, .back-to-filters, .price-rage-wrap-title i, .listsearch-input-wrap_contrl li a i, .geodir-opt-tooltip strong, .listing-features li i, .gdop-list-link:hover i, .show-hidden-sb i, .filter-sidebar-header .tabs-menu li a i, .datepicker--day-name, .scroll-nav li a.act-scrlink, .scroll-nav-wrapper-opt a.scroll-nav-wrapper-opt-btn i, .show-more-snopt:hover, .show-more-snopt-tooltip a i, .breadcrumbs a:before, .list-single-stats li span i, .list-single-main-item-title h3 i, .box-widget-item-header i, .opening-hours ul li.todaysDay span.opening-hours-day, .listing-carousel-button, .list-single-main-item-title i, .list-single-main-item-title:before, .box-widget-item-header:before, .list-author-widget-contacts li span i, .list-author-widget-contacts li i, .contact-infos i, .btn i, .reviews-comments-item-date i, .rate-review i, .chat-widget_input button, .fchat-header h3 a, .custom-form .review-total span input, .photoUpload span i, .bottom-bcw-box_link a:hover, .custom-form label i, .video-box-btn, .claim-widget-link a, .custom-form .quantity span i, .scroll-nav li a.act-scrlink i, .share-holder.hid-share .share-container .share-icon, .sc-btn, .list-single-main-item-title h3 span, .ss-slider-cont, .team-social li a, .team-info h4, .simple-title span, .back-tofilters i, .breadcrumbs-wrapper.block-breadcrumbs:before, .breadcrumbs-wrapper.top-breadcrumbs a:before, .top-breadcrumbs .container:before, .header-sec-link a i, .map-modal-container h3 a, .map-modal-close, .post-opt li i, .cat-item li span, .cat-item li a:hover, .brd-show-share i, .author-social li a, .post-nav-text strong, .post-nav:before, .faq-nav li a.act-scrlink i, .faq-nav li a.act-scrlink:before, .faq-nav li a:hover i, .log-massage a, .cart-total strong, .action-button i, .dashboard-header-stats-item span, .dashboard-header-stats-item i, .add_new-dashboard i, .tfp-btn strong, .user-profile-menu li a i, .logout_btn i, .dashboard-message-text p a, .dashboard-message-time i, .pass-input-wrap span, .fuzone .fu-text i, .radio input[type="radio"]:checked + span:before, .booking-list-message-text h4 span, .dashboard-message-text h4 a:hover, .chat-contacts-item .chat-contacts-item-text span, .recomm-price i, .time-line-icon i, .testi-link, .testimonilas-avatar h4, .testimonilas-text:before, .testimonilas-text:after, .cc-btn, .single-facts_2 .inline-facts-wrap .inline-facts i, .images-collage-title, .collage-image-input i, .process-count, .listing-counter span, .main-search-input-tabs .tabs-menu li.current a, .hero-categories li a i, .main-search-input-item span.iconn-dec, .main-search-button i, .shb, .follow-btn i, .user-profile-header_stats li span, .follow-user-list li:hover a span, .dashboard-tabs .tabs-menu li a span, .bold-facts .inline-facts-wrap .num, .page-scroll-nav nav li a i, .mob-nav-content-btn i, .map-close, .post-opt-title a:hover, .post-author a:hover span, .post-opt a:hover, .breadcrumbs-wrapper a:hover, .reviews-comments-header h4 a:hover, .listing-item-grid_title h3 a:hover, .geodir-category-content h3 a:hover, .footer-contacts li a:hover, .footer-widget-posts .widget-posts-descr a:hover, .footer-link:hover, .geodir-category-opt h4 a:hover, .header-search-button:hover i, .list-author-widget-contacts li a:hover, .contact-infos a:hover, .list-single-author a:hover, .close_sbfilters, .show-lang:hover i, .show-reg-form:hover, .ctb-modal-close:hover, .pac-icon:before, .pi-text h4,
+.hero-inputs-wrap .filter-gid-item .flabel-icon i,
+.logo-text,
+.lfield-icon i,
+.nice-select:before,
+.nice-select-search-box:before,
+.nearby-input-wrap .get-current-city,
+#subfield_content_address .get-curr-loc,
+.filter-inputs-row label.flabel-icon i,
+.filter-inputs-row input[type=checkbox],
+.filter-inputs-row input[type=radio],
+.listings-loader,
+.notification-list-time i,
+.notification-msg a,
+.ajax-result-message,
+.opening-hours .current-status,
+.btn-link,
+.mdimgs-wrap ul .fu-text i,
+.widget-posts-date i,
+.footer-widget .widget-posts-descr a:hover,
+.townhub-tweet .timePosted a:before,
+.townhub-tweet p.tweet:after,
+.cat-item span,
+.cat-item a:hover,
+.currency-tooltip li a:hover,
+.show-currency-tooltip:hover span i,
+.subfooter-menu-wrap ul.menu li a,
+.subfooter-menu-wrap ul.menu li a:hover,
+.copyright a,
+.copyright a:hover,
+.subscribe-button i,
+.subscribe-agree-label a,
+.edit-listing-link,
+.lsingle-block-title:before,
+.comment-reply-title-wrap:before,
+.review-total-inner .reviews-total-score,
+.lbl-hasIcon i,
+.message-input button,
+.contact-date,
+.dashboard-card-content h4 span,
+.dashboard-card-content .entry-title a:hover,
+.lcheckout-title h2 span,
+.ck-form label i,
+.ck-form .ck-form-terms label a,
+.ck-form input[type="checkbox"]:checked:after,
+.lbl-hasIcon i,
+.booking-time-picker .tpick-icon,
+.prelog-message,
+.breadcrumbs-wrapper .woocommerce-breadcrumb a:before,
+section.products.related > h2:after, section.products.upsells > h2:after,
+.body-townhub ul.products li.product .woocommerce-loop-category__title:hover, .body-townhub ul.products li.product .woocommerce-loop-product__title:hover,
+.body-townhub ul.products li.product .price, .body-townhub div.product p.price, .body-townhub div.product span.price,
+.body-townhub ul.cart_list li a:hover,
+.body-townhub ul.product_list_widget li .woocommerce-Price-amount,
+ul.woocommerce-widget-layered-nav-list li span, ul.product-categories li span,
+.widget_archive span, .widget_pages span, .widget_nav_menu span,
+.widget_archive a:hover, .widget_pages a:hover, .widget_nav_menu a:hover,
+table#wp-calendar a:hover,
+.single-page-content-wrap .single-page-title-inside:before,
+.show-currency-tooltip .currency-symbol, .evticket-available span, .litem-ad,
+.claim-success,
+.report-success,
+.lroom-facts li i,
+.flatWeatherPlugin ul.wiForecasts li.wi, .lcard-price strong,
+.scroll-nav-bookmark-btn i,
+.lshare-shortcode .showshare i, .card-verified i {
+  color: #4DB7FE; }
+
+.nav-holder nav li.current-menu-ancestor > a,
+.nav-holder nav li.current-menu-item > a {
+  color: #4DB7FE; }
+
+.dynamic-footer-widget .search-widget .search-submit,
+.color-bg, .nice-select .option.selected, .nice-select .option.selected.focus, .nav-holder nav li a:before, .section-separator:before, .footer-widget h3:before, .cluster div, .pagination a.current-page, .pagination a:hover, .irs-bar, .irs-slider, .irs-bar-edge, .catcar-scrollbar .swiper-scrollbar-drag, .checket-cat:after, .scroll-nav li a.act-scrlink:before, .listing-carousel_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .box-media-zoom, .daterangepicker td.active, .list-widget-social li a, .contact-socials a, .btn.border-btn:hover, .chat-message.chat-message_user p, .chat-widget-button, .tags-stylwrap a:hover, .custom-form .quantity input.qty, .listing-hero-section .list-single-header-item h1:before, .box-item a, .menu-filters a.menu-filters-active, .promo-link i, .ss-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .accordion a.toggle span, .search-widget .search-submit:hover, .reply-item:hover, .comment-reply-link:hover, #progressbar li.active span, #progressbar li:before, .user-profile-menu li a.user-profile-act:before, .new-dashboard-item, .dashboard-title:before, .dhs-controls div:hover, .message-counter, .chat-contacts-item:after, .tc-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .tc-pagination2 .swiper-pagination-bullet.swiper-pagination-bullet-active, .down-btn i, .listing-filters a.gallery-filter-active, .single-facts_2 .inline-facts-wrap:before, .single-social li a, .mob-nav-content-btn.slsw_vis, .infobox-status, .header-search_container .header-search-button:hover, .pac-item:hover, .process-item_time-line:before, .lg-actions .lg-next:hover, .lg-actions .lg-prev:hover,
+.pagination .current,
+.notification-list-remove,
+.listing-type-active,
+.listing-type-active:hover,
+.tabs-working-hours .tabs-menu .active,
+.cthiso-filters a.cthiso-filter-active,
+.tagcloud a:hover,
+.header-search-input-wrap .hero-inputs-wrap .main-search-button:hover,
+.loading-indicator span,
+.dashboard-chat-app-header,
+.your-reply .reply-text,
+.contact-item:after,
+.ck-progress-bar li.active span,
+.cal-months-footer .btn-cal-cancel,
+#chat-app .closechat_btn,
+.body-townhub div.product .woocommerce-tabs ul.tabs li.active,
+.body-townhub div.product form.cart .button,
+.cth-woo-content-bot .woocommerce-loop-product__link,
+.woocommerce-mini-cart__buttons.buttons a.button.checkout,
+.body-townhub nav.woocommerce-pagination .page-numbers:hover,
+.body-townhub nav.woocommerce-pagination .page-numbers.current,
+.btn-unlock-month,
+input.button-primary,
+.price-head,
+.lstatus-started {
+  background: #4DB7FE; }
+
+.submit-sec-title:before,
+.header-search-input-wrap .hero-inputs-wrap .filter-gid-item input:focus,
+.pin, .nice-select:after, .loader-inner, .ed-btn, blockquote, .main-register-holder .tabs-menu li.current,
+.filter-sidebar-header .tabs-menu li.current, .header-search-input input:focus, .listsearch-input-wrap .tabs-menu li.current,
+.btn.border-btn, .litem-ad {
+  border-color: #4DB7FE; }
+
+.body-townhub ul.cart_list .woocommerce-mini-cart-item a.remove {
+  color: #4DB7FE !important;
+  border-color: #4DB7FE; }
+
+.body-townhub.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.body-townhub.woocommerce-cart table.cart td.actions button.button,
+.body-townhub.woocommerce-checkout .place-order button.button.alt {
+  background: #4DB7FE; }
+
+.body-townhub.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.body-townhub.woocommerce-checkout .place-order button.button.alt:hover {
+  background: #1aa2fe; }
+
+.woocommerce-mini-cart__buttons.buttons a,
+.body-townhub.woocommerce-cart table.cart td.actions .coupon button.button,
+.body-townhub.woocommerce-cart .cart-collaterals .cart_totals button.button,
+.scroll-nav-bookmark-btn,
+.lshare-shortcode .showshare {
+  background: #384F95; }
+
+.body-townhub .woocommerce-info {
+  border-top-color: #4DB7FE; }
+
+.inline-lsiw .filter-sidebar-header .tabs-menu li.current a,
+.color2-bg, .list-widget-social li a:hover, .contact-socials a:hover, .accordion a.toggle.act-accordion, .banner-wdget-content a:hover, .inline-lsiw .listsearch-input-wrap_contrl li.current a, .cc-btn:hover, .down-btn:hover, .new-dashboard-item:hover, .header-search-button:hover, .lg-actions .lg-next, .lg-actions .lg-prev, .box-media-zoom:hover, .main-search-button,
+.cth-dropdown-options input[type="checkbox"]:checked + label,
+.fchat-header,
+.body-townhub #review_form input#submit,
+.body-townhub #review_form input#submit:hover,
+.body-townhub div.product form.cart .button:hover,
+.woocommerce-mini-cart__buttons.buttons a.button,
+.body-townhub .woocommerce-product-search button,
+.btn-book-now, .listing-rating-count-wrap .review-score, .scroll-nav-wrapper-opt a.scroll-nav-wrapper-opt-btn,
+.review-score-total span.review-score-total-item, .reviews-comments-item-text .review-score-user span.review-score-user_item,
+.to-top {
+  background: #384F95; }
+
+.share-holder.hid-share .share-container .share-icon:hover, .images-collage-title.color-bg,
+.booking-details .msg-reply-to-link {
+  color: #384F95; }
+
+.green-bg, div.datedropper.primary .pick-submit, .footer-bg-pin, .gsd_open, .lstatus-opening, .verified-badge, .toggle-filter-btn.tsb_act, .status.st_online span, .slide-progress, .reply-item, .comment-reply-link, #progressbar li.active:last-child span, .user-profile-menu li a span, .infobox-status.open, .map-popup-location-category.shop-cat, .process-item_time-line:after,
+.switchbtn input:checked + .switchbtn-label,
+.collage-image-input.hasicon.empty-content,
+.header-search-input-wrap .hero-inputs-wrap .main-search-button,
+.body-townhub span.onsale, .count-select-ser {
+  background: #5ECFB1; }
+
+.clear-wishlist:hover, .lang-tooltip li a:before, .opening-hours ul li.todaysDay span.opening-hours-time, .pricerange .lpricerange-from, .pricerange .lpricerange-to, .tags-stylwrap .tags-title i, .faq-nav li a i, .tfp-det p a, .tfp-btn:before, .green-bg_color, .testi-link:hover,
+.woocommerce-grouped-product-list-item__price .woocommerce-Price-amount,
+.product_meta .posted_in a,
+.product_meta .tagged_as a,
+.ad-status-completed {
+  color: #5ECFB1; }
+
+.orange-bg {
+  background: #E9776D; }
+
+.clear-singleinput,
+.cth-cleartime:hover,
+.cth-cleardate:hover,
+.advanced-filter-close {
+  color: #E9776D; }
+
+.blue-bg, .map-popup-location-category.gym-cat {
+  background: #4C97FD; }
+
+.blue-bg_color {
+  color: #4C97FD; }
+
+.red-bg, .gsd_close, .lstatus-closed, .map-popup-location-category.cafe-cat, .infobox-status.close {
+  background: #F75C96; }
+
+.red-bg_color, .withdrawal-cancel, .card-verified.cv_not i {
+  color: #F75C96; }
+
+.cancel-wdwal-btn,
+.yellow-bg, .map-popup-location-category.hotels-cat {
+  background: #F8BD38; }
+
+.yellow-bg_color {
+  color: #F8BD38; }
+
+.purp-bg, .map-popup-location-category.event-cat {
+  background: #BE31E3; }
+
+.purp-bg_color {
+  color: #BE31E3; }
+
+.dark-blue-bg {
+  background: #3d528b; }
+
+.purp-gradient-bg {
+  background: linear-gradient(to left, #DBA9CB, #9451DA); }
+
+.green-gradient-bg {
+  background: linear-gradient(to left, #5ECFB1, #47EEB0); }
+
+.blue-gradient-bg {
+  background: linear-gradient(to top, #6DB6FD, #60B6FD); }
+
+.ctb-modal-title {
+  background: #4E65A3; }
+
+/*--
+    gradient
+--*/
+.color-gradient-bg,
+.gradient-bg, .header-modal .tabs-menu li.current, .scrollbar-inner2 .simplebar-scrollbar:before {
+  background-color: #6DB6FD;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6DB6FD), to(#6FCFFD));
+  background: -webkit-linear-gradient(top, #6DB6FD, #6FCFFD);
+  background: -moz-linear-gradient(top, #6DB6FD, #6FCFFD);
+  background: -ms-linear-gradient(top, #6DB6FD, #6FCFFD);
+  background: -o-linear-gradient(top, #6DB6FD, #6FCFFD); }
+
+/*--
+    dark gradient
+--*/
+.gradient-dark {
+  background-color: #325096;
+  background: -webkit-gradient(linear, 20% 0%, 0% 10%, from(#4E65A3), to(#325096));
+  background: -webkit-linear-gradient(right, #4E65A3, #325096);
+  background: -moz-linear-gradient(right, #4E65A3, #325096);
+  background: -ms-linear-gradient(right, #4E65A3, #325096);
+  background: -o-linear-gradient(right, #4E65A3, #325096); }
+
+.green-bg i,
+.color-bg i {
+  color: #fff; }
+
+.del-bg {
+  background: #F75C96; }
+
+.available-cal-months .cal-date-checked,
+.available-cal-months .cal-date-checked:hover {
+  background: #4db7fe; }
+
+.available-cal-months .cal-date-inside {
+  background: #80ccfe;
+  color: #fff; }
+
+.cancel-bg {
+  background: #ccc; }
+
+.lmsg-replied {
+  background-color: #4C97FD; }
