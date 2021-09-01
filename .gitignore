@@ -15,6 +15,7 @@
 # wp-content/themes/twenty*/
 wp-content/wpvividbackups
 wp-content/uploads
+wp-content/updraft
 
 # ignore node dependency directories
 node_modules/
