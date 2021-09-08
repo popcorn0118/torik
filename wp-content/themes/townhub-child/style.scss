@@ -1,0 +1,404 @@
+/*
+CTC Separate Stylesheet
+Updated: 2021-09-02 14:21:50
+Theme Name: TownHub Child
+Theme URI: https://townhub.cththemes.com/
+Template: townhub
+Author: CTHthemes
+Author URI: http://themeforest.net/user/cththemes
+Description: TownHub 手動創建子主題
+Tags: one-column,two-columns,right-sidebar,flexible-header,custom-colors,custom-header,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,post-formats,rtl-language-support,sticky-post,theme-options,threaded-comments,translation-ready
+Version: 1.5.9.1630563710
+*/
+$primary: #FF8300;
+$sec: #402020;
+$text: #393939;
+
+// 共用
+.elementor-widget-icon-box .elementor-icon-box-content {
+    flex-grow: 0 !important;
+}
+section {
+    background: unset;
+}
+.btn-primary, .btn-sec, .btn-primary-d {
+    .elementor-button {
+        border: 1px solid #fff;
+        min-width: 160px;
+        padding: 12px;
+        text-align: center;
+        border-radius: 0px;
+        line-height: 1.1;
+        font-size: 16px;
+        font-family: "Noto Serif TC", Sans-serif !important;
+        font-weight: 300 !important;
+        transition: 0.4s;
+    }
+    
+    &.w100 {
+        .elementor-button {
+            width: 100%;
+        }
+    }
+}
+.btn-primary {
+    .elementor-button {
+        background-color: $primary !important;
+        box-shadow: 0px 0px 0px 8px $primary;
+    }
+    
+    .elementor-button {
+        &:hover {
+            // background-color: lighten($primary, 10%) !important;
+            box-shadow: 0px 0px 0px 0px lighten($primary, 10%);
+        }
+    }
+    .w-border {
+        .elementor-button {
+            box-shadow: 0px 0px 0px 8px $primary, 0px 0px 0px 9px #ffffff;
+            &:hover {
+                box-shadow: 0px 0px 0px 0px $primary, 0px 0px 0px 0px #ffffff;
+            }
+        }
+    }
+}
+.btn-primary-d {
+    .elementor-button {
+        background-color: #F54108 !important;
+        box-shadow: 0px 0px 0px 8px #F54108;
+    }
+    
+    .elementor-button {
+        &:hover {
+            // background-color: lighten(#F54108, 10%) !important;
+            box-shadow: 0px 0px 0px 0px lighten(#F54108, 10%);
+        }
+    }
+    .w-border {
+        .elementor-button {
+            box-shadow: 0px 0px 0px 8px #F54108, 0px 0px 0px 9px #ffffff;
+            &:hover {
+                box-shadow: 0px 0px 0px 0px #F54108, 0px 0px 0px 0px #ffffff;
+            }
+        }
+    }
+}
+.btn-sec {
+    .elementor-button {
+        background-color: $sec !important;
+        box-shadow: 0px 0px 0px 8px $sec;
+    }
+    .elementor-button {
+        &:hover {
+            // background-color: lighten($sec, 10%) !important;
+            box-shadow: 0px 0px 0px 0px lighten($sec, 10%);
+        }
+    }
+    &.w-border {
+        .elementor-button {
+            box-shadow: 0px 0px 0px 8px $sec, 0px 0px 0px 9px #ffffff;
+            &:hover {
+                box-shadow: 0px 0px 0px 0px $sec, 0px 0px 0px 0px #ffffff;
+            }
+        }
+    }
+}
+
+// 首頁 header
+.index-header {
+    &::before, &::after {
+        content: '';
+        width: calc(50% - 110px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        border-bottom: 1px solid $sec;
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+    &.color-p{
+        &::before, &::after {
+            border-bottom: 1px solid $sec;
+        }
+    }
+    &.color-w{
+        &::before, &::after {
+            border-bottom: 1px solid #fff;
+        }
+    }
+    &.color-y{
+        &::before, &::after {
+            border-bottom: 1px solid #FFBC00;
+        }
+    }
+    .elementor-icon-box-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // icon
+        .elementor-icon-box-icon {
+            margin: 0 !important;
+        }
+        // 標題
+        .elementor-icon-box-content {
+            margin-left: 15px;
+        }
+    }
+}
+
+// 首頁 - 搜尋
+.index-hero-section {
+    .main-search-input-tabs {
+        margin-top: 0;
+        .tabs-menu {
+            margin-bottom: 103px;
+            display: flex;
+            li {
+                background-color: $sec;
+                min-width: 50%;
+                display: unset;
+                a {
+                    color: #fff;
+                    font-family: "Noto Serif TC", Sans-serif;
+                    font-weight: 200;
+                    font-size: 18px;
+                    padding: 21px 30px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: calc(100% - 16px);
+                        height: calc(100% - 16px);
+                        border: 1px solid #fff;
+                    }
+                }
+                &.current {
+                    background-color: $primary;
+                    a {
+                        color: $sec;
+                        &::before {
+                            display: none !important;
+                        }
+                        &::after {
+                            border: 1px solid $sec;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tabs-container {
+        box-shadow: 0 0 0;
+        background: transparent;
+        .hero-inputs-wrap {
+            .filter-gid-item {
+                border-right: 1px solid transparent;
+                .filter-item-inner {
+                    background-color: rgba(255,255,255,0.2);
+                    border-bottom: 1px solid #fff;
+                    height: 100%;
+                    .flabel-icon {
+                        line-height: 16px;
+                    }
+                    i {
+                        color: #fff;
+                    }
+                    input {
+                        color: #fff;
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                }
+                .nice-select {
+                    background-color: transparent;
+                    &::before, span {
+                        color: #fff;
+                    }
+                    &::after {
+                        border-color: #fff;
+                    }
+                }
+            }
+            .main-search-button {
+                background-color: #F54108;
+                box-shadow: 0px 0px 0px 8px #F54108;
+                border-radius: 0px;
+                font-size: 15px;
+                color: #fff;
+                top: 15px;
+                bottom: 15px;
+                border: 1px solid #fff;
+                transition: 0.4s;
+                @media (max-width: 768px) { 
+                    max-width: calc(100% - 26px);
+                }
+                i {
+                    color: #fff;
+                }
+                &:hover {
+                    background-color: $sec;
+                    box-shadow: 0px 0px 0px 8px $sec;
+                }
+            }
+        }
+    }
+    .hero-inputs-wrap:after {
+        display: none;
+    }
+}
+.index-hero-section-bg {
+    > div {
+        height: 270px;
+        margin-top: -270px;
+        @media (max-width: 1064px) {
+            margin-top: -250px;
+        }
+        @media (max-width: 768px) {
+            height: 400px;
+            margin-top: -400px;
+        }
+    }
+}
+
+// 首頁 - 精選造型
+.index-featured-look {
+    .featured-look-item {
+        position: relative;
+        .featured-look-text {
+            line-height: 1.5 !important;
+        }
+        .featured-look-avatar-img {
+
+        }
+        .featured-look-brn {
+            .avdbtn-text {
+                position: relative;
+                padding-right: 20px;
+                transition: 0.4s;
+                &::before, &::after {
+                    content: '';
+                    border-color: $primary;
+                    border: 1px solid #FF8300;
+                    display: inline-block;
+                }
+                &::before {
+                    width: 10px;
+                    height: 10px;
+                    transform: rotate(45deg) translateY(-68%);
+                    border-left: 0;
+                    border-bottom: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                }
+                &::after {
+                    transition: 0.8s;
+                    position: absolute;
+                    width: 20px;
+                    height: 1px;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    border-left: 0;
+                    border-right: 0;
+                    border-top: 0;
+                    right: -5px;
+                }
+                &:hover {
+                    padding-right: 50px;
+                    &::after {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 首頁 - 風格類型
+.imdex-style {
+    > div {
+        flex-wrap: wrap;
+    }
+    .imdex-style-item {
+        margin: 0 15px 30px 15px;
+        width: calc((100% / 3) - 30px) !important;
+        @media (max-width: 768px) {
+            width: calc(50% - 30px) !important;
+        }
+        @media (max-width: 768px) {
+            width: calc(100% - 30px) !important;
+        }
+        > .elementor-widget-wrap {
+            @media (max-width: 1140px) {
+                background-size: cover !important; 
+            }
+        }
+        &:hover {
+            > .elementor-widget-wrap {
+                transition: 0.4s !important;
+                background-size: 110% auto !important;
+                @media (max-width: 1140px) {
+                    background-size: cover !important; 
+                }
+            }
+        }
+        a {
+            padding: 60px 50px 60px 50px !important;
+            display: block;
+            font-weight: 300;
+            font-family: "Noto Serif TC", Sans-serif;
+            &:hover {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+//首頁 - 最新造型師 
+.newest-stylist {
+    .bdt-carousel-item {
+        .bdt-carousel-title {
+            a {
+                font-size: 18px;
+                font-family: "Vollkorn", Sans-serif;
+                &:hover {
+                    font-weight: normal;
+
+                }
+            }
+        }
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 30px;
+            height: 5px;
+            border-radius: 0;
+        }
+    }
+}
+
+
+
+// footer 
+.footer-gradual {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b49c5b+0,fcf3dc+33,e1c987+65,b49c5b+100 */
+    background: #b49c5b; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #b49c5b 0%, #fcf3dc 33%, #e1c987 65%, #b49c5b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #b49c5b 0%,#fcf3dc 33%,#e1c987 65%,#b49c5b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #b49c5b 0%,#fcf3dc 33%,#e1c987 65%,#b49c5b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b49c5b', endColorstr='#b49c5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
