@@ -19,7 +19,12 @@ section {
   background: unset;
 }
 
-.btn-primary .elementor-button, .btn-sec .elementor-button, .btn-primary-d .elementor-button {
+p {
+  line-height: 1.5 !important;
+  font-size: 14px !important;
+}
+
+.btn-primary .elementor-button, .btn-sec .elementor-button, .btn-primary-d .elementor-button, .form-warp .elementor-button {
   border: 1px solid #fff;
   min-width: 160px;
   padding: 12px;
@@ -32,24 +37,24 @@ section {
   transition: 0.4s;
 }
 
-.btn-primary.w100 .elementor-button, .btn-sec.w100 .elementor-button, .btn-primary-d.w100 .elementor-button {
+.btn-primary.w100 .elementor-button, .btn-sec.w100 .elementor-button, .btn-primary-d.w100 .elementor-button, .form-warp.w100 .elementor-button {
   width: 100%;
 }
 
-.btn-primary .elementor-button {
+.btn-primary .elementor-button, .form-warp .elementor-button {
   background-color: #FF8300 !important;
   box-shadow: 0px 0px 0px 8px #FF8300;
 }
 
-.btn-primary .elementor-button:hover {
+.btn-primary .elementor-button:hover, .form-warp .elementor-button:hover {
   box-shadow: 0px 0px 0px 0px #ff9c33;
 }
 
-.btn-primary .w-border .elementor-button {
+.btn-primary .w-border .elementor-button, .form-warp .w-border .elementor-button {
   box-shadow: 0px 0px 0px 8px #FF8300, 0px 0px 0px 9px #ffffff;
 }
 
-.btn-primary .w-border .elementor-button:hover {
+.btn-primary .w-border .elementor-button:hover, .form-warp .w-border .elementor-button:hover {
   box-shadow: 0px 0px 0px 0px #FF8300, 0px 0px 0px 0px #ffffff;
 }
 
@@ -85,6 +90,54 @@ section {
 
 .btn-sec.w-border .elementor-button:hover {
   box-shadow: 0px 0px 0px 0px #402020, 0px 0px 0px 0px #ffffff;
+}
+
+.form-warp {
+  position: relative;
+}
+
+.form-warp .elementor-widget-wrap::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #FF8300;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.form-warp form {
+  position: relative;
+  z-index: 2;
+}
+
+.form-warp form input[type=radio] {
+  display: none !important;
+}
+
+.form-warp form input[type=radio] + label::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  line-height: 3.2rem;
+  margin: 3px 3px -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 3px solid #ffffff;
+  box-shadow: 0px 0px 0px 1px #dddddd;
+  cursor: pointer;
+}
+
+.form-warp form input[type=radio]:checked + label::before {
+  background-color: #FF8300;
+  box-shadow: 0px 0px 0px 1px #FF8300;
+}
+
+.form-warp .elementor-button {
+  margin-top: 20px;
 }
 
 .index-header::before, .index-header::after {
@@ -395,6 +448,41 @@ section {
   width: 30px;
   height: 5px;
   border-radius: 0;
+}
+
+.join .join-item-1 .elementor-icon-list-item {
+  margin-right: 0 !important;
+}
+
+.join .join-item-1 .elementor-icon-list-item i {
+  width: auto !important;
+}
+
+.join .join-item-1 .elementor-icon-list-item:last-of-type i {
+  color: #402020 !important;
+}
+
+.join .join-item-1 p {
+  line-height: 1.5 !important;
+}
+
+.join-cooperate .join-cooperate-item {
+  position: relative;
+  z-index: 1;
+}
+
+.join-cooperate .join-cooperate-item::before {
+  content: '';
+  width: 206px;
+  height: 206px;
+  border-radius: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: #fff;
 }
 
 .footer-gradual {

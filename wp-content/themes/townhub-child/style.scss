@@ -21,7 +21,11 @@ $text: #393939;
 section {
     background: unset;
 }
-.btn-primary, .btn-sec, .btn-primary-d {
+p {
+    line-height: 1.5 !important;
+    font-size: 14px !important;
+}
+.btn-primary, .btn-sec, .btn-primary-d, .form-warp {
     .elementor-button {
         border: 1px solid #fff;
         min-width: 160px;
@@ -41,7 +45,7 @@ section {
         }
     }
 }
-.btn-primary {
+.btn-primary, .form-warp {
     .elementor-button {
         background-color: $primary !important;
         box-shadow: 0px 0px 0px 8px $primary;
@@ -101,6 +105,52 @@ section {
                 box-shadow: 0px 0px 0px 0px $sec, 0px 0px 0px 0px #ffffff;
             }
         }
+    }
+}
+
+.form-warp {
+    position: relative;
+    .elementor-widget-wrap {
+        &::after {
+            content: '';
+            position: absolute;
+            border: 1px solid $primary;
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    }
+    form {
+        position: relative;
+        z-index: 2;
+        input[type=radio] {
+            display: none !important;
+            + label::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                line-height: 3.2rem;
+                margin: 3px 3px -3px;
+                background-color:#fff;
+                border-radius: 100%;
+                border: 3px solid #ffffff;
+                box-shadow: 0px 0px 0px 1px #dddddd;
+                cursor: pointer;
+            }
+            &:checked {
+                + label::before {
+                    background-color:$primary;
+                    box-shadow: 0px 0px 0px 1px $primary;
+                }
+            }
+        }
+    }
+    .elementor-button {
+        margin-top: 20px;
     }
 }
 
@@ -389,7 +439,44 @@ section {
     }
 }
 
-
+// 加入我們
+.join {
+    .join-item-1 {
+        .elementor-icon-list-item {
+            margin-right: 0 !important;
+            i {
+                width: auto !important;
+            }
+            &:last-of-type {
+                i {
+                    color: $sec !important;
+                }
+            }
+        }
+        p {
+            line-height: 1.5 !important;
+        }
+    }
+}
+.join-cooperate {
+    .join-cooperate-item {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            width: 206px;
+            height: 206px;
+            border-radius: 100%;
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            position: absolute;
+            z-index: 0;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background-color: #fff;
+        }
+    }
+}
 
 // footer 
 .footer-gradual {
