@@ -81,7 +81,7 @@ p {
 }
 
 .btn-sec .elementor-button:hover {
-  box-shadow: 0px 0px 0px 0px #623131;
+  box-shadow: 0px 0px 0px 0px transparent;
 }
 
 .btn-sec.w-border .elementor-button {
@@ -138,6 +138,308 @@ p {
 
 .form-warp .elementor-button {
   margin-top: 20px;
+}
+
+.to-top,
+.chat-widget-button,
+.show-cart {
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px transparent !important;
+  background: #FF8300 !important;
+}
+
+@media only screen and (max-width: 1064px) {
+  .to-top,
+  .chat-widget-button,
+  .show-cart {
+    right: 20px !important;
+  }
+}
+
+.to-top:hover,
+.chat-widget-button:hover,
+.show-cart:hover {
+  background: #402020 !important;
+}
+
+.to-top i,
+.chat-widget-button i,
+.show-cart i {
+  color: #fff !important;
+}
+
+.to-top {
+  line-height: 2.2 !important;
+}
+
+.to-top:hover {
+  line-height: 2.3 !important;
+}
+
+.chat-widget-button span {
+  background: #402020;
+}
+
+.show-cart .cart-count {
+  color: #393939;
+}
+
+.bdt-user-login-skin-dropdown .bdt-dropdown {
+  padding: 20px !important;
+}
+
+.bdt-user-login-skin-dropdown .bdt-user-card-small {
+  background-color: #FCF3DC !important;
+  color: #ff8300;
+  margin: -20px -20px 20px -20px !important;
+}
+
+.bdt-user-login-skin-dropdown .bdt-user-card-small .bdt-card-title {
+  font-size: 18px !important;
+}
+
+.bdt-user-login-skin-dropdown .bdt-ul-custom-nav-icon {
+  line-height: 1.5;
+  color: #c6c6c6 !important;
+  min-width: 15px !important;
+  display: inline-block !important;
+  text-align: center !important;
+}
+
+.bdt-user-login-skin-dropdown .bdt-ul-custom-nav-icon i {
+  line-height: 1.5 !important;
+}
+
+.bdt-user-login-modal .bdt-modal-close-default {
+  padding: 20px;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog {
+  background: #FFFCF4;
+  border-radius: 0;
+  padding: 20px;
+  position: relative;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog::after {
+  content: '';
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border: 1px solid #FF8300;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-header {
+  padding: 30px 15px 15px 30px;
+  border-bottom: 0px;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-header .bdt-modal-title {
+  text-align: center;
+  color: #402020;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-header .bdt-modal-title .bdt-icon {
+  display: none;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body {
+  position: relative;
+  z-index: 1;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body .bdt-form-label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body input {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body input:not([type="checkbox"]) {
+  height: 45px;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body input:not([type="checkbox"])::placeholder {
+  color: #a7a7a7;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body input[type="checkbox"] {
+  border-radius: 3px;
+  position: relative;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body input[type="checkbox"]:checked {
+  border: 1px solid #FF8300;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  left: 4px;
+  transform: rotate(45deg);
+  border-right: 2px solid #FF8300;
+  border-bottom: 2px solid #FF8300;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body .elementor-field-type-submit {
+  justify-content: center;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body button {
+  width: calc(100% - 16px);
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: #FF8300;
+  box-shadow: 0px 0px 0px 8px #FF8300;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body button:hover {
+  background-color: #402020;
+  box-shadow: 0px 0px 0px 8px #402020;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body .bdt-user-login-password {
+  text-align: center;
+}
+
+.bdt-user-login-modal .bdt-modal-dialog .bdt-modal-body .bdt-user-login-password a:hover {
+  color: #402020;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .single-page-content-wrap {
+    padding: 0;
+  }
+}
+
+#register-form, .login-form-container, #password-lost-form {
+  background: #FFFCF4;
+  padding: 40px;
+  position: relative;
+}
+
+#register-form *, .login-form-container *, #password-lost-form * {
+  position: relative;
+  z-index: 2;
+}
+
+#register-form::after, .login-form-container::after, #password-lost-form::after {
+  content: '';
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  border: 1px solid #FF8300;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#register-form form .filter-tags, .login-form-container form .filter-tags, #password-lost-form form .filter-tags {
+  display: flex;
+}
+
+#register-form form input, .login-form-container form input, #password-lost-form form input {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+#register-form form input:not([type="checkbox"])::placeholder, #register-form form input:not([type="submit"])::placeholder, .login-form-container form input:not([type="checkbox"])::placeholder, .login-form-container form input:not([type="submit"])::placeholder, #password-lost-form form input:not([type="checkbox"])::placeholder, #password-lost-form form input:not([type="submit"])::placeholder {
+  color: #a7a7a7;
+}
+
+@media (max-width: 768px) {
+  #register-form form input:not([type="checkbox"]), #register-form form input:not([type="submit"]), .login-form-container form input:not([type="checkbox"]), .login-form-container form input:not([type="submit"]), #password-lost-form form input:not([type="checkbox"]), #password-lost-form form input:not([type="submit"]) {
+    width: calc(100% - 16px);
+  }
+}
+
+#register-form form input[type="checkbox"], .login-form-container form input[type="checkbox"], #password-lost-form form input[type="checkbox"] {
+  visibility: hidden;
+  margin-right: 5px;
+}
+
+#register-form form input[type="checkbox"]::before, .login-form-container form input[type="checkbox"]::before, #password-lost-form form input[type="checkbox"]::before {
+  content: '';
+  visibility: visible;
+  border-radius: 3px;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #a7a7a7;
+  display: inline-block;
+}
+
+#register-form form input[type="checkbox"]::after, .login-form-container form input[type="checkbox"]::after, #password-lost-form form input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  left: 4px;
+  top: 50%;
+  left: 28%;
+  transform: rotate(45deg) translate(-50%, -50%);
+  border-right: 2px solid #FF8300;
+  border-bottom: 2px solid #FF8300;
+}
+
+#register-form form input[type="checkbox"]:checked::before, .login-form-container form input[type="checkbox"]:checked::before, #password-lost-form form input[type="checkbox"]:checked::before {
+  border: 1px solid #FF8300;
+}
+
+#register-form form input[type="checkbox"]:checked::after, .login-form-container form input[type="checkbox"]:checked::after, #password-lost-form form input[type="checkbox"]:checked::after {
+  visibility: visible;
+}
+
+#register-form form button, #register-form form input[type="submit"], .login-form-container form button, .login-form-container form input[type="submit"], #password-lost-form form button, #password-lost-form form input[type="submit"] {
+  font-size: 14px;
+  min-width: 150px;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: #FF8300;
+  box-shadow: 0px 0px 0px 8px #FF8300;
+  margin: 5px 0 5px 8px;
+  padding: 5px 10px;
+}
+
+#register-form form button:hover, #register-form form input[type="submit"]:hover, .login-form-container form button:hover, .login-form-container form input[type="submit"]:hover, #password-lost-form form button:hover, #password-lost-form form input[type="submit"]:hover {
+  background-color: #402020;
+  box-shadow: 0px 0px 0px 8px #402020;
+}
+
+#register-form .signup-submit, #register-form .signup-submit + p,
+#register-form .lostpassword-submit, #register-form .lostpassword-submit + p, .login-form-container .signup-submit, .login-form-container .signup-submit + p,
+.login-form-container .lostpassword-submit, .login-form-container .lostpassword-submit + p, #password-lost-form .signup-submit, #password-lost-form .signup-submit + p,
+#password-lost-form .lostpassword-submit, #password-lost-form .lostpassword-submit + p {
+  display: inline-block;
+}
+
+#register-form .have-an-account, #register-form .forgot-password, .login-form-container .have-an-account, .login-form-container .forgot-password, #password-lost-form .have-an-account, #password-lost-form .forgot-password {
+  font-size: 14px;
+}
+
+#register-form .have-an-account:hover, #register-form .forgot-password:hover, .login-form-container .have-an-account:hover, .login-form-container .forgot-password:hover, #password-lost-form .have-an-account:hover, #password-lost-form .forgot-password:hover {
+  color: #402020;
+  font-weight: normal;
+}
+
+#register-form .have-an-account, .login-form-container .have-an-account, #password-lost-form .have-an-account {
+  margin-left: 20px;
+}
+
+.section-separator:before {
+  background: #FFBC00 !important;
 }
 
 .index-header::before, .index-header::after {
@@ -448,6 +750,229 @@ p {
   width: 30px;
   height: 5px;
   border-radius: 0;
+}
+
+.archive .tabs-wrapper .filter-sidebar-header,
+.archive .listsearch-input-wrap-header,
+.archive .more-filter-option-btn {
+  display: none;
+}
+
+.archive .hidden-listing-filter {
+  display: block !important;
+}
+
+.archive .hidden-listing-filter {
+  border-top: 0;
+}
+
+.archive .show-on-sides {
+  display: block;
+}
+
+.archive #wrapper > .content::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 400px;
+  background-color: #FF8300;
+}
+
+.archive .list-main-wrap-headers {
+  height: 80px;
+}
+
+.archive .list-main-wrap-headers .list-main-wrap-header {
+  background-color: transparent;
+  width: auto !important;
+  margin: 80px 0 0;
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .archive .list-main-wrap-headers .list-main-wrap-header {
+    padding: 0;
+  }
+}
+
+.archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-title h2 {
+  color: #402020;
+  font-size: 24px;
+}
+
+.archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .price-opt-title, .archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt i, .archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .current {
+  color: #fff;
+}
+
+.archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .nice-select {
+  border: none;
+  border-radius: 0px;
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+}
+
+.archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .nice-select::before {
+  display: none;
+}
+
+.archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .nice-select::after {
+  border-color: #fff;
+}
+
+.archive .scrl-content {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.archive .scrl-content .filter-inputs-row > .filter-gid-item {
+  width: calc(100% / 3 - 160px / 3);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .archive .scrl-content .filter-inputs-row > .filter-gid-item {
+    width: 100%;
+    margin-bottom: 0px !important;
+  }
+}
+
+.archive .scrl-content .filter-inputs-row .filter_submit {
+  width: 160px;
+}
+
+@media (max-width: 768px) {
+  .archive .scrl-content .filter-inputs-row .filter_submit {
+    width: 100%;
+  }
+}
+
+.archive .scrl-content .filter-item-inner .flabel-icon i, .archive .scrl-content .filter-item-inner .lfield-icon i {
+  color: #fff;
+}
+
+.archive .scrl-content .filter-item-inner input {
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  width: 100%;
+  height: 50px;
+  padding-left: 45px;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+}
+
+.archive .scrl-content .filter-item-inner input::placeholder {
+  color: #fff;
+}
+
+.archive .scrl-content .filter-item-inner .nice-select {
+  border: none;
+  border-radius: 0px;
+  width: 100%;
+  height: 50px;
+  padding-left: 40px;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.archive .scrl-content .filter-item-inner .nice-select::before, .archive .scrl-content .filter-item-inner .nice-select span {
+  color: #fff;
+}
+
+.archive .scrl-content .filter-item-inner .nice-select::after {
+  border-color: #fff;
+}
+
+.archive .scrl-content .filter-item-inner .header-search-button {
+  width: calc(100% - 8px);
+  background-color: #F54108;
+  box-shadow: 0px 0px 0px 8px #F54108;
+  border-radius: 0px;
+  font-size: 15px;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .archive .scrl-content .filter-item-inner .header-search-button {
+    width: calc(100% - 16px);
+    margin: 16px 8px;
+  }
+}
+
+.archive .scrl-content .filter-item-inner .header-search-button i {
+  color: #fff;
+}
+
+.archive .scrl-content .filter-item-inner .header-search-button:hover {
+  background-color: #402020;
+  box-shadow: 0px 0px 0px 8px #402020;
+}
+
+.archive .lws_mobile {
+  padding: 0;
+}
+
+@media (max-width: 1064px) {
+  .archive .lws_mobile {
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .archive .lws_mobile {
+    background-color: #FF8300;
+    margin: 0 -15px;
+    padding: 0 15px 15px;
+  }
+}
+
+@media (max-width: 1064px) {
+  .archive .mob-search-nav-wrap {
+    display: none;
+  }
+}
+
+.archive .more-filter-option-wrap {
+  margin: 0 0 30px;
+}
+
+.archive .more-filter-option-wrap .clear-filter-btn {
+  color: #402020;
+  padding: 0;
+}
+
+.archive .more-filter-option-wrap .clear-filter-btn i {
+  color: #402020;
+}
+
+.archive .list-main-wrap {
+  background: #fff;
+  padding: 0 30px 30px;
+}
+
+.archive .list-main-wrap .geodir-js-favorite_btn i {
+  color: #fff;
+}
+
+.archive .list-main-wrap .geodir_status_date {
+  background: #FF8300;
 }
 
 .join .join-item-1 .elementor-icon-list-item {

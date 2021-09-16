@@ -94,8 +94,7 @@ p {
     }
     .elementor-button {
         &:hover {
-            // background-color: lighten($sec, 10%) !important;
-            box-shadow: 0px 0px 0px 0px lighten($sec, 10%);
+            box-shadow: 0px 0px 0px 0px transparent;
         }
     }
     &.w-border {
@@ -153,6 +152,264 @@ p {
         margin-top: 20px;
     }
 }
+// 右下浮動icon
+.to-top,
+.chat-widget-button,
+.show-cart {
+    border-radius: 100%;
+    box-shadow: 0px 0px 0px transparent !important;
+    background: $primary !important;
+    @media only screen and (max-width: 1064px) {
+        right: 20px !important;
+    }
+    &:hover {
+        background: $sec !important;
+    }
+    i {
+        color: #fff !important;
+    }
+}
+.to-top {
+    line-height: 2.2 !important;
+    &:hover {
+        line-height: 2.3 !important;
+    }
+}
+.chat-widget-button span {
+    background: #402020;
+}
+.show-cart {
+    .cart-count {
+        color: $text;
+    }
+}
+// 右上角下拉選單
+.bdt-user-login-skin-dropdown .bdt-dropdown {
+    padding: 20px !important;
+}
+.bdt-user-login-skin-dropdown .bdt-user-card-small {
+    background-color: #FCF3DC !important;
+    color: #ff8300;
+    margin: -20px -20px 20px -20px !important;
+    .bdt-card-title {
+        font-size: 18px !important;
+    }
+}
+.bdt-user-login-skin-dropdown {
+    .bdt-ul-custom-nav-icon {
+        line-height: 1.5;
+        color: #c6c6c6 !important;
+        min-width: 15px !important;
+        display: inline-block !important;
+        text-align: center !important;
+        i {
+            line-height: 1.5 !important;
+        }
+    }
+}
+//會員登入-popup
+.bdt-user-login-modal {
+    .bdt-modal-close-default {
+        padding: 20px;
+    }
+    .bdt-modal-dialog {
+        background: #FFFCF4;
+        border-radius: 0;
+        padding: 20px;
+        position: relative;
+        &::after {
+            content: '';
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            border: 1px solid $primary;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bdt-modal-header {
+            padding: 30px 15px 15px 30px;
+            border-bottom: 0px;
+            .bdt-modal-title {
+                text-align: center;
+                color: $sec;
+                .bdt-icon {
+                    display: none;
+                }
+            }
+        }
+        .bdt-modal-body {
+            position: relative;
+            z-index: 1;
+            .bdt-form-label {
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+            input {
+                border: 1px solid #e6e6e6;
+                background: #fff;
+                &:not([type="checkbox"]) {
+                    height: 45px;
+                    &::placeholder {
+                        color: #a7a7a7;
+                    }
+                }
+                &[type="checkbox"] {
+                    border-radius: 3px;
+                    position: relative;
+                    &:checked {
+                        border: 1px solid $primary;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 5px;
+                            height: 8px;
+                            left: 4px;
+                            transform: rotate(45deg);
+                            border-right: 2px solid $primary;
+                            border-bottom: 2px solid $primary;
+                        }
+                    }
+                }
+            }
+            .elementor-field-type-submit {
+                justify-content: center;
+            }
+            button {
+                width: calc(100% - 16px);
+                border: 1px solid #fff;
+                border-radius: 0;
+                background-color: $primary;
+                box-shadow: 0px 0px 0px 8px $primary;
+                padding: 10px;
+                margin: 5px 0;
+                &:hover {
+                    background-color: $sec;
+                    box-shadow: 0px 0px 0px 8px $sec;
+                }
+            }
+            .bdt-user-login-password  {
+                text-align: center;
+                a {
+                    &:hover {
+                        color: $sec;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+//form
+//(登入(login-page)、註冊(register-page)、忘記密碼(forget-password-page))
+.single-page-content-wrap {
+    @media (max-width: 768px) {
+        padding: 0;
+    }
+}
+#register-form, .login-form-container, #password-lost-form {
+    background: #FFFCF4;
+    padding: 40px;
+    position: relative;
+    * {
+        position: relative;
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        border: 1px solid $primary;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    form {
+        .filter-tags {
+            display: flex;
+        }
+        input {
+            border: 1px solid #e6e6e6;
+            background: #fff;
+            &:not([type="checkbox"]),&:not([type="submit"]) {
+                &::placeholder {
+                    color: #a7a7a7;
+                }
+                @media (max-width: 768px) {
+                    width: calc(100% - 16px);
+                }
+            }
+            &[type="checkbox"] {
+                visibility: hidden;
+                margin-right: 5px;
+                &::before {
+                    content: '';
+                    visibility: visible;
+                    border-radius: 3px;
+                    position: relative;
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid #a7a7a7;
+                    display: inline-block;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 8px;
+                    left: 4px;
+                    top: 50%;
+                    left: 28%;
+                    transform: rotate(45deg) translate(-50%, -50%);
+                    border-right: 2px solid $primary;
+                    border-bottom: 2px solid $primary;
+                }
+                &:checked {
+                    &::before {
+                        border: 1px solid $primary;
+                    }
+                    &::after {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        button, input[type="submit"] {
+            font-size: 14px;
+            min-width: 150px;
+            border: 1px solid #fff;
+            border-radius: 0;
+            background-color: $primary;
+            box-shadow: 0px 0px 0px 8px $primary;
+            margin: 5px 0 5px 8px;
+            padding: 5px 10px;
+            &:hover {
+                background-color: $sec;
+                box-shadow: 0px 0px 0px 8px $sec;
+            }
+        }
+    }
+    .signup-submit, .signup-submit + p,
+    .lostpassword-submit, .lostpassword-submit + p {
+        display: inline-block;
+    }
+    .have-an-account, .forgot-password {
+        font-size: 14px;
+        &:hover {
+            color: $sec;
+            font-weight: normal;
+        }
+    }
+    .have-an-account {
+        margin-left: 20px;
+    }
+}
+.section-separator:before {
+    background: #FFBC00 !important;
+}
+
 
 // 首頁 header
 .index-header {
@@ -438,6 +695,206 @@ p {
         }
     }
 }
+
+//服務項目(首頁點搜尋進到此頁)
+.archive {
+    .tabs-wrapper .filter-sidebar-header,
+    .listsearch-input-wrap-header,
+    .more-filter-option-btn {
+        display: none;
+    }
+    .hidden-listing-filter {
+        display: block !important;
+    }
+    .hidden-listing-filter {
+        border-top: 0;
+    }
+    .show-on-sides {
+        display: block;
+    }
+    // 背景橘
+    #wrapper > .content {
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 400px;
+            background-color: $primary;
+        }
+    }
+    // 搜尋結果 title 區塊
+    .list-main-wrap-headers {
+        height: 80px;
+        .list-main-wrap-header {
+            background-color: transparent;
+            width: auto !important;
+            margin: 80px 0 0;
+            padding: 0;
+            @media (max-width: 480px) {
+                padding: 0;
+            }
+            .list-main-wrap-title h2 {
+                color: $sec;
+                font-size: 24px;
+            }
+            .list-main-wrap-opt {
+                .price-opt-title, i, .current {
+                    color: #fff;
+                }
+                // 下拉
+                .nice-select {
+                    border: none;
+                    border-radius: 0px;
+                    width: 100%;
+                    height: 50px;
+                    padding-left: 20px;
+                    background: transparent;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-bottom: 1px solid #fff;
+                    display: flex;
+                    align-items: center;
+                    &::before {
+                        display: none;
+                    }
+                    &::after {
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    // 搜尋 input 區塊
+    .scrl-content {
+        padding: 0 !important;
+        background: transparent !important;
+        .filter-inputs-row {
+            > .filter-gid-item {
+                width: calc(100% / 3 - 160px / 3);
+                margin-bottom: 0;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 0px !important;
+                }
+            }
+            .filter_submit {
+                width: 160px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+        .filter-item-inner {
+            .flabel-icon, .lfield-icon {
+                i {
+                    color: #fff;
+                }
+            }
+            input {
+                color: #fff;
+                border: none;
+                border-radius: 0px;
+                width: 100%;
+                height: 50px;
+                padding-left: 45px;
+                background: transparent;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid #fff;
+                display: flex;
+                align-items: center;
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+            .nice-select {
+                border: none;
+                border-radius: 0px;
+                width: 100%;
+                height: 50px;
+                padding-left: 40px;
+                background: transparent;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid #fff;
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                font-weight: normal;
+                &::before, span {
+                    color: #fff;
+                }
+                &::after {
+                    border-color: #fff;
+                }
+            }
+            .header-search-button {
+                width: calc(100% - 8px);
+                background-color: #F54108;
+                box-shadow: 0px 0px 0px 8px #F54108;
+                border-radius: 0px;
+                font-size: 15px;
+                color: #fff;
+                border: 1px solid #fff;
+                transition: 0.4s;
+                @media (max-width: 768px) { 
+                    width: calc(100% - 16px);
+                    margin: 16px 8px;
+                }
+                i {
+                    color: #fff;
+                }
+                &:hover {
+                    background-color: $sec;
+                    box-shadow: 0px 0px 0px 8px $sec;
+                }
+            }
+        }
+    }
+    
+    
+        .lws_mobile {
+            padding: 0;
+            @media (max-width: 1064px) {
+                display: block !important;
+            }
+            @media (max-width: 768px) {
+                background-color: $primary;
+                margin: 0 -15px;
+                padding: 0 15px 15px;
+            }
+        }
+        .mob-search-nav-wrap {
+            @media (max-width: 1064px) {
+                display: none;
+            }
+        }
+    
+    .more-filter-option-wrap {
+        margin: 0 0 30px;
+        // 重置篩選條件
+        .clear-filter-btn {
+            color: $sec;
+            padding: 0;
+            i {
+                color: $sec; 
+            }
+        }
+    }
+    // 主要內容區塊
+    .list-main-wrap {
+        background: #fff;
+        padding: 0 30px 30px;
+        .geodir-js-favorite_btn {
+            i {
+                color: #fff;
+            }
+        }
+        .geodir_status_date {
+            background: $primary;
+        }
+    }
+}
+
+
 
 // 加入我們
 .join {
