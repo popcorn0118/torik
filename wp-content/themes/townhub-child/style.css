@@ -24,7 +24,7 @@ p {
   font-size: 14px !important;
 }
 
-.archive #wrapper > .content::before, .single #wrapper > .content::before {
+.archive #wrapper > .content::before, .single-listing #wrapper > .content::before, .blog #wrapper > .content::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -34,6 +34,7 @@ p {
 }
 
 .btn-primary .elementor-button, .btn-sec .elementor-button, .btn-primary-d .elementor-button, .form-warp .elementor-button {
+  font-family: "Noto Serif TC", Sans-serif;
   border: 1px solid #fff;
   min-width: 160px;
   padding: 12px;
@@ -42,7 +43,7 @@ p {
   line-height: 1.1;
   font-size: 16px;
   font-family: "Noto Serif TC", Sans-serif !important;
-  font-weight: 300 !important;
+  font-weight: 600 !important;
   transition: 0.4s;
 }
 
@@ -1106,6 +1107,85 @@ p {
 
 #lreviews_form button i {
   color: #fff;
+}
+
+.blog .breadcrumbs-wrapper, .category-news .breadcrumbs-wrapper {
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.blog .breadcrumbs-wrapper a, .blog .breadcrumbs-wrapper span, .category-news .breadcrumbs-wrapper a, .category-news .breadcrumbs-wrapper span {
+  color: #fff;
+}
+
+.blog .breadcrumbs-wrapper a::before, .category-news .breadcrumbs-wrapper a::before {
+  color: #cfcfcf;
+}
+
+.blog .post-container, .category-news .post-container {
+  background: #fff;
+  padding: 30px;
+}
+
+.blog .readmore-btn, .category-news .readmore-btn {
+  border-radius: 0;
+  border: 1px solid #fff;
+  background-color: #402020;
+  box-shadow: 0px 0px 0px 8px #402020;
+  padding: 8px 50px 8px 30px;
+  font-weight: 400;
+}
+
+.blog .readmore-btn:hover, .category-news .readmore-btn:hover {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.blog .readmore-btn i, .category-news .readmore-btn i {
+  color: #fff;
+}
+
+.search-widget input {
+  background: #fff;
+  border: 1px solid #FF8300;
+  border-radius: 0;
+}
+
+.search-widget .search-submit {
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-widget .search-submit:hover {
+  background: #402020 !important;
+}
+
+.search-widget .search-submit .fa-search {
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-post .single-par {
+  background-color: #402020;
+}
+
+.single-post .brd-show-share i {
+  color: #fff;
+}
+
+.single-post .btn.color2-bg {
+  border-radius: 0;
+  border: 1px solid #fff;
+  background-color: #402020;
+  box-shadow: 0px 0px 0px 8px #402020;
+  padding: 8px 30px;
+  margin-left: 8px;
 }
 
 .join .join-item-1 .elementor-icon-list-item {
