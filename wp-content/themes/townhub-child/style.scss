@@ -48,7 +48,6 @@ p {
         border-radius: 0px;
         line-height: 1.1;
         font-size: 16px;
-        font-family: "Noto Serif TC", Sans-serif !important;
         font-weight: 600 !important;
         transition: 0.4s;
     }
@@ -976,7 +975,7 @@ p {
                 color: #393939;
                 background: #fff;
                 &::placeholder {
-                    color: #9C9C9C;
+                    color: #a7a7a7;
                     font-size: 15px;
                 }
             }
@@ -1197,12 +1196,198 @@ p {
     }
     th {
         background: #f8f8f8;
-        // color: #fff !important;
-    }
-    td {
-        // background: #FFFCF4;
     }
 }
+
+//控制面板
+.gradient-bg {
+    background: -webkit-linear-gradient(top,$primary,$sec) !important;
+}
+.dashboard-header-sec {
+    .dashboard-breadcrumbs {
+        a, span {
+            color: #fff;
+        }
+        a {
+            &:hover {
+                color: $sec;
+            }
+            &::before {
+                color: #cfcfcf !important;
+            }
+        }
+    }
+    .tfp-btn {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid #fff;
+        border-radius: 0px;
+        color:  rgba(255, 255, 255, 0.7);
+        strong {
+            color: #fff;
+        }
+        &::before {
+            color: #fff;
+        }
+    }
+    .dashboard-header-stats {
+        .swiper-slide {
+            .dashboard-header-stats-item {
+                color: #444;
+                i {
+                    background: #FFFCF4;
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .add_new-dashboard {
+        background-color: $primary;
+        box-shadow: 0px 0px 0px 8px $primary;
+        border: 1px solid #fff;
+        padding: 12px 20px;
+        text-align: center;
+        border-radius: 0px;
+        line-height: 1.1;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.4s;
+        color: #fff;
+        font-weight: normal;
+        i {
+            color: #fff;
+        }
+        &:hover {
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+    }
+}
+.dashboard-sidebar-col {
+    box-shadow: 0 0 15px 0px #00000026;
+    border-radius: 5px;
+    padding: 0 0 30px 0;
+    #dash_menu {
+        h3 {
+            color: $sec;
+        }
+        .no-list-style {
+            .dashboard-menu-li {
+                a {
+                    color: #444;
+                    font-size: 14px;
+                    font-weight: normal;
+                    &::before {
+                        background-color: $primary;
+                    }
+                    i {
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+    .logout_btn, .dashboard-to-top {
+        background-color: $primary;
+        box-shadow: 0px 0px 0px 8px $primary;
+        width: calc(100% - 50px);
+        margin-left: 8px;
+        position: relative;
+        left: calc(50% - 8px);
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+        padding: 12px 20px;
+        text-align: center;
+        border-radius: 0px;
+        line-height: 1.1;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.4s;
+        color: #fff;
+        font-weight: normal;
+        i {
+            color: #fff !important;
+        }
+        &:hover {
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+    }
+    .dashboard-to-top {
+        background-color: #9C9C9C;
+        box-shadow: 0px 0px 0px 8px #9C9C9C;
+    }
+}
+.dashboard-main-col {
+    .dashboard-title {
+        h3 {
+            color: #444;
+            padding-left: 50px;
+        }
+        &::before {
+            left: 0;
+            background: $primary;
+        }
+    }
+    label {
+        color: #444; 
+    }
+    input {
+        color: #444 !important;
+        &::placeholder {
+            color: #a7a7a7 !important;
+        }
+    }
+    .btn.color2-bg {
+        background-color: $primary;
+        box-shadow: 0px 0px 0px 8px $primary;
+        border: 1px solid #fff;
+        padding: 12px 50px 12px 20px;
+        text-align: center;
+        border-radius: 0px;
+        line-height: 1.1;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.4s;
+        color: #fff;
+        font-weight: normal;
+        i {
+            color: #fff !important;
+        }
+        &:hover {
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+    }
+    .color-bg {
+        &:hover {
+            color: #fff;
+        }
+    }
+    .page-numbers {
+        &.current, &:hover {
+            background: $primary;
+        }
+    }
+    .dashboard-chat-app-header {
+        background: #f1f1f1;
+    }
+    .delete-bookmark-btn {
+        background: $primary;
+        &:hover {
+            i {
+                color: #fff;
+                margin-top: 12px;
+            }
+        }
+    }
+    .del-bg::after {
+        background: $primary !important;
+    }
+    .btn-noicon {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+
 
 // footer 
 .footer-gradual {
