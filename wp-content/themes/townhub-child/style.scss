@@ -25,8 +25,8 @@ p {
     line-height: 1.5 !important;
     font-size: 14px !important;
 }
-// 背景橘(服務項目、服務項目詳細頁、部落格)
-.archive, .single-listing, .blog {
+// 背景橘(服務項目、服務項目詳細頁、部落格、購物頁)
+.archive, .single-listing, .blog, .woocommerce-page {
     #wrapper > .content {
         &::before {
             content: '';
@@ -1138,6 +1138,69 @@ p {
             transform: translateX(-50%);
             background-color: #fff;
         }
+    }
+}
+
+// 購物
+// 點icon展開右側
+.cart-modal {
+    .close-cart i {
+        color: #fff;
+    }
+}
+.body-townhub.woocommerce-page {
+    .breadcrumbs-wrapper {
+        background: transparent;
+        margin-bottom: 0;
+        a, span {
+            color: #fff;
+        }
+        a::before {
+            color: #cfcfcf;
+        }
+    }
+    .list-single-main-wrapper {
+        .single-page-content-wrap {
+            .single-page-title-inside {
+                border-bottom: 0;
+                .entry-title {
+                    color: $sec;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    .button {
+        // 購物頁按鈕-sec
+        border-radius: 0 !important;
+        border: 1px solid #fff;
+        background: $sec !important;
+        box-shadow: 0px 0px 0px 8px $sec;
+        padding: 8px 30px !important;
+        line-height: 1.2;
+        margin: 0 8px;
+        transition: 0.4s;
+        &:hover:not(:disabled) {
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+        // 購物頁按鈕-primary
+        &.checkout-button, &.alt {
+            background: $primary !important;
+            box-shadow: 0px 0px 0px 8px $primary;
+            &:hover {
+                box-shadow: 0px 0px 0px 0px transparent;
+            }
+        }
+    }
+    table {
+        border-top: 2px solid $primary !important;
+    }
+    th {
+        background: #f8f8f8;
+        // color: #fff !important;
+    }
+    td {
+        // background: #FFFCF4;
     }
 }
 

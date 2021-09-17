@@ -24,7 +24,7 @@ p {
   font-size: 14px !important;
 }
 
-.archive #wrapper > .content::before, .single-listing #wrapper > .content::before, .blog #wrapper > .content::before {
+.archive #wrapper > .content::before, .single-listing #wrapper > .content::before, .blog #wrapper > .content::before, .woocommerce-page #wrapper > .content::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -1221,6 +1221,64 @@ p {
   bottom: 0;
   transform: translateX(-50%);
   background-color: #fff;
+}
+
+.cart-modal .close-cart i {
+  color: #fff;
+}
+
+.body-townhub.woocommerce-page .breadcrumbs-wrapper {
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.body-townhub.woocommerce-page .breadcrumbs-wrapper a, .body-townhub.woocommerce-page .breadcrumbs-wrapper span {
+  color: #fff;
+}
+
+.body-townhub.woocommerce-page .breadcrumbs-wrapper a::before {
+  color: #cfcfcf;
+}
+
+.body-townhub.woocommerce-page .list-single-main-wrapper .single-page-content-wrap .single-page-title-inside {
+  border-bottom: 0;
+}
+
+.body-townhub.woocommerce-page .list-single-main-wrapper .single-page-content-wrap .single-page-title-inside .entry-title {
+  color: #402020;
+  font-size: 28px;
+}
+
+.body-townhub.woocommerce-page .button {
+  border-radius: 0 !important;
+  border: 1px solid #fff;
+  background: #402020 !important;
+  box-shadow: 0px 0px 0px 8px #402020;
+  padding: 8px 30px !important;
+  line-height: 1.2;
+  margin: 0 8px;
+  transition: 0.4s;
+}
+
+.body-townhub.woocommerce-page .button:hover:not(:disabled) {
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+.body-townhub.woocommerce-page .button.checkout-button, .body-townhub.woocommerce-page .button.alt {
+  background: #FF8300 !important;
+  box-shadow: 0px 0px 0px 8px #FF8300;
+}
+
+.body-townhub.woocommerce-page .button.checkout-button:hover, .body-townhub.woocommerce-page .button.alt:hover {
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+.body-townhub.woocommerce-page table {
+  border-top: 2px solid #FF8300 !important;
+}
+
+.body-townhub.woocommerce-page th {
+  background: #f8f8f8;
 }
 
 .footer-gradual {
