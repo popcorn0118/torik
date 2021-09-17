@@ -25,6 +25,19 @@ p {
     line-height: 1.5 !important;
     font-size: 14px !important;
 }
+// 背景橘
+.archive, .single {
+    #wrapper > .content {
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 400px;
+            background-color: $primary;
+        }
+    }
+}
 .btn-primary, .btn-sec, .btn-primary-d, .form-warp {
     .elementor-button {
         border: 1px solid #fff;
@@ -712,17 +725,6 @@ p {
     .show-on-sides {
         display: block;
     }
-    // 背景橘
-    #wrapper > .content {
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 400px;
-            background-color: $primary;
-        }
-    }
     // 搜尋結果 title 區塊
     .list-main-wrap-headers {
         height: 80px;
@@ -890,6 +892,137 @@ p {
         }
         .geodir_status_date {
             background: $primary;
+        }
+    }
+}
+
+//服務項目詳細頁
+.single {
+    .azp_container {
+        // background: #fff;
+    }
+    .lsingle-block-box {
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+    .lheadinfo {
+        .lsingle-block-box {
+            background: transparent;
+            // 上半部title
+            .lsingle-block-headinfos {
+                padding: 0;
+                .list-single-header-item { 
+                    padding: 20px 0 0;
+                    h1 {
+                        color: #fff;
+                    }
+                }
+                .list-single-header_bottom {
+                    border-top: 0;
+                    background: #fff;
+                    padding: 30px 30px 20px;
+                    margin-top: 10px;
+                    .geodir_status_date {
+                        background: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+//下半部
+.body-townhub {
+    //左邊內容
+    .azp-element-azp-c1r6whtz4ki {
+        button {
+            border-radius: 0;
+            border: 1px solid #fff;
+            background-color: $sec;
+            box-shadow: 0px 0px 0px 8px $sec;
+            padding: 8px 50px 8px 30px;
+            margin-left: 8px;
+        }
+    }
+    //右邊表格
+    .azp-element-azp-2x9n130lnp6 {
+        > .linquiry_general {
+            box-shadow: 0 0 0 0;
+            .block_box {
+                background: #FFFCF4;
+                border-radius: 0;
+                border: 1px solid $primary !important;
+                box-shadow: 0 0 0 16px #fffcf4;
+                margin: 8px;
+            }
+        }
+        .azp-element-azp-1m16hl93o7e {
+            .box-widget-item-header {
+                background: transparent;
+                border-bottom: 0;
+                margin: 0;
+                h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $sec;
+                    text-align: center;
+                }
+            }
+            .lfield-label {
+                color: $sec;
+                font-weight: bold;
+            }
+            input, textarea, select,.cth-dpick-label-val,.cth-dropdown-header {
+                color: #393939;
+                background: #fff;
+                &::placeholder {
+                    color: #9C9C9C;
+                    font-size: 15px;
+                }
+            }
+            .cth-dropdown-header {
+                color: #9C9C9C;
+                font-size: 15px;
+                font-weight: normal;
+                margin: 0px;
+            }
+            .total-coast {
+                border-top: 0;
+                border-bottom: 0;
+                color: #393939;
+                strong {
+                    color: #393939;
+                    font-weight: normal;
+                }
+            }
+            button {
+                width: 100%;
+                border-radius: 0;
+                border: 1px solid #fff;
+                background-color: $primary;
+                box-shadow: 0px 0px 0px 8px $primary;
+                padding: 8px 20px;
+            }
+        }
+    }
+}
+//評論bar
+#lreviews_form {
+    margin-bottom: 20px;
+    .irs-bar, .irs-bar-edge, .irs-slider.single {
+        background: $primary !important;
+    }
+    .irs-from, .irs-single, .irs-to {
+        background: $sec;
+    }
+    button {
+        border-radius: 0;
+        border: 1px solid #fff;
+        background-color: $sec;
+        box-shadow: 0px 0px 0px 8px $sec;
+        padding: 8px 50px 8px 30px;
+        margin-left: 8px;
+        i {
+            color: #fff;
         }
     }
 }
