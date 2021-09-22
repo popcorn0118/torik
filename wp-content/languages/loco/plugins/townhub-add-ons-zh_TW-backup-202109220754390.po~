@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TownHub Add-Ons\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-22 03:52+0000\n"
-"PO-Revision-Date: 2021-07-22 05:17+0000\n"
+"PO-Revision-Date: 2021-09-22 07:51+0000\n"
 "Language-Team: 繁體中文\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.5.3; wp-5.8\n"
-"Last-Translator: \n"
+"Last-Translator: estelle\n"
 "Language: zh_TW"
 
 #: includes/class-checkout-listing.php:170
@@ -1551,7 +1551,7 @@ msgstr "建立新的服務項目 <span><i class=\"fal fa-layer-plus\"></i></span
 
 #: includes/class-admin-scripts.php:179
 msgid "Add Listing Room"
-msgstr ""
+msgstr "新增加值服務"
 
 #: includes/class-admin-scripts.php:396 includes/class-frontend-scripts.php:312
 msgid "Add Member"
@@ -2407,7 +2407,7 @@ msgstr "賬戶餘額"
 #: includes/class-auth-stats.php:247
 msgctxt "Author Stats"
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: includes/class-auth-stats.php:104 includes/class-auth-stats.php:146
 #: includes/class-auth-stats.php:174 includes/class-auth-stats.php:269
@@ -2418,7 +2418,7 @@ msgstr "會員入會方案"
 #: includes/class-auth-stats.php:97 includes/class-auth-stats.php:167
 msgctxt "Author Stats"
 msgid "Select all"
-msgstr ""
+msgstr "選擇全部"
 
 #: includes/class-auth-stats.php:241
 msgctxt "Author Stats"
@@ -2429,7 +2429,7 @@ msgstr "總計"
 #: includes/class-auth-stats.php:270
 msgctxt "Author Stats"
 msgid "Total All-Time Sales"
-msgstr ""
+msgstr "全部時間總銷售"
 
 #: includes/class-auth-stats.php:105
 msgctxt "Author Stats"
@@ -5371,7 +5371,7 @@ msgstr ""
 
 #: includes/class-frontend-scripts.php:409
 msgid "Edit Room"
-msgstr ""
+msgstr "編輯加值服務"
 
 #: posttypes/cpt-room.php:36
 msgid "Edit Rooms"
@@ -9706,12 +9706,12 @@ msgstr ""
 #: posttypes/cpt-listing-type.php:1943 posttypes/cpt-listing-type.php:1946
 msgctxt "Listing type field"
 msgid "Room Quantity"
-msgstr ""
+msgstr "Quantity"
 
 #: posttypes/cpt-listing-type.php:1429
 msgctxt "Listing type field"
 msgid "Rooms/Products"
-msgstr ""
+msgstr "Products"
 
 #: posttypes/cpt-listing-type.php:1673 posttypes/cpt-listing-type.php:1676
 msgctxt "Listing type field"
@@ -9867,7 +9867,7 @@ msgstr "服務項目將進入待審核狀態"
 
 #: posttypes/cpt-listing-type.php:2165
 msgid "Listing/Room Price"
-msgstr ""
+msgstr "產品價格"
 
 #: posttypes/cpt-listing-type.php:208
 msgid "listing_type"
@@ -11261,11 +11261,11 @@ msgstr ""
 
 #: posttypes/cpt-lreport.php:39
 msgid "No Reports found"
-msgstr ""
+msgstr "無任何報告"
 
 #: posttypes/cpt-lreport.php:40
 msgid "No Reports found in Trash"
-msgstr ""
+msgstr "垃圾桶中無任何報告"
 
 #: template-parts/search-no.php:5
 msgid "No Results"
@@ -12583,7 +12583,7 @@ msgstr ""
 #: shortcodes/azp.php:545 shortcodes/azp.php:580 shortcodes/azp.php:615
 #: shortcodes/azp.php:642
 msgid "Preview Room"
-msgstr ""
+msgstr "預覽"
 
 #: azp_elements/card/preview_listing_content.php:8
 #: azp_elements/card/preview_listing.php:8
@@ -13045,7 +13045,7 @@ msgstr ""
 
 #: posttypes/cpt-lreport.php:31
 msgid "Reports"
-msgstr ""
+msgstr "報告"
 
 #: includes/class-admin-scripts.php:202
 msgid "Required"
@@ -13223,27 +13223,27 @@ msgstr ""
 
 #: shortcodes/azp.php:640
 msgid "Room Button"
-msgstr ""
+msgstr "按鈕"
 
 #: azp_elements/rcard/room.php:6
 msgid "Room Card"
-msgstr ""
+msgstr "卡片"
 
 #: posttypes/cpt-room.php:22
 msgid "Room Datas"
-msgstr ""
+msgstr "日期"
 
 #: azp_elements/sroom/quantity.php:6
 msgid "Room Quantity"
-msgstr ""
+msgstr "產品數量"
 
 #: posttypes/cpt-listing-type.php:2170
 msgid "Room quantity"
-msgstr ""
+msgstr "產品數量"
 
 #: posttypes/cpt-booking.php:98 shortcodes/azp.php:259
 msgid "Room Type"
-msgstr ""
+msgstr "產品類型"
 
 #: posttypes/cpt-room.php:32 posttypes/cpt-room.php:33
 #: includes/class-checkout-listing.php:270
@@ -13259,12 +13259,12 @@ msgstr "加值服務預訂"
 #: azp_templates/instant/lbook_rooms.php:43
 msgctxt "rooms booking date format"
 msgid "DD/MM/YYYY"
-msgstr ""
+msgstr "日/月/年"
 
 #: template-parts/room-inquiry-field.php:23
 msgctxt "Rooms Inquiry"
 msgid "Email Address*"
-msgstr ""
+msgstr "Email*"
 
 #: template-parts/room-inquiry-field.php:27
 msgctxt "Rooms Inquiry"
@@ -13274,7 +13274,7 @@ msgstr "電話"
 #: template-parts/room-inquiry-field.php:19
 msgctxt "Rooms Inquiry"
 msgid "Your Name*"
-msgstr ""
+msgstr "Name*"
 
 #: template-parts/dashboard/inquiries.php:289
 #: template-parts/dashboard/bookings.php:292
@@ -13541,7 +13541,7 @@ msgstr ""
 
 #: posttypes/cpt-lreport.php:38
 msgid "Search Reports"
-msgstr ""
+msgstr "搜索報告"
 
 #: inc/template_tags.php:956
 msgid "Search results for: "
@@ -14197,11 +14197,11 @@ msgstr "登錄"
 
 #: azp_elements/widget/lsimilar.php:6
 msgid "Similar Listings"
-msgstr "類似服務"
+msgstr "其他造型師"
 
 #: azp_elements/widget/lsimilar_slider.php:6
 msgid "Similar Listings - Slider"
-msgstr "類似服務 - 滑塊"
+msgstr "其他造型師 - 滑塊"
 
 #: elementor/listings_slider.php:210
 msgid "Simple Style"
@@ -14249,7 +14249,7 @@ msgstr "單張地圖縮放"
 #: azp_elements/sroom/content.php:8 azp_elements/sroom/calendar.php:8
 #: azp_elements/sroom/button.php:8
 msgid "Single Room"
-msgstr ""
+msgstr "單一產品"
 
 #: azp_elements/inquiry/general.php:266 azp_elements/instant/general.php:224
 msgid "Single Slot?"
@@ -15286,7 +15286,7 @@ msgstr ""
 
 #: includes/class-ajax-handler.php:1063
 msgid "The room is empty.<br>Thank you."
-msgstr ""
+msgstr "此產品已空"
 
 #: posttypes/townhub-chat.php:495
 msgid "the site admin"

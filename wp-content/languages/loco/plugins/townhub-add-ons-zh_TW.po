@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TownHub Add-Ons\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-22 03:52+0000\n"
-"PO-Revision-Date: 2021-07-22 05:23+0000\n"
+"PO-Revision-Date: 2021-09-22 07:54+0000\n"
 "Language-Team: 繁體中文\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.5.3; wp-5.8\n"
-"Last-Translator: \n"
+"Last-Translator: estelle\n"
 "Language: zh_TW"
 
 #: includes/class-checkout-listing.php:170
@@ -14197,11 +14197,11 @@ msgstr "登錄"
 
 #: azp_elements/widget/lsimilar.php:6
 msgid "Similar Listings"
-msgstr "類似服務"
+msgstr "其他造型師"
 
 #: azp_elements/widget/lsimilar_slider.php:6
 msgid "Similar Listings - Slider"
-msgstr "類似服務 - 滑塊"
+msgstr "其他造型師 - 滑塊"
 
 #: elementor/listings_slider.php:210
 msgid "Simple Style"
