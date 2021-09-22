@@ -31,7 +31,6 @@ $phone = get_post_meta( get_the_ID(), ESB_META_PREFIX.'phone', true );
 $whatsapp = get_post_meta( get_the_ID(), ESB_META_PREFIX.'whatsapp', true );
 $email = get_post_meta( get_the_ID(), ESB_META_PREFIX.'email', true );
 $website = get_post_meta( get_the_ID(), ESB_META_PREFIX.'website', true );
-
 if( $auto_whatsapp == 'yes' && empty($whatsapp) ) $whatsapp = $phone;
 // $listing_author_id = get_the_author_meta('ID');
 // Esb_Class_Membership::current_plan( get_post_field( 'post_author', get_the_ID() ) )
@@ -82,19 +81,19 @@ if(( $hide_widget_on_check = townhub_addons_is_hide_on_plans($hide_widget_on) ) 
                         <?php endif;?>
                         <?php 
                         if( $phone != '' && $hide_phone != 'yes' ): ?>
-                        <li class="aucontact-phone">phone <span><?php _e( '<i class="fal fa-phone"></i> Phone :', 'townhub-add-ons' );?></span> <a href="tel:<?php echo esc_attr( $phone );?>"  rel="nofollow"><?php echo esc_html($phone)  ;?></a></li>
+                        <li class="aucontact-phone"><span><?php _e( '<i class="fal fa-phone"></i> Phone :', 'townhub-add-ons' );?></span> <a href="tel:<?php echo esc_attr( $phone );?>"  rel="nofollow"><?php echo esc_html($phone)  ;?></a></li>
                         <?php endif;?>
                         <?php 
                         if($email != '' && $hide_email != 'yes' ): ?>
-                        <li class="aucontact-email">email <span><?php _e( '<i class="fal fa-envelope"></i> Mail :', 'townhub-add-ons' );?></span> <a href="mailto:<?php echo esc_attr( $email ) ;?>"  rel="nofollow"><?php echo  esc_html($email)  ;?></a></li>
+                        <li class="aucontact-email"><span><?php _e( '<i class="fal fa-envelope"></i> Mail :', 'townhub-add-ons' );?></span> <a href="mailto:<?php echo esc_attr( $email ) ;?>"  rel="nofollow"><?php echo  esc_html($email)  ;?></a></li>
                         <?php endif;?>
                         <?php 
                         if($website != '' && $hide_web != 'yes' ): ?>
-                        <li class="aucontact-web">website<span><?php _e( '<i class="fal fa-browser"></i> Website :', 'townhub-add-ons' );?></span> <a href="<?php echo $website ;?>" target="_blank"  rel="nofollow"><?php echo  esc_url($website ) ;?></a></li>
+                        <li class="aucontact-web"><span><?php _e( '<i class="fal fa-browser"></i> Website :', 'townhub-add-ons' );?></span> <a href="<?php echo $website ;?>" target="_blank"  rel="nofollow"><?php echo  esc_url($website ) ;?></a></li>
                         <?php endif;?>
                         <?php 
                         if($whatsapp != '' && $hide_whatsapp != 'yes' ): ?>
-                        <li class="aucontact-whatsapp">whatsapp <span><?php _e( '<i class="fab fa-whatsapp"></i> Whatsapp: ', 'townhub-add-ons' );?></span> <a href="<?php echo 'https://wa.me/'.$whatsapp; ?>" target="_blank"  rel="nofollow"><?php echo esc_html($whatsapp)  ;?></a></li>
+                        <li class="aucontact-whatsapp"><span><?php _e( '<i class="fab fa-whatsapp"></i> Whatsapp: ', 'townhub-add-ons' );?></span> <a href="<?php echo 'https://wa.me/'.$whatsapp; ?>" target="_blank"  rel="nofollow"><?php echo esc_html($whatsapp)  ;?></a></li>
                         <?php endif;?>
                     </ul>
                 </div>
