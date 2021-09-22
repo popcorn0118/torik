@@ -189,6 +189,10 @@ p {
   background: #402020;
 }
 
+.show-cart {
+  display: none;
+}
+
 .show-cart .cart-count {
   color: #393939;
 }
@@ -506,14 +510,15 @@ p {
 }
 
 .index-hero-section .main-search-input-tabs .tabs-menu {
-  margin-bottom: 103px;
+  margin-bottom: 69px;
   display: flex;
+  justify-content: center;
 }
 
 .index-hero-section .main-search-input-tabs .tabs-menu li {
   background-color: #402020;
-  min-width: 50%;
   display: unset;
+  flex: 1;
 }
 
 .index-hero-section .main-search-input-tabs .tabs-menu li a {
@@ -521,7 +526,7 @@ p {
   font-family: "Noto Serif TC", Sans-serif;
   font-weight: 200;
   font-size: 18px;
-  padding: 21px 30px;
+  padding: 21px 15px;
   position: relative;
 }
 
@@ -624,6 +629,11 @@ p {
 
 .index-hero-section .hero-inputs-wrap:after {
   display: none;
+}
+
+.index-hero-section .intro-item-after {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .index-hero-section-bg > div {

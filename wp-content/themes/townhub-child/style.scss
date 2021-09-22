@@ -192,6 +192,8 @@ p {
     background: #402020;
 }
 .show-cart {
+    // 隱藏購物車 icon
+    display: none;
     .cart-count {
         color: $text;
     }
@@ -479,18 +481,19 @@ p {
     .main-search-input-tabs {
         margin-top: 0;
         .tabs-menu {
-            margin-bottom: 103px;
+            margin-bottom: 69px;
             display: flex;
+            justify-content: center;
             li {
                 background-color: $sec;
-                min-width: 50%;
                 display: unset;
+                flex: 1;
                 a {
                     color: #fff;
                     font-family: "Noto Serif TC", Sans-serif;
                     font-weight: 200;
                     font-size: 18px;
-                    padding: 21px 30px;
+                    padding: 21px 15px;
                     position: relative;
                     &::after {
                         content: '';
@@ -576,6 +579,10 @@ p {
     }
     .hero-inputs-wrap:after {
         display: none;
+    }
+    .intro-item-after {
+        text-align: center;
+        margin-top: 10px;
     }
 }
 .index-hero-section-bg {
