@@ -899,6 +899,14 @@ p {
         }
         .geodir_status_date {
             background: $primary;
+            color: #fff;
+            font-weight: bold;
+        }
+        .listing-item {
+            // 服務項目卡片 - 強制隱藏價格
+            .lcard-price {
+                display: none;
+            }
         }
     }
 }
@@ -931,6 +939,11 @@ p {
                     margin-top: 10px;
                     .geodir_status_date {
                         background: $primary;
+                        color: #fff;
+                        font-weight: bold;
+                        i {
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -940,75 +953,160 @@ p {
 //下半部
 .body-townhub {
     //左邊內容
-    .azp-element-azp-c1r6whtz4ki {
-        button {
-            border-radius: 0;
-            border: 1px solid #fff;
-            background-color: $sec;
-            box-shadow: 0px 0px 0px 8px $sec;
-            padding: 8px 50px 8px 30px;
-            margin-left: 8px;
+    // .azp-element-azp-c1r6whtz4ki {
+    //     button {
+    //         border-radius: 0;
+    //         border: 1px solid #fff;
+    //         background-color: $sec;
+    //         box-shadow: 0px 0px 0px 8px $sec;
+    //         padding: 8px 50px 8px 30px;
+    //         margin-left: 8px;
+    //     }
+    // }
+    .lsingle-block-content {
+        color: #444;
+        *, span, p, a, li a {
+            color: #444;
         }
     }
-    //右邊表格
-    .azp-element-azp-2x9n130lnp6 {
-        > .linquiry_general {
-            box-shadow: 0 0 0 0;
-            .block_box {
-                background: #FFFCF4;
-                border-radius: 0;
-                border: 1px solid $primary !important;
-                box-shadow: 0 0 0 16px #fffcf4;
-                margin: 8px;
+    .rooms-container {
+        // 其他費用說明
+        .lrooms-item {
+            .lrooms-details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .lrooms-details-header {
+                    padding-bottom: 0;
+                }
+                .lroom-dbtn {
+                    .room-modal-open {
+                        font-weight: bold;
+                        i {
+                            margin-left: 5px;
+                        }
+                        &:hover, &:hover i {
+                           color: $primary;
+                        }
+                    }
+                }
             }
         }
-        .azp-element-azp-1m16hl93o7e {
-            .box-widget-item-header {
-                background: transparent;
-                border-bottom: 0;
-                margin: 0;
-                h3 {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: $sec;
-                    text-align: center;
+        
+
+    }
+    //右半部共用
+    .box-widget-item-header, .list-single-main-item-title, .lsingle-block-title {
+        position: relative;
+        // padding: 18px 0;
+        // margin: 0 30px 30px 30px;
+        // &::after {
+        //     content: '';
+        //     width: 100px;
+        //     height: 2px;
+        //     background-color: $primary;
+        //     display: block;
+        //     position: absolute;
+        //     bottom: -1px;
+        //     left: 0;
+        // }
+        h3 {
+            font-size: 1.4em !important;
+            font-weight: 600;
+            font-family: "Noto Sans TC";
+            color: #444;
+        }
+    }
+    //右邊表格(已暫時移除，對應後台 > 服務類別 > General Inquiry)
+    // .azp-element-azp-2x9n130lnp6 {
+    //     > .linquiry_general {
+    //         box-shadow: 0 0 0 0;
+    //         .block_box {
+    //             background: #FFFCF4;
+    //             border-radius: 0;
+    //             border: 1px solid $primary !important;
+    //             box-shadow: 0 0 0 16px #fffcf4;
+    //             margin: 8px;
+    //         }
+    //     }
+    //     .azp-element-azp-1m16hl93o7e {
+    //         .box-widget-item-header {
+    //             background: transparent;
+    //             border-bottom: 0;
+    //             margin: 0;
+    //             h3 {
+    //                 font-size: 24px;
+    //                 font-weight: bold;
+    //                 color: $sec;
+    //                 text-align: center;
+    //             }
+    //         }
+    //         .lfield-label {
+    //             color: $sec;
+    //             font-weight: bold;
+    //         }
+    //         input, textarea, select,.cth-dpick-label-val,.cth-dropdown-header {
+    //             color: #393939;
+    //             background: #fff;
+    //             &::placeholder {
+    //                 color: #a7a7a7;
+    //                 font-size: 15px;
+    //             }
+    //         }
+    //         .cth-dropdown-header {
+    //             color: #9C9C9C;
+    //             font-size: 15px;
+    //             font-weight: normal;
+    //             margin: 0px;
+    //         }
+    //         .total-coast {
+    //             border-top: 0;
+    //             border-bottom: 0;
+    //             color: #393939;
+    //             strong {
+    //                 color: #393939;
+    //                 font-weight: normal;
+    //             }
+    //         }
+    //         button {
+    //             width: 100%;
+    //             border-radius: 0;
+    //             border: 1px solid #fff;
+    //             background-color: $primary;
+    //             box-shadow: 0px 0px 0px 8px $primary;
+    //             padding: 8px 20px;
+    //         }
+    //     }
+    // }
+    // 右邊聯絡資訊
+    .service-content-info {
+        .cus-field-body {
+            padding: 18px 30px;
+            .cus-fields-wrap {
+                display: flex;
+                flex-direction: column;
+                .cus-field-item {
+                    &:before {
+                        min-width: 20px;
+                        text-align: center;
+                        margin-right: 5px;
+                        color:$primary;
+                    }
+                    display: flex;
+                    line-height: 1.5;
+                    .cus-field-title, .cus-field-content {
+                        font-family: 'Noto Sans TC';
+                        font-weight: 500;
+                    }
                 }
             }
-            .lfield-label {
-                color: $sec;
-                font-weight: bold;
-            }
-            input, textarea, select,.cth-dpick-label-val,.cth-dropdown-header {
-                color: #393939;
-                background: #fff;
-                &::placeholder {
-                    color: #a7a7a7;
-                    font-size: 15px;
-                }
-            }
-            .cth-dropdown-header {
-                color: #9C9C9C;
-                font-size: 15px;
-                font-weight: normal;
-                margin: 0px;
-            }
-            .total-coast {
-                border-top: 0;
-                border-bottom: 0;
-                color: #393939;
-                strong {
-                    color: #393939;
-                    font-weight: normal;
-                }
-            }
-            button {
-                width: 100%;
-                border-radius: 0;
-                border: 1px solid #fff;
-                background-color: $primary;
-                box-shadow: 0px 0px 0px 8px $primary;
-                padding: 8px 20px;
-            }
+        }
+    }
+    // 右邊月曆
+    .cal-date {
+        // 強致隱藏價格
+        .available-cal-metas {
+            display: none;
         }
     }
 }
@@ -1295,11 +1393,12 @@ p {
     .logout_btn, .dashboard-to-top {
         background-color: $primary;
         box-shadow: 0px 0px 0px 8px $primary;
-        width: calc(100% - 50px);
-        margin-left: 8px;
-        position: relative;
-        left: calc(50% - 8px);
+        width: calc(100% - 50px) !important;
+        margin-left: 8px !important;
+        position: relative !important;
+        left: calc(50% - 8px) !important;
         transform: translateX(-50%);
+        top: 0 !important;
         border: 1px solid #fff;
         padding: 12px 20px;
         text-align: center;
@@ -1390,6 +1489,24 @@ p {
     .btn-noicon {
         &:hover {
             color: #fff;
+        }
+    }
+    // 服務項目 > 加值服務卡片
+    .room-item {
+        min-height: 62px !important;
+        margin-top: 10px;
+        .room-footer {
+            background: #ffffff !important;
+            border: 1px solid #e6e6e6 !important;
+        }
+        .room-title {
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+        .room-delete {
+            line-height: 37px;
+            background: #b4b4b4;
+            border-left: 0;
         }
     }
 }
