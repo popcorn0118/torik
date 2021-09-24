@@ -1029,6 +1029,10 @@ p {
   color: #fff;
 }
 
+.single .lphotos .fa-search {
+  color: #fff !important;
+}
+
 .body-townhub .lsingle-block-content {
   color: #444;
 }
