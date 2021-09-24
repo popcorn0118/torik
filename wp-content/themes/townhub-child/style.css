@@ -11,6 +11,10 @@ Description: TownHub 手動創建子主題
 Tags: one-column,two-columns,right-sidebar,flexible-header,custom-colors,custom-header,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,post-formats,rtl-language-support,sticky-post,theme-options,threaded-comments,translation-ready
 Version: 1.5.9.1630563710
 */
+.bdt-navbar-nav > li > a, .bdt-navbar-item, .bdt-navbar-toggle {
+  min-height: 20px;
+}
+
 .elementor-widget-icon-box .elementor-icon-box-content {
   flex-grow: 0 !important;
 }

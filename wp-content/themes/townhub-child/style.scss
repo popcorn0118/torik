@@ -15,6 +15,10 @@ $sec: #402020;
 $text: #393939;
 
 // 共用
+
+.bdt-navbar-nav>li>a, .bdt-navbar-item, .bdt-navbar-toggle {
+    min-height: 20px;
+}
 .elementor-widget-icon-box .elementor-icon-box-content {
     flex-grow: 0 !important;
 }
