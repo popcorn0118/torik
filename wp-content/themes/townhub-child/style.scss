@@ -484,6 +484,12 @@ p {
             margin-bottom: 69px;
             display: flex;
             justify-content: center;
+            @media (max-width: 768px) {
+                margin-bottom: 59px;
+            }
+            @media (max-width: 560px) {
+                margin-bottom: 34px;
+            }
             li {
                 background-color: $sec;
                 display: unset;
@@ -495,6 +501,10 @@ p {
                     font-size: 18px;
                     padding: 21px 15px;
                     position: relative;
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        padding: 21px 10px;
+                    }
                     &::after {
                         content: '';
                         position: absolute;
@@ -583,6 +593,9 @@ p {
     .intro-item-after {
         text-align: center;
         margin-top: 10px;
+        @media (max-width: 768px) {
+            margin-top: 20px;
+        }
     }
 }
 .index-hero-section-bg {
@@ -779,7 +792,7 @@ p {
         background: transparent !important;
         .filter-inputs-row {
             > .filter-gid-item {
-                width: calc(100% / 3 - 160px / 3);
+                width: calc(100% / 4 - 160px / 4);
                 margin-bottom: 0;
                 @media (max-width: 768px) {
                     width: 100%;
