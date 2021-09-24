@@ -1138,7 +1138,29 @@ p {
         }
     }
 }
-
+// 作者
+.author {
+    .breadcrumbs-wrapper {
+        background: transparent;
+        margin-bottom: 0;
+        a, span {
+            color: #fff;
+        }
+        a::before {
+            color: #cfcfcf;
+        }
+    }
+    .post-container {
+        background: #fff;
+        padding: 30px;
+        min-height: 70vh;
+    }
+    .follow-btn, .author-msg-submit {
+        i {
+            color: #fff;
+        }
+    }
+}
 //部落格
 .blog, .category-news {
     .breadcrumbs-wrapper {

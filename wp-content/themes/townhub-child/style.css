@@ -1129,6 +1129,29 @@ p {
   color: #fff;
 }
 
+.author .breadcrumbs-wrapper {
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.author .breadcrumbs-wrapper a, .author .breadcrumbs-wrapper span {
+  color: #fff;
+}
+
+.author .breadcrumbs-wrapper a::before {
+  color: #cfcfcf;
+}
+
+.author .post-container {
+  background: #fff;
+  padding: 30px;
+  min-height: 70vh;
+}
+
+.author .follow-btn i, .author .author-msg-submit i {
+  color: #fff;
+}
+
 .blog .breadcrumbs-wrapper, .category-news .breadcrumbs-wrapper {
   background: transparent;
   margin-bottom: 0;
