@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.8.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-22 21:12:34+0000\n"
+"PO-Revision-Date: 2021-08-03 04:32:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +31,11 @@ msgstr "Asia/Taipei"
 msgid "Continue"
 msgstr "繼續"
 
-#: wp-admin/about.php:75
+#: wp-admin/includes/theme.php:338
+msgid "Template Editing"
+msgstr "編輯範本"
+
+#: wp-admin/about.php:108
 msgid "The Query Loop Block makes it possible to display posts based on specified parameters; like a PHP loop without the code. Easily display posts from a specific category, to do things like create a portfolio or a page full of your favorite recipes. Think of it as a more complex and powerful Latest Posts Block! Plus, pattern suggestions make it easier than ever to create a list of posts with the design you want."
 msgstr "[查詢迴圈] 區塊能顯示指定參數的文章，與 PHP 迴圈相似但不須撰寫程式碼。這個區塊能顯示指定分類的文章，能達成類似建立作品集或私房食譜頁面的目標，使用者可以將這個區塊類比為功能較為複雜但更為強大的 [最新文章] 區塊。此外，區塊版面配置建議能讓建立指定條件的文章清單變得比以往更容易。"
 
@@ -88,94 +92,94 @@ msgstr "WordPress 5.8 是由許多熱情的社群成員組成的全球團隊所�
 
 #. translators: %1$s: Link to 5.6's block dev notes. %2$s: Link to 5.7's block
 #. dev notes. %3$s: Link to 5.8's block dev notes.
-#: wp-admin/about.php:219
+#: wp-admin/about.php:252
 msgid "Expanding on previously implemented block supports in WordPress <a href=\"%1$s\">5.6</a> and <a href=\"%2$s\">5.7</a>, WordPress 5.8 introduces several new block support flags and new options to customize your registered blocks. More information is available in the <a href=\"%3$s\">block supports dev note</a>."
 msgstr "WordPress 5.8 導入了多個全新區塊支援旗標及選項以自訂開發者自行註冊的區塊，藉以擴充 WordPress <a href=\"%1$s\" target=\"_blank\">5.6</a> 及 <a href=\"%2$s\" target=\"_blank\">5.7</a> 中之前對區塊支援的改進。如需進一步了解，請參考〈<a href=\"%3$s\" target=\"_blank\">區塊支援開發須知</a>〉。"
 
-#: wp-admin/about.php:213
+#: wp-admin/about.php:246
 msgid "Adding Additional Block Supports"
 msgstr "新增額外的區塊支援"
 
-#: wp-admin/about.php:207
+#: wp-admin/about.php:240
 msgid "WebP is a modern image format that provides improved lossless and lossy compression for images on the web. WebP images are around 30% smaller on average than their JPEG or PNG equivalents, resulting in sites that are faster and use less bandwidth."
 msgstr "WebP 是能為網站提供改進的無損及有損壓縮圖片的新式圖片格式。WebP 圖片比相同解析度的 JPEG 及 PNG 圖片大小小約 30%，因此能讓網站更快速、耗用更少的頻寬。"
 
-#: wp-admin/about.php:203
+#: wp-admin/about.php:236
 msgid "Adding support for WebP"
 msgstr "新增支援 WebP"
 
 #. translators: %s: Link to Browse Happy.
-#: wp-admin/about.php:195
+#: wp-admin/about.php:228
 msgid "Support for Internet Explorer 11 has been dropped as of this release. This means you may have issues managing your site that will not be fixed in the future. If you are currently using IE11, it is strongly recommended that you <a href=\"%s\">switch to a more modern browser</a>."
 msgstr "這個版本已停止對 Internet Explorer 11 的支援，這代表使用 IE 管理網站所產生的相關問題，不會獲得任何修正。如果目前仍使用 IE11 的使用者，強烈建議轉換至<a href=\"%s\" target=\"_blank\">更新式的瀏覽器</a>。"
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:222
 msgid "Dropping support for Internet Explorer 11"
 msgstr "停止對 Internet Explorer 11 的支援"
 
 #. translators: %s: Theme.json dev note link.
-#: wp-admin/about.php:178
+#: wp-admin/about.php:211
 msgid "Introducing the Global Styles and Global Settings APIs: control the editor settings, available customization tools, and style blocks using a theme.json file in the active theme. This configuration file enables or disables features and sets default styles for both a website and blocks. If you build themes, you can experiment with this early iteration of a useful new feature. For more about what is currently available and how it works, <a href=\"%s\">check out this dev note</a>."
 msgstr "這次主要版本更新導入 Global Styles 及 Global Settings 這兩項 API。在網站目前使用的佈景主題中使用 theme.json 檔案，便能控制編輯器設定、提供可用的客製化工具及樣式區塊。這個組態檔案能控制功能的啟用與停用，並能為網站及區塊設定預設樣式。如果你是佈景主題開發者，可以試用這個實用全新功能的早期版本。如需進一步了解目前提供的內容及運作方式，請參考<a href=\"%s\" target=\"_blank\">開發須知</a>。"
 
-#: wp-admin/about.php:172
+#: wp-admin/about.php:205
 msgid "Theme.json"
 msgstr "Theme.json"
 
-#: wp-admin/about.php:159
+#: wp-admin/about.php:192
 msgid "For Developers to Explore"
 msgstr "開發者可深入了解的項目"
 
-#: wp-admin/about.php:149
+#: wp-admin/about.php:182
 msgid "Colorize your image and cover blocks with duotone filters! Duotone can add a pop of color to your designs and style your images (or videos in the cover block) to integrate well with your themes. You can think of the duotone effect as a black and white filter, but instead of the shadows being black and the highlights being white, you pick your own colors for the shadows and highlights. There’s more to learn about how it works in the documentation."
 msgstr "使用雙色調濾鏡為圖片及 [封面] 區塊上色！雙色調可以為網站設計增添流行色彩，並為圖片 (或 [封面] 區塊中的影片) 進行風格化，以便與網站目前使用的佈景主題進行密切的整合。以黑白濾鏡為例，雙色調效果會將陰影部分取代為黑色、亮部取代為白色，而使用者可以自訂雙色調的專屬陰影及亮部色彩。如需進一步了解雙色調如何運作，請參考相關文件說明。"
 
-#: wp-admin/about.php:145
+#: wp-admin/about.php:178
 msgid "Style and Colorize Images"
 msgstr "圖片樣式化及上色"
 
-#: wp-admin/about.php:130
+#: wp-admin/about.php:163
 msgid "Starting in this release the Pattern Transformations tool will suggest block patterns based on the block you are using. Right now, you can give it a try in the Query Block and Social Icon Block. As more patterns are added, you will be able to get inspiration for how to style your site without ever leaving the editor!"
 msgstr "從這個版本開始，區塊版面配置轉換工具會依據目前使用的區塊提出建議的區塊版面配置，目前可以在 [查詢迴圈] 及 [社交網路服務圖示] 區塊中使用這項功能。隨著開發者為 WordPress 加入更多區塊版面配置，使用者不需要離開編輯器，便能為網站風格化得到更多靈感。"
 
-#: wp-admin/about.php:126
+#: wp-admin/about.php:159
 msgid "Suggested Patterns for Blocks"
 msgstr "為使用的區塊建議區塊版面配置"
 
-#: wp-admin/about.php:117
+#: wp-admin/about.php:150
 msgid "Sometimes you need a simple landing page, but sometimes you need something a little more robust. As blocks increase, patterns emerge, and content creation gets easier, new solutions are needed to make complex content easy to navigate. List View is the best way to jump between layers of content and nested blocks. Since the List View gives you an overview of all the blocks in your content, you can now navigate quickly to the precise block you need. Ready to focus completely on your content? Toggle it on or off to suit your workflow."
 msgstr "有時候網站需要簡單的到達頁面，但是有時候又需要更紮實的東西。隨著區塊數量的增加、區塊版面配置的出現及內容創作的簡化，需要新的解決方案讓複雜的內容更加容易導覽。清單檢視是在內容階層及巢狀區塊間切換的最佳方式，並且能讓使用者獲得內容的全部區塊概觀。因此能立即快速導覽至所需區塊。如需全面專注於內撰寫，請切換至符合個人工作流程的檢視方式。"
 
-#: wp-admin/about.php:113
+#: wp-admin/about.php:146
 msgid "Overview of the Page Structure"
 msgstr "頁面結構概觀"
 
-#: wp-admin/about.php:103
+#: wp-admin/about.php:136
 msgid "Three Workflow Helpers"
 msgstr "三個工作流程協助程式"
 
-#: wp-admin/about.php:93
+#: wp-admin/about.php:126
 msgid "You can use the familiar block editor to edit templates that hold your content—simply activate a block theme or a theme that has opted in for this feature. Switch from editing your posts to editing your pages and back again, all while using a familiar block editor. There are more than 20 new blocks available within compatible themes. Read more about this feature and how to experiment with it in the release notes."
 msgstr "僅需啟用專為區塊所設計的佈景主題或內建編輯範本功能的佈景主題，使用者便能使用熟悉的區塊編輯器編輯包含使用者創作內容的範本。在編輯文章、頁面及再次返回間切換，完全不需要離開區塊編輯器。目前提供超過 20 種全新、與佈景主題相容的實用區塊，如需進一步了解這項功能及體驗這項功能的方式，請參考相關版本資訊。"
 
-#: wp-admin/about.php:89
+#: wp-admin/about.php:122
 msgid "Edit the Templates Around Posts"
 msgstr "以文章為主體編輯範本"
 
-#: wp-admin/about.php:72
+#: wp-admin/about.php:105
 msgid "Display Posts with New Blocks and Patterns"
 msgstr "使用新的區塊及區塊版面配置顯示文章"
 
 #. translators: %s: Widgets dev note link.
-#: wp-admin/about.php:61
+#: wp-admin/about.php:94
 msgid "After months of hard work, the power of blocks has come to both the Block Widgets Editor and the Customizer. Now you can add blocks both in widget areas across your site and with live preview through the Customizer. This opens up new possibilities to create content: from no-code mini layouts to the vast library of core and third-party blocks. For our developers, you can find more details in the <a href=\"%s\">Widgets dev note</a>."
 msgstr "經過多個月的努力，目前已經將區塊的功能導入區塊小工具編輯器及外觀自訂器中。使用者現在可以在小工具區域加入區塊，並透過外觀自訂器進行即時預覽。這項變革開啟了建立內容的全新可能性，從無須撰寫程式碼的極簡版面配置到核心程式及第三方區塊的大量程式庫都會有極大助益。WordPress 的開發者可以在〈<a href=\"%s\" target=\"_blank\">小工具開發須知</a>〉找到進一步的詳細資料。"
 
-#: wp-admin/about.php:55
+#: wp-admin/about.php:88
 msgid "Manage Widgets with Blocks"
 msgstr "使用區塊管理小工具"
 
-#: wp-admin/about.php:45
+#: wp-admin/about.php:78
 msgid "Three Essential Powerhouses"
 msgstr "三項核心基礎改進"
 
@@ -227,25 +231,25 @@ msgstr "儲存變更前，請確認 %1$s 檔案為可寫入。請參閱〈<a hre
 msgid "Rewrite rules:"
 msgstr "重寫規則:"
 
-#: wp-admin/nav-menus.php:1022
+#: wp-admin/nav-menus.php:1038
 msgid "List of menu items selected for deletion:"
 msgstr "已選取的選單項目刪除清單:"
 
-#: wp-admin/nav-menus.php:1020
+#: wp-admin/nav-menus.php:1036
 msgid "Remove Selected Items"
 msgstr "移除已選取的項目"
 
-#: wp-admin/nav-menus.php:987 wp-admin/nav-menus.php:1018
+#: wp-admin/nav-menus.php:999 wp-admin/nav-menus.php:1034
 msgid "Bulk Select"
 msgstr "批次選取"
 
 #. translators: %s: Item name.
-#: wp-admin/nav-menus.php:491
+#: wp-admin/nav-menus.php:501
 msgid "Deleted menu item: %s."
 msgstr "已刪除的選單項目: %s。"
 
 #. translators: %s: Item name.
-#: wp-admin/nav-menus.php:489
+#: wp-admin/nav-menus.php:499
 msgid "item %s"
 msgstr "[%s] 項目"
 
@@ -532,11 +536,11 @@ msgid "Want more events? <a href=\"%s\">Help organize the next one</a>!"
 msgstr "想參加更多活動？<a href=\"%s\" target=\"_blank\">協助社群舉辦活動</a>"
 
 #. translators: %s: User's display name.
-#: wp-admin/includes/ajax-actions.php:5448
+#: wp-admin/includes/ajax-actions.php:5450
 msgid "A password reset link was emailed to %s."
 msgstr "密碼重設連結已透過電子郵件傳送給「%s」。"
 
-#: wp-admin/includes/ajax-actions.php:5438
+#: wp-admin/includes/ajax-actions.php:5440
 msgid "Cannot send password reset, permission denied."
 msgstr "無法傳送密碼重設連結，權限遭拒。"
 
@@ -603,7 +607,7 @@ msgstr "聯絡資訊"
 msgid "Copy suggested policy text to clipboard"
 msgstr "複製建議的隱私權政策內容至剪貼簿"
 
-#: wp-admin/includes/file.php:1831 wp-admin/includes/update-core.php:1469
+#: wp-admin/includes/file.php:1831 wp-admin/includes/update-core.php:1473
 msgid "Directory listing failed."
 msgstr "無法列出目錄。"
 
@@ -683,7 +687,7 @@ msgid "https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-
 msgstr "https://developer.wordpress.org/rest-api/frequently-asked-questions/#why-is-authentication-not-working"
 
 #. translators: %s: WordPress 5.8 Field Guide link.
-#: wp-admin/about.php:238
+#: wp-admin/about.php:271
 msgid "Check out the latest version of the WordPress Field Guide. It highlights developer notes for each change you may want to be aware of. <a href=\"%s\">WordPress 5.8 Field Guide.</a>"
 msgstr "請參考最新版 WordPress 詳解指南，這份指南列舉了每一項開發者需要了解的注意事項。<a href=\"%s\" target=\"_blank\">WordPress 5.8 詳解指南</a>"
 
@@ -754,7 +758,7 @@ msgstr "新增應用程式密碼"
 msgid "Required to create an Application Password, but not to update the user."
 msgstr "這是建立應用程式密碼的必填項目，但這項設定不會變更使用者個人資料。"
 
-#: wp-admin/about.php:251
+#: wp-admin/about.php:284
 msgid "Go to Updates"
 msgstr "前往 [更新]"
 
@@ -917,10 +921,10 @@ msgstr "最後使用時間"
 
 #. translators: 1: The Site Health action that is no longer used by core. 2:
 #. The new function that replaces it.
-#: wp-admin/includes/ajax-actions.php:5176
-#: wp-admin/includes/ajax-actions.php:5209
-#: wp-admin/includes/ajax-actions.php:5242
-#: wp-admin/includes/ajax-actions.php:5292
+#: wp-admin/includes/ajax-actions.php:5178
+#: wp-admin/includes/ajax-actions.php:5211
+#: wp-admin/includes/ajax-actions.php:5244
+#: wp-admin/includes/ajax-actions.php:5294
 msgid "The Site Health check for %1$s has been replaced with %2$s."
 msgstr "%1$s 的 [網站狀態] 檢查已由 %2$s 取代。"
 
@@ -1104,7 +1108,7 @@ msgstr "%1$s 的值小於 %2$s。"
 msgid "Environment type"
 msgstr "環境類型"
 
-#: wp-admin/about.php:233
+#: wp-admin/about.php:266
 msgid "Check the Field Guide for more!"
 msgstr "請參閱詳解指南以進一步了解相關資訊"
 
@@ -1112,7 +1116,7 @@ msgstr "請參閱詳解指南以進一步了解相關資訊"
 msgid "Auto-updates are only available for plugins recognized by WordPress.org, or that include a compatible update system."
 msgstr "自動更新功能僅適用於 WordPress.org 外掛目錄或相容的更新系統所提供的外掛。"
 
-#: wp-admin/includes/theme.php:861 wp-admin/themes.php:1017
+#: wp-admin/includes/theme.php:863 wp-admin/themes.php:1017
 msgid "Update Incompatible"
 msgstr "更新套件與現有執行環境不相容"
 
@@ -1172,7 +1176,7 @@ msgctxt "theme"
 msgid "Activate &#8220;%s&#8221;"
 msgstr "啟用 %s"
 
-#: wp-admin/includes/ajax-actions.php:5382
+#: wp-admin/includes/ajax-actions.php:5384
 msgid "Sorry, you are not allowed to modify plugins."
 msgstr "很抱歉，目前的登入身分沒有修改外掛的權限。"
 
@@ -1394,7 +1398,7 @@ msgstr "WordPress 主要版本、每個佈景主題或外掛均可個別啟用�
 msgid "<strong>Important:</strong> Before updating, please <a href=\"%1$s\">back up your database and files</a>. For help with updates, visit the <a href=\"%2$s\">Updating WordPress</a> documentation page."
 msgstr "<strong>重要提示:</strong> 在進行更新前，請先<a href=\"%1$s\" target=\"_blank\">備份這個網站的資料庫及檔案</a>。如需進一步了解更新核心程式相關說明，請參考〈<a href=\"%2$s\" target=\"_blank\">更新 WordPress</a>〉線上說明。"
 
-#: wp-admin/customize.php:203 wp-admin/theme-install.php:389
+#: wp-admin/customize.php:207 wp-admin/theme-install.php:389
 #: wp-admin/theme-install.php:436 wp-admin/themes.php:554
 #: wp-admin/themes.php:912 wp-admin/themes.php:1128
 msgctxt "theme"
@@ -1431,20 +1435,20 @@ msgctxt "plugin"
 msgid "<strong>Error:</strong> Current versions of WordPress (%1$s) and PHP (%2$s) do not meet minimum requirements for %3$s. The plugin requires WordPress %4$s and PHP %5$s."
 msgstr "<strong>錯誤:</strong> 目前使用的 WordPress %1$s 及 PHP %2$s 不符合 %3$s 的最低版本需求。這個外掛需要 WordPress %4$s 及 PHP %5$s。"
 
-#: wp-admin/includes/ajax-actions.php:5404
+#: wp-admin/includes/ajax-actions.php:5406
 msgid "Invalid data. The item does not exist."
 msgstr "無效的資料。項目不存在。"
 
-#: wp-admin/includes/ajax-actions.php:5375
-#: wp-admin/includes/ajax-actions.php:5400
+#: wp-admin/includes/ajax-actions.php:5377
+#: wp-admin/includes/ajax-actions.php:5402
 msgid "Invalid data. Unknown type."
 msgstr "無效的資料。未知的類型。"
 
-#: wp-admin/includes/ajax-actions.php:5370
+#: wp-admin/includes/ajax-actions.php:5372
 msgid "Invalid data. Unknown state."
 msgstr "無效的資料。未知的狀態。"
 
-#: wp-admin/includes/ajax-actions.php:5364
+#: wp-admin/includes/ajax-actions.php:5366
 msgid "Invalid data. No selected item."
 msgstr "無效的資料。沒有選取的項目。"
 
@@ -1797,17 +1801,17 @@ msgstr "WordPress 最低版本需求"
 msgid "Theme name"
 msgstr "佈景主題名稱"
 
-#: wp-admin/includes/theme.php:1025 wp-admin/theme-install.php:410
+#: wp-admin/includes/theme.php:1027 wp-admin/theme-install.php:410
 #: wp-admin/theme-install.php:442
 msgctxt "theme"
 msgid "Cannot Install"
 msgstr "無法安裝"
 
-#: wp-admin/includes/theme.php:333
+#: wp-admin/includes/theme.php:334
 msgid "Full Site Editing"
 msgstr "全站編輯"
 
-#: wp-admin/includes/theme.php:323
+#: wp-admin/includes/theme.php:324
 msgid "Block Editor Patterns"
 msgstr "區塊編輯器版面配置"
 
@@ -1867,11 +1871,11 @@ msgstr "PHP 可存取的記憶體上限 (僅供管理後台)"
 msgid "Is this site discouraging search engines?"
 msgstr "這個網站是否阻擋搜尋引擎進行索引"
 
-#: wp-admin/includes/theme.php:348
+#: wp-admin/includes/theme.php:350
 msgid "Wide Blocks"
 msgstr "寬幅區塊"
 
-#: wp-admin/includes/theme.php:324
+#: wp-admin/includes/theme.php:325
 msgid "Block Editor Styles"
 msgstr "區塊編輯器樣式"
 
@@ -2072,7 +2076,7 @@ msgid "The seventh parameter passed to %s should be an integer representing menu
 msgstr "傳遞至 %s 的第 7 個參數應該為代表選單位置的整數。"
 
 #. translators: 1: WordPress version number, 2: The PHP extension name needed.
-#: wp-admin/includes/update-core.php:1070
+#: wp-admin/includes/update-core.php:1074
 msgid "The update cannot be installed because WordPress %1$s requires the %2$s PHP extension."
 msgstr "由於 WordPress %1$s 需要 PHP 的 %2$s 擴充功能，因此無法進行更新。"
 
@@ -2230,7 +2234,7 @@ msgstr "〈<a href=\"https://wordpress.org/support/article/settings-permalinks-s
 msgid "<a href=\"https://wordpress.org/support/article/dashboard-updates-screen/\">Documentation on Updating WordPress</a>"
 msgstr "〈<a href=\"https://wordpress.org/support/article/dashboard-updates-screen/\" target=\"_blank\">更新 WordPress</a>〉線上說明"
 
-#: wp-admin/nav-menus.php:653
+#: wp-admin/nav-menus.php:663
 msgid "<a href=\"https://wordpress.org/support/article/appearance-menus-screen/\">Documentation on Menus</a>"
 msgstr "〈<a href=\"https://wordpress.org/support/article/appearance-menus-screen/\" target=\"_blank\">選單</a>〉線上說明"
 
@@ -2777,17 +2781,17 @@ msgid "The authenticity of %s could not be verified as signature verification is
 msgstr "由於在這個系統無法使用簽章驗證，因此無法驗證 %s 的真實性。"
 
 #. translators: %s: Eraser friendly name.
-#: wp-admin/includes/ajax-actions.php:5051
+#: wp-admin/includes/ajax-actions.php:5053
 msgid "Eraser callback is not valid: %s."
 msgstr "清除程式的回呼無效: %s。"
 
 #. translators: %s: Eraser friendly name.
-#: wp-admin/includes/ajax-actions.php:5041
+#: wp-admin/includes/ajax-actions.php:5043
 msgid "Eraser does not include a callback: %s."
 msgstr "清除程式不包含的回呼: %s。"
 
-#: wp-admin/includes/ajax-actions.php:4763
-#: wp-admin/includes/ajax-actions.php:4954
+#: wp-admin/includes/ajax-actions.php:4765
+#: wp-admin/includes/ajax-actions.php:4956
 msgid "Sorry, you are not allowed to perform this action."
 msgstr "很抱歉，目前的登入身分沒有執行這項操作的權限。"
 
@@ -2923,7 +2927,7 @@ msgstr "%1$s 已有新版本可供下載安裝，但無法在目前使用的 PHP
 msgid "This plugin failed to load properly and is paused during recovery mode."
 msgstr "網站進入 [復原模式] 期間，這個外掛無法正確載入並會遭到系統暫停。"
 
-#: wp-admin/includes/theme.php:1170
+#: wp-admin/includes/theme.php:1172
 msgid "Go to the Themes screen"
 msgstr "前往 [佈景主題] 頁面"
 
@@ -2972,7 +2976,7 @@ msgid "Great job!"
 msgstr "非常好！"
 
 #: wp-admin/about.php:33 wp-admin/credits.php:34 wp-admin/freedoms.php:37
-#: wp-admin/includes/ms.php:1122 wp-admin/nav-menus.php:691
+#: wp-admin/includes/ms.php:1122 wp-admin/nav-menus.php:701
 #: wp-admin/options-privacy.php:143 wp-admin/privacy-policy-guide.php:41
 #: wp-admin/privacy.php:31 wp-admin/site-health.php:115
 msgid "Secondary menu"
@@ -3982,29 +3986,29 @@ msgstr "由於 <a href=\"%1$s\" target=\"_blank\">WordPress %2$s</a> 需要 MySQ
 msgid "You cannot update because <a href=\"%1$s\">WordPress %2$s</a> requires PHP version %3$s or higher. You are running version %4$s."
 msgstr "由於 <a href=\"%1$s\" target=\"_blank\">WordPress %2$s</a> 需要 PHP %3$s 或更新版本，因此無法進行更新。這個網站目前執行的是 %4$s 版。"
 
-#: wp-admin/nav-menus.php:927
+#: wp-admin/nav-menus.php:937
 msgid "Add menu items"
 msgstr "新增選單項目"
 
 #. translators: %s: URL to create a new menu.
-#: wp-admin/nav-menus.php:893
+#: wp-admin/nav-menus.php:903
 msgid "or <a href=\"%s\">create a new menu</a>. Don&#8217;t forget to save your changes!"
 msgstr "或為這個網站<a href=\"%s\">建立選單</a>。請記得要儲存已進行的變更。"
 
-#: wp-admin/nav-menus.php:840 wp-admin/nav-menus.php:905
+#: wp-admin/nav-menus.php:850 wp-admin/nav-menus.php:915
 msgid "Click the Save Menu button to save your changes."
 msgstr "點擊 [儲存選單] 按鈕以儲存變更。"
 
 #. translators: %s: URL to create a new menu.
-#: wp-admin/nav-menus.php:828
+#: wp-admin/nav-menus.php:838
 msgid "Edit your menu below, or <a href=\"%s\">create a new menu</a>. Don&#8217;t forget to save your changes!"
 msgstr "請在下方編輯這個網站的選單，或為這個網站<a href=\"%s\">建立選單</a>。請記得要儲存已進行的變更。"
 
-#: wp-admin/nav-menus.php:821
+#: wp-admin/nav-menus.php:831
 msgid "Fill in the Menu Name and click the Create Menu button to create your first menu."
 msgstr "輸入選單名稱並點擊 [建立選單] 按鈕便能建立這個網站的第一個選單。"
 
-#: wp-admin/nav-menus.php:820
+#: wp-admin/nav-menus.php:830
 msgid "Create your first menu below."
 msgstr "請在下方建立第一個選單。"
 
@@ -4116,9 +4120,10 @@ msgctxt "plugin"
 msgid "Cannot Install"
 msgstr "無法安裝"
 
+#. translators: %s: WordPress version
 #. translators: %s: WordPress version.
-#: wp-admin/includes/update.php:302 wp-admin/install.php:238
-#: wp-admin/update-core.php:92 wp-admin/upgrade.php:80
+#: wp-admin/about.php:65 wp-admin/includes/update.php:302
+#: wp-admin/install.php:238 wp-admin/update-core.php:92 wp-admin/upgrade.php:80
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -4133,15 +4138,15 @@ msgctxt "plugin"
 msgid "Resume %s"
 msgstr "恢復使用 %s"
 
-#: wp-admin/includes/theme.php:1168
+#: wp-admin/includes/theme.php:1170
 msgid "You can find more details and make changes on the Themes screen."
 msgstr "在 [佈景主題] 畫面可以找到進一步詳細資料並進行變更。"
 
-#: wp-admin/includes/theme.php:1167
+#: wp-admin/includes/theme.php:1169
 msgid "One or more themes failed to load properly."
 msgstr "一或多個佈景主題無法正確載入。"
 
-#: wp-admin/includes/theme.php:1138
+#: wp-admin/includes/theme.php:1140
 msgid "Could not resume the theme."
 msgstr "無法恢復使用佈景主題。"
 
@@ -4737,7 +4742,7 @@ msgid "Report generated for"
 msgstr "製表傳送目標"
 
 #. translators: %s: Exporter array index.
-#: wp-admin/includes/ajax-actions.php:4847
+#: wp-admin/includes/ajax-actions.php:4849
 msgid "Exporter array at index %s does not include a friendly name."
 msgstr "匯出程式在索引 %s 中的陣列不包含易記名稱。"
 
@@ -4749,72 +4754,72 @@ msgstr "很抱歉，目前的登入身分沒有在這個網站上清除個人資
 msgid "Sorry, you are not allowed to export personal data on this site."
 msgstr "很抱歉，目前的登入身分沒有在這個網站上匯出個人資料的權限。"
 
-#: wp-admin/includes/ajax-actions.php:5014
+#: wp-admin/includes/ajax-actions.php:5016
 msgid "Eraser index is out of range."
 msgstr "清除程式索引超出範圍。"
 
-#: wp-admin/includes/ajax-actions.php:4973
+#: wp-admin/includes/ajax-actions.php:4975
 msgid "Missing eraser index."
 msgstr "找不到清除程式索引。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4898
+#: wp-admin/includes/ajax-actions.php:4900
 msgid "Expected done (boolean) in response array from exporter: %s."
 msgstr "匯出程式 %s 必須完成回應陣列中的布林值。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4891
+#: wp-admin/includes/ajax-actions.php:4893
 msgid "Expected data array in response array from exporter: %s."
 msgstr "匯出程式 %s 的回應陣列中必須有資料陣列。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4884
+#: wp-admin/includes/ajax-actions.php:4886
 msgid "Expected data in response array from exporter: %s."
 msgstr "匯出程式 %s 的回應陣列中必須有資料。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4877
+#: wp-admin/includes/ajax-actions.php:4879
 msgid "Expected response as an array from exporter: %s."
 msgstr "匯出程式 %s 必須回應為一組陣列。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4863
+#: wp-admin/includes/ajax-actions.php:4865
 msgid "Exporter callback is not a valid callback: %s."
 msgstr "匯出程式 %s 的回呼不是有效的回呼。"
 
 #. translators: %s: Exporter friendly name.
-#: wp-admin/includes/ajax-actions.php:4856
+#: wp-admin/includes/ajax-actions.php:4858
 msgid "Exporter does not include a callback: %s."
 msgstr "匯出程式 %s 不包含回呼。"
 
 #. translators: %s: Exporter array index.
-#: wp-admin/includes/ajax-actions.php:4840
+#: wp-admin/includes/ajax-actions.php:4842
 msgid "Expected an array describing the exporter at index %s."
 msgstr "必須有一組陣列描述在索引 %s 中的匯出程式。"
 
-#: wp-admin/includes/ajax-actions.php:4826
+#: wp-admin/includes/ajax-actions.php:4828
 msgid "Exporter index is out of range."
 msgstr "匯出程式索引超出範圍。"
 
-#: wp-admin/includes/ajax-actions.php:4822
+#: wp-admin/includes/ajax-actions.php:4824
 msgid "Exporter index cannot be negative."
 msgstr "匯出程式索引不能為負數。"
 
-#: wp-admin/includes/ajax-actions.php:4816
+#: wp-admin/includes/ajax-actions.php:4818
 msgid "An exporter has improperly used the registration filter."
 msgstr "匯出程式不當使用註冊篩選器。"
 
-#: wp-admin/includes/ajax-actions.php:4787
-#: wp-admin/includes/ajax-actions.php:4979
+#: wp-admin/includes/ajax-actions.php:4789
+#: wp-admin/includes/ajax-actions.php:4981
 msgid "Missing page index."
 msgstr "找不到頁面索引。"
 
-#: wp-admin/includes/ajax-actions.php:4781
+#: wp-admin/includes/ajax-actions.php:4783
 msgid "Missing exporter index."
 msgstr "找不到匯出程式索引。"
 
-#: wp-admin/includes/ajax-actions.php:4772
-#: wp-admin/includes/ajax-actions.php:4963
+#: wp-admin/includes/ajax-actions.php:4774
+#: wp-admin/includes/ajax-actions.php:4965
 msgid "Invalid request type."
 msgstr "無效的要求類型。"
 
@@ -4941,7 +4946,7 @@ msgstr "個人資料匯出"
 msgid "Personal Data Export for %s"
 msgstr "個人資料匯出: %s"
 
-#: wp-admin/includes/ajax-actions.php:4777
+#: wp-admin/includes/ajax-actions.php:4779
 msgid "A valid email address must be given."
 msgstr "必須輸入有效的電子郵件地址。"
 
@@ -5012,61 +5017,61 @@ msgstr "確認要求已成功重新傳送。"
 msgid "Unable to initiate confirmation request."
 msgstr "確認要求無法初始化。"
 
-#: wp-admin/includes/ajax-actions.php:4759
-#: wp-admin/includes/ajax-actions.php:4949
+#: wp-admin/includes/ajax-actions.php:4761
+#: wp-admin/includes/ajax-actions.php:4951
 msgid "Invalid request ID."
 msgstr "無效的要求 ID。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5123
+#: wp-admin/includes/ajax-actions.php:5125
 msgid "Expected done flag in response array from %1$s eraser (index %2$d)."
 msgstr "清除程式 %1$s (索引 %2$d) 必須完成回應陣列中的旗標。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5112
+#: wp-admin/includes/ajax-actions.php:5114
 msgid "Expected messages key to reference an array in response array from %1$s eraser (index %2$d)."
 msgstr "清除程式 %1$s (索引 %2$d) 必須完成回應陣列中的訊息索引鍵以進行參照。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5101
+#: wp-admin/includes/ajax-actions.php:5103
 msgid "Expected messages key in response array from %1$s eraser (index %2$d)."
 msgstr "清除程式 %1$s (索引 %2$d) 必須完成回應陣列中的訊息索引鍵。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5090
+#: wp-admin/includes/ajax-actions.php:5092
 msgid "Expected items_retained key in response array from %1$s eraser (index %2$d)."
 msgstr "清除程式 %1$s (索引 %2$d) 必須完成回應陣列中的 items_retained 索引鍵。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5079
+#: wp-admin/includes/ajax-actions.php:5081
 msgid "Expected items_removed key in response array from %1$s eraser (index %2$d)."
 msgstr "清除程式 %1$s (索引 %2$d) 必須完成回應陣列中的 items_removed 索引鍵。"
 
 #. translators: 1: Eraser friendly name, 2: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5068
+#: wp-admin/includes/ajax-actions.php:5070
 msgid "Did not receive array from %1$s eraser (index %2$d)."
 msgstr "無法從 %1$s 清除程式收到陣列 (索引 %2$d)。"
 
 #. translators: %d: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5032
+#: wp-admin/includes/ajax-actions.php:5034
 msgid "Eraser array at index %d does not include a friendly name."
 msgstr "清除程式在索引 %d 中的陣列不包含易記名稱。"
 
 #. translators: %d: Eraser array index.
-#: wp-admin/includes/ajax-actions.php:5027
+#: wp-admin/includes/ajax-actions.php:5029
 msgid "Expected an array describing the eraser at index %d."
 msgstr "必須有一組陣列描述在索引 %d 中的清除程式。"
 
-#: wp-admin/includes/ajax-actions.php:4830
-#: wp-admin/includes/ajax-actions.php:5018
+#: wp-admin/includes/ajax-actions.php:4832
+#: wp-admin/includes/ajax-actions.php:5020
 msgid "Page index cannot be less than one."
 msgstr "頁面索引不能小於 1。"
 
-#: wp-admin/includes/ajax-actions.php:5010
+#: wp-admin/includes/ajax-actions.php:5012
 msgid "Eraser index cannot be less than one."
 msgstr "清除程式索引不能小於 1。"
 
-#: wp-admin/includes/ajax-actions.php:4969
+#: wp-admin/includes/ajax-actions.php:4971
 msgid "Invalid email address in request."
 msgstr "要求中的電子郵件地址無效。"
 
@@ -5572,11 +5577,11 @@ msgstr "很抱歉，目前的登入身分沒有刪除使用者的權限。"
 msgid "Sorry, you are not allowed to create users."
 msgstr "很抱歉，目前的登入身分沒有新增使用者的權限。"
 
-#: wp-admin/customize.php:241
+#: wp-admin/customize.php:245
 msgid "The Customizer allows you to preview changes to your site before publishing them. You can navigate to different pages on your site within the preview. Edit shortcuts are shown for some editable elements."
 msgstr "外觀自訂器讓網站管理員能在發佈網站前預覽變更，還可以在進行預覽時瀏覽網站的不同頁面。某些可編輯元素會顯示編輯捷徑。"
 
-#: wp-admin/customize.php:255
+#: wp-admin/customize.php:259
 msgctxt "short (~12 characters) label for hide controls button"
 msgid "Hide Controls"
 msgstr "隱藏控制項"
@@ -5585,7 +5590,7 @@ msgstr "隱藏控制項"
 msgid "Expand Sidebar"
 msgstr "展開資訊欄"
 
-#: wp-admin/nav-menus.php:1052
+#: wp-admin/nav-menus.php:1070
 msgid "Display location"
 msgstr "指定編輯中選單的顯示位置"
 
@@ -5612,7 +5617,7 @@ msgid "Select one or more Theme features to filter by"
 msgstr "選取一或多個佈景主題特色篩選條件"
 
 #. translators: %s: Number of ratings.
-#: wp-admin/includes/theme.php:844 wp-admin/theme-install.php:465
+#: wp-admin/includes/theme.php:846 wp-admin/theme-install.php:465
 msgid "(%s ratings)"
 msgstr "(%s 筆評分資訊)"
 
@@ -5678,7 +5683,7 @@ msgstr "重複背景圖片"
 #: wp-admin/includes/class-custom-background.php:100
 #: wp-admin/includes/class-custom-image-header.php:137 wp-admin/index.php:112
 #: wp-admin/link-manager.php:79 wp-admin/media-new.php:61 wp-admin/media.php:97
-#: wp-admin/my-sites.php:52 wp-admin/nav-menus.php:654
+#: wp-admin/my-sites.php:52 wp-admin/nav-menus.php:664
 #: wp-admin/options-discussion.php:32 wp-admin/options-general.php:49
 #: wp-admin/options-media.php:41 wp-admin/options-permalink.php:62
 #: wp-admin/options-reading.php:53 wp-admin/options-writing.php:53
@@ -5785,7 +5790,7 @@ msgstr "%s 已成功刪除。"
 msgid "The search for installed plugins will search for terms in their name, description, or author."
 msgstr "搜尋已安裝的外掛時，會一併以相同關鍵字在外掛名稱、說明內容或開發者中進行搜尋。"
 
-#: wp-admin/includes/theme.php:328
+#: wp-admin/includes/theme.php:329
 msgid "Custom Logo"
 msgstr "自訂標誌"
 
@@ -5803,7 +5808,7 @@ msgstr "很抱歉，目前的登入身分沒有新增使用者至這個多站網
 msgid "Sorry, you are not allowed to edit this changeset."
 msgstr "很抱歉，目前的登入身分沒有編輯這個變更集的權限。"
 
-#: wp-admin/includes/ajax-actions.php:4177 wp-admin/update.php:202
+#: wp-admin/includes/ajax-actions.php:4179 wp-admin/update.php:202
 #: wp-admin/update.php:223
 msgid "Sorry, you are not allowed to update themes for this site."
 msgstr "很抱歉，目前的登入身分沒有為這個網站更新佈景主題的權限。"
@@ -5853,7 +5858,7 @@ msgstr "很抱歉，目前的登入身分沒有為這個網站修改未註冊設
 msgid "Sorry, you are not allowed to manage options for this site."
 msgstr "很抱歉，目前的登入身分沒有為這個網站管理設定的權限。"
 
-#: wp-admin/nav-menus.php:676 wp-admin/widgets-form.php:393
+#: wp-admin/nav-menus.php:686 wp-admin/widgets-form.php:393
 msgid "Manage with Live Preview"
 msgstr "透過即時預覽進行管理"
 
@@ -5920,43 +5925,43 @@ msgstr "請立即更新 WordPress"
 msgid "<a href=\"%1$s\">WordPress %2$s</a> is available! <a href=\"%3$s\" aria-label=\"%4$s\">Please update now</a>."
 msgstr "<a href=\"%1$s\" target=\"_blank\">WordPress %2$s</a> 已可供下載安裝！<a href=\"%3$s\" aria-label=\"%4$s\">請立即更新</a>。"
 
-#: wp-admin/includes/theme.php:318
+#: wp-admin/includes/theme.php:319
 msgid "Portfolio"
 msgstr "作品集"
 
-#: wp-admin/includes/theme.php:317
+#: wp-admin/includes/theme.php:318
 msgid "Photography"
 msgstr "攝影"
 
-#: wp-admin/includes/dashboard.php:1308 wp-admin/includes/theme.php:316
+#: wp-admin/includes/dashboard.php:1308 wp-admin/includes/theme.php:317
 msgid "News"
 msgstr "新聞"
 
-#: wp-admin/includes/theme.php:314
+#: wp-admin/includes/theme.php:315
 msgid "Food & Drink"
 msgstr "美食"
 
-#: wp-admin/includes/theme.php:313
+#: wp-admin/includes/theme.php:314
 msgid "Entertainment"
 msgstr "娛樂"
 
-#: wp-admin/includes/theme.php:312
+#: wp-admin/includes/theme.php:313
 msgid "Education"
 msgstr "教育"
 
-#: wp-admin/includes/theme.php:311
+#: wp-admin/includes/theme.php:312
 msgid "E-Commerce"
 msgstr "電子商務"
 
-#: wp-admin/includes/theme.php:310
+#: wp-admin/includes/theme.php:311
 msgid "Blog"
 msgstr "部落格"
 
-#: wp-admin/includes/theme.php:332
+#: wp-admin/includes/theme.php:333
 msgid "Footer Widgets"
 msgstr "頁尾小工具"
 
-#: wp-admin/includes/theme.php:341
+#: wp-admin/includes/theme.php:343
 msgid "Grid Layout"
 msgstr "格狀版面配置"
 
@@ -6026,37 +6031,37 @@ msgstr "很抱歉，目前的登入身分沒有為這個網站編輯連結的權
 msgid "Sorry, you are not allowed to manage privacy options on this site."
 msgstr "很抱歉，目前的登入身分沒有在這個網站上管理隱私權設定的權限。"
 
-#: wp-admin/includes/ajax-actions.php:4602
+#: wp-admin/includes/ajax-actions.php:4604
 msgid "Plugin could not be deleted."
 msgstr "外掛無法刪除。"
 
-#: wp-admin/includes/ajax-actions.php:4456 wp-admin/update.php:29
+#: wp-admin/includes/ajax-actions.php:4458 wp-admin/update.php:29
 #: wp-admin/update.php:57 wp-admin/update.php:79
 msgid "Sorry, you are not allowed to update plugins for this site."
 msgstr "很抱歉，目前的登入身分沒有為這個網站更新外掛的權限。"
 
-#: wp-admin/includes/ajax-actions.php:4332
-#: wp-admin/includes/ajax-actions.php:4441
-#: wp-admin/includes/ajax-actions.php:4549
+#: wp-admin/includes/ajax-actions.php:4334
+#: wp-admin/includes/ajax-actions.php:4443
+#: wp-admin/includes/ajax-actions.php:4551
 msgid "No plugin specified."
 msgstr "找不到指定的外掛。"
 
-#: wp-admin/includes/ajax-actions.php:4308
+#: wp-admin/includes/ajax-actions.php:4310
 msgid "Theme could not be deleted."
 msgstr "佈景主題無法刪除。"
 
-#: wp-admin/includes/ajax-actions.php:4270
+#: wp-admin/includes/ajax-actions.php:4272
 msgid "Sorry, you are not allowed to delete themes on this site."
 msgstr "很抱歉，目前的登入身分沒有為這個網站刪除佈景主題的權限。"
 
-#: wp-admin/includes/ajax-actions.php:4053 wp-admin/theme-install.php:16
+#: wp-admin/includes/ajax-actions.php:4055 wp-admin/theme-install.php:16
 #: wp-admin/update.php:251 wp-admin/update.php:291 wp-admin/update.php:324
 msgid "Sorry, you are not allowed to install themes on this site."
 msgstr "很抱歉，目前的登入身分沒有在這個網站上安裝佈景主題的權限。"
 
-#: wp-admin/includes/ajax-actions.php:4040
-#: wp-admin/includes/ajax-actions.php:4163
-#: wp-admin/includes/ajax-actions.php:4258
+#: wp-admin/includes/ajax-actions.php:4042
+#: wp-admin/includes/ajax-actions.php:4165
+#: wp-admin/includes/ajax-actions.php:4260
 msgid "No theme specified."
 msgstr "找不到指定的佈景主題。"
 
@@ -6072,7 +6077,7 @@ msgstr "很抱歉，目前的登入身分沒有匯出這個網站內容的權限
 msgid "You can filter the list of posts by post status using the text links above the posts list to only show posts with that status. The default view is to show all posts."
 msgstr "使用者可以點擊文章清單上方的各個狀態連結，便會列出對應狀態的文章。預設檢視為顯示全部文章。"
 
-#: wp-admin/customize.php:214
+#: wp-admin/customize.php:218
 msgid "Close the Customizer and go back to the previous page"
 msgstr "關閉 [外觀自訂器] 並返回上一頁"
 
@@ -6516,13 +6521,13 @@ msgid "Send User Notification"
 msgstr "傳送使用者通知"
 
 #. translators: %s: Menu name.
-#: wp-admin/nav-menus.php:1072
+#: wp-admin/nav-menus.php:1090
 msgctxt "menu location"
 msgid "(Currently set to: %s)"
 msgstr "(目前選單: %s)"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:275
+#: wp-admin/about.php:308
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>%s 版</strong>修正了 1 個安全性問題。"
 
@@ -6534,15 +6539,15 @@ msgstr "https://zh-tw.gravatar.com/"
 msgid "Profile Picture"
 msgstr "個人資料圖片"
 
-#: wp-admin/about.php:272
+#: wp-admin/about.php:45 wp-admin/about.php:305
 msgid "Maintenance and Security Releases"
 msgstr "維護及安全性更新版本"
 
-#: wp-admin/about.php:269
+#: wp-admin/about.php:302
 msgid "Security Releases"
 msgstr "安全性更新版本"
 
-#: wp-admin/about.php:266
+#: wp-admin/about.php:299
 msgid "Maintenance Releases"
 msgstr "維護版本"
 
@@ -7084,7 +7089,7 @@ msgstr "留言 (%s)"
 msgid "Comments (%1$s) on &#8220;%2$s&#8221;"
 msgstr "在〈%2$s〉中有 %1$s 則留言"
 
-#: wp-admin/includes/ajax-actions.php:5392
+#: wp-admin/includes/ajax-actions.php:5394
 msgid "Sorry, you are not allowed to modify themes."
 msgstr "很抱歉，目前的登入身分沒有修改佈景主題的權限。"
 
@@ -7169,7 +7174,7 @@ msgid "%s comment"
 msgid_plural "%s comments"
 msgstr[0] "%s 則留言"
 
-#: wp-admin/includes/ajax-actions.php:3891
+#: wp-admin/includes/ajax-actions.php:3893
 msgid "Image could not be processed."
 msgstr "圖片無法進行處理。"
 
@@ -7192,7 +7197,7 @@ msgid "Show more details"
 msgstr "顯示更多詳細資料"
 
 #. translators: %s: Number of menus.
-#: wp-admin/nav-menus.php:720
+#: wp-admin/nav-menus.php:730
 msgid "Your theme supports %s menu. Select which menu appears in each location."
 msgid_plural "Your theme supports %s menus. Select which menu appears in each location."
 msgstr[0] "目前使用的佈景主題提供 %s 個位置顯示選單，請選取指定位置要顯示的選單。"
@@ -7390,7 +7395,7 @@ msgctxt "timezone date format"
 msgid "Y-m-d H:i:s"
 msgstr "Y 年 n 月 j 日a g:i:s"
 
-#: wp-admin/nav-menus.php:625
+#: wp-admin/nav-menus.php:635
 msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
 msgstr "如需新增自訂連結，請<strong>展開 [自訂連結] 區段並輸入網址及連結文字，然後點擊 [新增至選單]</strong> 便可完成。"
 
@@ -7428,7 +7433,7 @@ msgstr ""
 "《###SITE_NAME###》網站管理員敬上\n"
 "###SITEURL###"
 
-#: wp-admin/includes/theme.php:808 wp-admin/themes.php:926
+#: wp-admin/includes/theme.php:810 wp-admin/themes.php:926
 msgid "Close details dialog"
 msgstr "關閉詳細資料對話方塊"
 
@@ -7646,19 +7651,19 @@ msgid "Filter by comment type"
 msgstr "依留言類型篩選"
 
 #. translators: %s: User's display name.
-#: wp-admin/includes/ajax-actions.php:3866
+#: wp-admin/includes/ajax-actions.php:3868
 msgid "%s has been logged out."
 msgstr "「%s」已登出。"
 
-#: wp-admin/includes/ajax-actions.php:3862
+#: wp-admin/includes/ajax-actions.php:3864
 msgid "You are now logged out everywhere else."
 msgstr "已在除了這台裝置之外的全部裝置登出。"
 
-#: wp-admin/includes/ajax-actions.php:3853
+#: wp-admin/includes/ajax-actions.php:3855
 msgid "Could not log out user sessions. Please try again."
 msgstr "無法登出使用者工作階段，請再試一次。"
 
-#: wp-admin/includes/ajax-actions.php:3740
+#: wp-admin/includes/ajax-actions.php:3742
 msgid "This preview is unavailable in the editor."
 msgstr "無法在編輯器中預覽。"
 
@@ -7843,7 +7848,7 @@ msgid "Beta Testing"
 msgstr "Beta 版測試"
 
 #. translators: %s: URL that could not be embedded.
-#: wp-admin/includes/ajax-actions.php:3706
+#: wp-admin/includes/ajax-actions.php:3708
 msgid "%s failed to embed."
 msgstr "無法嵌入來自 %s 的內容。"
 
@@ -8070,12 +8075,12 @@ msgctxt "theme"
 msgid "Active:"
 msgstr "目前使用的佈景主題:"
 
-#: wp-admin/includes/theme.php:322
+#: wp-admin/includes/theme.php:323
 msgid "Accessibility Ready"
 msgstr "無障礙支援"
 
 #. translators: %s: Theme name.
-#: wp-admin/includes/theme.php:935 wp-admin/themes.php:1096
+#: wp-admin/includes/theme.php:937 wp-admin/themes.php:1096
 msgid "This is a child theme of %s."
 msgstr "這是 %s 的子佈景主題。"
 
@@ -8168,15 +8173,15 @@ msgstr "下列外掛已成功更新："
 msgid "Add Widget"
 msgstr "新增小工具"
 
-#: wp-admin/includes/theme.php:807 wp-admin/themes.php:925
+#: wp-admin/includes/theme.php:809 wp-admin/themes.php:925
 msgid "Show next theme"
 msgstr "顯示下一個佈景主題"
 
-#: wp-admin/includes/theme.php:806 wp-admin/themes.php:924
+#: wp-admin/includes/theme.php:808 wp-admin/themes.php:924
 msgid "Show previous theme"
 msgstr "顯示上一個佈景主題"
 
-#: wp-admin/includes/theme.php:856 wp-admin/themes.php:1012
+#: wp-admin/includes/theme.php:858 wp-admin/themes.php:1012
 msgid "Update Available"
 msgstr "已有更新可供安裝"
 
@@ -8293,8 +8298,8 @@ msgstr "WordPress %s 已可供下載安裝。"
 
 #: wp-admin/includes/class-core-upgrader.php:160
 #: wp-admin/includes/class-wp-upgrader.php:165
-#: wp-admin/includes/update-core.php:975 wp-admin/includes/update-core.php:1147
-#: wp-admin/includes/update-core.php:1183
+#: wp-admin/includes/update-core.php:979 wp-admin/includes/update-core.php:1151
+#: wp-admin/includes/update-core.php:1187
 msgid "The update cannot be installed because we will be unable to copy some files. This is usually due to inconsistent file permissions."
 msgstr "由於無法複製某些檔案，因此無法安裝更新。這個狀況通常是由不正確的檔案權限所造成。"
 
@@ -8417,7 +8422,7 @@ msgstr "更新語言套件"
 msgid "Background updates"
 msgstr "背景更新"
 
-#: wp-admin/includes/update-core.php:1243
+#: wp-admin/includes/update-core.php:1247
 msgid "There is not enough free disk space to complete the update."
 msgstr "沒有足夠的磁碟空間進行更新。"
 
@@ -8460,18 +8465,18 @@ msgstr "下方所列出的尺寸，決定了將圖片新增至 [媒體庫] 後�
 msgid "Comment must be manually approved"
 msgstr "留言必須由相關站務人員手動核准"
 
-#: wp-admin/nav-menus.php:623
+#: wp-admin/nav-menus.php:633
 msgid "<strong>Clicking the arrow to the right of any menu item</strong> in the editor will reveal a standard group of settings. Additional settings such as link target, CSS classes, link relationships, and link descriptions can be enabled and disabled via the Screen Options tab."
 msgstr "在 [編輯選單] 分頁中<strong>點擊任一選單項目右側的箭頭</strong>，便會顯示一組標準設定。其他設定例如連結目標開啟方式、CSS 類別、連結目標的人際關係及連結內容說明等，均可在 [顯示項目設定] 分頁裡啟用或停用。"
 
 #. translators: 1: URL to Widgets screen, 2 and 3: The names of the default
 #. themes.
-#: wp-admin/nav-menus.php:592
+#: wp-admin/nav-menus.php:602
 msgid "Menus can be displayed in locations defined by your theme, even used in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%1$s\">Widgets</a> screen. If your theme does not support the navigation menus feature (the default themes, %2$s and %3$s, do), you can learn about adding this support by following the Documentation link to the side."
 msgstr "每個佈景主題提供的選單位置不盡相同，而選單除了可以顯示於佈景主題提供的位置外，還可以透過 [<a href=\"%1$s\">小工具</a>] 頁面的 [導覽選單] 小工具顯示於資訊欄。如果這個網站使用的佈景主題不支援導覽選單功能 (預設佈景主題 %2$s 和 %3$s 均支援)，請查閱側邊的說明文件以進一步了解如何為佈景主題加入這項功能的支援。"
 
 #. translators: %s: URL to Widgets screen.
-#: wp-admin/nav-menus.php:583
+#: wp-admin/nav-menus.php:593
 msgid "Your theme does not natively support menus, but you can use them in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%s\">Widgets</a> screen."
 msgstr "目前使用的佈景主題無法以原生方式支援選單功能，但你可以在 [<a href=\"%s\">小工具</a>] 頁面中新增 [導覽選單] 小工具。"
 
@@ -8495,11 +8500,11 @@ msgstr "輸入的使用者名稱包含無效的字元。"
 msgid "Please provide a valid username."
 msgstr "請提供正確的使用者名稱。"
 
-#: wp-admin/includes/update-core.php:1164
+#: wp-admin/includes/update-core.php:1168
 msgid "Copying the required files&#8230;"
 msgstr "正在複製必要的檔案..."
 
-#: wp-admin/includes/update-core.php:1078
+#: wp-admin/includes/update-core.php:1082
 msgid "Preparing to install the latest version&#8230;"
 msgstr "正在準備安裝最新版本..."
 
@@ -8739,7 +8744,7 @@ msgstr "這個安裝套件不包含任何檔案。"
 msgid "To navigate between revisions, <strong>drag the slider handle left or right</strong> or <strong>use the Previous or Next buttons</strong>."
 msgstr "如需瀏覽不同版本的內容修訂，請<strong>左右拖曳滑桿</strong>或<strong>點擊 [上一版]、[下一版] 按鈕</strong>。"
 
-#: wp-admin/customize.php:147 wp-admin/includes/class-wp-debug-data.php:440
+#: wp-admin/customize.php:151 wp-admin/includes/class-wp-debug-data.php:440
 #: wp-admin/includes/dashboard.php:1140 wp-admin/includes/dashboard.php:1339
 msgid "Loading&hellip;"
 msgstr "正在載入..."
@@ -8756,11 +8761,11 @@ msgstr "嘗試從回收桶還原的項目已不存在。"
 msgid "The item you are trying to move to the Trash no longer exists."
 msgstr "嘗試移至回收桶的項目已不存在。"
 
-#: wp-admin/nav-menus.php:978
+#: wp-admin/nav-menus.php:988
 msgid "Drag the items into the order you prefer. Click the arrow on the right of the item to reveal additional configuration options."
 msgstr "請在下方將各個選單項目拖曳至合適的順序。點擊選單項目右側的箭號，便會顯示更多組態設定。"
 
-#: wp-admin/nav-menus.php:611
+#: wp-admin/nav-menus.php:621
 msgid "If you haven&#8217;t yet created any menus, <strong>click the &#8217;create a new menu&#8217; link</strong> to get started"
 msgstr "如果這個網站尚未建立任何選單，點擊 <strong>[建立選單]</strong> 連結便能開始建立選單。"
 
@@ -8800,105 +8805,105 @@ msgctxt "Followed by post revision info"
 msgid "From:"
 msgstr "第一份:"
 
-#: wp-admin/nav-menus.php:794
+#: wp-admin/nav-menus.php:804
 msgctxt "menu"
 msgid "Use new menu"
 msgstr "建立選單"
 
-#: wp-admin/nav-menus.php:775
+#: wp-admin/nav-menus.php:785
 msgctxt "menu"
 msgid "Edit"
 msgstr "編輯"
 
-#: wp-admin/nav-menus.php:744
+#: wp-admin/nav-menus.php:754
 msgid "Select a Menu"
 msgstr "選取選單"
 
-#: wp-admin/nav-menus.php:735
+#: wp-admin/nav-menus.php:745
 msgid "Assigned Menu"
 msgstr "指派的選單"
 
-#: wp-admin/nav-menus.php:734
+#: wp-admin/nav-menus.php:744
 msgid "Theme Location"
 msgstr "佈景主題提供的選單位置"
 
-#: wp-admin/nav-menus.php:703
+#: wp-admin/nav-menus.php:713
 msgid "Manage Locations"
 msgstr "管理選單位置"
 
-#: wp-admin/nav-menus.php:692
+#: wp-admin/nav-menus.php:702
 msgid "Edit Menus"
 msgstr "編輯選單"
 
-#: wp-admin/nav-menus.php:640
+#: wp-admin/nav-menus.php:650
 msgid "To add a new menu instead of assigning an existing one, <strong>click the &#8217;Use new menu&#8217; link</strong>. Your new menu will be automatically assigned to that theme location"
 msgstr "如需為佈景主題選單位置新增選單而不是指派現有選單，<strong>請點擊 [建立選單] 連結。</strong>新選單建立完畢後，會自動指派至對應的佈景主題選單位置。"
 
-#: wp-admin/nav-menus.php:639
+#: wp-admin/nav-menus.php:649
 msgid "To edit a menu currently assigned to a theme location, <strong>click the adjacent &#8217;Edit&#8217; link</strong>"
 msgstr "如需編輯已指派至佈景主題選單位置的選單，<strong>請點擊選單旁邊的 [編輯] 連結。</strong>"
 
-#: wp-admin/nav-menus.php:638
+#: wp-admin/nav-menus.php:648
 msgid "To assign menus to one or more theme locations, <strong>select a menu from each location&#8217;s drop down.</strong> When you&#8217;re finished, <strong>click Save Changes</strong>"
 msgstr "如需將選單指派至一個或多個佈景主題位置，<strong>請從各別選單位置的下拉式選單中選取選單。</strong>設定完畢後，<strong>請點擊 [儲存設定]。</strong>"
 
-#: wp-admin/nav-menus.php:637
+#: wp-admin/nav-menus.php:647
 msgid "This screen is used for globally assigning menus to locations defined by your theme."
 msgstr "這個畫面用來將選單一次性指派至佈景主題所提供的選單位置。"
 
-#: wp-admin/nav-menus.php:632
+#: wp-admin/nav-menus.php:642
 msgid "Editing Menus"
 msgstr "編輯選單"
 
-#: wp-admin/nav-menus.php:627
+#: wp-admin/nav-menus.php:637
 msgid "Delete a menu item by <strong>expanding it and clicking the Remove link</strong>"
 msgstr "<strong>展開選單項目並點擊 [移除] 連結</strong>，便能刪除選單項目。"
 
-#: wp-admin/nav-menus.php:626
+#: wp-admin/nav-menus.php:636
 msgid "To reorganize menu items, <strong>drag and drop items with your mouse or use your keyboard</strong>. Drag or move a menu item a little to the right to make it a submenu"
 msgstr "如需重新排列選單項目，<strong>請以滑鼠拖曳選單項目或使用鍵盤進行操作</strong>。此外，將選單項目稍往右側拖曳或移動，便可使其成為子選單項目。"
 
-#: wp-admin/nav-menus.php:624
+#: wp-admin/nav-menus.php:634
 msgid "Add one or several items at once by <strong>selecting the checkbox next to each item and clicking Add to Menu</strong>"
 msgstr "如需一次新增一個 (含) 以上的項目，請<strong>選取個別項目的核取方塊，然後點擊 [新增至選單]</strong> 便可完成。"
 
-#: wp-admin/nav-menus.php:622
+#: wp-admin/nav-menus.php:632
 msgid "Each navigation menu may contain a mix of links to pages, categories, custom URLs or other content types. Menu links are added by selecting items from the expanding boxes in the left-hand column below."
 msgstr "每個導覽選單均可包含頁面、分類、自訂網址或其他內容類型的連結。展開畫面左側的區塊，便可從中選取項目並新增為選單連結。"
 
-#: wp-admin/nav-menus.php:617
+#: wp-admin/nav-menus.php:627
 msgid "Menu Management"
 msgstr "選單管理"
 
-#: wp-admin/nav-menus.php:612
+#: wp-admin/nav-menus.php:622
 msgid "You can assign theme locations to individual menus by <strong>selecting the desired settings</strong> at the bottom of the menu editor. To assign menus to all theme locations at once, <strong>visit the Manage Locations tab</strong> at the top of the screen."
 msgstr "網站管理員可以在選單編輯器底部<strong>選取合適的設定</strong>，將特定選單指派至佈景主題提供的選單位置。如需一次將多個選單指派至佈景主題提供的全部位置，請至 [<strong>管理選單位置</strong>] 分頁中進行設定。"
 
-#: wp-admin/nav-menus.php:610
+#: wp-admin/nav-menus.php:620
 msgid "To edit an existing menu, <strong>choose a menu from the drop down and click Select</strong>"
 msgstr "如需編輯現有的選單，請<strong>從下拉式選單選取要進行編輯的選單，然後點擊 [選取] 按鈕</strong>。"
 
-#: wp-admin/nav-menus.php:609
+#: wp-admin/nav-menus.php:619
 msgid "The menu management box at the top of the screen is used to control which menu is opened in the editor below."
 msgstr "畫面頂端的選單管理框，用於選取要在下方選單編輯器進行編輯的選單。"
 
-#: wp-admin/nav-menus.php:599
+#: wp-admin/nav-menus.php:609
 msgid "Add, organize, and modify individual menu items"
 msgstr "新增、管理及修改個別選單項目"
 
-#: wp-admin/nav-menus.php:598
+#: wp-admin/nav-menus.php:608
 msgid "Create, edit, and delete menus"
 msgstr "新增、編輯及刪除選單"
 
-#: wp-admin/nav-menus.php:597 wp-admin/themes.php:132
+#: wp-admin/nav-menus.php:607 wp-admin/themes.php:132
 msgid "From this screen you can:"
 msgstr "網站管理員在這個畫面可以進行以下操作:"
 
-#: wp-admin/nav-menus.php:589
+#: wp-admin/nav-menus.php:599
 msgid "This screen is used for managing your navigation menus."
 msgstr "這個畫面用來管理網站的導覽選單。"
 
-#: wp-admin/nav-menus.php:442
+#: wp-admin/nav-menus.php:452
 msgid "Menu locations updated."
 msgstr "選單位置已更新。"
 
@@ -8948,11 +8953,11 @@ msgstr "拒絕: %s"
 msgid "Capabilities"
 msgstr "權限"
 
-#: wp-admin/nav-menus.php:1027 wp-admin/network/settings.php:490
+#: wp-admin/nav-menus.php:1045 wp-admin/network/settings.php:490
 msgid "Menu Settings"
 msgstr "選單設定"
 
-#: wp-admin/nav-menus.php:935
+#: wp-admin/nav-menus.php:945
 msgid "Menu structure"
 msgstr "選單結構"
 
@@ -8987,7 +8992,7 @@ msgstr "無法這個項目移至回收桶。「%s」目前正在編輯。"
 msgid "%s has taken over and is currently editing."
 msgstr "「%s」已接管編輯工作且正在進行編輯。"
 
-#: wp-admin/nav-menus.php:845
+#: wp-admin/nav-menus.php:855
 msgid "Select a menu to edit:"
 msgstr "選取需要編輯的選單:"
 
@@ -9004,15 +9009,15 @@ msgstr "安裝過程相當順利！目前已完成安裝程序中重要的一步
 msgid "Client version"
 msgstr "用戶端版本"
 
-#: wp-admin/nav-menus.php:1043
+#: wp-admin/nav-menus.php:1061
 msgid "Auto add pages"
 msgstr "自動新增頁面"
 
-#: wp-admin/nav-menus.php:1001
+#: wp-admin/nav-menus.php:1015
 msgid "Give your menu a name, then click Create Menu."
 msgstr "請輸入選單名稱，然後點擊 [建立選單]。"
 
-#: wp-admin/nav-menus.php:976
+#: wp-admin/nav-menus.php:986
 msgid "Edit your default menu by adding or removing items. Drag the items into the order you prefer. Click Create Menu to save your changes."
 msgstr "透過新增或移除選單項目的方式編輯網站的預設選單，並將選單項目拖曳至合適的順序，然後點擊 [儲存選單] 以儲存變更。"
 
@@ -9202,7 +9207,7 @@ msgid "Search engine visibility"
 msgstr "搜尋引擎可見度"
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1566 wp-admin/update-core.php:894
+#: wp-admin/includes/update-core.php:1570 wp-admin/update-core.php:894
 msgid "Welcome to WordPress %1$s. You will be redirected to the About WordPress screen. If not, click <a href=\"%2$s\">here</a>."
 msgstr "歡迎使用 WordPress %1$s，接下來將會重新導向至〈關於 WordPress〉畫面。如果並未重新導向，請點擊<a href=\"%2$s\">這個連結</a>前往。"
 
@@ -9376,7 +9381,7 @@ msgstr "如果網站不需要顯示頁首圖片，請點擊這個頁面 [頁首�
 
 #: wp-admin/media.php:70
 msgid "You attempted to edit an item that isn&#8217;t an attachment. Please go back and try again."
-msgstr "目前正在嘗試編輯不是附件的項目。請返回上一步並再試一次。"
+msgstr "目前嘗試編輯不是附件的項目。請返回上一步並再試一次。"
 
 #: wp-admin/includes/class-wp-theme-install-list-table.php:324
 #: wp-admin/includes/class-wp-theme-install-list-table.php:482
@@ -9969,27 +9974,29 @@ msgstr "輸入這個多站網路中已存在的使用者電子郵件地址，便
 msgid "Show Toolbar when viewing site"
 msgstr "檢視網站前端時顯示工具列"
 
+#. translators: %s: HelpHub URL
 #. translators: %s: Documentation URL.
-#: wp-admin/about.php:298
+#: wp-admin/about.php:62 wp-admin/about.php:331
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "如需進一步了解相關資訊，請參閱<a href=\"%s\" target=\"_blank\">版本資訊</a>。"
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:292
+#: wp-admin/about.php:325
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s 版</strong>修正了多個安全性問題，同時也修正了 %2$s 個程式碼錯誤。"
 
+#. translators: 1: WordPress version number, 2: plural number of bugs.
 #. translators: 1: WordPress version number, 2: Plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:286
+#: wp-admin/about.php:50 wp-admin/about.php:319
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s 版</strong>修正了 1 個安全性問題，同時也修正了 %2$s 個程式碼錯誤。"
 
 #. translators: 1: WordPress version number, 2: Plural number of bugs.
-#: wp-admin/about.php:280
+#: wp-admin/about.php:313
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>%1$s 版</strong>修正了 %2$s 個程式碼錯誤。"
@@ -9999,19 +10006,19 @@ msgid "Welcome to your WordPress Dashboard! This is the screen you will see when
 msgstr "歡迎使用 WordPress 控制台！使用者登入網站後便會看見這個畫面，這個畫面能讓不同權限的使用者存取 WordPress 網站的對應管理功能。點擊任何頁面標題上方的 [使用說明] 分頁，便能取得相關功能的使用說明。"
 
 #. translators: %s: WordPress version number.
-#: wp-admin/about.php:277
+#: wp-admin/about.php:310
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>%s 版</strong>修正了多個安全性問題。"
 
-#: wp-admin/about.php:271
+#: wp-admin/about.php:304
 msgid "Maintenance and Security Release"
 msgstr "維護及安全性更新版本"
 
-#: wp-admin/about.php:268
+#: wp-admin/about.php:301
 msgid "Security Release"
 msgstr "安全性更新版本"
 
-#: wp-admin/about.php:265
+#: wp-admin/about.php:298
 msgid "Maintenance Release"
 msgstr "維護版本"
 
@@ -10025,7 +10032,7 @@ msgid "This screen allows you to choose your permalink structure. You can choose
 msgstr "網站管理員可以在這個畫面設定網站的永久連結結構，從中選取一項一般設定或建立自訂網址結構。"
 
 #. translators: 1: WordPress version, 2: URL to About screen.
-#: wp-admin/includes/update-core.php:1574 wp-admin/update-core.php:902
+#: wp-admin/includes/update-core.php:1578 wp-admin/update-core.php:902
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "歡迎使用 WordPress %1$s。<a href=\"%2$s\">進一步了解</a>"
 
@@ -10296,11 +10303,11 @@ msgstr "<strong>編輯</strong> &mdash; 點擊 [編輯] 連結便會進入文章
 msgid "Because this is a multisite installation, you may add accounts that already exist on the Network by specifying a username or email, and defining a role. For more options, such as specifying a password, you have to be a Network Administrator and use the hover link under an existing user&#8217;s name to Edit the user profile under Network Admin > All Users."
 msgstr "由於這是多站網路，因此網站管理員可以透過指定使用者名稱或電子郵件地址的方式，將多站網路中現有的帳號加入網站中，並為其指派使用者角色。如需進行指派密碼等其他設定，則必須具備多站網路管理員權限，然後前往 [多站網路管理中心]&rarr;[全部使用者]，並點擊某位現有使用者的使用者名稱連結，便能編輯這個使用者的個人資料。"
 
-#: wp-admin/about.php:254
+#: wp-admin/about.php:287
 msgid "Go to Dashboard &rarr; Home"
 msgstr "前往 [控制台]&rarr;[首頁]"
 
-#: wp-admin/about.php:251
+#: wp-admin/about.php:284
 msgid "Go to Dashboard &rarr; Updates"
 msgstr "前往 [控制台]&rarr;[更新]"
 
@@ -10446,8 +10453,8 @@ msgstr "管理後台左側的導覽選單提供存取各個 WordPress 管理畫�
 #: wp-admin/includes/class-custom-image-header.php:99
 #: wp-admin/includes/class-wp-screen.php:853 wp-admin/includes/ms.php:1137
 #: wp-admin/index.php:42 wp-admin/link-manager.php:56 wp-admin/media-new.php:48
-#: wp-admin/media.php:85 wp-admin/my-sites.php:43 wp-admin/nav-menus.php:604
-#: wp-admin/nav-menus.php:645 wp-admin/options-discussion.php:23
+#: wp-admin/media.php:85 wp-admin/my-sites.php:43 wp-admin/nav-menus.php:614
+#: wp-admin/nav-menus.php:655 wp-admin/options-discussion.php:23
 #: wp-admin/options-general.php:41 wp-admin/options-media.php:33
 #: wp-admin/options-permalink.php:22 wp-admin/options-reading.php:24
 #: wp-admin/options-writing.php:22 wp-admin/plugin-editor.php:124
@@ -10565,8 +10572,8 @@ msgstr "多站網路管理員"
 #. translators: %s: Theme version number.
 #. translators: %s: WordPress version.
 #. translators: %s: Theme version.
-#: wp-admin/includes/ajax-actions.php:4466
-#: wp-admin/includes/ajax-actions.php:4509
+#: wp-admin/includes/ajax-actions.php:4468
+#: wp-admin/includes/ajax-actions.php:4511
 #: wp-admin/includes/class-wp-debug-data.php:951
 #: wp-admin/includes/class-wp-debug-data.php:998
 #: wp-admin/includes/class-wp-debug-data.php:1321
@@ -10600,7 +10607,7 @@ msgstr "停用"
 #: wp-admin/includes/class-wp-users-list-table.php:273
 #: wp-admin/includes/class-wp-users-list-table.php:460
 #: wp-admin/includes/media.php:1739 wp-admin/includes/meta-boxes.php:1079
-#: wp-admin/includes/template.php:645 wp-admin/includes/theme.php:1011
+#: wp-admin/includes/template.php:645 wp-admin/includes/theme.php:1013
 #: wp-admin/includes/widgets.php:295 wp-admin/themes.php:636
 #: wp-admin/themes.php:1139 wp-admin/widgets-form.php:335
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:290
@@ -10618,7 +10625,7 @@ msgstr "刪除網站"
 
 #. translators: %s: Plugin name.
 #: wp-admin/includes/class-wp-theme-install-list-table.php:491
-#: wp-admin/includes/deprecated.php:1387 wp-admin/includes/theme.php:1022
+#: wp-admin/includes/deprecated.php:1387 wp-admin/includes/theme.php:1024
 #: wp-admin/theme-install.php:403 wp-admin/theme-install.php:440
 #: wp-admin/includes/network.php:374
 msgid "Install"
@@ -10640,7 +10647,7 @@ msgstr "設定已儲存。"
 #: wp-admin/includes/class-custom-image-header.php:135
 #: wp-admin/includes/ms.php:1159 wp-admin/index.php:110
 #: wp-admin/link-manager.php:77 wp-admin/media-new.php:59 wp-admin/media.php:95
-#: wp-admin/my-sites.php:50 wp-admin/nav-menus.php:652
+#: wp-admin/my-sites.php:50 wp-admin/nav-menus.php:662
 #: wp-admin/options-discussion.php:30 wp-admin/options-general.php:47
 #: wp-admin/options-media.php:39 wp-admin/options-permalink.php:59
 #: wp-admin/options-reading.php:51 wp-admin/options-writing.php:51
@@ -10724,19 +10731,19 @@ msgstr ""
 "請點擊下方連結以啟用你的使用者帳號：\n"
 "%%s"
 
-#: wp-admin/includes/meta-boxes.php:494 wp-admin/includes/theme.php:335
+#: wp-admin/includes/meta-boxes.php:494 wp-admin/includes/theme.php:336
 msgid "Post Formats"
 msgstr "文章格式"
 
-#: wp-admin/includes/theme.php:334
+#: wp-admin/includes/theme.php:335
 msgid "Full Width Template"
 msgstr "全螢幕寬度範本"
 
-#: wp-admin/includes/theme.php:331
+#: wp-admin/includes/theme.php:332
 msgid "Featured Images"
 msgstr "精選圖片"
 
-#: wp-admin/includes/theme.php:330
+#: wp-admin/includes/theme.php:331
 msgid "Featured Image Header"
 msgstr "精選圖片頁首"
 
@@ -10902,7 +10909,7 @@ msgstr "第 %1$s 頁，總計 %2$s 頁"
 msgid "%s Page Template"
 msgstr "[%s] 頁面範本"
 
-#: wp-admin/includes/ajax-actions.php:4571 wp-admin/plugins.php:622
+#: wp-admin/includes/ajax-actions.php:4573 wp-admin/plugins.php:622
 msgid "You cannot delete a plugin while it is active on the main site."
 msgstr "無法刪除啟用於主要網站的外掛。"
 
@@ -11048,7 +11055,7 @@ msgstr "更新外掛"
 msgid "Theme updated successfully."
 msgstr "佈景主題已成功更新。"
 
-#: wp-admin/includes/ajax-actions.php:4237
+#: wp-admin/includes/ajax-actions.php:4239
 #: wp-admin/includes/class-theme-upgrader.php:63
 #: wp-admin/includes/class-theme-upgrader.php:100
 msgid "Theme update failed."
@@ -11059,7 +11066,7 @@ msgstr "佈景主題更新失敗。"
 msgid "Plugin updated successfully."
 msgstr "外掛已成功更新。"
 
-#: wp-admin/includes/ajax-actions.php:4528
+#: wp-admin/includes/ajax-actions.php:4530
 #: wp-admin/includes/class-plugin-upgrader.php:64
 #: wp-admin/includes/class-plugin-upgrader.php:91
 msgid "Plugin update failed."
@@ -11170,7 +11177,7 @@ msgstr "正在執行更新程序。這項程序在某些主機上需要一點時
 msgid "Apply Filters"
 msgstr "套用篩選條件"
 
-#: wp-admin/includes/theme.php:329
+#: wp-admin/includes/theme.php:330
 msgid "Editor Style"
 msgstr "編輯器樣式"
 
@@ -11674,7 +11681,7 @@ msgstr "使用者可以使用下列方式自訂這個畫面的顯示項目:"
 msgid "Search Installed Plugins"
 msgstr "搜尋已安裝的外掛"
 
-#: wp-admin/nav-menus.php:716
+#: wp-admin/nav-menus.php:726
 msgid "Your theme supports one menu. Select which menu you would like to use."
 msgstr "目前使用的佈景主題提供 1 個位置顯示選單，請選取指定位置要顯示的選單。"
 
@@ -12013,7 +12020,7 @@ msgstr "CSS 類別 (選填)"
 msgid "Link Target"
 msgstr "連結目標開啟方式"
 
-#: wp-admin/nav-menus.php:961 wp-admin/nav-menus.php:1118
+#: wp-admin/nav-menus.php:971 wp-admin/nav-menus.php:1136
 msgid "Save Menu"
 msgstr "儲存選單"
 
@@ -12076,7 +12083,7 @@ msgid "User already exists. Password inherited."
 msgstr "這個使用者已存在，將會沿用現有密碼。"
 
 #: wp-admin/includes/class-wp-automatic-updater.php:425
-#: wp-admin/includes/update-core.php:1560 wp-admin/update-core.php:890
+#: wp-admin/includes/update-core.php:1564 wp-admin/update-core.php:890
 msgid "WordPress updated successfully."
 msgstr "WordPress 已成功更新。"
 
@@ -12105,7 +12112,7 @@ msgstr "WordPress 更新"
 msgid "Edit menu item"
 msgstr "編輯選單項目"
 
-#: wp-admin/about.php:254 wp-admin/includes/network.php:148
+#: wp-admin/about.php:287 wp-admin/includes/network.php:148
 msgid "Go to Dashboard"
 msgstr "前往 [控制台]"
 
@@ -12157,7 +12164,7 @@ msgstr "這個電子郵件地址用於管理目的。如果變更了這項設定
 msgid "View All"
 msgstr "檢視全部"
 
-#: wp-admin/nav-menus.php:374 wp-admin/nav-menus.php:396
+#: wp-admin/nav-menus.php:384 wp-admin/nav-menus.php:406
 msgid "Please enter a valid menu name."
 msgstr "請輸入有效的選單名稱。"
 
@@ -12532,7 +12539,7 @@ msgstr ""
 "即將刪除 %s 這個佈景主題。\n"
 "點擊 [取消] 以停止操作，點擊 [確定] 以進行刪除。"
 
-#: wp-admin/includes/theme.php:821 wp-admin/themes.php:939
+#: wp-admin/includes/theme.php:823 wp-admin/themes.php:939
 msgid "Current Theme"
 msgstr "目前使用的佈景主題"
 
@@ -12548,7 +12555,7 @@ msgstr "選取需要編輯的佈景主題:"
 msgid "Edit Themes"
 msgstr "編輯佈景主題"
 
-#: wp-admin/includes/theme.php:1000 wp-admin/themes.php:1102
+#: wp-admin/includes/theme.php:1002 wp-admin/themes.php:1102
 msgid "Tags:"
 msgstr "標籤:"
 
@@ -12571,7 +12578,7 @@ msgstr "很抱歉，目前的登入身分沒有編輯這個項目的權限。"
 #: wp-admin/edit-tags.php:160 wp-admin/edit-tags.php:180 wp-admin/post.php:127
 #: wp-admin/term.php:31
 msgid "You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?"
-msgstr "目前嘗試編輯的是不存在的項目，或許這個項目之前便遭到刪除。"
+msgstr "目前嘗試編輯不存在的項目，原因是這個項目之前便已遭刪除。"
 
 #: wp-admin/includes/class-wp-plugins-list-table.php:417
 msgid "No plugins found."
@@ -12679,7 +12686,7 @@ msgstr "外掛檔案"
 msgid "Select plugin to edit:"
 msgstr "選取需要編輯的外掛:"
 
-#: wp-admin/includes/ajax-actions.php:4739 wp-admin/plugin-editor.php:184
+#: wp-admin/includes/ajax-actions.php:4741 wp-admin/plugin-editor.php:184
 #: wp-admin/theme-editor.php:189
 msgid "File edited successfully."
 msgstr "檔案已完成編輯。"
@@ -13179,7 +13186,7 @@ msgstr "由於這個附件在回收桶中，因此無法進行編輯。請將這
 
 #: wp-admin/media.php:67
 msgid "You attempted to edit an attachment that doesn&#8217;t exist. Perhaps it was deleted?"
-msgstr "目前正在嘗試編輯不存在的附件。原因是附件已遭刪除。"
+msgstr "目前嘗試編輯不存在的附件，原因是這個附件之前便已遭刪除。"
 
 #: wp-admin/media.php:23 wp-admin/media.php:61
 msgid "Sorry, you are not allowed to edit this attachment."
@@ -13330,34 +13337,34 @@ msgstr "更新至 %s"
 msgid "You are using a development version (%1$s). Cool! Please <a href=\"%2$s\">stay updated</a>."
 msgstr "這個網站使用的是開發中的 %1$s 版。感謝協助測試，請<a href=\"%2$s\">隨時保持更新</a>。"
 
-#: wp-admin/includes/update-core.php:1401
+#: wp-admin/includes/update-core.php:1405
 msgid "Upgrading database&#8230;"
 msgstr "正在更新資料庫..."
 
-#: wp-admin/includes/update-core.php:959
+#: wp-admin/includes/update-core.php:963
 msgid "The update could not be unpacked"
 msgstr "更新套件無法解壓縮。"
 
-#: wp-admin/includes/update-core.php:941
+#: wp-admin/includes/update-core.php:945
 msgid "Verifying the unpacked files&#8230;"
 msgstr "正在驗證解壓縮的檔案..."
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number, 3: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1056
+#: wp-admin/includes/update-core.php:1060
 msgid "The update cannot be installed because WordPress %1$s requires MySQL version %2$s or higher. You are running version %3$s."
 msgstr "由於 WordPress %1$s 需要 MySQL %2$s 或更新版本，因此無法進行更新。這個網站目前執行的是 %3$s 版。"
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Current PHP version number.
-#: wp-admin/includes/update-core.php:1045
+#: wp-admin/includes/update-core.php:1049
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher. You are running version %3$s."
 msgstr "由於 WordPress %1$s 需要 PHP %2$s 或更新版本，因此無法進行更新。這個網站目前執行的是 %3$s 版。"
 
 #. translators: 1: WordPress version number, 2: Minimum required PHP version
 #. number, 3: Minimum required MySQL version number, 4: Current PHP version
 #. number, 5: Current MySQL version number.
-#: wp-admin/includes/update-core.php:1032
+#: wp-admin/includes/update-core.php:1036
 msgid "The update cannot be installed because WordPress %1$s requires PHP version %2$s or higher and MySQL version %3$s or higher. You are running PHP version %4$s and MySQL version %5$s."
 msgstr "由於 WordPress %1$s 需要 PHP %2$s 及 MySQL %3$s 或這兩者的更新版本，因此無法進行更新。這個網站目前執行的是 PHP %4$s 及 MySQL %5$s。"
 
@@ -13375,7 +13382,7 @@ msgid "This theme is already installed."
 msgstr "這個佈景主題已安裝。"
 
 #. translators: %s: Theme version.
-#: wp-admin/includes/theme.php:826 wp-admin/theme-install.php:476
+#: wp-admin/includes/theme.php:828 wp-admin/theme-install.php:476
 #: wp-admin/themes.php:944
 msgid "Version: %s"
 msgstr "版本: %s"
@@ -13388,51 +13395,51 @@ msgstr "請在這裡上傳 ZIP 格式的佈景主題壓縮檔以安裝或更新�
 msgid "Find Themes"
 msgstr "尋找佈景主題"
 
-#: wp-admin/includes/theme.php:315
+#: wp-admin/includes/theme.php:316
 msgid "Holiday"
 msgstr "節日"
 
-#: wp-admin/includes/theme.php:309 wp-admin/includes/theme.php:378
+#: wp-admin/includes/theme.php:310 wp-admin/includes/theme.php:380
 msgid "Subject"
 msgstr "用途"
 
-#: wp-admin/includes/theme.php:336
+#: wp-admin/includes/theme.php:337
 msgid "Sticky Post"
 msgstr "置頂文章"
 
-#: wp-admin/includes/theme.php:337
+#: wp-admin/includes/theme.php:339
 msgid "Theme Options"
 msgstr "佈景主題選項"
 
-#: wp-admin/includes/theme.php:326
+#: wp-admin/includes/theme.php:327
 msgid "Custom Colors"
 msgstr "自訂色彩"
 
-#: wp-admin/includes/theme.php:321 wp-admin/includes/theme.php:377
+#: wp-admin/includes/theme.php:322 wp-admin/includes/theme.php:379
 msgid "Features"
 msgstr "功能"
 
-#: wp-admin/includes/theme.php:347
+#: wp-admin/includes/theme.php:349
 msgid "Right Sidebar"
 msgstr "右側資訊欄"
 
-#: wp-admin/includes/theme.php:346
+#: wp-admin/includes/theme.php:348
 msgid "Left Sidebar"
 msgstr "左側資訊欄"
 
-#: wp-admin/includes/theme.php:345
+#: wp-admin/includes/theme.php:347
 msgid "Four Columns"
 msgstr "四欄"
 
-#: wp-admin/includes/theme.php:344
+#: wp-admin/includes/theme.php:346
 msgid "Three Columns"
 msgstr "三欄"
 
-#: wp-admin/includes/theme.php:343
+#: wp-admin/includes/theme.php:345
 msgid "Two Columns"
 msgstr "兩欄"
 
-#: wp-admin/includes/theme.php:342
+#: wp-admin/includes/theme.php:344
 msgid "One Column"
 msgstr "一欄"
 
@@ -14309,8 +14316,8 @@ msgid "Empty archive."
 msgstr "空的壓縮檔。"
 
 #: wp-admin/includes/file.php:1673 wp-admin/includes/file.php:1803
-#: wp-admin/includes/file.php:1848 wp-admin/includes/update-core.php:1342
-#: wp-admin/includes/update-core.php:1486
+#: wp-admin/includes/file.php:1848 wp-admin/includes/update-core.php:1346
+#: wp-admin/includes/update-core.php:1490
 msgid "Could not copy file."
 msgstr "無法複製檔案。"
 
@@ -14628,12 +14635,12 @@ msgid "The plugin is at the latest version."
 msgstr "外掛已是最新版本。"
 
 #: wp-admin/includes/class-wp-upgrader.php:168
-#: wp-admin/includes/update-core.php:1291
+#: wp-admin/includes/update-core.php:1295
 msgid "Disabling Maintenance mode&#8230;"
 msgstr "正在停用 [網站例行性維護] 模式..."
 
 #: wp-admin/includes/class-wp-upgrader.php:167
-#: wp-admin/includes/update-core.php:1155
+#: wp-admin/includes/update-core.php:1159
 msgid "Enabling Maintenance mode&#8230;"
 msgstr "正在啟用 [網站例行性維護] 模式..."
 
@@ -14643,7 +14650,7 @@ msgstr "不相容的壓縮檔。"
 
 #: wp-admin/includes/class-wp-upgrader.php:163 wp-admin/includes/file.php:1641
 #: wp-admin/includes/file.php:1782 wp-admin/includes/file.php:1856
-#: wp-admin/includes/update-core.php:1500
+#: wp-admin/includes/update-core.php:1504
 msgid "Could not create directory."
 msgstr "無法建立目錄。"
 
@@ -15104,11 +15111,11 @@ msgid "Header updated. <a href=\"%s\">Visit your site</a> to see how it looks."
 msgstr "頁首已更新。<a href=\"%s\">造訪這個網站</a>以檢視外觀變化。"
 
 #: wp-admin/includes/class-custom-image-header.php:503
-#: wp-admin/includes/theme.php:327
+#: wp-admin/includes/theme.php:328
 msgid "Custom Header"
 msgstr "自訂頁首"
 
-#: wp-admin/includes/template.php:2487 wp-admin/nav-menus.php:803
+#: wp-admin/includes/template.php:2487 wp-admin/nav-menus.php:813
 #: wp-admin/options.php:402
 msgid "Save Changes"
 msgstr "儲存設定"
@@ -15124,7 +15131,7 @@ msgid "Background updated. <a href=\"%s\">Visit your site</a> to see how it look
 msgstr "背景已更新。<a href=\"%s\">造訪這個網站</a>以檢視外觀變化。"
 
 #: wp-admin/includes/class-custom-background.php:232
-#: wp-admin/includes/theme.php:325
+#: wp-admin/includes/theme.php:326
 msgid "Custom Background"
 msgstr "自訂背景"
 

@@ -1,0 +1,4 @@
+[08-Sep-2021 00:39:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_block_template_html() in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/template-canvas.php:12
+Stack trace:
+#0 {main}
+  thrown in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/template-canvas.php on line 12

@@ -1,0 +1,4 @@
+[08-Sep-2021 00:48:10 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'WP_Widget' not found in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/widgets/class-wp-widget-block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/widgets/class-wp-widget-block.php on line 17

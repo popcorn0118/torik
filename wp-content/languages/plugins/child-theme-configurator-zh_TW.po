@@ -1,0 +1,1261 @@
+# Translation of Plugins - Child Theme Configurator - Stable (latest release) in Chinese (Taiwan)
+# This file is distributed under the same license as the Plugins - Child Theme Configurator - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-05-20 05:44:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: zh_TW\n"
+"Project-Id-Version: Plugins - Child Theme Configurator - Stable (latest release)\n"
+
+#: includes/forms/related.php:8
+msgid "If you find this plugin useful, please support us by %supgrading%s or %sclick here to donate as little as $1.%s"
+msgstr "如果這個外掛對這個網站有幫助，請以%s升級至 Pro 版%s或%s使用 PayPal 贊助%s的方式支持開發工作。"
+
+#: includes/classes/UI.php:356
+msgid "Dismiss this notice."
+msgstr "關閉這項通知"
+
+#: includes/forms/related.php:7
+msgid "Help us help you!"
+msgstr "助人助己"
+
+#: includes/forms/parent-child.php:401
+msgid "IMPORTANT: Some \"premium\" themes use unsupported options that cannot be copied with the free verson of CTC. If you purchased this theme from a website such as \"ThemeForest,\" child themes may not work correctly. Click the \"Upgrade\" tab for more information."
+msgstr "重要通知: 某些付費版佈景主題使用了 Child Theme Configurator 免費版無法複製的不支援設定，如果這個網站使用了購自如 ThemeForest 等網站的佈景主題，有可能無法正確建立子佈景主題。點擊 [升級] 分頁以進一步了解相關資訊。"
+
+#: includes/forms/parent-child.php:314
+msgid "Click to Edit Child Theme Attributes"
+msgstr "點擊以編輯子佈景主題屬性"
+
+#: includes/forms/related.php:14
+msgid "Hook Highlighter - See Below The Surface"
+msgstr "Hook Highlighter: 深入了解程式底層運作"
+
+#: includes/forms/related.php:11
+msgid "Hook Highlighter - See It In Action"
+msgstr "Hook Highlighter: 了解外掛運作方式"
+
+#: includes/help/en_US.php:11 includes/forms/addl_panels.php:10
+msgid "<strong>Now with time and memory benchmarks!</strong>"
+msgstr "<strong>現在已包含執行時間及記憶體效能評定功能！</strong>"
+
+#: includes/forms/fileform.php:24
+msgid "Click to edit files using the Theme Editor"
+msgstr "點擊以使用 [佈景主題編輯器] 編輯檔案"
+
+#: includes/forms/fileform.php:24
+msgid "Click to edit functions.php"
+msgstr "點擊以編輯 functions.php"
+
+#: includes/forms/addl_panels.php:41
+msgid "Upgrade Offer"
+msgstr "升級優惠"
+
+#: includes/forms/parent-child.php:297
+msgid "Do not force dependency for these stylesheet handles:"
+msgstr "不強制建立與列出的樣式表控點的相依性:"
+
+#: includes/forms/webfonts.php:25
+msgid "Use a relative path to link to webfont kit stylesheets you have uploaded to your Child Theme. <strong>Example:</strong>"
+msgstr "請使用相對路徑以連結上傳至子佈景主題的網頁字型套件樣式表。<strong>範例如下:</strong>"
+
+#: includes/forms/webfonts.php:23
+msgid "Local Font Files"
+msgstr "網站主機字型檔案"
+
+#: includes/help/en_US.php:13 includes/forms/addl_panels.php:12
+msgid "Display action and filter hooks, program files and backtrace information inline for the current page."
+msgstr "在目前的頁面內顯示動作及篩選器勾點、程式檔案及反向追蹤。"
+
+#: includes/help/en_US.php:12 includes/forms/addl_panels.php:11
+msgid "Hook Highlighter provides insight into the internal program flow of WordPress when activated on any front-facing page of a website."
+msgstr "Hook Highlighter 啟用後，網站管理員便可在網站任何前端頁面深入解析 WordPress 的內部程式運作流程。"
+
+#: includes/help/en_US.php:9 includes/help/en_US.php:14
+#: includes/forms/addl_panels.php:8 includes/forms/addl_panels.php:13
+msgid "Learn more about Hook Highlighter"
+msgstr "進一步了解 Hook Highlighter"
+
+#: includes/forms/addl_panels.php:17
+msgid "Maybe you are having trouble getting your child theme to work, or just don’t want to mess with it ... <strong>Let us set it up for you!</strong>"
+msgstr "也許只是在製作子佈景主題時遇到困難，或是不想因為製作子佈景主題而破壞現有版面配置，<strong>這個外掛都可以應付自如</strong>。"
+
+#: includes/forms/addl_panels.php:16 includes/forms/addl_panels.php:17
+msgid "Learn more about Premium Support"
+msgstr "進一步了解付費版技術支援"
+
+#: includes/forms/webfonts.php:18
+msgid "Additional Linked Stylesheets"
+msgstr "其他已連結的樣式表"
+
+#: includes/forms/tabs.php:22
+msgid "Web Fonts & CSS"
+msgstr "網頁字型及 CSS"
+
+#: includes/forms/settings-errors.php:16
+msgid "CTC encountered an error:"
+msgstr "Child Theme Configurator 發生錯誤:"
+
+#: includes/forms/errorstrings.php:35
+msgid "Error moving file: %s"
+msgstr "移動檔案時發生錯誤: %s"
+
+#: includes/forms/errorstrings.php:34
+msgid "Maximum number of styles exceeded."
+msgstr "超過樣式表最大數量。"
+
+#: includes/forms/errorstrings.php:33
+msgid "Pack failed -- %s"
+msgstr "壓縮失敗 -- %s"
+
+#: includes/forms/errorstrings.php:32
+msgid "Unpack failed -- %s"
+msgstr "解壓縮失敗 -- %s"
+
+#: includes/forms/errorstrings.php:25
+msgid "newfiles != files"
+msgstr "newfiles != 檔案"
+
+#: includes/forms/errorstrings.php:24
+msgid "deleted: %s != %s files"
+msgstr "已刪除: %s != %s 個檔案"
+
+#: includes/forms/errorstrings.php:23
+msgid "invalid dir: %s"
+msgstr "無效的目錄: %s"
+
+#: includes/forms/errorstrings.php:22
+msgid "could not copy %s"
+msgstr "無法複製 %s"
+
+#: includes/forms/errorstrings.php:20
+msgid "Could not copy file: %s"
+msgstr "無法複製 %s 檔案。"
+
+#: includes/classes/UI.php:355
+msgid "<p><strong>The WordPress configuration file has been modified incorrectly.</strong> Please see <a href=\"http://www.childthemeconfigurator.com/child-theme-faqs/#constants\" target=\"_blank\">this FAQ</a> for more information.</p>"
+msgstr "<p><strong>WordPress 設定檔遭到不正確的修改。</strong>請參閱<a href=\"http://www.childthemeconfigurator.com/child-theme-faqs/#constants\" target=\"_blank\">這份常見問題集</a>以取得進一步資訊。</p>"
+
+#: includes/classes/UI.php:354
+msgid "The combination of these two plugins interferes with the Analysis results. Please temporarily deactivate one of them and Analyze again."
+msgstr "同時啟用這兩個外掛會影響分析結果，請暫時停用其中一個外掛，然後再次分析。"
+
+#: includes/classes/UI.php:353
+msgid "Both WP Rocket and Autoptimize plugins are enabled."
+msgstr "WP Rocket 及 Autoptimize 外掛均已啟用。"
+
+#: includes/classes/UI.php:352
+msgid "Use the Web Fonts tab to add a link to the parent RTL stylesheet. See the documentation for more information.</p>"
+msgstr "<p>透過 [網頁字型及 CSS] 分頁，便可加入上層 RTL 樣式表的連結。請參閱文件以取得進一步資訊。</p>"
+
+#: includes/classes/UI.php:351
+msgid "This theme uses a RTL (right-to-left) stylesheet that is not being loaded in the child theme."
+msgstr "這個佈景主題使用了在子佈景主題中並未載入的 RTL (從右至左) 樣式表。"
+
+#: includes/classes/UI.php:324
+msgid "<p><strong>PLEASE NOTE:</strong></p><p><em>The analyzer reveals errors that may otherwise go undetected. Unless this is a fatal error, WordPress may appear to work correctly; however, PHP will continue to log the error until it is resolved. Please contact the author of any theme or plugin</em> <strong>mentioned above</strong> <em>and cut/paste the error from the text area.</em> <strong>Do not use a screen capture as it may cut off part of the error text.</strong> <em>Additional information about the error may also be available in the <a href=\"http://www.childthemeconfigurator.com/child-theme-faqs/\" target=\"_blank\">CTC documentation</a>.</em></p>"
+msgstr "<p><strong>請注意</strong>:</p><p>分析程式顯示了之前未發現的錯誤。除非是嚴重錯誤，否則 WordPress 還是會正常執行，但 PHP 會持續記錄錯誤直到解決為止。請聯絡<strong>上述</strong>佈景主題或外掛的開發者，並從文字區域中剪下/貼上相關錯誤訊息。<strong>請不要使用螢幕擷圖，因為它可能會截斷部分錯誤訊息</strong>。相關錯誤訊息的其他資訊，請參閱 <a href=\"http://www.childthemeconfigurator.com/child-theme-faqs/\" target=\"_blank\">Child Theme Configurator 線上文件</a>中的說明。</p>"
+
+#: includes/classes/UI.php:346
+msgid "<p>This workaround was used in earlier versions of CTC and can be eliminated by using the \"Repair header template\" option (see step 6, \"Additional handling options\", below).</p>"
+msgstr "<p>這項 Child Theme Configuratort 早期版本採用的因應措施，可使用下方步驟 6 [其他處理設定] 中的 [修復頁首範本] 設定加以清除。</p>"
+
+#: includes/classes/UI.php:345
+msgid "This Child Theme was configured to accomodate a hard-coded stylesheet link."
+msgstr "這個子佈景主題設定為可儲存寫死的樣式表連結。"
+
+#: includes/forms/parent-child.php:301
+msgid "By default, the order of stylesheets that load prior to the primary stylesheet is preserved by treating them as dependencies. In some cases, stylesheets are detected in the preview that are not used site-wide. If necessary, dependency can be removed for specific stylesheets above."
+msgstr "依照預設，會以樣式表間的相依性為依據，維持載入主樣式表之前的樣式表順序。在某些狀況下，在不是套用於全站的預覽才會偵測到樣式表。如有需要，可於上方為指定樣式表移除相依性。"
+
+#: includes/forms/parent-child.php:267
+msgid "Advanced handling options"
+msgstr "進階處理設定"
+
+#: includes/classes/Upgrade.php:188
+msgid "Update Plugin"
+msgstr "升級外掛"
+
+#: includes/classes/Upgrade.php:70
+msgid "Upgrade Now"
+msgstr "立即升級"
+
+#: includes/classes/Upgrade.php:69
+msgid "You can upgrade to the latest version by clicking the button below. After validating the Update Key from your order, WordPress will retrieve the plugin from our website and install it automatically. If you no longer wish to use the premium version, you can dismiss this notice by clicking the close icon (x) at the top right."
+msgstr "透過點擊下方按鈕便可更新至最新版。升級金鑰驗證成功後，WordPress 會自動從我們的網站擷取並安裝外掛。如果你不想再使用付費版，請按一下右上方 (x) 圖示以關閉這項通知。"
+
+#: includes/classes/Upgrade.php:67
+msgid " is not compatible with the installed version of Child Theme Configurator and has been deactivated."
+msgstr "與目前 Child Theme Configurator 已安裝的版本並不相容，所以會將 Pro 版先予以停用。"
+
+#: includes/classes/Upgrade.php:67
+msgid "Child Theme Configurator Pro version %s"
+msgstr "Child Theme Configurator Pro %s 版"
+
+#: includes/classes/Upgrade.php:61
+msgid "contact us."
+msgstr "與我們聯絡。"
+
+#: includes/classes/Upgrade.php:61
+msgid "Sorry, we could not validate your Update Key. Please try again or, if you need assistance, please %s"
+msgstr "很抱歉，無法驗證你所提供升級金鑰，請稍後再試。如有需要協助之處，請%s"
+
+#: includes/classes/Upgrade.php:60
+msgid "Enter your Update Key"
+msgstr "輸入升級金鑰"
+
+#: includes/forms/zipform.php:6
+msgid "Export Child Theme"
+msgstr "匯出子佈景主題"
+
+#: includes/forms/settings-errors.php:81
+msgid "%sPreview your child theme%s before activating."
+msgstr "請在啟用前先%s預覽這個子佈景主題%s。"
+
+#: includes/forms/settings-errors.php:74
+msgid "You must %sNetwork enable%s your child theme."
+msgstr "必須為 WordPress 多站網路%s啟用這個子佈景主題%s。"
+
+#: includes/forms/settings-errors.php:54
+msgid "Update Key saved successfully."
+msgstr "升級金鑰儲存成功。"
+
+#: includes/forms/rule-value.php:9
+msgid "To find and edit selectors containing specific values for a given property, first choose the property (e.g., \"color\"), then click \"Selectors\" for any resulting value. A dialog panel will open with the corresponding selectors, grouped by media query."
+msgstr "要尋找並編輯包含特定屬性值的選取器，請先選擇屬性 (例如 color)，然後再點擊含有該屬性值的 [選取器] 連結。點擊之後會出現對話方塊面板，面板中會顯示所有包含該屬性及屬性值的選取器，這些選取器會以媒體查詢進行分組。"
+
+#: includes/forms/query-selector.php:9
+msgid "To find and edit specific selectors within @media query blocks, first choose the query, then the selector. Use the \"base\" query to edit all other selectors."
+msgstr "要在不同 @media 查詢中尋找並編輯特定的選取器，請先選擇媒體查詢再選擇選取器，而使用 base 查詢便能編輯其他選取器。"
+
+#: includes/forms/notices.php:111
+msgid "It is a good idea to save a Zip Archive of your Child Theme before using CTC for the first time. Click the \"save backup\" link ( see Step 2, below ) to export your themes."
+msgstr "在首次使用 Child Theme Configurator 前，將網站上的子佈景主題儲存成 ZIP 壓縮檔是個不錯的作法。點擊下方步驟 2 中的儲存備份連結便能匯出佈景主題。"
+
+#: includes/forms/notices.php:97
+msgid "Thank you for installing Child Theme Configurator."
+msgstr "感謝採用 Child Theme Configurator。"
+
+#: includes/forms/addl_panels.php:36
+msgid "Create new template and script files right from the admin."
+msgstr "直接從管理後台建立子佈景主題範本及指令碼檔案。"
+
+#: includes/forms/addl_panels.php:35
+msgid "Add Child Theme Files"
+msgstr "新增子佈景主題檔案"
+
+#: includes/classes/UI.php:350
+msgid "<p>%1Click Here%2 to view the theme as viewed by the Analyzer.</p>"
+msgstr "<p>%1點擊這裡%2以檢視分析程式分析過的佈景主題。</p>"
+
+#: includes/classes/UI.php:347
+msgid "Click to show/hide raw analysis data. Please include contents below with any support requests."
+msgstr "點擊以顯示/隱藏原始分析資料。提出技術支援需求時，請包含以下內容。"
+
+#: includes/classes/UI.php:322
+msgid "Click to show/hide PHP debug output"
+msgstr "點擊以顯示/隱藏 PHP 偵錯輸出資料"
+
+#: includes/classes/UI.php:321
+msgid "<p>First, verify you can <a href=\"%s\">preview your home page with the Customizer</a> and try analyzing again.</p><p>If that does not work, try temporarily disabling plugins that <strong>minify CSS</strong> or that <strong>force redirects between HTTP and HTTPS</strong>.</p>"
+msgstr "<p>首先請<a href=\"%s\">以 [外觀自訂器] 預覽網站首頁</a>加以驗證，確認能正常載入首頁後便再次進行分析。</p><p>如果依舊不能正常運作，請暫時停用能<strong>最小化 CSS</strong> 或<strong>強制在 HTTP 及 HTTPS 間進行重新導向</strong>的外掛。</p>"
+
+#: includes/forms/parent-child.php:89 includes/forms/parent-child.php:117
+msgid "Click here to save a backup of the selected theme."
+msgstr "點擊這裡為選取的佈景主題進行備份"
+
+#: includes/forms/files.php:58
+msgid "Click \"Export Zip\" to save a backup of the currently loaded child theme. You can export any of your themes from the Parent/Child tab."
+msgstr "點擊 [匯出子佈景主題] 便能為目前載入的子佈景主題進行備份。在 [上層/子佈景主題] 分頁中可匯出任何佈景主題。"
+
+#: includes/forms/notices.php:45
+msgid "This Child Theme has incorrect ownership permissions. Child Theme Configurator will attempt to correct this when you click the button below."
+msgstr "這個子佈景主題沒有適當的所有權權限。請點擊下方按鈕，Child Theme Configurator 會試著修正這個問題。"
+
+#: includes/classes/UI.php:320
+msgid "The theme \"%s\" could not be analyzed because the preview did not render correctly."
+msgstr "由於預覽無法正確轉譯，所以無法為佈景主題 %s 進行分析。"
+
+#: includes/forms/errorstrings.php:29
+msgid "Invalid theme root directory."
+msgstr "無效的佈景主題根目錄。"
+
+#: includes/forms/errorstrings.php:31
+msgid "PclZip returned zero bytes."
+msgstr "PclZip 傳回 0 個位元組。"
+
+#: includes/forms/errorstrings.php:30
+msgid "No writable temp directory."
+msgstr "沒有可供寫入的暫存目錄。"
+
+#: includes/classes/UI.php:343
+msgid "<p>The Configurator selected \"Do not add any parent stylesheet handling\" for the \"Parent stylesheet handling\" option (see step 6, below).</p>"
+msgstr "<p>Child Theme Configurator 選取了下方步驟 6 中的 [不加入任何上層佈景主題樣式表處理] 作為處理上層佈景主題樣式表的方式。</p>"
+
+#. Description of the plugin
+msgid "When using the Customizer is not enough - Create child themes and customize styles, templates, functions and more."
+msgstr "這個外掛可以協助 WordPress 網站管理員為已安裝的佈景主題建立子佈景主題，並為子佈景主題自訂樣式、範本及函式等，以彌補外觀自訂器仍未臻完善之處。"
+
+#: includes/forms/tabs.php:29
+msgid "Child Styles"
+msgstr "子佈景主題樣式"
+
+#: includes/forms/tabs.php:26
+msgid "Baseline Styles"
+msgstr "基準樣式"
+
+#: includes/forms/query-selector.php:57
+msgid "Baseline Value"
+msgstr "基準值"
+
+#: includes/forms/query-selector.php:15
+msgid "( or \"base\" )"
+msgstr "(或 base)"
+
+#: includes/forms/query-selector.php:14
+msgid "@media Query"
+msgstr "@media 查詢"
+
+#: includes/forms/parent-child.php:469
+msgid "Configure Plugin Styles"
+msgstr "設定外掛樣式"
+
+#: includes/forms/parent-child.php:444
+msgid "Select the plugin stylesheets you wish to customize below."
+msgstr "在下方選取要進行自訂的外掛樣式表。"
+
+#: includes/forms/parent-child.php:439
+msgid "Parse Plugin stylesheets:"
+msgstr "剖析外掛樣式表:"
+
+#: includes/forms/parent-child.php:417
+msgid "Configure Child Theme"
+msgstr "設定子佈景主題"
+
+#: includes/forms/parent-child.php:413 includes/forms/parent-child.php:465
+msgid "Click to run the Configurator:"
+msgstr "點擊以執行設定程式:"
+
+#: includes/forms/parent-child.php:399
+msgid "This option replaces the Child Theme's existing Menus, Widgets and other Customizer Settings with those from the Parent Theme. You should only need to use this option the first time you configure a Child Theme."
+msgstr "這項設定會將子佈景主題的 [選單]、[小工具] 及其他 [外觀自訂器] 相關設定，以上層佈景主題的設定加以取代。僅有在第一次設定子佈景主題時，才須要套用這項設定。"
+
+#: includes/forms/parent-child.php:392
+msgid "Copy Menus, Widgets and other Customizer Settings from the Parent Theme to the Child Theme:"
+msgstr "將上層佈景主題的 [選單]、[小工具] 及其他 [外觀自訂器] 相關設定複製至子佈景主題:"
+
+#: includes/forms/parent-child.php:310
+msgid "Customize the Child Theme Name, Description, Author, Version, etc.:"
+msgstr "自訂子佈景主題名稱、說明、開發人員、版本等屬性:"
+
+#: includes/forms/parent-child.php:314
+msgid "Click to toggle form"
+msgstr "顯示/隱藏表單"
+
+#: includes/forms/parent-child.php:286
+msgid "Let the Configurator (try to) resolve any stylesheet issues listed above. This can fix many, but not all, common problems."
+msgstr "請試著讓 Child Theme Configurator 解決列於上方的樣式表問題。這應能修正多數常見的問題，但並非所有問題均能修正。"
+
+#: includes/forms/parent-child.php:285
+msgid "Repair the header template in the child theme."
+msgstr "在子佈景主題中修復頁首範本"
+
+#: includes/forms/parent-child.php:275
+msgid "Do not load or parse the parent theme styles. Only use this option if the Child Theme uses a Framework like Genesis and uses <em>only child theme stylesheets</em> for its appearance."
+msgstr "啟用這項設定後，便不會載入或剖析上層佈景主題樣式。只有當子佈景主題是以佈景主題架構 (例如 Genesis) 進行開發，且<strong>僅有子佈景主題的樣式表</strong>用於網站外觀時，才使用這項設定。"
+
+#: includes/forms/parent-child.php:274
+msgid "Ignore parent theme stylesheets."
+msgstr "忽略上層佈景主題樣式表"
+
+#: includes/forms/parent-child.php:260
+msgid "Select this option if this theme already handles the parent theme stylesheet or if the parent theme's <code>style.css</code> file is not used for its appearance."
+msgstr "如果這個佈景主題已自行處理上層佈景主題樣式，或上層佈景主題的 <code>style.css</code> 並未用於網站外觀，請選取這項設定。"
+
+#: includes/forms/parent-child.php:257
+msgid "Do not add any parent stylesheet handling."
+msgstr "不加入任何上層佈景主題樣式表處理"
+
+#: includes/forms/parent-child.php:251
+msgid "Only use this option if the parent stylesheet cannot be loaded using the WordPress style queue. Using <code>@import</code> is not recommended."
+msgstr "只有當上層佈景主題樣式表無法使用 WordPress 樣式佇列載入時才使用這項設定，一般狀況並不建議使用 <code>@import</code>。"
+
+#: includes/forms/parent-child.php:245
+msgid "Use <code>@import</code> in the child theme stylesheet."
+msgstr "在子佈景主題樣式表中使用 <code>@import</code>"
+
+#: includes/forms/parent-child.php:239
+msgid "Let the Configurator determine the appropriate actions and dependencies and update the functions file automatically."
+msgstr "讓這個外掛判斷合適的操作及相依性，並自動更新佈景主題函式相關檔案。"
+
+#: includes/forms/parent-child.php:233
+msgid "Use the WordPress style queue."
+msgstr "使用 WordPress 樣式佇列"
+
+#: includes/forms/parent-child.php:219
+msgid "Select Parent Theme stylesheet handling:"
+msgstr "請選取上層佈景主題樣式表的處理方式:"
+
+#: includes/forms/parent-child.php:209
+msgid "Save new custom styles to a separate stylesheet and combine any existing child theme styles with the parent to form baseline. Select this option if you want to preserve the existing child theme styles instead of overwriting them. This option also allows you to customize stylesheets that load after the primary stylesheet."
+msgstr "將自訂樣式儲存為個別樣式表，並將子佈景主題現有樣式與上層佈景主題樣式進行合併成為基準樣式；如需保留現有的子佈景主題樣式而不是加以覆寫，請啟用這項設定。這項設定也能讓你自訂在載入主要樣式表後的其他樣式。"
+
+#: includes/forms/parent-child.php:206
+msgid "Separate Stylesheet"
+msgstr "個別樣式表"
+
+#: includes/forms/parent-child.php:194
+msgid "Save new custom styles directly to the Child Theme primary stylesheet, replacing the existing values. The primary stylesheet will load in the order set by the theme."
+msgstr "將自訂樣式直接儲存為子佈景主題的主要樣式表，並取代原有的值。主要樣式表會依佈景主題設定的順序載入樣式。"
+
+#: includes/forms/parent-child.php:191
+msgid "Primary Stylesheet (style.css)"
+msgstr "主要樣式表 (style.css)"
+
+#: includes/forms/parent-child.php:182
+msgid "Select where to save new styles:"
+msgstr "選取儲存子佈景主題樣式表的位置:"
+
+#: includes/forms/parent-child.php:217
+msgid "Click to expand"
+msgstr "點擊以展開"
+
+#: includes/forms/parent-child.php:169
+msgid "For verification only (you cannot modify the directory of an existing Child Theme)."
+msgstr "子佈景主題目錄僅供驗證使用，使用者無法修改現有的子佈景主題目錄。"
+
+#: includes/forms/parent-child.php:159
+msgid "Verify Child Theme directory:"
+msgstr "驗證子佈景主題目錄:"
+
+#: includes/forms/parent-child.php:152
+msgid "This is NOT the name of the Child Theme. You can customize the name, description, etc. in step 7, below."
+msgstr "這項設定<strong>不是</strong>子佈景主題的名稱。你可以在下方步驟 7 中自訂如名稱、說明等屬性。"
+
+#: includes/forms/parent-child.php:146
+msgid "Directory Name"
+msgstr "目錄名稱"
+
+#: includes/forms/parent-child.php:142
+msgid "Name the new theme directory:"
+msgstr "子佈景主題目錄名稱:"
+
+#: includes/forms/parent-child.php:127
+msgid "Analyze Child Theme"
+msgstr "分析子佈景主題"
+
+#: includes/forms/parent-child.php:113
+msgid "Select a Child Theme:"
+msgstr "選取子佈景主題:"
+
+#: includes/forms/parent-child.php:102 includes/forms/parent-child.php:130
+msgid "Click \"Analyze\" to determine stylesheet dependencies and other potential issues."
+msgstr "點擊 [分析] 以檢查樣式表的相依性及其他潛在問題。"
+
+#: includes/forms/parent-child.php:99
+msgid "Analyze Parent Theme"
+msgstr "分析上層佈景主題"
+
+#: includes/forms/parent-child.php:95 includes/forms/parent-child.php:123
+msgid "Analyze"
+msgstr "分析"
+
+#: includes/forms/parent-child.php:85
+msgid "Select a Parent Theme:"
+msgstr "選取上層佈景主題:"
+
+#: includes/forms/parent-child.php:74
+msgid "Revert the Child theme stylesheet and functions files to their state before the initial configuration or last reset. Additional child theme files will not be removed, but you can delete them under the Files tab."
+msgstr "將子佈景主題樣式表和函式檔案文件還原至進行初始設定或上一次重設前的狀態。這項操作不會刪除額外的子佈景主題檔案，但可以在 [檔案] 分頁中進行刪除。"
+
+#: includes/forms/parent-child.php:71
+msgid "RESET an existing Child Theme (this will destroy any work you have done in the Configurator)"
+msgstr "重設現有的子佈景主題 (這項功能會清除所有在設定程式中為指定的子佈景主題所進行的設定)"
+
+#: includes/forms/parent-child.php:60
+msgid "Make a complete copy of an existing Child Theme in a new directory, including any menus, widgets and other Customizer settings. The option to copy the Parent Theme settings (step 8, below) is disabled with this action."
+msgstr "將現有的子佈景主題完整再製於新目錄中，包含 [選單]、[小工具] 以及其他 [外觀自訂器] 設定，執行這項動作會停用原本步驟 8 可從上層佈景主題複製設定的功能。"
+
+#: includes/forms/parent-child.php:57
+msgid "DUPLICATE an existing Child Theme"
+msgstr "再製現有的子佈景主題"
+
+#: includes/forms/parent-child.php:46
+msgid "Set up a previously installed child theme for use with the Configurator or to modify current settings."
+msgstr "透過設定程式設定已建立的子佈景主題，或修改子佈景主題目前的設定。"
+
+#: includes/forms/parent-child.php:43
+msgid "CONFIGURE an existing Child Theme"
+msgstr "設定現有的子佈景主題"
+
+#: includes/forms/parent-child.php:30
+msgid "Install a new customizable child theme using an installed theme as a parent."
+msgstr "透過已安裝的上層佈景主題，為網站建立可自訂的子佈景主題。"
+
+#: includes/forms/parent-child.php:27
+msgid "CREATE a new Child Theme"
+msgstr "建立子佈景主題"
+
+#: includes/forms/parent-child.php:19
+msgid "Select an action:"
+msgstr "選取執行動作:"
+
+#: includes/forms/current-theme.php:6
+msgid "Currently loaded"
+msgstr "目前載入的子佈景主題"
+
+#: includes/forms/fileform.php:14
+msgid "Copy PHP templates from the parent theme by selecting them here. The Configurator defines a template as a Theme PHP file having no PHP functions or classes. Non-template files cannot be inherited by a child theme."
+msgstr "請在這裡選取要從上層佈景主題複製的 PHP 範本。設定程式將範本定義為佈景主題中不含 PHP 函式或類別的 PHP 檔案，子佈景主題無法繼承非範本檔案。"
+
+#: includes/forms/notices.php:107
+msgid "click here to view the latest videos."
+msgstr "點擊這裡觀賞最新的教學課程影片。"
+
+#: includes/forms/notices.php:105
+msgid "For more information, please open the Help tab at the top right or "
+msgstr "如需更多資訊，請開啟畫面右上方的 [使用說明] 標籤，或"
+
+#: includes/forms/notices.php:102
+msgid "Contact Us."
+msgstr "與我們聯絡。"
+
+#: includes/forms/notices.php:100
+msgid "A lot of time and testing has gone into this release but there may be edge cases. If you have any questions, please"
+msgstr "我們雖然投入大量時間在測試這個發行版本，但可能仍會有所遺漏。如果使用上遇到任何問題，請"
+
+#: includes/forms/notices.php:84
+msgid "Your stylesheet has changed since the last time you used the Configurator. Please follow the steps for \"CONFIGURE an existing Child Theme\" under the \"Parent/Child\" Tab or you will lose these changes."
+msgstr "上次使用過 Child Theme Configurator 後，樣式表進行過變更。請依照 [上層/子佈景主題] 分頁中的 [設定現有的子佈景主題] 所列步驟進行設定，否則會失去這些變更。"
+
+#: includes/forms/notices.php:76
+msgid "Child Theme Configurator did not detect any configuration data because a previously configured Child Theme has been removed. Please follow the steps for \"CONFIGURE an existing Child Theme\" under the \"Parent/Child\" Tab."
+msgstr "由於已移除之前設定的子佈景主題，因此 Child Theme Configurator 無法偵測到任何設定資料。請依照 [上層/子佈景主題] 分頁中的 [設定現有的子佈景主題] 所列步驟進行設定。"
+
+#: includes/classes/UI.php:349
+msgid "<p>This method has been replaced by the \"Separate stylesheet\" and \"Ignore Parent Theme\" options ( selected below ) for broader framework compatability.</p>"
+msgstr "為求對佈景主題架構有更好的相容性，這項處理方式會由下方的 [個別樣式表] 及 [忽略上層佈景主題樣式表] 這兩項設定所取代。"
+
+#: includes/classes/UI.php:348
+msgid "This child theme was configured using the CTC Pro \"Genesis stylesheet handling\" method."
+msgstr "這個子佈景主題設定為使用 Child Theme Configurator Pro 的 [Genesis 樣式表處理方式]。"
+
+#: includes/classes/UI.php:344
+msgid "This theme does not require the parent theme's <code>style.css</code> file for its appearance."
+msgstr "這個子佈景主題的外觀無須上層佈景主題的 <code>style.css</code> 檔案。"
+
+#: includes/classes/UI.php:342
+msgid "The parent theme's <code>style.css</code> file is being loaded automatically."
+msgstr "上層佈景主題的 <code>style.css</code> 檔案已自動載入。"
+
+#: includes/classes/UI.php:341
+msgid "<p>Consider saving new custom styles to a \"Separate stylesheet\" (see step 5, below) so that you can customize these styles.</p>"
+msgstr "<p>請考慮將新的自訂樣式儲存至個別樣式表 (參考下方的步驟 5)，這樣便能為這些額外載入的樣式進行自訂。</p>"
+
+#: includes/classes/UI.php:340
+msgid "This theme loads additional stylesheets after the <code>style.css</code> file:"
+msgstr "這個佈景主題在載入 <code>style.css</code> 後，還載入了其他樣式表："
+
+#: includes/classes/UI.php:339
+msgid "<p>Please consider selecting \"Use the WordPress style queue\" for the parent stylesheet handling option (see step 6, below).</p>"
+msgstr "<p>請選取下方步驟 6 中的 [使用 WordPress 樣式佇列] 作為處理上層佈景主題樣式表的方式。</p>"
+
+#: includes/classes/UI.php:338
+msgid "This child theme uses <code>@import</code> to load the parent theme's <code>style.css</code> file."
+msgstr "這個子佈景主題使用了 <code>@import</code> 語法載入上層佈景主題的 <code>style.css</code> 檔案。"
+
+#: includes/classes/UI.php:337
+msgid "<p>The Configurator makes significant modifications to the child theme, including stylesheet changes and additional php functions. Please consider using the DUPLICATE child theme option (see step 1, above) and keeping the original as a backup.</p>"
+msgstr "<p>Child Theme Configurator 對子佈景主題進行了重大修改，包含進行樣式表的變更及加入額外的 PHP 函式。請使用上方步驟 1 中的 [再製現有的子佈景主題] 設定，並為目前的子佈景主題進行備份。</p>"
+
+#: includes/classes/UI.php:336
+msgid "This Child Theme has not been configured for this plugin."
+msgstr "這個子佈景主題尚未針對這個外掛進行設定。"
+
+#: includes/classes/UI.php:335
+msgid "This theme appears OK to use as a Child theme."
+msgstr "這個佈景主題檢測合格，可以作為子佈景主題使用。"
+
+#: includes/classes/UI.php:334
+msgid "This child theme appears to be functioning correctly."
+msgstr "這個子佈景主題應能正常運作。"
+
+#: includes/classes/UI.php:333
+msgid "<p>Please select a stylesheet handling method or check \"Ignore parent theme stylesheets\" (see step 6, below).</p>"
+msgstr "<p>請選取樣式表的處理方式，或啟用下方步驟 6 的 [忽略上層佈景主題樣式表] 設定。</p>"
+
+#: includes/classes/UI.php:332
+msgid "This child theme uses the parent stylesheet but does not load the parent theme's <code>style.css</code> file."
+msgstr "這個子佈景主題使用了上層佈景主題的樣式表，卻未載入上層佈景主題的 <code>style.css</code> 檔案。"
+
+#: includes/classes/UI.php:331
+msgid "<p>If you want to customize styles using this plugin, please click \"Configure Child Theme\" again to add this to the settings.</p>"
+msgstr "<p>如需使用這個外掛自訂樣式，請再次點擊 [設定子佈景主題] 將樣式的變更新增至設定中。</p>"
+
+#: includes/classes/UI.php:330
+msgid "This child theme does not load a Configurator stylesheet."
+msgstr "這個子佈景主題並未載入設定程式的樣式表。"
+
+#: includes/classes/UI.php:329
+msgid "<p>This is common with older themes but requires the use of <code>@import</code>, which is no longer recommended. You can try to resolve this using the \"Repair header template\" option (see step 6, \"Additional handling options\", below).</p>"
+msgstr "<p>這是必須採用早已不建議使用的 <code>@import</code> 語法的舊式佈景主題的常見問題。請使用下方步驟 6 [其他處理設定] 中的 [修復頁首範本] 設定解決這個問題。</p>"
+
+#: includes/classes/UI.php:328
+msgid "This theme loads the parent theme's <code>style.css</code> file outside the wp_styles queue."
+msgstr "這個子佈景主題在 wp_styles 樣式佇列外載入上層佈景主題的 <code>style.css</code> 檔案。"
+
+#: includes/classes/UI.php:327
+msgid "<p>This makes it difficult for plugins to override these styles. You can try to resolve this using the  \"Repair header template\" option (Step 6, \"Additional handling options\", below).</p>"
+msgstr "<p>這會讓外掛很難覆寫這些樣式。請使用下方步驟 6 [其他處理設定] 中的 [修復頁首範本] 設定解決這個問題。</p>"
+
+#: includes/classes/UI.php:326
+msgid "This theme loads stylesheets after the wp_styles queue."
+msgstr "這個佈景主題在載入 wp_styles 樣式佇列後，才會載入自有的樣式表。"
+
+#: includes/classes/UI.php:325
+msgid "Do Not Activate \"%s\"! A PHP FATAL ERROR has been detected."
+msgstr "請不要啟用 %s，這會導致 PHP 產生嚴重錯誤。"
+
+#: includes/classes/UI.php:319
+msgid "The theme \"%s\" generated unexpected PHP debug output."
+msgstr "佈景主題 %s 產生了未預期的 PHP 偵錯輸出。"
+
+#: includes/classes/UI.php:318
+msgid "Checking"
+msgstr "正在檢查"
+
+#: includes/classes/UI.php:317
+msgid "Updating"
+msgstr "正在更新"
+
+#: includes/classes/UI.php:316
+msgid "No Styles Available. Check Parent/Child settings."
+msgstr "沒有可用的樣式，請檢查 [上層/子佈景主題] 分頁中的設定。"
+
+#: includes/classes/UI.php:298
+msgid "Are you sure you wish to RESET? This will destroy any work you have done in the Configurator."
+msgstr "確定要進行重新設定？這項操作會讓之前在設定程式中所有的設定結果完全消失。"
+
+#: includes/forms/settings-errors.php:67
+msgid "Child Theme <strong>%s</strong> has been generated successfully."
+msgstr "已成功產生子佈景主題 <strong>%s</strong>。"
+
+#: includes/forms/settings-errors.php:48
+msgid "Child Theme <strong>%s</strong> has been reset. Please configure it using the settings below."
+msgstr "子佈景主題 <strong>%s</strong> 已完成重設，請使用外掛提供的功能再次進行設定。"
+
+#: includes/classes/UI.php:35
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+msgstr "英文: Sample<br />中文: 範例"
+
+#: includes/forms/errorstrings.php:16
+msgid "Could not upgrade child theme"
+msgstr "無法為子佈景主題進行升級"
+
+#: includes/forms/errorstrings.php:11
+msgid "Please select a valid Child Theme."
+msgstr "請選取有效的子佈景主題。"
+
+#. Author URI of the plugin
+msgid "http://www.lilaeamedia.com"
+msgstr "https://www.lilaeamedia.com"
+
+#. Author of the plugin
+msgid "Lilaea Media"
+msgstr "Lilaea Media"
+
+#. Plugin URI of the plugin
+msgid "http://www.childthemeconfigurator.com"
+msgstr "https://www.childthemeconfigurator.com/"
+
+#: includes/forms/webfonts.php:20
+msgid "Use <code>@import url( [path] );</code> to link additional stylesheets. Child Theme Configurator uses the <code>@import</code> keyword to identify them and convert them to <code>&lt;link&gt;</code> tags. <strong>Example:</strong>"
+msgstr "請使用 <code>@import url( [path] );</code> 語法以連結其他樣式表。Child Theme Configurator 透過 <code>@import</code> 這個關鍵字識別樣式表路徑/網址並將之轉換為 <code>&lt;link&gt;</code> 標籤。<strong>範例如下:</strong>"
+
+#: includes/forms/themepreview.php:21
+msgid "Not Network Enabled"
+msgstr "未啟用多站網路"
+
+#: includes/forms/themepreview.php:17
+msgid " in default Site"
+msgstr " 於預設網站"
+
+#: includes/forms/themepreview.php:16
+msgid "Preview"
+msgstr "預覽"
+
+#: includes/forms/themepreview.php:14
+msgid "By: "
+msgstr "開發人員: "
+
+#: includes/forms/themepreview.php:12
+msgid "Version: "
+msgstr "版本: "
+
+#: includes/forms/tabs.php:33
+msgid "Files"
+msgstr "檔案"
+
+#: includes/forms/tabs.php:17
+msgid "Property/ Value"
+msgstr "屬性/屬性值"
+
+#: includes/forms/tabs.php:14
+msgid "Query/ Selector"
+msgstr "查詢/選取器"
+
+#: includes/forms/tabs.php:11
+msgid "Parent/ Child"
+msgstr "上層/子佈景主題"
+
+#: includes/forms/rule-value.php:27
+msgid "Value"
+msgstr "屬性值"
+
+#: includes/forms/related.php:4
+msgid "Click help"
+msgstr "點擊 [使用說明]"
+
+#: includes/forms/related.php:2
+msgid "New user?"
+msgstr "第一次使用這個外掛嗎？"
+
+#: includes/forms/query-selector.php:92
+msgid "Values entered here are merged into existing child styles or added to the child stylesheet if they do not exist in the parent."
+msgstr "如果在這裡輸入的值並不存在於上層佈景主題中，就會將之整合或新增至其子佈景主題的樣式表中。"
+
+#: includes/forms/query-selector.php:92
+msgid "Use to enter shorthand CSS or new @media queries and selectors."
+msgstr "這個欄位用於輸入 CSS 簡寫語法或新增 @media 查詢及選取器。"
+
+#: includes/forms/query-selector.php:90
+msgid "Raw CSS"
+msgstr "原始 CSS"
+
+#: includes/forms/webfonts.php:15 includes/forms/query-selector.php:87
+msgid "Save"
+msgstr "儲存"
+
+#: includes/forms/query-selector.php:85
+msgid "Copy Selector"
+msgstr "複製選取器"
+
+#: includes/forms/query-selector.php:76
+msgid "Order"
+msgstr "樣式序列順序"
+
+#: includes/forms/query-selector.php:66
+msgid "New Property"
+msgstr "新增屬性"
+
+#: includes/forms/query-selector.php:60
+msgid "Child Value"
+msgstr "子佈景主題屬性值"
+
+#: includes/forms/rule-value.php:14 includes/forms/query-selector.php:54
+msgid "Property"
+msgstr "屬性"
+
+#: includes/forms/query-selector.php:47
+msgid "Delete Child Values"
+msgstr "刪除子佈景主題屬性值"
+
+#: includes/forms/query-selector.php:46
+msgid "Save Child Values"
+msgstr "儲存子佈景主題屬性值"
+
+#: includes/forms/rule-value.php:30 includes/forms/query-selector.php:38
+msgid "Sample"
+msgstr "呈現效果"
+
+#: includes/forms/query-selector.php:25
+msgid "Selector"
+msgstr "選取器"
+
+#: includes/forms/debug-toggle.php:8
+msgid "Debug"
+msgstr "偵錯模式"
+
+#: includes/forms/parent-child.php:150
+msgid "NOTE:"
+msgstr "請注意:"
+
+#: includes/forms/parent-child.php:379 includes/forms/parent-child.php:383
+msgid "Version"
+msgstr "版本"
+
+#: includes/forms/parent-child.php:373
+msgid "Tags"
+msgstr "標籤"
+
+#: includes/forms/parent-child.php:369
+msgid "Theme Tags"
+msgstr "佈景主題標籤"
+
+#: includes/forms/parent-child.php:363
+msgid "Description"
+msgstr "內容說明"
+
+#: includes/forms/parent-child.php:359
+msgid "Theme Description"
+msgstr "佈景主題說明"
+
+#: includes/forms/parent-child.php:349 includes/forms/parent-child.php:353
+msgid "Author Website"
+msgstr "開發人員網站"
+
+#: includes/forms/parent-child.php:339 includes/forms/parent-child.php:343
+msgid "Author"
+msgstr "開發人員"
+
+#: includes/forms/parent-child.php:329 includes/forms/parent-child.php:333
+msgid "Theme Website"
+msgstr "佈景主題網站"
+
+#: includes/forms/parent-child.php:323
+msgid "Theme Name"
+msgstr "佈景主題名稱"
+
+#: includes/forms/parent-child.php:319
+msgid "Child Theme Name"
+msgstr "子佈景主題名稱"
+
+#: includes/forms/main.php:35
+msgid "version"
+msgstr "版本"
+
+#: includes/forms/images.php:13
+msgid "Delete child theme images by selecting them here."
+msgstr "透過選取子佈景主題圖片便可進行刪除。"
+
+#: includes/forms/images.php:10
+msgid "Child Theme Images"
+msgstr "子佈景主題圖片"
+
+#: includes/forms/files.php:77
+msgid "Make read-only"
+msgstr "設定為唯讀"
+
+#: includes/forms/files.php:71
+msgid "Attempt to reset child theme permissions to user ownership and read-only access."
+msgstr "請重新設定子佈景主題權限為僅保留使用者所有權且為唯讀權限。"
+
+#: includes/forms/files.php:68
+msgid "Secure Child Theme"
+msgstr "保護子佈景主題"
+
+#: includes/forms/files.php:57
+msgid "Export Child Theme as Zip Archive"
+msgstr "匯出子佈景主題為 ZIP 壓縮檔"
+
+#: includes/forms/files.php:44
+msgid "The theme screenshot should be a 4:3 ratio (e.g., 880px x 660px) JPG, PNG or GIF. It will be renamed <code>screenshot</code>."
+msgstr "佈景主題螢幕擷圖必須為長寬比 4:3 (例如 880px x 660px) 的 JPG、PNG 或 GIF 圖片，上傳的圖片會重新命名為 <code>screenshot</code>。"
+
+#: includes/forms/files.php:41
+msgid "Upload New Screenshot"
+msgstr "上傳螢幕擷圖"
+
+#: includes/forms/files.php:32
+msgid "Child Theme Screenshot"
+msgstr "子佈景主題螢幕擷圖"
+
+#: includes/forms/files.php:25 includes/forms/files.php:51
+msgid "Upload"
+msgstr "上傳"
+
+#: includes/forms/files.php:18
+msgid "Theme images reside under the <code>images</code> directory in your child theme and are meant for stylesheet use only. Use the Media Library for content images."
+msgstr "佈景主題圖片位於子佈景主題的 <code>images</code> 目錄中，且僅供樣式表使用。網站內容的圖片請使用 [媒體庫] 中的圖片。"
+
+#: includes/forms/files.php:15
+msgid "Upload New Child Theme Image"
+msgstr "上傳子佈景主題圖片"
+
+#: includes/forms/file-form-buttons.php:13 includes/forms/images.php:21
+msgid "Delete Selected"
+msgstr "刪除選取項目"
+
+#: includes/forms/file-form-buttons.php:13
+msgid "Copy Selected to Child Theme"
+msgstr "複製選取項目至子佈景主題"
+
+#: includes/forms/file-form-buttons.php:9
+msgid "Make Selected Writable"
+msgstr "將選取項目設定為可寫入"
+
+#: includes/forms/fileform.php:30
+msgid "Delete child theme templates or make them writable by selecting them here. Writable files are displayed in <span style=\"color:red\">red</span>."
+msgstr "刪除子佈景主題範本，或在這裡藉由選取子佈景主題範本將之變更為可寫入。可寫入的檔案會顯示為<span style=\"color:red\">紅色</span>。"
+
+#: includes/forms/fileform.php:29
+msgid "Delete child theme templates by selecting them here."
+msgstr "在這裡選取子佈景主題範本檔案後，便能進行刪除。"
+
+#: includes/forms/fileform.php:19
+msgid "The %s file is generated separately and cannot be copied here."
+msgstr "這個外掛會個別產生 %s 檔案，所以無法在這裡進行複製。"
+
+#: includes/forms/fileform.php:17
+msgid "CAUTION: If your child theme is active, the child theme version of the file will be used instead of the parent immediately after it is copied."
+msgstr "注意: 已啟用的子佈景主題在複製上層佈景主題檔案後，會立即使用子佈景主題版本的檔案，以取代上層佈景主題的版本。"
+
+#: includes/forms/fileform.php:9
+msgid "Child Theme Files"
+msgstr "子佈景主題檔案"
+
+#: includes/forms/fileform.php:9
+msgid "Parent Templates"
+msgstr "上層佈景主題範本"
+
+#: includes/classes/UI.php:119
+msgid "Click here to edit template files using the Theme Editor"
+msgstr "點擊這裡使用 [佈景主題編輯器] 編輯範本檔案"
+
+#: includes/classes/UI.php:115
+msgid "The Theme editor has been disabled. Template files must be edited offline."
+msgstr "已停用佈景主題編輯器，必須離線編輯範本檔案。"
+
+#: includes/forms/backups.php:10
+msgid "Restore backup from"
+msgstr "備份檔位置為"
+
+#: includes/forms/backup.php:8
+msgid "Backup"
+msgstr "備份"
+
+#: includes/forms/addl_tabs.php:7
+msgid "Upgrade"
+msgstr "升級"
+
+#: includes/forms/addl_panels.php:39
+msgid "Tutorial Videos"
+msgstr "教學課程影片"
+
+#: includes/forms/addl_panels.php:38
+msgid "Online Documentation"
+msgstr "線上說明文件"
+
+#: includes/forms/addl_panels.php:37
+msgid "Top-rated Online Support"
+msgstr "廣受好評的線上技術支援"
+
+#: includes/forms/addl_panels.php:34
+msgid "Return to recently edited selectors from a toggleable sidebar."
+msgstr "從可開關的資訊欄返回最近編輯的選取器。"
+
+#: includes/forms/addl_panels.php:34
+msgid "Most recent edits"
+msgstr "最近的編輯記錄"
+
+#: includes/forms/addl_panels.php:33
+msgid "Tweak menus quickly and easily."
+msgstr "透過導覽選單尋找需要調整的樣式既快速又簡單。"
+
+#: includes/forms/addl_panels.php:33
+msgid "Find styles by Nav Menu"
+msgstr "透過導覽選單尋找樣式"
+
+#: includes/forms/addl_panels.php:32
+msgid "Use the \"All Styles\" panel to edit groups of selectors from a single combined list."
+msgstr "在 [所有樣式] 分頁中的樣式清單中編輯選取器群組。"
+
+#: includes/forms/addl_panels.php:32
+msgid "Find related styles"
+msgstr "尋找相關樣式"
+
+#: includes/forms/addl_panels.php:31
+msgid "Keep the colors you select just a click away. No more searching for hex codes and RGB values."
+msgstr "僅需點擊一下便可選取色彩，不再需要搜尋色彩的 Hex 色碼及 RGB 值。"
+
+#: includes/forms/addl_panels.php:31
+msgid "Color Palettes"
+msgstr "調色盤"
+
+#: includes/forms/addl_panels.php:30
+msgid "Preview your child theme with a single click."
+msgstr "僅需點擊一下便能預覽子佈景主題。"
+
+#: includes/forms/addl_panels.php:30
+msgid "Quick Preview"
+msgstr "快速預覽"
+
+#: includes/forms/addl_panels.php:29
+msgid "Apply the power of CTC's top-rated interface to your site's plugin styles. All new design makes it much easier to get the results you want."
+msgstr "透過 Child Theme Configurator 廣受好評界面，以它強大功能為網站外掛的樣式進行調整，全新設計可以讓變更樣式更容易獲得預想中的效果。"
+
+#: includes/forms/addl_panels.php:28
+msgid "Customize Plugin Stylesheets"
+msgstr "自訂外掛樣式表"
+
+#: includes/forms/addl_panels.php:26
+msgid "We've packed in more features to make design work quicker and easier with <strong>Child Theme Configurator Pro.</strong>"
+msgstr "我們在 <strong>Child Theme Configurator Pro</strong> 中陸續加入許多功能，只為了讓設計工作變的更快更簡單。"
+
+#: includes/forms/addl_panels.php:25
+msgid "Designed by Developers Who Use It Every Day."
+msgstr "由每天使用它的開發人員所設計"
+
+#: includes/forms/addl_panels.php:24
+msgid "Thousands of users have already seen the benefits of using Child Theme Configurator. If you spend any amount of time customizing WordPress, CTC Pro will help maximize your productivity."
+msgstr "已有成千上萬的使用者體驗到採用 Child Theme Configurator 所帶來的好處。如果你花了大量時間在自訂 WordPress 上，Child Theme Configurator Pro 能最大限度的提昇這項工作的效率。"
+
+#: includes/forms/addl_panels.php:23
+msgid "Customizing WordPress just got even easier."
+msgstr "自訂 WordPress 網站樣式從未如此簡單"
+
+#: includes/forms/addl_panels.php:22
+msgid "Learn more about CTC Pro"
+msgstr "進一步了解 Child Theme Configurator Pro"
+
+#: includes/help/en_US.php:15 includes/forms/addl_panels.php:14
+#: includes/forms/addl_panels.php:18
+msgid "Learn more"
+msgstr "進一步了解"
+
+#: includes/forms/addl_panels.php:43
+msgid "*Prices and offers subject to change."
+msgstr "*價格及優惠可能會隨時調整。"
+
+#: includes/forms/addl_panels.php:43
+msgid "Order Now"
+msgstr "立即訂購"
+
+#: includes/forms/addl_panels.php:42
+msgid "and get <strong>20% off entire order</strong>."
+msgstr "便能獲得<strong>整筆訂單 8 折</strong>的優惠。"
+
+#: includes/forms/addl_panels.php:42
+msgid "wordpress-org"
+msgstr "wordpress-org"
+
+#: includes/forms/addl_panels.php:42
+msgid "Use coupon code"
+msgstr "使用優惠碼"
+
+#: includes/forms/addl_css.php:11
+msgid "Stylesheets that are currently being loaded by the parent theme are automatically selected below (except for Bootstrap stylesheets which add a large amount data to the configuration). To further reduce overhead, select only the additional stylesheets you wish to customize."
+msgstr "已在下方自動選取目前由上層佈景主題所載入的樣式表，但不包含加入大量資料進行設定的 Bootstrap 樣式表。為了進一步降低主機負擔，請只選取需要進行自訂的其他樣式表。"
+
+#: includes/forms/addl_css.php:7
+msgid "Parse additional stylesheets:"
+msgstr "剖析其他樣式表:"
+
+#: includes/forms/notices.php:68
+msgid "<strong>However, some styles could not be parsed due to memory limits.</strong> Try deselecting \"Additional Stylesheets\" below and click \"Generate/Rebuild Child Theme Files\". %sWhy am I seeing this?%s"
+msgstr "<strong>由於主機記憶體限制，導致有些樣式無法進行剖析。</strong>請取消選取下方的 [其他樣式表]，並點擊 [產生/重新建置子佈景主題檔案]。%s為什麼我會看到這個？%s"
+
+#: includes/forms/notices.php:60
+msgid "Child Theme Configurator needs to update its internal data. Please set your preferences below and click \"Generate Child Theme Files\" to update your configuration."
+msgstr "Child Theme Configurator 必須更新內部資料。請在下方進行偏好設定，並點擊 [產生子佈景主題檔案] 以更新相關設定。"
+
+#: includes/forms/notices.php:51
+msgid "Correct Child Theme Permissions"
+msgstr "修正子佈景主題權限"
+
+#: includes/forms/notices.php:32
+msgid "<li>Run PHP under Apache with suEXEC (contact your web host).</li>"
+msgstr "<li>在 Apache 中以 suEXEC 執行 PHP (請聯絡主機服務提供商)。</li>"
+
+#: includes/forms/notices.php:30
+msgid "<li><a target=\"_blank\" href=\"http://codex.wordpress.org/Changing_File_Permissions\" title=\"Changing File Permissions\">Set write permissions on the server manually</a> (not recommended).</li>"
+msgstr "<li><a href=\"https://codex.wordpress.org/Changing_File_Permissions\" title=\"變更檔案權限\" target=\"_blank\">在伺服器上手動設定寫入權限</a> (不建議)。</li>"
+
+#: includes/forms/notices.php:29
+msgid "<li><a target=\"_blank\" href=\"http://technet.microsoft.com/en-us/library/cc771170\" title=\"Setting Application Pool Identity\">Assign WordPress to an application pool that has write permissions</a> (Windows IIS systems).</li>"
+msgstr "<li><a href=\"https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771170(v=ws.10)\" title=\"設定應用程式集區識別\" target=\"_blank\">將 WordPress 指派給具備寫入權限的應用程式集區</a> (Windows IIS 系統)。</li>"
+
+#: includes/forms/notices.php:27
+msgid "<li><a target=\"_blank\"  href=\"http://codex.wordpress.org/Editing_wp-config.php#WordPress_Upgrade_Constants\" title=\"Editin wp-config.php\">Add your FTP/SSH credentials to the WordPress config file</a>.</li>"
+msgstr "<li><a href=\"https://codex.wordpress.org/Editing_wp-config.php#WordPress_Upgrade_Constants\" title=\"編輯 wp-config.php\" target=\"_blank\">將 FTP/SSH 登入認證新增至 WordPress 設定檔中</a>。</li>"
+
+#: includes/forms/notices.php:24
+msgid "Make files writable"
+msgstr "將檔案設定為可寫入"
+
+#: includes/forms/notices.php:20
+msgid "<li>Temporarily set write permissions by clicking the button below. When you are finished editing, revert to read-only by clicking \"Make read-only\" under the \"Files\" tab.</li>"
+msgstr "<li>點擊下方按鈕以暫時設定寫入權限。完成編輯後，請點擊 [檔案] 分頁中的 [設定為唯讀] 還原為唯讀狀態。</li>"
+
+#: includes/forms/notices.php:12
+msgid "The child theme is in read-only mode and Child Theme Configurator cannot apply changes. Click to see options"
+msgstr "這個子佈景主題目前為唯讀模式，所以 Child Theme Configurator 無法套用變更。點擊查看可用設定"
+
+#: includes/forms/errorstrings.php:28
+msgid "Could not upload file."
+msgstr "無法上傳檔案。"
+
+#: includes/forms/errorstrings.php:26
+msgid "There were errors while resetting permissions."
+msgstr "重設權限時發生錯誤。"
+
+#: includes/forms/errorstrings.php:36
+msgid "Could not set write permissions."
+msgstr "無法設定寫入權限。"
+
+#: includes/forms/errorstrings.php:21
+msgid "Could not delete %s file."
+msgstr "無法刪除 %s 檔案。"
+
+#: includes/forms/errorstrings.php:19
+msgid "A closing PHP tag was detected in Child theme functions file so \"Parent Stylesheet Handling\" option was not configured. Closing PHP at the end of the file is discouraged as it can cause premature HTTP headers. Please edit <code>functions.php</code> to remove the final <code>?&gt;</code> tag and click \"Generate/Rebuild Child Theme Files\" again."
+msgstr "由於在子佈景主題的函式檔案中偵測到 PHP 結尾標籤，導致無法設定上層佈景主題樣式表處理方式。不建議在檔案尾端加上 PHP 結尾標籤，因為會導致不完整讀 HTTP 標頭。請在 <code>functions.php</code> 中加以編輯，藉以移除 <code>?&gt;</code> 標籤，然後再次點擊 [產生/重新建置子佈景主題檔案]。"
+
+#: includes/forms/errorstrings.php:17
+msgid "Your stylesheet is not writable."
+msgstr "樣式表無法進行寫入。"
+
+#: includes/forms/errorstrings.php:14
+msgid "Your theme directories are not writable."
+msgstr "佈景主題目錄無法進行寫入。"
+
+#: includes/forms/errorstrings.php:13
+msgid "<strong>%s</strong> exists. Please enter a different Child Theme template name."
+msgstr "<strong>%s</strong> 已存在，請輸入不同的子佈景主題範本名稱。"
+
+#: includes/forms/errorstrings.php:12
+msgid "Please enter a valid Child Theme directory name."
+msgstr "請輸入有效的子佈景主題目錄名稱。"
+
+#: includes/forms/errorstrings.php:10
+msgid "Please select a valid Parent Theme."
+msgstr "請選取有效的上層佈景主題。"
+
+#: includes/forms/errorstrings.php:8
+msgid "%s does not exist. Please select a valid Parent Theme."
+msgstr "%s 不存在。請選取有效的上層佈景主題。"
+
+#: includes/forms/errorstrings.php:7
+msgid "You do not have permission to configure child themes."
+msgstr "目前的登入身分沒有設定子佈景主題的權限。"
+
+#: includes/forms/errorstrings.php:9
+msgid "The Functions file is required and cannot be deleted."
+msgstr "函式檔案為必要檔案且無法刪除。"
+
+#: includes/forms/errorstrings.php:6
+msgid "Zip file creation failed."
+msgstr "無法建立 ZIP 壓縮檔。"
+
+#: includes/classes/UI.php:313
+msgid "%sWhy am I seeing this?%s"
+msgstr "%s為什麼我會看到這個？%s"
+
+#: includes/classes/UI.php:312
+msgid "Deactivating or replacing plugins may resolve this issue."
+msgstr "停用或更換外掛或能解決這個問題。"
+
+#: includes/classes/UI.php:311
+msgid "Conflicting or out-of-date jQuery libraries were loaded by another plugin:"
+msgstr "無法載入產生衝突或過時的 jQuery 程式庫的外掛:"
+
+#: includes/classes/UI.php:310
+msgid "The page could not be loaded correctly."
+msgstr "無法正確載入頁面。"
+
+#: includes/classes/UI.php:309
+msgid "<strong>%s</strong> exists. Please enter a different Child Theme"
+msgstr "<strong>%s</strong> 已存在，請輸入不同的子佈景主題名稱。"
+
+#: includes/classes/UI.php:308
+msgid "Please enter a valid Child Theme name."
+msgstr "請輸入有效的子佈景主題名稱。"
+
+#: includes/classes/UI.php:307
+msgid "Please enter a valid Child Theme."
+msgstr "請輸入有效的子佈景主題。"
+
+#: includes/classes/UI.php:306
+msgid "(Child Only)"
+msgstr "(僅子佈景主題)"
+
+#: includes/classes/UI.php:305
+msgid "The stylesheet cannot be displayed."
+msgstr "無法顯示樣式表。"
+
+#: includes/classes/UI.php:304
+msgid "Rename"
+msgstr "重新命名"
+
+#: includes/classes/UI.php:303
+msgid "Cancel"
+msgstr "取消"
+
+#: includes/classes/UI.php:302
+msgid "Edit Selector"
+msgstr "編輯選取器"
+
+#: includes/classes/UI.php:301
+msgid "Close"
+msgstr "關閉"
+
+#: includes/classes/UI.php:300 includes/forms/rule-value.php:33
+msgid "Selectors"
+msgstr "選取器"
+
+#: includes/classes/UI.php:299
+msgid "<span style=\"font-size:10px\">!</span>"
+msgstr "<span style=\"font-size:10px\">！</span>"
+
+#: includes/classes/UI.php:296
+msgid "Color"
+msgstr "色彩"
+
+#: includes/classes/UI.php:295
+msgid "Style"
+msgstr "樣式"
+
+#: includes/classes/UI.php:294
+msgid "Width/None"
+msgstr "框線寬度 (可設定為 none)"
+
+#: includes/classes/UI.php:293
+msgid "Color 2"
+msgstr "背景色彩 2"
+
+#: includes/classes/UI.php:292
+msgid "Color 1"
+msgstr "背景色彩 1"
+
+#: includes/classes/UI.php:291
+msgid "Origin"
+msgstr "背景色彩漸層方式"
+
+#: includes/classes/UI.php:290
+msgid "URL/None"
+msgstr "背景圖片網址 (可不設定或設定為 none)"
+
+#: includes/forms/settings-errors.php:84 includes/forms/themepreview.php:18
+msgid "Live Preview"
+msgstr "即時預覽"
+
+#: includes/forms/settings-errors.php:77 includes/forms/themepreview.php:20
+msgid "Go to Themes"
+msgstr "前往 [佈景主題]"
+
+#: includes/forms/settings-errors.php:71
+msgid "IMPORTANT:"
+msgstr "重要提示:"
+
+#: includes/forms/settings-errors.php:61
+msgid "Child Theme files modified successfully."
+msgstr "子佈景主題檔案已修改成功。"
+
+#: includes/classes/Core.php:138
+msgid "Child Theme Configurator requires WordPress version %s or later."
+msgstr "Child Theme Configurator 須要 WordPress %s 版或更新版本"
+
+#: includes/classes/Core.php:98 includes/classes/Core.php:109
+#: includes/classes/Core.php:120
+msgid "Child Themes"
+msgstr "子佈景主題"
+
+#. Plugin Name of the plugin
+#: includes/classes/Core.php:97 includes/classes/Core.php:108
+#: includes/forms/main.php:35
+msgid "Child Theme Configurator"
+msgstr "Child Theme Configurator"
