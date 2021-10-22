@@ -924,6 +924,29 @@ p {
             .lcard-price {
                 display: none;
             }
+            .title-sin_map {
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .geodir-category-text {
+                min-height: 72px;
+            }
+            .listing-cats-wrap {
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                padding-top: 0;
+                padding-bottom: 0;
+                margin: 10px 0;
+                .listing-item-category-wrap {
+                    display: inline-block;
+                }
+            }
         }
     }
 }
@@ -1110,6 +1133,7 @@ p {
                 display: flex;
                 flex-direction: column;
                 .cus-field-item {
+                    flex-wrap: wrap;
                     &:before {
                         min-width: 20px;
                         text-align: center;
