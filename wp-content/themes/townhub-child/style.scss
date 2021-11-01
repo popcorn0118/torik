@@ -29,6 +29,9 @@ p {
     line-height: 1.5 !important;
     font-size: 14px !important;
 }
+.nav-login, .nav-logout {
+    display: none;
+}
 // 背景橘(服務項目、服務項目詳細頁、部落格、購物頁)
 .archive, .single-listing, .blog, .woocommerce-page {
     #wrapper > .content {
