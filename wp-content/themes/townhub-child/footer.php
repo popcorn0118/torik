@@ -52,13 +52,16 @@
         <?php wp_footer(); ?>
         <script>
             // 登入彈窗有bug，改判斷登入登出不同按鈕
+            
+            var $ = jQuery;
+            $('.bdt-user-name').removeClass('bdt-visible@l');
             <?php
                 if( is_user_logged_in() ) { 
-                    echo "jQuery('.nav-login').css('display', 'inline-block');";
-                    echo "jQuery('.nav-logout').css('display', 'none');";
+                    echo "$('.nav-login').css('display', 'inline-block');";
+                    echo "$('.nav-logout').css('display', 'none');";
                 } else { 
-                    echo "jQuery('.nav-login').css('display', 'none');";
-                    echo "jQuery('.nav-logout').css('display', 'inline-block');";
+                    echo "$('.nav-login').css('display', 'none');";
+                    echo "$('.nav-logout').css('display', 'inline-block');";
                 } 
             ?>
         </script>
