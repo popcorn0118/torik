@@ -3311,7 +3311,7 @@ msgstr "二月"
 #: inc/template_tags.php:2344
 msgctxt "calendar"
 msgid "Fri"
-msgstr "周五"
+msgstr "五"
 
 #: includes/class-admin-scripts.php:406 includes/class-frontend-scripts.php:322
 msgctxt "calendar"
@@ -3346,7 +3346,7 @@ msgstr "五月"
 #: inc/template_tags.php:2340
 msgctxt "calendar"
 msgid "Mon"
-msgstr "周一"
+msgstr "一"
 
 #: includes/class-admin-scripts.php:416 includes/class-frontend-scripts.php:332
 msgctxt "calendar"
@@ -3361,7 +3361,7 @@ msgstr "十月"
 #: inc/template_tags.php:2345
 msgctxt "calendar"
 msgid "Sat"
-msgstr "週六"
+msgstr "六"
 
 #: includes/class-admin-scripts.php:414 includes/class-frontend-scripts.php:330
 msgctxt "calendar"
@@ -3371,17 +3371,17 @@ msgstr "九月"
 #: inc/template_tags.php:2347
 msgctxt "calendar"
 msgid "Sun"
-msgstr "週日"
+msgstr "日"
 
 #: inc/template_tags.php:2343
 msgctxt "calendar"
 msgid "Thu"
-msgstr "周四"
+msgstr "四"
 
 #: inc/template_tags.php:2341
 msgctxt "calendar"
 msgid "Tue"
-msgstr "周二"
+msgstr "二"
 
 #: includes/class-admin-scripts.php:425 includes/class-frontend-scripts.php:355
 msgctxt "Calendar"
@@ -3391,7 +3391,7 @@ msgstr "本月解鎖(開放預訂)"
 #: inc/template_tags.php:2342
 msgctxt "calendar"
 msgid "Wed"
-msgstr "周三"
+msgstr "三"
 
 #: posttypes/cpt-booking.php:1581 posttypes/cpt-booking.php:1584
 #: posttypes/cpt-booking.php:1587 posttypes/cpt-booking.php:1591
