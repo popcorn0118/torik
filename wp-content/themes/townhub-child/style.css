@@ -175,6 +175,10 @@ p {
   margin-top: 20px;
 }
 
+.ctb-modal-title {
+  background-color: #402020 !important;
+}
+
 .to-top,
 .chat-widget-button,
 .show-cart {

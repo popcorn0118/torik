@@ -172,6 +172,11 @@ p {
         margin-top: 20px;
     }
 }
+// 回覆“訊息”彈窗
+.ctb-modal-title {
+    background-color: $sec !important;
+}
+
 // 右下浮動icon
 .to-top,
 .chat-widget-button,
