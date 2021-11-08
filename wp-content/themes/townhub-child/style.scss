@@ -176,6 +176,11 @@ p {
 .ctb-modal-title {
     background-color: $sec !important;
 }
+.available-cal-months .cal-date {
+    width: calc(100% / 7 - 3px) !important;
+    margin-right: 1.5px !important;
+    margin-left: 1.5px;
+}
 
 // 右下浮動icon
 .to-top,

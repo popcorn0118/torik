@@ -179,6 +179,12 @@ p {
   background-color: #402020 !important;
 }
 
+.available-cal-months .cal-date {
+  width: calc(100% / 7 - 3px) !important;
+  margin-right: 1.5px !important;
+  margin-left: 1.5px;
+}
+
 .to-top,
 .chat-widget-button,
 .show-cart {
