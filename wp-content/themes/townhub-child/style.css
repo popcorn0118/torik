@@ -185,6 +185,10 @@ p {
   margin-left: 1.5px;
 }
 
+.cal-date {
+  cursor: default;
+}
+
 .to-top,
 .chat-widget-button,
 .show-cart {
