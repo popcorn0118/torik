@@ -19616,7 +19616,7 @@ msgstr ""
 msgid ""
 "Your message is received. The listing author will contact with you soon.<br>"
 "Thank you."
-msgstr "已收到您的訊息。廠商將盡快與您聯繫。<br>謝謝。"
+msgstr "已收到您的訊息。「造型師」將盡快與您聯繫。<br>謝謝。"
 
 #: includes/class-ajax-handler.php:699
 msgid ""

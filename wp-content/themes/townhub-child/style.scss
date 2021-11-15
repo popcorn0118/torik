@@ -749,7 +749,7 @@ p {
     }
 }
 
-//服務項目(首頁點搜尋進到此頁)
+//服務項目(首頁點搜尋進到此頁)/造型師介紹
 .archive {
     .tabs-wrapper .filter-sidebar-header,
     .listsearch-input-wrap-header,
@@ -936,6 +936,10 @@ p {
             font-weight: bold;
         }
         .listing-item {
+            .geodir-category-img-wrap {
+                height: 0;
+                padding-bottom: 50%;
+            }
             // 服務項目卡片 - 強制隱藏價格
             .lcard-price {
                 display: none;
@@ -964,7 +968,12 @@ p {
                 }
             }
         }
-    }
+    } 
+}
+// 移除“服務項目分類”顯示於前台（造型師介紹、造型師介紹詳細頁）、“基本服務”顯示於前台（造型師介紹詳細頁-貼心服務）無用的 fa icon 圈圈
+.listing-item-category, 
+.lsingle-block-content .listing-features li i {
+    display: none;
 }
 
 //服務項目詳細頁
@@ -1329,6 +1338,13 @@ p {
             background-color: #fff;
         }
     }
+}
+// 造型師介紹詳細頁面（listing）> 點其他費用 > 詳細資料 跳出彈窗
+.ajax-modal-photos-btn {
+    display: none;
+}
+.ajax-modal-close {
+    background: $primary;
 }
 
 // 購物

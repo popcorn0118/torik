@@ -1152,6 +1152,11 @@ p {
   font-weight: bold;
 }
 
+.archive .list-main-wrap .listing-item .geodir-category-img-wrap {
+  height: 0;
+  padding-bottom: 50%;
+}
+
 .archive .list-main-wrap .listing-item .lcard-price {
   display: none;
 }
@@ -1181,6 +1186,11 @@ p {
 
 .archive .list-main-wrap .listing-item .listing-cats-wrap .listing-item-category-wrap {
   display: inline-block;
+}
+
+.listing-item-category,
+.lsingle-block-content .listing-features li i {
+  display: none;
 }
 
 .single .lsingle-block-box {
@@ -1488,6 +1498,14 @@ p {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-color: #fff;
+}
+
+.ajax-modal-photos-btn {
+  display: none;
+}
+
+.ajax-modal-close {
+  background: #FF8300;
 }
 
 .cart-modal .close-cart i {
