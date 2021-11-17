@@ -501,15 +501,15 @@ class ElementsKit_Widget_Image_Accordion extends Widget_Base {
                 'options' => [
                     'left'    => [
                         'title' =>esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' =>esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' =>esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'selectors' => [

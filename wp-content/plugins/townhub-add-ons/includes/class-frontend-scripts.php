@@ -116,6 +116,7 @@ class Esb_Class_Frontend_Scripts
         }
         $checkout_page_id = esb_addons_get_wpml_option('checkout_page');
         $_townhub_add_ons = array(
+            'is_rtl'               => is_rtl(),
             'url'                  => esc_url(admin_url('admin-ajax.php')),
             'nonce'                => wp_create_nonce('townhub-add-ons'),
             'posted_on'            => __('Posted on ', 'townhub-add-ons'),
@@ -319,18 +320,18 @@ class Esb_Class_Frontend_Scripts
 
                 'days'                  => cth_get_week_days(),
                 'months'                => array(
-                    _x('January', 'calendar', 'townhub-add-ons'),
-                    _x('February', 'calendar', 'townhub-add-ons'),
-                    _x('March', 'calendar', 'townhub-add-ons'),
-                    _x('April', 'calendar', 'townhub-add-ons'),
-                    _x('May', 'calendar', 'townhub-add-ons'),
-                    _x('June', 'calendar', 'townhub-add-ons'),
-                    _x('July', 'calendar', 'townhub-add-ons'),
-                    _x('August', 'calendar', 'townhub-add-ons'),
-                    _x('September', 'calendar', 'townhub-add-ons'),
-                    _x('October', 'calendar', 'townhub-add-ons'),
-                    _x('November', 'calendar', 'townhub-add-ons'),
-                    _x('December', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} January', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} February', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} March', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} April', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} May', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} June', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} July', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} August', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} September', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} October', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} November', 'calendar', 'townhub-add-ons'),
+                    _x('{YEAR} December', 'calendar', 'townhub-add-ons'),
                 ),
                 // earnings
                 'earnings_title'        => __('Your Earnings', 'townhub-add-ons'),
@@ -466,6 +467,7 @@ class Esb_Class_Frontend_Scripts
             'withdrawal_date'                => (int)townhub_addons_get_option('withdrawal_date'),
             'single_map_init'               => townhub_addons_get_option('single_map_init', 'no'),
             'hide_cat_features'               => townhub_addons_get_option('hide_cat_features', 'no'),
+            'tag_dis_comma'                     => is_rtl() ? 'yes': 'no',
         );
 
         if( townhub_addons_cookie_accepted() ){

@@ -270,15 +270,15 @@ class ElementsKit_Widget_Tab extends Widget_Base {
                 'options' => [
                     'left'    => [
                         'title' =>esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' =>esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' =>esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'selectors' => [
@@ -300,15 +300,15 @@ class ElementsKit_Widget_Tab extends Widget_Base {
                 'options' => [
                     'flex-start'    => [
                         'title' =>esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' =>esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'flex-end' => [
                         'title' =>esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'selectors' => [
@@ -2113,9 +2113,9 @@ class ElementsKit_Widget_Tab extends Widget_Base {
                     $handler_id = (($tab['ekit_tab_title']) != '' ? strtolower(preg_replace("![^a-z0-9]+!i", "-", $tab['ekit_tab_title'])) : ('tab-'.$tab['_id']));
                     ?>
                     <li class="elementkit-nav-item elementor-repeater-item-<?php echo esc_attr( $tab[ '_id' ] ); ?>">
-                        <a class="elementkit-nav-link <?php echo esc_attr($is_active);?> <?php echo esc_attr($ekit_tab_header_icon_pos_style); ?>" id="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>-tab" data-ekit-handler-id="<?php echo esc_html( $handler_id ); ?>" data-ekit-toggle="tab" href="#content-<?php echo esc_attr($tab['_id'].$tab_id); ?>"
+                        <a class="elementkit-nav-link <?php echo esc_attr($is_active);?> <?php echo esc_attr($ekit_tab_header_icon_pos_style); ?>" id="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>-tab" data-ekit-handler-id="<?php echo esc_html( $handler_id ); ?>" data-ekit-toggle="tab" data-target="#content-<?php echo esc_attr($tab['_id'].$tab_id); ?>" href="#Content-<?php echo esc_attr($tab['_id'].$tab_id); ?>"
                             data-ekit-toggle-trigger="<?php echo esc_attr( $ekit_tab_trigger_type ); ?>"
-                            role="tab" aria-controls="content-<?php echo esc_attr($tab['_id'].$tab_id); ?>" aria-selected="true">
+                            role="tab" aria-controls="Content-<?php echo esc_attr($tab['_id'].$tab_id); ?>" aria-selected="true">
                             <?php echo \ElementsKit_Lite\Utils::kses($icon_html.$img_html); ?>
                             <span class="elementskit-tab-title"><?php echo esc_html($tab['ekit_tab_title']); ?></span>
                         </a>
@@ -2137,6 +2137,6 @@ class ElementsKit_Widget_Tab extends Widget_Base {
                 <?php endforeach; ?>
             </div>
         </div>
-    <?php }
-    protected function _content_template() { }
+    <?php
+    }
 }

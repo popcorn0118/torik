@@ -34,7 +34,7 @@ class Esb_Class_Earning{
         return $author_earning;
     }
 
-    public static function insert($order_id = 0, $author_id = 0, $listing_id = 0, $woo_product = false){
+    public static function insert($order_id = 0, $author_id = 0, $listing_id = 0, $woo_product = false, $deposit = 0){
         global $wpdb;
         $tb_name = $wpdb->prefix . 'cth_austats';
         $year = date_i18n('Y');
@@ -50,7 +50,11 @@ class Esb_Class_Earning{
 
             $fixed_fee = (float)get_user_meta($author_id, ESB_META_PREFIX.'fixed_fee', true);
 
-            if( $woo_product ){
+            if( (int)$deposit > 0 ){
+                $order_total = $subtotal = $deposit;
+                $vat_tax = 0;
+                $fees = 0;
+            }elseif( $woo_product ){
                 $order_total = $subtotal = (float)get_post_meta( $order_id, '_price', true );
                 $vat_tax = 0;
                 $fees = 0;

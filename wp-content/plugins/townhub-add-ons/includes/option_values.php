@@ -808,6 +808,40 @@ function townhub_addons_get_plugin_options(){
             array(
                 "type" => "field",
                 "field_type" => "checkbox",
+                'id' => 'woo_hide_adults',
+                'args'=> array(
+                    'default' => 'no',
+                    'value' => 'yes',
+                ),
+                "title" => _x('Hide cart adults', 'TownHub Add-Ons', 'townhub-add-ons'),
+                'desc'  => '',
+            ),
+            array(
+                "type" => "field",
+                "field_type" => "checkbox",
+                'id' => 'woo_hide_children',
+                'args'=> array(
+                    'default' => 'no',
+                    'value' => 'yes',
+                ),
+                "title" => _x('Hide cart children', 'TownHub Add-Ons', 'townhub-add-ons'),
+                'desc'  => '',
+            ),
+            array(
+                "type" => "field",
+                "field_type" => "checkbox",
+                'id' => 'woo_hide_infants',
+                'args'=> array(
+                    'default' => 'no',
+                    'value' => 'yes',
+                ),
+                "title" => _x('Hide cart infants', 'TownHub Add-Ons', 'townhub-add-ons'),
+                'desc'  => '',
+            ),
+
+            array(
+                "type" => "field",
+                "field_type" => "checkbox",
                 'id' => 'woo_hide_ckin',
                 'args'=> array(
                     'default' => 'no',

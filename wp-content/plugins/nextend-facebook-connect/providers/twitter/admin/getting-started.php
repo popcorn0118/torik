@@ -2,6 +2,8 @@
 defined('ABSPATH') || die();
 /** @var $this NextendSocialProviderAdmin */
 
+$lastUpdated = '2021-09-09';
+
 $provider = $this->getProvider();
 ?>
 
@@ -9,6 +11,8 @@ $provider = $this->getProvider();
     <h2 class="title"><?php _e('Getting Started', 'nextend-facebook-connect'); ?></h2>
 
     <p style="max-width:55em;"><?php printf(__('To allow your visitors to log in with their %1$s account, first you must create a %1$s App. The following guide will help you through the %1$s App creation process. After you have created your %1$s App, head over to "Settings" and configure the given "%2$s" and "%3$s" according to your %1$s App.', 'nextend-facebook-connect'), "Twitter", "Consumer Key", "Consumer Secret"); ?></p>
+
+    <p><?php do_action('nsl_getting_started_warnings', $provider, $lastUpdated); ?></p>
 
     <h2 class="title"><?php printf(_x('Create %s', 'App creation', 'nextend-facebook-connect'), 'Twitter App'); ?></h2>
 
@@ -24,7 +28,16 @@ $provider = $this->getProvider();
         <li><?php printf(__('Go back to your Twitter project and on the left side, under the "<b>%s</b>" section click on the name of your App.', 'nextend-facebook-connect'), 'Projects and Apps'); ?></li>
         <li><?php printf(__('Scroll down and click on the "<b>%1$s</b>" button at "<b>%2$s</b>".', 'nextend-facebook-connect'), 'Edit', 'Authentication settings'); ?></li>
         <li><?php printf(__('Switch on the "<b>%s</b>" option.', 'nextend-facebook-connect'), 'Enable 3-legged OAuth'); ?></li>
-        <li><?php printf(__('Add the following URL to the "<b>%1$s</b>" field: <b>%2$s</b>', 'nextend-facebook-connect'), 'Callback URLs', $provider->getRedirectUriForApp()); ?></li>
+        <li><?php
+            $loginUrls = apply_filters('nsl_redirect_uri_override', array($provider->getRedirectUriForApp()), $provider, false);
+            printf(__('Add the following URL to the "<b>%1$s</b>" field:', 'nextend-facebook-connect'), 'Callback URLs');
+            echo "<ul>";
+            foreach ($loginUrls as $loginUrl) {
+                echo "<li><strong>" . $loginUrl . "</strong></li>";
+            }
+            echo "</ul>";
+            ?>
+        </li>
         <li><?php printf(__('Enter your site\'s URL to the "<b>%1$s</b>" field: <b>%2$s</b>', 'nextend-facebook-connect'), 'Website URL', site_url()); ?></li>
         <li><?php printf(__('If you want to get the email address as well, then don’t forget to enable the "<b>%1$s</b>" option. In this case you also need to fill the "<b>%2$s</b>" and the "<b>%3$s</b>" fields with the corresponding URLs!', 'nextend-facebook-connect'), 'Request email address from users', 'Terms of service', 'Privacy policy'); ?></li>
         <li><?php printf(__('Click on "<b>%s</b>".', 'nextend-facebook-connect'), 'Save'); ?></li>

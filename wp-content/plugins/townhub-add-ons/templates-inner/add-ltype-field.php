@@ -13,6 +13,7 @@ $support_types = array(
     
     'textarea' => __( 'Textarea', 'townhub-add-ons' ),
     'editor' => __( 'Editor', 'townhub-add-ons' ),
+    'datetime' => __( 'Date Time Picker', 'townhub-add-ons' ),
     'file' => _x( 'File Upload', 'Listing type', 'townhub-add-ons' ),
     'raw_html' => _x( 'HTML Code', 'Listing type', 'townhub-add-ons' ),
 );

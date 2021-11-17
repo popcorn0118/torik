@@ -391,7 +391,7 @@ class CTH_Listing_Slider_Item extends Widget_Base {
 
     }
 
-    protected function _content_template() {}
+    protected function content_template() {}
 
    
     

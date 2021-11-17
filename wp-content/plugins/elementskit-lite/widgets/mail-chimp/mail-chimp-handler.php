@@ -11,7 +11,7 @@ class ElementsKit_Widget_Mail_Chimp_Handler extends \ElementsKit_Lite\Core\Handl
     }
 
     static function get_title() {
-        return esc_html__( 'Mail Chimp', 'elementskit-lite' );
+        return esc_html__( 'MailChimp', 'elementskit-lite' );
     }
 
     static function get_icon() {

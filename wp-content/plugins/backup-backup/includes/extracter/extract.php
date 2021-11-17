@@ -12,6 +12,7 @@
   use BMI\Plugin\Backup_Migration_Plugin as BMP;
   use BMI\Plugin\Zipper\Zip as Zip;
   use BMI\Plugin\Zipper\BMI_Zipper as ZipManager;
+  use BMI\Plugin\Database\BMI_Database_Sorting as SmartDatabaseSort;
 
   // Exit on direct access
   if (!defined('ABSPATH')) {
@@ -31,6 +32,7 @@
       // Requirements
       require_once BMI_INCLUDES . '/database/manager.php';
       require_once BMI_INCLUDES . '/database/better-restore.php';
+      require_once BMI_INCLUDES . '/database/smart-sort.php';
 
       // IsCLI?
       $this->isCLI = $isCLI;
@@ -47,12 +49,17 @@
       // Use specified name if it is in batching mode
       if (is_numeric($tmptime)) $this->tmptime = $tmptime;
 
+      // Splitting enabled?
+      $this->splitting = Dashboard\bmi_get_config('OTHER:RESTORE:SPLITTING') ? true : false;
+
       // Restore start time
       $this->start = microtime(true);
 
       // File amount by default 0 later we replace it with scan
       $this->fileAmount = 0;
       $this->recent_export_seek = 0;
+      $this->processData = [];
+      $this->conversionStats = [];
 
       // Options
       $this->batchStep = 0;
@@ -101,6 +108,12 @@
       }
       if (isset($options['recent_export_seek'])) {
         $this->recent_export_seek = intval($options['recent_export_seek']);
+      }
+      if (isset($options['processData'])) {
+        $this->processData = $options['processData'];
+      }
+      if (isset($options['conversionStats'])) {
+        $this->conversionStats = $options['conversionStats'];
       }
 
       // Name
@@ -396,7 +409,7 @@
     public function restoreBackupFromFiles($manifest) {
 
       $this->same_domain = untrailingslashit($manifest->dbdomain) == untrailingslashit($this->siteurl) ? true : false;
-      $this->migration->log(__('Restoring files...', 'backup-backup'), 'STEP');
+      $this->migration->log(__('Restoring files (this process may take a while)...', 'backup-backup'), 'STEP');
       $contentDirectory = $this->WP_CONTENT_DIR;
       $pathtowp = DIRECTORY_SEPARATOR . 'wp-content';
       if (isset($manifest->config->WP_CONTENT_DIR) && isset($manifest->config->ABSPATH)) {
@@ -412,7 +425,7 @@
       }
 
       $this->replaceAll($pathtowp);
-      $this->migration->log(__('Files restored', 'backup-backup'), 'SUCCESS');
+      $this->migration->log(__('All files restored successfully.', 'backup-backup'), 'SUCCESS');
 
     }
 
@@ -442,14 +455,20 @@
     public function alter_tables(&$manifest) {
 
       $storage = $this->tmp . DIRECTORY_SEPARATOR . 'db_tables';
-      $importer = new BetterDatabaseImport($storage, $manifest->total_queries, $manifest->config->ABSPATH, $manifest->dbdomain, $this->siteurl, $this->migration, $this->isCLI);
+
+      $queriesAll = $manifest->total_queries;
+      if (isset($this->conversionStats['total_queries'])) {
+        $queriesAll = $this->conversionStats['total_queries'];
+      }
+
+      //                                             $manifest->total_queries # the other solution
+      $importer = new BetterDatabaseImport($storage, $queriesAll, $manifest->config->ABSPATH, $manifest->dbdomain, $this->siteurl, $this->migration, $this->isCLI, $this->conversionStats);
 
       $importer->xi = $this->db_xi;
       $importer->init_start = $this->ini_start;
       $importer->table_names_alter = $this->table_names_alter;
 
       $importer->alter_names();
-      $importer->showEndLogs();
       $this->migration->log(__('Database restored', 'backup-backup'), 'SUCCESS');
 
     }
@@ -460,9 +479,14 @@
 
       if ($this->firstDB == true) {
         $this->migration->log(__('Successfully detected backup created with V2 engine, importing...', 'backup-backup'), 'INFO');
+        $this->migration->log(__('Restoring database...', 'backup-backup'), 'STEP');
       }
 
-      $importer = new BetterDatabaseImport($storage, $manifest->total_queries, $manifest->config->ABSPATH, $manifest->dbdomain, $this->siteurl, $this->migration, $this->isCLI);
+      $queriesAll = $manifest->total_queries;
+      if (isset($this->conversionStats['total_queries'])) {
+        $queriesAll = $this->conversionStats['total_queries'];
+      }
+      $importer = new BetterDatabaseImport($storage, $queriesAll, $manifest->config->ABSPATH, $manifest->dbdomain, $this->siteurl, $this->migration, $this->isCLI, $this->conversionStats);
 
       if ($this->isCLI) {
 
@@ -526,7 +550,7 @@
     public function restoreDatabaseDynamic(&$manifest) {
 
       if ($this->firstDB == true) {
-        $this->migration->log(__('Checking for database backup...', 'backup-backup'), 'STEP');
+        $this->migration->log(__('Checking the database structure...', 'backup-backup'), 'STEP');
       }
 
       if (is_dir($this->tmp . DIRECTORY_SEPARATOR . 'db_tables')) {
@@ -898,8 +922,98 @@
 
         }
 
-        // STEP: 7
+        // STEP 7
         if ($this->isCLI || $this->batchStep == 7) {
+
+          // Get manifest
+          if (!isset($manifest)) {
+            $manifest = $this->getCurrentManifest();
+          }
+
+          $wasDisabled = 0;
+          if (!$this->splitting) {
+
+            $this->migration->log(__('Splitting process is disabled in the settings, omitting.', 'backup-backup'), 'INFO');
+            $wasDisabled = 1;
+
+          } else {
+
+            $newDataProcess = $this->processData;
+            $dbFinishedConv = 'false';
+            $db_tables = $this->tmp . DIRECTORY_SEPARATOR . 'db_tables';
+
+            if (is_dir($db_tables)) {
+
+              if (empty($this->processData)) {
+                $this->migration->log(__('Converting database files into partial files.', 'backup-backup'), 'STEP');
+                if (defined('BMI_DB_MAX_ROWS_PER_QUERY')) {
+                  $this->migration->log(__('Max rows per query (this site): ', 'backup-backup') . BMI_DB_MAX_ROWS_PER_QUERY, 'INFO');
+                }
+              }
+
+              $dbsort = new SmartDatabaseSort($db_tables, $this->migration, $this->isCLI);
+              $process = $dbsort->sortUnsorted($this->processData);
+
+              if (!is_null($process) && isset($process)) {
+                $newDataProcess = $process;
+              }
+
+              if ($this->isCLI || (isset($process['convertionFinished']) && $process['convertionFinished'] == 'yes')) {
+                $this->migration->log(__('Database convertion finished successfully.', 'backup-backup'), 'SUCCESS');
+
+                $this->migration->log(__('Calculating new query size and counts.', 'backup-backup'), 'STEP');
+                $stats = $dbsort->countAllFilesAndQueries();
+                $this->migration->log(__('Calculaion completed, printing details.', 'backup-backup'), 'SUCCESS');
+
+                $this->migration->log(__('Total queries to insert after conversion: ', 'backup-backup') . $stats['total_queries'], 'INFO');
+                $this->migration->log(__('Partial files count after conversion: ', 'backup-backup') . sizeof($stats['all_files']), 'INFO');
+                $this->migration->log(__('Total size of the database: ', 'backup-backup') . BMP::humanSize($stats['total_size']), 'INFO');
+                $this->migration->log(__('Table count to be imported: ', 'backup-backup') . sizeof($stats['all_tables']), 'INFO');
+
+                $this->conversionStats = $stats;
+
+                $dbFinishedConv = 'true';
+              }
+
+            } else {
+
+              if (file_exists($this->tmp . '/bmi_database_backup.sql')) {
+
+                $this->migration->log(__('Ommiting database convert step as the database backup included was not made with V2 engine.', 'backup-backup'), 'WARN');
+                $this->migration->log(__('The process may be less stable if the database is larger than usual.', 'backup-backup'), 'WARN');
+                $dbFinishedConv = 'true';
+
+              } else {
+
+                $this->migration->log(__('Ommiting database convert step as there is no database backup included.', 'backup-backup'), 'INFO');
+                $dbFinishedConv = 'true';
+
+              }
+
+            }
+
+          }
+
+          if (!$this->isCLI) {
+
+            BMP::res(['status' => 'restore_ongoing', 'tmp' => $this->tmptime, 'secret' => $secret, 'options' => [
+              'code' => $this->code,
+              'start' => $this->start,
+              'amount' => $this->fileAmount,
+              'dbConvertionFinished' => $dbFinishedConv,
+              'processData' => $newDataProcess,
+              'conversionStats' => $this->conversionStats,
+              'step' => 7 + $wasDisabled
+            ]]);
+
+            return;
+
+          }
+
+        }
+
+        // STEP: 8
+        if ($this->isCLI || $this->batchStep == 8) {
 
           // Get manifest
           if (!isset($manifest)) {
@@ -956,7 +1070,8 @@
               'db_xi' => $this->db_xi,
               'ini_start' => $this->ini_start,
               'table_names_alter' => $this->table_names_alter,
-              'step' => 7
+              'conversionStats' => $this->conversionStats,
+              'step' => 8
             ]]);
 
             return;
@@ -965,12 +1080,12 @@
 
         }
 
-        // STEP: 8
-        if ($this->isCLI || $this->batchStep == 8) {
+        // STEP: 9
+        if ($this->isCLI || $this->batchStep == 9) {
 
           // Rename database from temporary to destination
           // And do the rest
-          // Step 8 runs only at the end of database import
+          // Step 9 runs only at the end of database import
 
           // Get manifest
           if (!isset($manifest)) {
@@ -1007,8 +1122,12 @@
           // Make final cleanup
           $this->finalCleanUP();
 
+          // Touch autologin file
+          $autologin_file = BMI_BACKUPS . '/.autologin';
+          touch($autologin_file);
+
           // Final verbose
-          $this->migration->log(__('Restore process took: ', 'backup-backup') . (microtime(true) - $this->start) . 's', 'INFO');
+          $this->migration->log(__('Restore process took: ', 'backup-backup') . number_format(microtime(true) - $this->start, 2) . ' seconds.', 'INFO');
           Logger::log('Site restored...');
 
           // Return success

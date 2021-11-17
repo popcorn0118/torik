@@ -119,7 +119,7 @@ class CTH_Feature_Box extends Widget_Base {
         <?php
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <!--features-box --> 
         <# if(settings.featured == 'yes'){ #>

@@ -1,25 +1,27 @@
 <?php // phpcs:ignore Squiz.Commenting.FileComment.Missing
 /**
- * Redux, a simple, truly extensible and fully responsive options framework
+ * Redux, a simple, truly extensible and fully responsive option framework
  * for WordPress themes and plugins. Developed with WordPress coding
  * standards and PHP best practices in mind.
  *
- * Plugin Name:     Redux
- * Plugin URI:      http://wordpress.org/plugins/redux-framework
- * GitHub URI:      reduxframework/redux-framework
- * Description:     Build better sites in WordPress fast
- * Author:          Redux.io, Extendify
- * Author URI:      http://redux.io
- * Version:         4.1.29
- * Text Domain:     redux-framework
- * License:         GPLv3 or later
- * License URI:     http://www.gnu.org/licenses/gpl-3.0.txt
- * Provides:        ReduxFramework
+ * Plugin Name:         Redux
+ * Plugin URI:          http://wordpress.org/plugins/redux-framework
+ * GitHub URI:          reduxframework/redux-framework
+ * Description:         Build better sites in WordPress fast!
+ * Version:             4.3.2
+ * Requires at least:   4.0
+ * Requires PHP:        7.1
+ * Author:              Extendify
+ * Author URI:          https://extendify.com
+ * License:             GPLv3 or later
+ * License URI:         http://www.gnu.org/licenses/gpl-3.0.txt
+ * Text Domain:         redux-framework
+ * Provides:            ReduxFramework
  *
- * @package         ReduxFramework
- * @author          Redux.io by Dovy Paukstys <dovy@redux.io>
- * @license         GNU General Public License, version 3
- * @copyright       2012-2020 Redux.io
+ * @package             ReduxFramework
+ * @author              Extendify
+ * @license             GNU General Public License, version 3
+ * @copyright           2012-2021 Redux.io
  */
 
 // Exit if accessed directly.
@@ -38,4 +40,3 @@ register_deactivation_hook( __FILE__, array( 'Redux_Framework_Plugin', 'deactiva
 
 // Get plugin instance.
 Redux_Framework_Plugin::instance();
-

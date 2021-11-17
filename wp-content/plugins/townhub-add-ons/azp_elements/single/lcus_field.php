@@ -57,6 +57,8 @@ azp_add_element(
                     'file'          => _x('File url', 'Listing Type', 'townhub-add-ons'),
                     'raw_text'      => _x('HTML Code', 'Listing Type', 'townhub-add-ons'),
                     'dlfile'        => _x('View file button', 'Listing Type', 'townhub-add-ons'),
+                    'date'          => _x('Date', 'Listing Type', 'townhub-add-ons'),
+                    'datetime'      => _x('Date time', 'Listing Type', 'townhub-add-ons'),
                 ),
             ),
 

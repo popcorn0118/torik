@@ -68,6 +68,7 @@ function townhub_addons_add_elements(){
 
     require_once ESB_ABSPATH.'azp_elements/single/lcomments.php';
     require_once ESB_ABSPATH.'azp_elements/single/ladslider.php';
+    require_once ESB_ABSPATH.'azp_elements/single/mobile_btns.php';
 
 
     require_once ESB_ABSPATH.'azp_elements/widget/lwkhours.php';

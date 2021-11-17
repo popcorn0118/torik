@@ -373,7 +373,7 @@ function colorNameToHex( colour ) {
 	};
 })( jQuery );
 
-/* global redux, redux_change, jQuery */
+/* global redux, redux_change, jQuery, pagenow, ajaxurl */
 
 (function( $ ) {
 	'use strict';
@@ -382,6 +382,106 @@ function colorNameToHex( colour ) {
 
 	$.redux.initEvents = function( el ) {
 		var stickyHeight;
+		var search  = window.location.search;
+		var curPage = pagenow;
+		var dialog;
+		var messageDialog;
+
+		if ( 'string' === typeof search && 'string' === typeof curPage && true === redux.optName.args.dev_mode ) {
+			search  = search.replace( '?page=', '' );
+			curPage = curPage.replace( 'toplevel_page_', '' );
+
+			if ( search === curPage ) {
+				document.addEventListener(
+					'keydown',
+					function( event ) {
+						if ( event.ctrlKey && event.shiftKey && 'H' === event.key ) {
+							dialog.dialog( 'open' );
+						}
+					}
+				);
+
+				messageDialog = $( '#redux-dialog-message' ).dialog(
+					{
+						classes: {
+							'ui-dialog': 'redux-message-dialog',
+							'ui-dialog-buttonpane': 'redux-message-dialog-buttonpane',
+							'ui-dialog-title': 'redux-message-dialog-title',
+							'ui-dialog-content': 'redux-message-dialog-content'
+						},
+						modal: true,
+						autoOpen: false,
+						resizable: false,
+						height: 'auto',
+						width: 400,
+						buttons: {
+							Ok: function() {
+								$( this ).dialog( 'close' );
+							}
+						}
+					}
+				);
+
+				dialog = $( '#redux-dialog-confirm' ).dialog(
+					{
+						modal: true,
+						classes: {
+							'ui-dialog': 'redux-support-dialog'
+						},
+						autoOpen: false,
+						resizable: false,
+						height: 'auto',
+						width: 400,
+						buttons: {
+							Submit: function() {
+								var buttonPane  = $( '.redux-message-dialog-buttonpane' );
+								var dialogTitle = $( '.redux-message-dialog-title' );
+								var content     = $( '.redux-message-dialog-content .redux-message-p' );
+
+								$.ajax(
+									{ type: 'post',
+										dataType: 'json',
+										url: ajaxurl,
+										data: {
+											action:     'redux_submit_support_data',
+											nonce:      $( '#redux-dialog-confirm' ).data( 'nonce' )
+										},
+										beforeSend: function() {
+											buttonPane.css( { 'display': 'none' } );
+											$( '#redux-dialog-message .spinner' ).css( { 'visibility': 'visible' } );
+
+											messageDialog.dialog( 'open' );
+										},
+										error: function( response ) {
+											buttonPane.css( { 'display': 'block' } );
+											dialogTitle.text( 'Error' );
+
+											console.log( response );
+										},
+										success: function( response ) {
+											buttonPane.css( { 'display': 'block' } );
+
+											if ( response.status && 'success' === response.status ) {
+												dialogTitle.text( 'Information Sent' );
+												content.html( 'Your support data has been transmitted.  The reference number for this transmission is: <strong>' + response.data + '</strong>' );
+											} else {
+												dialogTitle.text( 'Error' );
+												content.text( response.data );
+											}
+										}
+									}
+								);
+
+								$( this ).dialog( 'close' );
+							},
+							Cancel: function() {
+								$( this ).dialog( 'close' );
+							}
+						}
+					}
+				);
+			}
+		}
 
 		el.find( '.redux-presets-bar' ).on(
 			'click',
@@ -584,8 +684,6 @@ function colorNameToHex( colour ) {
 	$( document ).ready(
 		function() {
 			var opt_name;
-			var li;
-
 			var tempArr = [];
 
 			$.fn.isOnScreen = function() {
@@ -597,17 +695,17 @@ function colorNameToHex( colour ) {
 					return;
 				}
 
-				win = $( window );
+				win      = $( window );
 				viewport = {
 					top: win.scrollTop()
 				};
 
-				viewport.right = viewport.left + win.width();
+				viewport.right  = viewport.left + win.width();
 				viewport.bottom = viewport.top + win.height();
 
 				bounds = this.offset();
 
-				bounds.right = bounds.left + this.outerWidth();
+				bounds.right  = bounds.left + this.outerWidth();
 				bounds.bottom = bounds.top + this.outerHeight();
 
 				return ( ! ( viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom ) );
@@ -646,9 +744,50 @@ function colorNameToHex( colour ) {
 				$.redux.initQtip();
 				$.redux.tabCheck();
 				$.redux.notices();
+
+				if ( 'undefined' === typeof $.redux.flyoutSubmenus ) {
+					$.redux.flyoutSubmenu();
+				}
 			}
 		}
 	);
+
+	$.redux.flyoutSubmenu = function() {
+
+		// Close flyouts when a new menu item is activated.
+		$( '.redux-group-tab-link-li a' ).on(
+			'click',
+			function() {
+				if ( true === redux.optName.args.flyout_submenus ) {
+					$( '.redux-group-tab-link-li' ).removeClass( 'redux-section-hover' );
+				}
+			}
+		);
+
+		if ( true === redux.optName.args.flyout_submenus ) {
+
+			// Submenus flyout when a main menu item is hovered.
+			$( '.redux-group-tab-link-li.hasSubSections' ).each(
+				function() {
+					$( this ).on(
+						'mouseenter',
+						function() {
+							if ( ! $( this ).hasClass( 'active' ) && ! $( this ).hasClass( 'activeChild' ) ) {
+								$( this ).addClass( 'redux-section-hover' );
+							}
+						}
+					);
+
+					$( this ).on(
+						'mouseleave',
+						function() {
+							$( this ).removeClass( 'redux-section-hover' );
+						}
+					);
+				}
+			);
+		}
+	};
 
 	$.redux.disableSections = function() {
 		$( '.redux-group-tab' ).each(

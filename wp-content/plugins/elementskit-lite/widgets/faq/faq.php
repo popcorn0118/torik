@@ -311,7 +311,6 @@ class ElementsKit_Widget_FAQ extends Widget_Base {
         </div>
         <?php endforeach; endif; ?>
 
-    <?php }
-
-    protected function _content_template() { }
+    <?php
+    }
 }

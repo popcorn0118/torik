@@ -4,12 +4,12 @@
  * Plugin Name: Social Login, Social Sharing by miniOrange
  * Plugin URI: https://www.miniorange.com
  * Description: Allow your users to login, comment and share with Facebook, Google, Apple, Twitter, LinkedIn etc using customizable buttons.
- * Version: 7.5.1
+ * Version: 7.5.5
  * Author: miniOrange
  * License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
  */
 
-define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.1');
+define('MO_OPENID_SOCIAL_LOGIN_VERSION', '7.5.5');
 define('plugin_url', plugin_dir_url(__FILE__) . "includes/images/icons/");
 define('MOSL_PLUGIN_DIR',str_replace('/','\\',plugin_dir_path(__FILE__)));
 require('miniorange_openid_sso_settings_page.php');
@@ -86,13 +86,12 @@ class miniorange_openid_sso_settings
             update_option('mo_openid_customer_token', 'jMj7MEdu4wkHObiD');
             update_option('mo_openid_admin_customer_key', '253560');
         }
-        add_option('app_pos','facebook#google#vkontakte#twitter#instagram#linkedin#amazon#salesforce#windowslive#yahoo#snapchat#dribbble');
-        if(strlen(get_option('app_pos')) == 88) {
-            $app_pos=get_option('app_pos');
-            $app_pos.='#snapchat#dribbble';
-            update_option('app_pos',$app_pos);
+        add_option('app_pos','facebook#google#discord#twitter#vkontakte#instagram#linkedin#amazon#salesforce#windowslive#yahoo#snapchat#dribbble');
+        if(strlen(get_option('app_pos')) != 114) {
+            delete_option('app_pos');
+            add_option('app_pos','facebook#google#discord#twitter#vkontakte#instagram#linkedin#amazon#salesforce#windowslive#yahoo#snapchat#dribbble');
         }
-        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#discord#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq');
+        update_option('app_pos_premium','apple#paypal#wordpress#github#hubspot#mailru#gitlab#steam#slack#trello#disqus#pinterest#yandex#spotify#reddit#tumblr#twitch#vimeo#kakao#flickr#line#meetup#dropbox#stackexchange#livejournal#foursquare#teamsnap#naver#odnoklassniki#wiebo#wechat#baidu#renren#qq');
         add_option('mo_openid_default_login_enable',1);
         add_option('mo_openid_default_register_enable',1);
         add_option( 'mo_openid_login_theme', 'longbutton' );
@@ -411,12 +410,18 @@ Thank you.';
                     $phone = sanitize_text_field($_POST['mo_openid_contact_us_phone']);
                     $query = sanitize_text_field($_POST['mo_openid_contact_us_query']);
                     $feature_plan=sanitize_text_field($_POST['mo_openid_feature_plan']);
+                    $enable_setup_call=isset($_POST['mo_openid_setup_call'])?$_POST['mo_openid_setup_call']:false;
+                    $timezone=sanitize_text_field($_POST['mo_openid_call_timezone']);
+                    $date=sanitize_text_field($_POST['mo_openid_setup_call_date']);
+                    $time=sanitize_text_field($_POST['mo_openid_setup_call_time']);
+
                     $customer = new CustomerOpenID();
                     if (mo_openid_check_empty_or_null($email) || mo_openid_check_empty_or_null($query)) {
                         update_option('mo_openid_message', 'Please fill up Email and Query fields to submit your query.');
                         mo_openid_show_error_message();
                     } else {
-                        $submited = $customer->submit_contact_us($email, $phone, $query, $feature_plan);
+
+                        $submited = $customer->submit_contact_us($email, $phone, $query, $feature_plan,$enable_setup_call,$timezone,$date,$time);
                         if ($submited == false) {
                             update_option('mo_openid_message', 'Your query could not be submitted. Please try again.');
                             mo_openid_show_error_message();
@@ -923,7 +928,7 @@ Thank you.';
                             $user_meta_thumbnail = get_user_meta($userdata->ID, 'moopenid_user_avatar', true);        //Read the avatar
                             $user_meta_name = $userdata->user_login;        //read user details
                             $user_picture = (!empty($user_meta_thumbnail) ? $user_meta_thumbnail : '');
-                            $size = (!empty($args['width']) ? 'width="' . $args['width'] . '" ' : 'width="50"');
+                            $size = (!empty($args['width']) ?  $args['width']  : 50);
                             if ($user_picture !== false AND strlen(trim($user_picture)) > 0) {    //Avatar found?
                                 return '<img alt="' . $user_meta_name . '" src="' . $user_picture . '" class="avatar apsl-avatar-social-login avatar-' . $size . ' photo" height="' . $size . '" width="' . $size . '" />';
                             }
@@ -1045,7 +1050,7 @@ Thank you.';
     }
     function mo_openid_is_buddypress_active(){
         include_once(ABSPATH.'wp-admin/includes/plugin.php');
-        if(is_plugin_active('buddypress/bp-loader.php') )
+        if(is_plugin_active('buddypress/bp-loader.php') || is_plugin_active('buddyboss-platform/bp-loader.php'))
             return true;
         else
             return false;

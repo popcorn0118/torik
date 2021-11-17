@@ -60,6 +60,6 @@ class ElementsKit_Widget_Icon_Hover extends Widget_Base {
         <span class="ekit_creative_icon_box ekit_hover_grow">
             <i class="fa fa-facebook"></i>
         </span>
-    <?php }
-    protected function _content_template() { }
+    <?php
+    }
 }

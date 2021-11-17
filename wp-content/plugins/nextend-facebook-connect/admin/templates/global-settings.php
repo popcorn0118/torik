@@ -7,12 +7,14 @@ $allowedSubviews = array(
     'general',
     'privacy',
     'login-form',
-    'woocommerce',
     'comment',
+    'custom-actions',
+    'woocommerce',
     'buddypress',
     'memberpress',
     'userpro',
-    'ultimate-member'
+    'ultimate-member',
+    'easy-digital-downloads'
 );
 
 $subview = (!empty($_GET['subview']) && in_array($_GET['subview'], $allowedSubviews)) ? $_GET['subview'] : 'general';
@@ -33,10 +35,10 @@ if (!NextendSocialLoginAdmin::isPro()) {
            class="nsl-admin-nav-tab<?php if ($subview === 'privacy'): ?> nsl-admin-nav-tab-active<?php endif; ?>"><?php _e('Privacy', 'nextend-facebook-connect'); ?></a>
         <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('login-form'); ?>"
            class="nsl-admin-nav-tab<?php if ($subview === 'login-form'): ?> nsl-admin-nav-tab-active<?php endif; ?>"><?php _e('Login Form', 'nextend-facebook-connect'); ?></a>
-        <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('woocommerce'); ?>"
-           class="nsl-admin-nav-tab<?php if ($subview === 'woocommerce'): ?> nsl-admin-nav-tab-active<?php endif; ?>">WooCommerce<?php echo $proBadge; ?></a>
         <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('comment'); ?>"
            class="nsl-admin-nav-tab<?php if ($subview === 'comment'): ?> nsl-admin-nav-tab-active<?php endif; ?>"><?php _e('Comment', 'nextend-facebook-connect'); ?><?php echo $proBadge; ?></a>
+        <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('woocommerce'); ?>"
+           class="nsl-admin-nav-tab<?php if ($subview === 'woocommerce'): ?> nsl-admin-nav-tab-active<?php endif; ?>">WooCommerce<?php echo $proBadge; ?></a>
         <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('buddypress'); ?>"
            class="nsl-admin-nav-tab<?php if ($subview === 'buddypress'): ?> nsl-admin-nav-tab-active<?php endif; ?>">BuddyPress<?php echo $proBadge; ?></a>
         <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('memberpress'); ?>"
@@ -46,6 +48,11 @@ if (!NextendSocialLoginAdmin::isPro()) {
         <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('ultimate-member'); ?>"
            class="nsl-admin-nav-tab<?php if ($subview === 'ultimate-member'): ?> nsl-admin-nav-tab-active<?php endif; ?>">Ultimate
             Member<?php echo $proBadge; ?></a>
+        <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('easy-digital-downloads'); ?>"
+           class="nsl-admin-nav-tab<?php if ($subview === 'easy-digital-downloads'): ?> nsl-admin-nav-tab-active<?php endif; ?>">Easy
+            Digital Downloads<?php echo $proBadge; ?></a>
+        <a href="<?php echo NextendSocialLoginAdmin::getAdminSettingsUrl('custom-actions'); ?>"
+           class="nsl-admin-nav-tab<?php if ($subview === 'custom-actions'): ?> nsl-admin-nav-tab-active<?php endif; ?>"><?php _e('Custom Actions', 'nextend-facebook-connect'); ?><?php echo $proBadge; ?></a>
     </div>
     <form method="post" action="<?php echo admin_url('admin-post.php'); ?>" novalidate="novalidate">
 

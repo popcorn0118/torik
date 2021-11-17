@@ -10,11 +10,13 @@ function townhub_addons_get_edit_listing_callback() {
         'data'          => array(
             // 'POST' => $_POST, 
         ),
+        'titles'        => array(),
         'post'          => array(),
         'fields'        => array(),
         'rFields'       => array(),
         // 'rpost'      => array(),
         'rooms'         => array(),
+        'listing_rooms'         => array(),
         'isEditing'     => false,
         'isAdding'      => false,
         'debug'         => false,
@@ -119,6 +121,8 @@ function townhub_addons_get_edit_listing_callback() {
                 // 'select_locations'          => townhub_addons_get_listing_locations_selected( $lid ),
                 'preview_url'               => get_permalink( $lid ),
                 '_price'                    => get_post_meta( $lid, '_price', true ),
+                // 'add_room_title'                    => get_post_meta( $ltype_id, ESB_META_PREFIX.'add_room_title', true ),
+                // 'edit_room_title'                    => get_post_meta( $ltype_id, ESB_META_PREFIX.'edit_room_title', true ),
             );
             // check has location selects
             // $locations_select = false;
@@ -136,7 +140,12 @@ function townhub_addons_get_edit_listing_callback() {
             if(!empty($rooms_ids) && is_array($rooms_ids)){
                 foreach ($rooms_ids as $rid) {
                     $rdatas = townhub_addons_get_room_post_data($rid, $ltype_id);
-                    if(!empty($rdatas)) $json['rooms'][] = $rdatas;
+                    if(!empty($rdatas)){
+                        $json['rooms'][] = $rdatas;
+                        // $json['listing_rooms'][] = $rdatas;
+                    }
+
+                    
                 }
             }
             $coupon_ids = get_post_meta( $lid, ESB_META_PREFIX.'coupon_ids', true );
@@ -146,6 +155,10 @@ function townhub_addons_get_edit_listing_callback() {
                     if(!empty($cdatas)) $json['coupons'][] = $cdatas;
                 }
             }
+
+            $json['titles']['add_room_title'] = get_post_meta( $ltype_id, ESB_META_PREFIX.'add_room_title', true );
+            $json['titles']['edit_room_title'] = get_post_meta( $ltype_id, ESB_META_PREFIX.'edit_room_title', true );
+
             // set isEditing
             $json['isEditing'] = true;
         // }  
@@ -297,6 +310,7 @@ function townhub_addons_get_submit_listing_fields_callback() {
         'data' => array(
             // 'POST'=>$_POST,
         ),
+        'titles' => array(),
         'post'      => array(),
         'fields'    => array(),
         'rFields'   => array(),
@@ -351,7 +365,9 @@ function townhub_addons_get_submit_listing_fields_callback() {
     $json['post']['working_hours'] = Esb_Class_Listing_CPT::wkhours_add();
     $json['post']['locations'] = townhub_addons_get_option('default_country');
     
-        
+    $json['titles']['add_room_title'] = get_post_meta( $ltype_id, ESB_META_PREFIX.'add_room_title', true );
+    $json['titles']['edit_room_title'] = get_post_meta( $ltype_id, ESB_META_PREFIX.'edit_room_title', true );
+
     // if(isset($_POST['for_editing']) && $_POST['for_editing'])
     //     $json['isEditing'] = true;
     // else

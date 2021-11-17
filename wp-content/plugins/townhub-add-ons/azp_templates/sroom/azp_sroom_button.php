@@ -25,11 +25,5 @@ if($el_id!=''){
 }
 ?>
 <div class="<?php echo $classes; ?>" <?php echo $el_id;?>> 
-    <div id="get-ID_listing">
-        <button class="btn float-btn color2-bg" type="submit"><?php echo $bt_name; ?><i class="<?php echo $bt_icon ?>"></i></button>
-        <input type="hidden" name="esb-checkout-type" value="listing">
-        <input type="hidden" name="listing_id" value="0">  
-        <input type="hidden" name="lb_room" value="<?php echo esc_attr( get_the_ID() );?>">  
-    </div>
-	
+    <a href="<?php echo $bt_url;?>" class="btn float-btn color2-bg custom-scroll-link"><?php echo $bt_name; ?><i class="<?php echo $bt_icon ?>"></i></a>
 </div>

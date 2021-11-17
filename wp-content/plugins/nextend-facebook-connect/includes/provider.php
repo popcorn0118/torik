@@ -79,6 +79,12 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
 
         $this->admin = new NextendSocialProviderAdmin($this);
 
+
+        add_action('rest_api_init', array(
+            $this,
+            'registerRedirectRESTRoute'
+        ));
+
     }
 
     /**
@@ -1091,7 +1097,7 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
         $socialID = $this->isUserConnected($userID);
         if ($socialID !== false) {
             $data[] = array(
-                'name'  => $this->getLabel() . ' ' . __('Identifier'),
+                'name'  => $this->getLabel() . ' ' . __('Identifier', 'nextend-facebook-connect'),
                 'value' => $socialID,
             );
         }
@@ -1099,7 +1105,7 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
         $accessToken = $this->getAccessToken($userID);
         if (!empty($accessToken)) {
             $data[] = array(
-                'name'  => $this->getLabel() . ' ' . __('Access token'),
+                'name'  => $this->getLabel() . ' ' . __('Access token', 'nextend-facebook-connect'),
                 'value' => $accessToken,
             );
         }
@@ -1107,7 +1113,7 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
         $profilePicture = $this->getUserData($userID, 'profile_picture');
         if (!empty($profilePicture)) {
             $data[] = array(
-                'name'  => $this->getLabel() . ' ' . __('Profile picture'),
+                'name'  => $this->getLabel() . ' ' . __('Profile Picture'),
                 'value' => $profilePicture,
             );
         }
@@ -1152,5 +1158,64 @@ abstract class NextendSocialProvider extends NextendSocialProviderDummy {
             '%s',
             '%s'
         ));
+    }
+
+    public function registerRedirectRESTRoute() {
+        if ($this->hasRedirectRESTRoute) {
+            register_rest_route('nextend-social-login/v1', $this->id . '/redirect_uri', array(
+                'methods'             => WP_REST_Server::READABLE,
+                'callback'            => array(
+                    $this,
+                    'redirectToProviderEndpointWithStateAndCode'
+                ),
+                'args'                => array(
+                    'state' => array(
+                        'required' => true,
+                    ),
+                    'code'  => array(
+                        'required' => true,
+                    )
+                ),
+                'permission_callback' => '__return_true',
+            ));
+        }
+    }
+
+    /**
+     * @param WP_REST_Request $request Full details about the request.
+     *
+     * @return WP_Error|WP_REST_Response
+     */
+    public function redirectToProviderEndpointWithStateAndCode($request) {
+        $params       = $request->get_params();
+        $errorMessage = '';
+
+        if (!empty($params['state']) && !empty($params['code'])) {
+
+            $provider = NextendSocialLogin::$allowedProviders[$this->id];
+
+            try {
+                $providerEndpoint                 = $provider->getRedirectUri();
+                $providerEndpointWithStateAndCode = add_query_arg(array(
+                    'state' => $params['state'],
+                    'code'  => $params['code']
+                ), $providerEndpoint);
+                wp_safe_redirect($providerEndpointWithStateAndCode);
+                exit;
+
+            } catch (Exception $e) {
+                $errorMessage = $e->getMessage();
+            }
+        } else {
+            if (empty($params['state']) && empty($params['code'])) {
+                $errorMessage = 'The code and state parameters are empty!';
+            } else if (empty($params['state'])) {
+                $errorMessage = 'The state parameter is empty!';
+            } else {
+                $errorMessage = 'The code parameter is empty!';
+            }
+        }
+
+        return new WP_Error('error', $errorMessage);
     }
 }

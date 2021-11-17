@@ -109,7 +109,7 @@ class CTH_Parallax_Content extends Widget_Base {
 
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <div class="parallax-content">
             <div class="video_section-title fl-wrap">

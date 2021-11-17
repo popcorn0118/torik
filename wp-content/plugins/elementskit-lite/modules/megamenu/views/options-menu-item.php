@@ -150,8 +150,11 @@
                                 <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
                             </svg>
                         </button>
+                        
                     </div>
                     <div class="right-content">
+                    <a class="button button-default alignleft" href="https://help.wpmet.com/docs/mega-menu-module/" target="_blank" >Megamenu Turorial</a>
+
                         <span class='spinner'></span>
                         <?php echo get_submit_button(esc_html__('Save', 'elementskit-lite'), 'elementskit-menu-item-save button-primary alignright','', false); ?>
                     </div>

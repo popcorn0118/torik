@@ -8,7 +8,7 @@ class ElementsKit_Widget_Contact_Form7_Handler extends \ElementsKit_Lite\Core\Ha
     }
 
     static function get_title() {
-        return esc_html__( 'Contact form 7', 'elementskit-lite' );
+        return esc_html__( 'Contact Form 7', 'elementskit-lite' );
     }
 
     static function get_icon() {

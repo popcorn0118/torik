@@ -374,6 +374,17 @@ function townhub_addons_options_get_search(){
                 // 'desc' => _x('For search results form', 'TownHub Add-Ons', 'townhub-add-ons'),
             ),
 
+            array(
+                "type" => "field",
+                "field_type" => "checkbox",
+                'id' => 'inout_rooms_only',
+                'args'=> array(
+                    'default' => 'yes',
+                    'value' => 'yes',
+                ),
+                "title" => __('Checkin/Checkout search for rooms only?', 'townhub-add-ons'),
+                'desc' => esc_html__("By enabling this option, the check-in/checkout search will only show listings with rooms", 'townhub-add-ons'), 
 
+            ),
     );
 }

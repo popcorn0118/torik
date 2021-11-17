@@ -45,11 +45,9 @@ function mo_register_openid() {
 if(!strpos($_SERVER['REQUEST_URI'], "mo_openid_general_settings&tab=licensing_plans")) {
     ?>
     <div id="upgrade_notice" class="mo_openid_notice mo_openid_notice-warning" >
-        <p style="font-size: larger"><b>Facebook Data Use Checkup:</b> If you are facing any sudden issues in your facebook application then kindly verify your app as per the latest Facebook policy
-            <a href="https://plugins.miniorange.com/data-use-checkup-process-in-facebook-app-wordpress-social-login" target="_blank">here</a>.
+        <p style="font-size: larger"><b>Rest API / Mobile SSO:</b> Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade or <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.
         </p>
-        <p><b>New SOCIAL SHARING PLUGIN </b>is available with attractive features.
-            <a style="background: #FFA335;border-color: #FFA335;color: white;" class="button" href="<?php echo site_url().'/wp-admin/admin.php?page=mo_openid_social_sharing_settings&tab=licensing_plans'; ?>"><?php echo mo_sl('Upgrade Now');?></a>
+        <p style="font-size: larger"><b>Discord WordPress Integration:</b> Check out our <a style="cursor: pointer" href="https://plugins.miniorange.com/discord-wordpress-add-on" target="_blank">Discord Add-on</a> if you're using Discord to manage your users for Membership, Role Mapping, Avatar Mapping, and more.
         </p>
     </div>
     <?php
@@ -1125,7 +1123,7 @@ else
                                         mo_openid_profile();
                                         break;
                                     case 'custom_registration_form':
-                                        if(mo_openid_is_customer_addon_license_key_verified()) {
+                                        if(mo_openid_is_customer_registered() && mo_openid_is_customer_addon_license_key_verified()) {
                                             if(is_plugin_active('miniorange-login-openid-extra-attributes-addon/miniorange_openid_sso_customization_addon.php'))
                                                 do_action('customization_addon');
                                             else {
@@ -1137,7 +1135,7 @@ else
                                             mo_openid_custom_registration_form();
                                         break;
                                     case 'mo_woocommerce_add_on':
-                                        if(mo_openid_is_wca_license_key_verified()) {
+                                        if(mo_openid_is_customer_registered() && mo_openid_is_wca_license_key_verified()) {
                                             if (is_plugin_active('miniorange-login-openid-woocommerce-addon/miniorange_openid_woocommerce_integration_addon.php')) {
                                                 do_action('mo_wc_addon');
                                             }
@@ -1150,7 +1148,7 @@ else
                                             mo_openid_woocommerce_add_on();
                                         break;
                                     case 'mo_mailchimp_add_on':
-                                        if(mo_openid_is_mailc_license_key_verified()) {
+                                        if(mo_openid_is_customer_registered() && mo_openid_is_mailc_license_key_verified()) {
                                             if (is_plugin_active('miniorange-login-openid-mailchimp-addon/miniorange_openid_mailchimp_addon.php')) {
                                                 do_action('mo_mailchimp_addon');
                                             }
@@ -1163,7 +1161,7 @@ else
                                             mo_openid_mailchimp_add_on();
                                         break;
                                     case 'mo_buddypress_add_on':
-                                        if(mo_openid_is_bpp_license_key_verified()) {
+                                        if(mo_openid_is_customer_registered() && mo_openid_is_bpp_license_key_verified()) {
                                             if (is_plugin_active('miniorange-login-openid-buddypress-addon/mo_openid_buddypress_display_addon.php')) {
                                                 do_action('buddypress_integration_addon');
                                             }
@@ -1176,7 +1174,7 @@ else
                                             mo_openid_buddypress_addon_display();
                                         break;
                                     case 'mo_hubspot_add_on':
-                                        if(mo_openid_is_hub_license_key_verified()) {
+                                        if(mo_openid_is_customer_registered() && mo_openid_is_hub_license_key_verified()) {
                                             if (is_plugin_active('miniorange-login-openid-hubspot-addon/mo_openid_hubspot_integration.php')) {
                                                 do_action('hubspot_integration_addon');
                                             }
@@ -1189,7 +1187,7 @@ else
                                             mo_openid_hubspot_add_on_display();
                                         break;
                                     case 'mo_discord_add_on':
-                                        if(mo_openid_is_dis_license_key_verified()) {
+                                        if(mo_openid_is_customer_registered() && mo_openid_is_dis_license_key_verified()) {
                                             if (is_plugin_active('miniorange-login-openid-discord-addon/mo_openid_discord_integration.php')) {
                                                 do_action('discord_integration_addon');
                                             }

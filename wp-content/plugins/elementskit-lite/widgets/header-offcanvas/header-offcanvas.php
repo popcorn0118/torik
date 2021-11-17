@@ -300,15 +300,15 @@ class ElementsKit_Widget_Header_Offcanvas extends Widget_Base
                     'options' => [
                         'left' => [
                             'title' => __( 'Left', 'elementskit-lite' ),
-                            'icon' => 'fa fa-align-left',
+                            'icon' => 'eicon-text-align-left',
                         ],
                         'center' => [
                             'title' => __( 'Center', 'elementskit-lite' ),
-                            'icon' => 'fa fa-align-center',
+                            'icon' => 'eicon-text-align-center',
                         ],
                         'right' => [
                             'title' => __( 'Right', 'elementskit-lite' ),
-                            'icon' => 'fa fa-align-right',
+                            'icon' => 'eicon-text-align-right',
                         ],
                     ],
                     'selectors' => [
@@ -694,16 +694,5 @@ class ElementsKit_Widget_Header_Offcanvas extends Widget_Base
         </div> <!-- END sidebar widget item -->
         <!-- END offset cart strart -->
         <?php
-
-
-
-
     }
-    protected function _content_template() { }
-
-
-
-
-
-
 }

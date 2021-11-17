@@ -116,7 +116,7 @@ class NextendSocialLoginAdmin {
     public static function admin_init() {
 
         if (current_user_can('manage_options')) {
-            require_once(dirname(__FILE__).'/notice.php');
+            require_once(dirname(__FILE__) . '/notice.php');
 
             if (!isset($_GET['page']) || $_GET['page'] != 'nextend-social-login' || !isset($_GET['view']) || $_GET['view'] != 'fix-redirect-uri') {
                 add_action('admin_notices', 'NextendSocialLoginAdmin::show_oauth_uri_notice');
@@ -171,7 +171,7 @@ class NextendSocialLoginAdmin {
                         break;
                     case 'update_oauth_redirect_url':
                         if (check_admin_referer('nextend-social-login_update_oauth_redirect_url')) {
-                            foreach (NextendSocialLogin::$enabledProviders AS $provider) {
+                            foreach (NextendSocialLogin::$enabledProviders as $provider) {
                                 $provider->updateOauthRedirectUrl();
                             }
                         }
@@ -219,11 +219,28 @@ class NextendSocialLoginAdmin {
             'NextendSocialLoginAdmin',
             'display_post_states'
         ), 10, 2);
+
+        if (defined('WPML_PLUGIN_BASENAME')) {
+            add_action('nsl_getting_started_warnings', array(
+                'NextendSocialLoginAdmin',
+                'show_WPML_warning'
+            ));
+            add_filter('nsl_redirect_uri_override', array(
+                'NextendSocialLoginAdmin',
+                'WPML_override_provider_redirect_uris'
+            ), 10, 3);
+
+        };
+
+        add_action('nsl_getting_started_warnings', array(
+            'NextendSocialLoginAdmin',
+            'show_getting_started_warning'
+        ), 100, 2);
     }
 
     public static function save_form_data() {
         if (current_user_can('manage_options') && check_admin_referer('nextend-social-login')) {
-            foreach ($_POST AS $k => $v) {
+            foreach ($_POST as $k => $v) {
                 if (is_string($v)) {
                     $_POST[$k] = stripslashes($v);
                 }
@@ -575,7 +592,7 @@ class NextendSocialLoginAdmin {
     }
 
     public static function show_oauth_uri_notice() {
-        foreach (NextendSocialLogin::$enabledProviders AS $provider) {
+        foreach (NextendSocialLogin::$enabledProviders as $provider) {
             if (!$provider->checkOauthRedirectUrl()) {
                 echo '<div class="error">
                         <p>' . sprintf(__('%s detected that your login url changed. You must update the Oauth redirect URIs in the related social applications.', 'nextend-facebook-connect'), '<b>Nextend Social Login</b>') . '</p>
@@ -762,5 +779,104 @@ class NextendSocialLoginAdmin {
         }
 
         return $post_states;
+    }
+
+    public static function show_WPML_warning() {
+        printf(__('<strong><u>Warning</u></strong>: You are using <b>%1$s</b>! Depending on your %1$s configuration the Redirect URI can be different. For more information please check our %2$s %1$s compatibility tutorial%3$s!', 'nextend-facebook-connect'), 'WPML', '<a href="https://nextendweb.com/nextend-social-login-docs/how-to-make-nextend-social-login-compatible-with-wpml/" target="_blank">', '</a>');
+    }
+
+    /**
+     * @param array                      $providerLoginUrl
+     * @param NextendSocialProviderAdmin $provider
+     *
+     * @return mixed
+     */
+    public static function WPML_override_provider_redirect_uris($providerLoginUrl, $provider, $addArg) {
+        global $sitepress;
+        if ($sitepress && method_exists($sitepress, 'get_active_languages')) {
+            $WPML_active_languages = $sitepress->get_active_languages();
+            if (count($WPML_active_languages) > 1) {
+                $converted_URLs = array();
+                $proxyPage      = NextendSocialLogin::getProxyPage();
+                $args           = array('loginSocial' => $provider->getId());
+
+                if ($proxyPage) {
+                    //OAuth flow handled over OAuth redirect uri proxy page
+
+                    foreach ($WPML_active_languages as $lang) {
+                        $convertedURL = get_permalink(apply_filters('wpml_object_id', $proxyPage, 'page', false, $lang['code']));
+                        if ($convertedURL) {
+                            if ($addArg) {
+                                $convertedURL = add_query_arg($args, $convertedURL);
+                            } else {
+                                /**
+                                 * Converted URLs may contain GET parameters, so we need to remove them for the providers that don't support GET parameters in the redirect urls.
+                                 */
+                                $convertedURLPieces = explode('?', $convertedURL);
+                                $convertedURL       = $convertedURLPieces[0];
+                            }
+                            $converted_URLs[] = $convertedURL;
+                        }
+                    }
+                } else {
+                    //OAuth flow handled over wp-login.php
+
+                    $WPML_language_url_format = false;
+                    if (method_exists($sitepress, 'get_setting')) {
+                        $WPML_language_url_format = $sitepress->get_setting('language_negotiation_type');
+                    }
+
+                    if ($WPML_language_url_format && $WPML_language_url_format == 3 && (!class_exists('\WPML\UrlHandling\WPLoginUrlConverter') || (class_exists('\WPML\UrlHandling\WPLoginUrlConverter') && (!get_option(\WPML\UrlHandling\WPLoginUrlConverter::SETTINGS_KEY, false) || (get_option(\WPML\UrlHandling\WPLoginUrlConverter::SETTINGS_KEY, false) && !$addArg))))) {
+                        /**
+                         * We need to display the original redirect url when the
+                         * Language URL format is set to "Language name added as a parameter and:
+                         * -when the WPLoginUrlConverter class doesn't exists, since that case it is an old WPML version that can not translate the /wp-login.php page
+                         * -if "Login and registration pages - Allow translating the login and registration pages" is disabled
+                         * -if "Login and registration pages - Allow translating the login and registration pages" is enabled, but the provider doesn't support GET parameters in the redirect URL
+                         */
+                        return $providerLoginUrl;
+                    } else {
+                        global $wpml_url_converter;
+                        /**
+                         * when the language URL format is set to "Different languages in directories" or "A different domain per language", then the Redirect URI will be different for each languages
+                         * Also when the language URL format is set to "Language name added as a parameter" and the "Login and registration pages - Allow translating the login and registration pages" setting is enabled, the urls will be different.
+                         */
+                        if ($wpml_url_converter && method_exists($wpml_url_converter, 'convert_url')) {
+                            foreach ($WPML_active_languages as $lang) {
+                                $convertedURL = $wpml_url_converter->convert_url(site_url('wp-login.php'), $lang['code']);
+                                if ($addArg) {
+                                    $convertedURL = add_query_arg($args, $convertedURL);
+                                }
+                                $converted_URLs[] = $convertedURL;
+                            }
+                        }
+                    }
+                }
+
+                if (!empty($converted_URLs)) {
+                    return $converted_URLs;
+                }
+            }
+        }
+
+        return $providerLoginUrl;
+    }
+
+    public static function show_getting_started_warning($provider, $lastUpdated) {
+        if ($provider && $lastUpdated) {
+
+            $lastUpdatedDate = date_format(date_create_from_format('Y-m-d', $lastUpdated), get_option('date_format'));
+
+            $supportURL         = 'https://nextendweb.com/contact-us/nextend-social-login-support/';
+            $version            = defined('NSL_PRO_PATH') ? 'Pro-Addon' : 'Free';
+            $args               = array(
+                'topic'    => 'Wrong-Steps',
+                'provider' => $provider->getLabel(),
+                'version'  => $version
+            );
+            $supportUrlWithArgs = add_query_arg($args, $supportURL);
+
+            printf(__('<p style="max-width:55em;"><strong><u>Warning</u></strong>: Providers change the App setup process quite often, which means some steps below might not be accurate. If you see significant difference in the written instructions and what you see at the provider, feel free to %1$sreport it%2$s, so we can check and update the instructions.<br><strong>Last updated:</strong> %3$s.</p>', 'nextend-facebook-connect'), '<a href="' . $supportUrlWithArgs . '" target="_blank">', '</a>', $lastUpdatedDate);
+        }
     }
 }

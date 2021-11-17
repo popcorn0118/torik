@@ -41,15 +41,14 @@ class Onboard_Status {
 		}
 
 		if ( isset( $_POST['settings']['newsletter_email'] ) && !empty($_POST['settings']['newsletter_email'])) {
+
 			$data = [
 				'email'           => $_POST['settings']['newsletter_email'],
 				'environment_id'  => 1,
 				'contact_list_id' => 1,
 			];
 
-			$response = Plugin_Data_Sender::instance()->sendAutomizyData( 'email-subscribe', $data);
-			echo print_r($response);
-			exit;
+		   Plugin_Data_Sender::instance()->sendAutomizyData( 'email-subscribe', $data);
 		}
 	}
 

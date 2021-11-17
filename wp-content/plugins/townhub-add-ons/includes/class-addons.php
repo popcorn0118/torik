@@ -12,7 +12,7 @@ if(!isset($townhub_addons_options))
     $townhub_addons_options = get_option( 'townhub-addons-options', array() ); 
 
 final class TownHub_Addons { 
-    public $cthversion = '1.5.9';
+    public $cthversion = '1.6.5';
     public $cart = null;
     public $geo = null;
     private static $_instance;

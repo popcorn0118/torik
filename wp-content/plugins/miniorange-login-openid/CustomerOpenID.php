@@ -296,13 +296,18 @@ class CustomerOpenID {
         $response = self::mo_openid_wp_remote_post($url, $args);
         return $response['body'];
     }
-    function submit_contact_us( $email, $phone, $query, $feature_plan ) {
+    function submit_contact_us( $email, $phone, $query, $feature_plan,$enable_setup_call,$timezone,$date,$time ) {
         $url = get_option('mo_openid_host_name') . '/moas/rest/customer/contact-us';
         $current_user = wp_get_current_user();
         $company = get_option('mo_openid_admin_company_name') ? get_option('mo_openid_admin_company_name') : $_SERVER ['SERVER_NAME'];
         $first_name = get_option('mo_openid_admin_first_name') ? get_option('mo_openid_admin_first_name') : $current_user->user_firstname;
         $last_name = get_option('mo_openid_admin_last_name') ? get_option('mo_openid_admin_last_name') : $current_user->user_lastname;
         $query = '[WP OpenID Connect Login Free Plugin Version: '.get_option('mo_openid_social_login_version').'] ' .$feature_plan.":".$query;
+        $meeting ='';
+        if($enable_setup_call) {
+            $meeting=' I Need a meeting at '.$time.' '.$date.' timezone:'.$timezone;
+        }
+
         $fields = array(
             'firstName'			=> $first_name,
             'lastName'	 		=> $last_name,
@@ -310,14 +315,14 @@ class CustomerOpenID {
             'email' 			=> $email,
             'ccEmail'           => 'socialloginsupport@xecurify.com',
             'phone'				=> $phone,
-            'query'				=> $query
+            'query'				=> $meeting.' '.$query,
         );
         $field_string = json_encode( $fields );
         $headers = array("Content-Type"=>"application/json","charset"=>"UTF-8","Authorization"=>"Basic");
         $args = array(
             'method' => 'POST',
             'body' => $field_string,
-            'timeout' => '5',
+            'timeout' => '10',
             'redirection' => '5',
             'httpversion' => '1.0',
             'blocking' => true,
@@ -519,7 +524,6 @@ class CustomerOpenID {
     }
 
     function mo_openid_wp_remote_post($url, $args = array()){
-
         $response = wp_remote_post($url, $args);
         if(!is_wp_error($response)){
             return $response;
@@ -533,4 +537,4 @@ class CustomerOpenID {
         }
     }
 
-}?>
+}

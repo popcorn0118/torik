@@ -13,7 +13,7 @@ class ElementsKit_Widget_Piechart_Handler extends \ElementsKit_Lite\Core\Handler
     }
 
     static function get_icon() {
-        return 'fa fa-pie-chart ekit-widget-icon ';
+        return 'eicon-shape ekit-widget-icon ';
     }
 
     static function get_categories() {

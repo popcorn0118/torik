@@ -1515,3 +1515,108 @@ p>a.mo-openid-share-link
 	50% {background-color: #1B79AE;}
 }
 
+/* meeting scheduler*/
+.call-setup-div{
+	background: #F2F5FB;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding-top: 10px;
+	border-style: solid;
+	border-color: #2f6062;
+	padding-left: 10px;
+}
+.call-setup-heading {
+	margin-top: 0px;
+	margin-left: 5px;
+}
+.call-setup-label{
+	padding-left:5px;
+	font-size: 15px;
+}
+.call-setup-details{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.call-setup-datetime{
+	width: 50%;
+	float: left;
+	position: relative;
+	height: auto;
+	min-height: 100% !important;
+}
+.call-setup-textbox{
+	width: 90% !important;
+}
+.call-setup-notice{
+	margin: 15px 25px 10px 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:disabled + .slider{
+	background-color: #ebebeb;
+	cursor: default;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 20px;
+	width: 20px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #0085ba;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #0085ba;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(15px);
+	-ms-transform: translateX(15px);
+	transform: translateX(15px);
+}
+
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 24px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}

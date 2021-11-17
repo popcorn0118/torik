@@ -39,10 +39,12 @@ class NextendSocialUserData {
             $registerFlowPage = NextendSocialLogin::getRegisterFlowPage();
             if ($registerFlowPage !== false) {
                 if (!is_page($registerFlowPage)) {
-                    wp_redirect(add_query_arg(array(
-                        'loginSocial' => $this->provider->getId()
-                    ), get_permalink($registerFlowPage)));
-                    exit;
+                    if (get_permalink() !== get_permalink($registerFlowPage)) {
+                        wp_redirect(add_query_arg(array(
+                            'loginSocial' => $this->provider->getId()
+                        ), get_permalink($registerFlowPage)));
+                        exit;
+                    }
                 }
                 $this->isCustomRegisterFlow = true;
 
@@ -147,7 +149,7 @@ class NextendSocialUserData {
                 require_once(dirname(__FILE__) . '/compat-wp-login.php');
             }
 
-            login_header(__('Registration Form'), '<p class="message register">' . __('Register For This Site!') . '</p>', $this->errors);
+            login_header(__('Registration Form'), '<p class="message register">' . __('Register For This Site') . '</p>', $this->errors);
 
             echo $this->render_registration_form();
 

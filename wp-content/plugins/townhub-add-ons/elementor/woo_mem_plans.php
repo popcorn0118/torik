@@ -404,7 +404,7 @@ class CTH_Woo_Mem_Plans extends Widget_Base {
 
     }
 
-    protected function _content_template() {}
+    protected function content_template() {}
 
    
     

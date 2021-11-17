@@ -567,6 +567,18 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 		);
 
 		$this->add_control(
+			'ekit_testimonial_loop',
+			[
+				'label' => esc_html__( 'Enable Loop?', 'elementskit-lite' ),
+				'type' =>   Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Yes', 'elementskit-lite' ),
+				'label_off' => esc_html__( 'No', 'elementskit-lite' ),
+				'return_value' => 'yes',
+				'default' => '',
+			]
+        );
+
+		$this->add_control(
             'ekit_testimonial_pause_on_hover',
             [
                 'label' => esc_html__( 'Pause on Hover', 'elementskit-lite' ),
@@ -770,15 +782,15 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 				'options' => [
 					'left'    => [
 						'title' =>esc_html__( 'Left', 'elementskit-lite' ),
-						'icon' => 'fa fa-align-left',
+						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
 						'title' =>esc_html__( 'Center', 'elementskit-lite' ),
-						'icon' => 'fa fa-align-center',
+						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
 						'title' =>esc_html__( 'Right', 'elementskit-lite' ),
-						'icon' => 'fa fa-align-right',
+						'icon' => 'eicon-text-align-right',
 					],
 				],
 				'selectors' => [
@@ -1561,15 +1573,15 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 					'options' => [
 						'client_left'    => [
 							'title' => esc_html__( 'Left', 'elementskit-lite' ),
-							'icon' => 'fa fa-align-left',
+							'icon' => 'eicon-text-align-left',
 						],
 						'client_center' => [
 							'title' => esc_html__( 'Center', 'elementskit-lite' ),
-							'icon' => 'fa fa-align-center',
+							'icon' => 'eicon-text-align-center',
 						],
 						'client_right' => [
 							'title' => esc_html__( 'Right', 'elementskit-lite' ),
-							'icon' => 'fa fa-align-right',
+							'icon' => 'eicon-text-align-right',
 						],
 					],
 					'condition' => [
@@ -2195,18 +2207,19 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 			'speed'				=> $ekit_testimonial_speed ? $ekit_testimonial_speed : 1000,
 			'slidesPerGroup'	=> (int) $slides_to_scroll_count,
 			'slidesPerView'		=> (int) $slides_to_show_count,
+			'loop'				=> ( !empty($ekit_testimonial_loop) && $ekit_testimonial_loop == 'yes' ) ? true : false,
 			'breakpoints'		=> [
                 320 => [
-                    'slidesPerView'      => !empty($settings['ekit_testimonial_slidetoshow_mobile']['size']) ? $settings['ekit_testimonial_slidetoshow_mobile']['size'] : 1,
-                    'slidesPerGroup'    => !empty($settings['ekit_testimonial_slidesToScroll_mobile']['size']) ? $settings['ekit_testimonial_slidesToScroll_mobile']['size'] : 1
+                    'slidesPerView'      => !empty( $ekit_testimonial_slidetoshow_mobile ) ? $ekit_testimonial_slidetoshow_mobile : 1,
+                    'slidesPerGroup'     => !empty( $ekit_testimonial_slidesToScroll_mobile ) ? $ekit_testimonial_slidesToScroll_mobile : 1
                 ],
                 768 => [
-                    'slidesPerView'      => !empty($settings['ekit_testimonial_slidetoshow_tablet']['size']) ? $settings['ekit_testimonial_slidetoshow_tablet']['size'] : 2,
-                    'slidesPerGroup'    => !empty($settings['ekit_testimonial_slidesToScroll_tablet']['size']) ? $settings['ekit_testimonial_slidesToScroll_tablet']['size'] : 1,
+                    'slidesPerView'      => !empty( $ekit_testimonial_slidetoshow_tablet ) ? $ekit_testimonial_slidetoshow_tablet : 2,
+                    'slidesPerGroup'     => !empty( $ekit_testimonial_slidesToScroll_tablet ) ? $ekit_testimonial_slidesToScroll_tablet : 1,
                 ],
                 1024 => [
                     'slidesPerView'      =>  $slides_to_show_count,
-                    'slidesPerGroup'    =>  $slides_to_show_count,
+                    'slidesPerGroup'     =>  $slides_to_scroll_count,
                 ]
             ],
 		];

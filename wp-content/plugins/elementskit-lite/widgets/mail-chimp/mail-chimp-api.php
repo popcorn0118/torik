@@ -26,7 +26,6 @@ class ElementsKit_Widget_Mail_Chimp_Api extends Core\Handler_Api {
 
 		$data = [
 			'email_address' => (($email != '') ? $email : ''),
-			'status' => 'subscribed',
 			'status_if_new' => 'subscribed',
 			'merge_fields' => [
 				'FNAME' => (($firstname != '') ? $firstname : ''),
@@ -34,6 +33,13 @@ class ElementsKit_Widget_Mail_Chimp_Api extends Core\Handler_Api {
 				'PHONE' => (($phone != '') ? $phone : ''),
 			],
 		];
+		
+		if(!empty($this->request['double_opt_in']) && $this->request['double_opt_in'] === 'yes') {
+			$data['status'] = 'pending';
+		} else {
+			$data['status'] = 'subscribed';
+		}
+
 		$server = explode('-', $token);
 		if( !is_array($server) || empty($token) || !isset($server[1]) ){
 			$return['error'] = esc_html__( 'Please set API Key into Dashboard User Data. ', 'elementskit-lite' );

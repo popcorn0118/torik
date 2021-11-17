@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - ManageWP Worker - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-02-11 23:04:53+0000\n"
+"PO-Revision-Date: 2021-11-07 23:39:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,13 +11,17 @@ msgstr ""
 "Language: zh_TW\n"
 "Project-Id-Version: Plugins - ManageWP Worker - Development (trunk)\n"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:267
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:297
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:386
+msgid "Disconnect all"
+msgstr "中斷全部連線"
+
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:283
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:313
 msgid "Click the Add site button."
 msgstr "點擊 [Add site] (新增網站) 按鈕。"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:261
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:292
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:277
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:308
 msgid "Log into your account."
 msgstr "登入專屬帳號。"
 
@@ -37,80 +41,82 @@ msgstr "自動登入權杖並未正確簽署，請洽詢我們的技術支援取
 msgid "The site is currently in maintenance mode."
 msgstr "網站目前為 [網站例行性維護] 模式。"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:396
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:421
 msgid "Currently loaded keys:"
 msgstr "目前載入的金鑰:"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:379
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:404
 msgid "Copy"
 msgstr "複製"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:371
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:396
 msgid "Connection key:"
 msgstr "連線金鑰:"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:358
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:374
 msgid "Disconnect"
 msgstr "中斷連線"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:339
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:351
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:355
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:367
 msgid "N/A"
 msgstr "無法使用"
 
 #. translators: the variable is going to contain a human time difference string
 #. like "2 days"
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:336
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:348
+#. translators: the variable is going to contain a human time difference string
+#. like "2 days"
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:352
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:364
 msgid "%s ago"
 msgstr "%s前"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:323
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:339
 msgid "Last Used"
 msgstr "最後使用時間"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:319
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:335
 msgid "Connected"
 msgstr "已連線"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:315
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:331
 msgid "ID"
 msgstr "ID"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:308
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:324
 msgid "Here is the list of currently active connections to this plugin:"
 msgstr "這裡列出這個外掛目前進行的連線:"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:301
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:317
 msgid "Enter this website's URL. When prompted, paste the connection key."
 msgstr "輸入這個網站的網址。出現提示訊息時，請輸入連線金鑰。"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:287
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:303
 msgid "Copy the connection key below."
 msgstr "複製下方的連線金鑰。"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:283
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:299
 msgid "Install and activate the <b>Worker</b> plugin."
 msgstr "安裝並啟用 <b>Worker</b> 外掛。"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:278
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:294
 msgid "Manual"
 msgstr "手動連線"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:272
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:288
 msgid "Enter this website's URL, admin username and password, and the system will take care of everything."
 msgstr "輸入這個網站的網址、網站管理員使用者名稱及密碼後，我們的系統便會處理所有項目。"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:255
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:271
 msgid "Automatic"
 msgstr "自動連線"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:250
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:266
 msgid "There are two ways to connect your website to the management dashboard:"
 msgstr "這個外掛提供兩種將這個網站連線至管理控制台的方式:"
 
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:203
-#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:433
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:219
+#: src/MWP/EventListener/PublicRequest/AddConnectionKeyInfo.php:458
 msgid "Connection Management"
 msgstr "連線管理"
 

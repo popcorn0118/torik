@@ -3,7 +3,7 @@
  * Copyright (c) 2014 Chris Wojcik <hello@chriswojcik.net>
  * Dual licensed under MIT and GPL.
  * @author Chris Wojcik
- * @version 1.5.9+2+1
+ * @version 1.6.5+2+1
  */
 
 // Utility

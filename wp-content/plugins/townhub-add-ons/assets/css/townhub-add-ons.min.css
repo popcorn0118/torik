@@ -3787,6 +3787,12 @@ button {
 .submit-field .mapboxgl-ctrl-geocoder--icon-close {
   margin-top: 10px; }
 
+.submit-fields-wrap .date-time-picker-field {
+  min-width: 200px; }
+
+.submit-fields-wrap .cth-dpick-label-val {
+  padding: 10px 15px; }
+
 @media (max-width: 767px) {
   .eventdate-dates-wrap {
     display: block; }
@@ -4189,7 +4195,7 @@ input.button-primary {
   position: absolute;
   z-index: 3;
   right: 0;
-  padding: 13px 10px;
+  padding: 13px 3px;
   color: #666;
   cursor: pointer; }
 
@@ -4223,7 +4229,12 @@ input.button-primary {
   display: inline;
   z-index: 10; }
 
-.nearby-mapbox + .nearby-distance-wrap {
+.nearby-osm .autoplace-clear-input {
+  display: inline;
+  z-index: 10; }
+
+.nearby-mapbox + .nearby-distance-wrap,
+.nearby-osm + .nearby-distance-wrap {
   z-index: auto;
   z-index: 10000; }
 
@@ -6985,7 +6996,8 @@ ul.cart-listi li .bkdates-date-detail span {
         -ms-flex: 1;
             flex: 1; }
   .qtt-item .qtt-input {
-    width: 65px; }
+    width: 65px;
+    min-width: 65px; }
   .qtt-item .qtt-price {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -6995,7 +7007,8 @@ ul.cart-listi li .bkdates-date-detail span {
   float: left;
   width: 65px;
   height: 42px;
-  position: relative; }
+  position: relative;
+  min-width: 65px; }
   .qtt-input input {
     width: 100%;
     height: 42px;

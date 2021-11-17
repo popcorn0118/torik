@@ -332,7 +332,7 @@ function townhub_addons_comment_rating_field(){
                 <div class="review-range-item flex-items-center">
                     <div class="range-slider-title"><?php echo $fobj['title'] ?></div>
                     <div class="range-slider-wrap ">
-                        <input name="<?php echo $fobj['fieldName'] ?>" type="text" class="rate-range" data-min="1" data-max="<?php echo esc_attr( $r_base ); ?>" data-step="1" value="<?php echo esc_attr( $r_default ); ?>">
+                        <input name="<?php echo $fobj['fieldName'] ?>" type="range" min="1" max="<?php echo esc_attr( $r_base ); ?>" step="1" class="rate-range full-width-wrap" data-min="1" data-max="<?php echo esc_attr( $r_base ); ?>" data-step="1" value="<?php echo esc_attr( $r_default ); ?>">
                     </div>
                 </div>
                 <!-- review-range-item end --> 

@@ -147,7 +147,7 @@ class CTH_Counter extends Widget_Base {
         endif;
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <# if(settings.number){ #>
         <div class="{{settings.fact_style}}  hide-decor-{{settings.no_decor}}">

@@ -388,7 +388,7 @@
 
       $this->output->log('Finalizing backup', 'STEP');
       $this->output->log('Closing files and archives', 'STEP');
-      $this->output->log('Archiving of ' . $this->total_files . ' files took: ' . (microtime(true) - floatval($this->backupstart)) . 's', 'INFO');
+      $this->output->log('Archiving of ' . $this->total_files . ' files took: ' . number_format(microtime(true) - floatval($this->backupstart), 2) . 's', 'INFO');
       $this->output->log('#001', 'END-CODE');
 
       if (!BMI_CLI_REQUEST) {

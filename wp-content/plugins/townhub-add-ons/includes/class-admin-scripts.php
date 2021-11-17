@@ -59,6 +59,7 @@ class Esb_Class_Admin_Scripts
         wp_enqueue_style('fontawesome-pro', self::$plugin_url . "assets/vendors/fontawesome-pro-5.10.0-web/css/all.min.css", false);
         wp_enqueue_style('select2', self::$plugin_url . 'assets/css/select2.min.css');
         wp_enqueue_style('townhub-add-ons', self::$plugin_url . 'assets/css/admin.css');
+        wp_style_add_data( 'townhub-add-ons', 'rtl', 'replace' );
 
         wp_enqueue_style('datetimepicker.jquery', self::$plugin_url . 'assets/admin/datetimepicker/jquery.datetimepicker.min.css');
         $map_provider = townhub_addons_get_option('map_provider');
@@ -318,6 +319,7 @@ class Esb_Class_Admin_Scripts
             }
             $gmap_marker      = townhub_addons_get_option('gmap_marker');
             $_townhub_add_ons = array(
+                'is_rtl'               => is_rtl(),
                 'url'                  => esc_url(admin_url('admin-ajax.php')),
                 'nonce'                => wp_create_nonce('townhub-add-ons'),
                 // 'listing_types'                 => $listing_type_ids,
@@ -403,18 +405,18 @@ class Esb_Class_Admin_Scripts
 
                     'days'                  => cth_get_week_days(),
                     'months'                => array(
-                        _x('January', 'calendar', 'townhub-add-ons'),
-                        _x('February', 'calendar', 'townhub-add-ons'),
-                        _x('March', 'calendar', 'townhub-add-ons'),
-                        _x('April', 'calendar', 'townhub-add-ons'),
-                        _x('May', 'calendar', 'townhub-add-ons'),
-                        _x('June', 'calendar', 'townhub-add-ons'),
-                        _x('July', 'calendar', 'townhub-add-ons'),
-                        _x('August', 'calendar', 'townhub-add-ons'),
-                        _x('September', 'calendar', 'townhub-add-ons'),
-                        _x('October', 'calendar', 'townhub-add-ons'),
-                        _x('November', 'calendar', 'townhub-add-ons'),
-                        _x('December', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} January', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} February', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} March', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} April', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} May', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} June', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} July', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} August', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} September', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} October', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} November', 'calendar', 'townhub-add-ons'),
+                        _x('{YEAR} December', 'calendar', 'townhub-add-ons'),
                     ),
                     'ltype_title'           => _x('Listing type', 'Listing type', 'townhub-add-ons'),
                     'ltype_desc'            => _x('Listing type description', 'Listing type', 'townhub-add-ons'),
@@ -483,6 +485,7 @@ class Esb_Class_Admin_Scripts
                 'mbtoken'                   => townhub_addons_get_option('mapbox_token'),
                 'autocomplete_result_type' => townhub_addons_get_option('autocomplete_result_type', 'none'),
                 'week_starts_monday'                => townhub_addons_get_option('week_starts_monday'),
+                'tag_dis_comma'                     => is_rtl() ? 'yes': 'no',
             );
 
             wp_localize_script('townhub-react-adminapp', '_townhub_add_ons', $_townhub_add_ons);

@@ -190,7 +190,8 @@ window._nslDOMReady(function () {
 
     window.nslRedirect = function (url) {
         var overlay = document.createElement('div');
-        overlay.style.cssText = "position:fixed;z-index:1000000;left:0;top:0;width:100%;height:100%;";
+        overlay.id = "nsl-redirect-overlay";
+        overlay.insertAdjacentHTML("afterbegin", "<div id='nsl-redirect-overlay-container'><div id='nsl-redirect-overlay-spinner'></div><p id='nsl-redirect-overlay-title'>" + _localizedStrings.redirect_overlay_title + "</p><p id='nsl-redirect-overlay-text'>" + _localizedStrings.redirect_overlay_text + "</p></div>");
         document.body.appendChild(overlay);
         window.location = url;
     };

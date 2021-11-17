@@ -295,19 +295,19 @@ class ElementsKit_Widget_Video extends Widget_Base {
 
 					'left'		 => [
 						'title'	 =>esc_html__( 'Left', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-left',
+						'icon'	 => 'eicon-text-align-left',
 					],
 					'center'	 => [
 						'title'	 =>esc_html__( 'Center', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-center',
+						'icon'	 => 'eicon-text-align-center',
 					],
 					'right'		 => [
 						'title'	 =>esc_html__( 'Right', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-right',
+						'icon'	 => 'eicon-text-align-right',
 					],
 					'justify'	 => [
 						'title'	 =>esc_html__( 'Justified', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-justify',
+						'icon'	 => 'eicon-text-align-justify',
 					],
 				],
 				'default'		 => 'center',
@@ -833,7 +833,14 @@ class ElementsKit_Widget_Video extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 		extract($settings);
 
-		 $ekit_video_popup_url = $ekit_video_popup_url."?autoplay={$ekit_video_popup_auto_play}&loop={$ekit_video_popup_video_loop}&controls={$ekit_video_popup_video_player_control}&mute={$ekit_video_popup_video_mute}&start={$ekit_video_popup_start_time}&end={$ekit_video_popup_end_time}&version=3";
+		$player_control = isset( $ekit_video_popup_video_player_control )  && $ekit_video_popup_video_player_control == '1'  ? 1 : 0;
+		$url_components = parse_url($ekit_video_popup_url);
+		parse_str($url_components['query'], $url_params);
+
+
+
+		$ekit_video_popup_url = $ekit_video_popup_url."?autoplay={$ekit_video_popup_auto_play}&playlist={$url_params['v']}&loop={$ekit_video_popup_video_loop}&controls={$player_control}&mute={$ekit_video_popup_video_mute}&start={$ekit_video_popup_start_time}&end={$ekit_video_popup_end_time}&version=3";
+		
 		?>
 			<div class="video-content">
                 <a href="<?php echo esc_url($ekit_video_popup_url); ?>" class="ekit-video-popup ekit-video-popup-btn <?php echo esc_attr($ekit_video_popup_button_style == 'icon' ? 'ekit_icon_button': '') ?> <?php echo esc_attr($ekit_video_popup_video_glow=="yes"?"glow-btn":''); ?>">

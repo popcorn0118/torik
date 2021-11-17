@@ -74,7 +74,7 @@ class Widget_List extends \ElementsKit_Lite\Core\Config_List{
 			],
 			'faq'              => [
 				'slug'    => 'faq',
-				'title'   => 'Faq',
+				'title'   => 'FAQ',
 				'package' => 'free',
 				'widget-category' => 'general' // General
 			],
@@ -104,7 +104,7 @@ class Widget_List extends \ElementsKit_Lite\Core\Config_List{
 			],
 			'pricing'          => [
 				'slug'    => 'pricing',
-				'title'   => 'Pricing',
+				'title'   => 'Pricing Table',
 				'package' => 'free',
 				'widget-category' => 'general' // General
 			],
@@ -116,13 +116,13 @@ class Widget_List extends \ElementsKit_Lite\Core\Config_List{
 			],
 			'social'           => [
 				'slug'    => 'social',
-				'title'   => 'Social',
+				'title'   => 'Social Icons',
 				'package' => 'free',
 				'widget-category' => 'general' // General
 			],
 			'progressbar'      => [
 				'slug'    => 'progressbar',
-				'title'   => 'Progressbar',
+				'title'   => 'Progress Bar',
 				'package' => 'free',
 				'widget-category' => 'general' // General
 			],
@@ -158,13 +158,13 @@ class Widget_List extends \ElementsKit_Lite\Core\Config_List{
 			],
 			'nav-menu'         => [
 				'slug'    => 'nav-menu',
-				'title'   => 'Nav Menu',
+				'title'   => 'ElementsKit Nav Menu',
 				'package' => 'free',
 				'widget-category' => 'header-footer' // ElementsKit Header Footer
 			],
 			'mail-chimp'       => [
 				'slug'    => 'mail-chimp',
-				'title'   => 'Mail Chimp',
+				'title'   => 'MailChimp',
 				'package' => 'free',
 				'widget-category' => 'form-widgets' // Form Widgets
 			],
@@ -176,7 +176,7 @@ class Widget_List extends \ElementsKit_Lite\Core\Config_List{
 			],
 			'piechart'         => [
 				'slug'    => 'piechart',
-				'title'   => 'Piechart',
+				'title'   => 'Pie Chart',
 				'package' => 'free',
 				'widget-category' => 'general' // General
 			],
@@ -261,7 +261,7 @@ class Widget_List extends \ElementsKit_Lite\Core\Config_List{
 			],
 			'tablepress'         => [
 				'slug'    => 'tablepress',
-				'title'   => 'Tablepress',
+				'title'   => 'TablePress',
 				'package' => 'free',
 				'widget-category' => 'general' // General
 			],

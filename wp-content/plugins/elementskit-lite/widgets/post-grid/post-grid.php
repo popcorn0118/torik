@@ -213,21 +213,24 @@ class ElementsKit_Widget_Post_Grid extends Widget_Base {
             'post_status'       => 'publish',
             'cat'               => $post_cat,
             'posts_per_page'    => $post_count,
-        ); 
-        
-        $this->add_render_attribute(
-            [
-                'ekit-single-item' => [
-                    'class' => [
-                        'tab__post__single--item ekit-post_grid-item',
-                        $count_col,
-                        'tablet-' . $settings['count_col_tablet'],
-                        'mobile-' . $settings['count_col_mobile'],
-                        'post-count-' . $post_count
-                    ],
-                ],
-            ]
         );
+
+        $tablet_responsive_class = isset($settings['count_col_tablet']) ? $settings['count_col_tablet'] :  'ekit___column-2';
+    	$mobile_responsive_class = isset($settings['count_col_mobile']) ? $settings['count_col_mobile'] :  'ekit___column-2';
+    
+    	$this->add_render_attribute(
+    		[
+    			'ekit-single-item' => [
+    				'class' => [
+    					'tab__post__single--item',
+    					$count_col,
+    					'tablet-' . $tablet_responsive_class,
+    					'mobile-' . $mobile_responsive_class,
+    					'post-count-' . $post_count
+    				],
+    			],
+    		]
+    	);
 
         ?>
 
@@ -257,7 +260,4 @@ class ElementsKit_Widget_Post_Grid extends Widget_Base {
         </div>
     <?php 
     }
-    protected function _content_template() { }
 }
-
-?>

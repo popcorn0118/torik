@@ -482,11 +482,11 @@ class ElementsKit_Widget_Team extends Widget_Base {
                 'options' => [
                     'left' => [
                         'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'right' => [
                         'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'selectors' => [
@@ -654,15 +654,15 @@ class ElementsKit_Widget_Team extends Widget_Base {
                 'options' => [
                     'text-left' => [
                         'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'text-center' => [
                         'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'text-right' => [
                         'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'default' => 'text-center',
@@ -969,15 +969,15 @@ class ElementsKit_Widget_Team extends Widget_Base {
                 'options' => [
                     'start' => [
                         'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                     'end' => [
                         'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'toggle' => true,
@@ -1501,15 +1501,15 @@ class ElementsKit_Widget_Team extends Widget_Base {
                 'options' => [
                     'left' => [
                         'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'default' => 'center',
@@ -2307,7 +2307,7 @@ class ElementsKit_Widget_Team extends Widget_Base {
 
 		<div <?php echo $this->get_render_attribute_string('profile_card'); ?>>
 			<?php if ($settings['ekit_team_chose_popup'] == 'yes') : ?>
-				<a href="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
+				<a href="javascript:void(0)" data-mfp-src="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
 			<?php endif; ?>
 			
 				<div class="profile-header ekit-team-img <?php echo esc_attr($ekit_team_style == 'default' ? 'ekit-img-overlay ekit-team-img-block' : ''); ?>" <?php if ( (isset($settings['ekit_team_chose_popup']) ? $ekit_team_chose_popup : 'no')  == 'yes') :?> data-toggle="modal" data-target="ekit_team_modal_#<?php echo esc_attr($this->get_id()); ?>" <?php endif; ?>>
@@ -2341,7 +2341,7 @@ class ElementsKit_Widget_Team extends Widget_Base {
 
 					<h2 class="profile-title">
 					<?php if ($settings['ekit_team_chose_popup'] == 'yes') : ?>
-						<a  href="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
+						<a  href="javascript:void(0)" data-mfp-src="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
 						<?php echo esc_html( $ekit_team_name ); ?>
 						</a>
 						<?php else: ?>
@@ -2385,7 +2385,7 @@ class ElementsKit_Widget_Team extends Widget_Base {
 							<div class="profile-body">
 								<h2 class="profile-title">
 								<?php if ($settings['ekit_team_chose_popup'] == 'yes') : ?>
-									<a  href="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
+									<a  href="javascript:void(0)" data-mfp-src="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
 									<?php echo esc_html( $ekit_team_name ); ?>
 									</a>
 									<?php else: ?>
@@ -2421,7 +2421,7 @@ class ElementsKit_Widget_Team extends Widget_Base {
 						<div class="profile-body">
 							<h2 class="profile-title">
 							<?php if ($settings['ekit_team_chose_popup'] == 'yes') : ?>
-								<a  href="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
+								<a href="javascript:void(0)" data-mfp-src="#ekit_team_modal_<?php echo esc_attr($this->get_id()); ?>" class="ekit-team-popup">
 								<?php echo esc_html( $ekit_team_name ); ?>
 								</a>
 								<?php else: ?>

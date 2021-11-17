@@ -42,7 +42,7 @@ if( !empty($images) && !is_array($images) ) {
                 <div class="sc-next sc-btn color2-bg"><i class="fas fa-caret-right"></i></div>
                 <div class="sc-prev sc-btn color2-bg"><i class="fas fa-caret-left"></i></div>
                 <div class="single-carousel fl-wrap full-height">
-                    <div class="swiper-container" data-options='{"loop":true}'>
+                    <div class="swiper-container" data-options='{"loop":false, "freeMode": false, "slidesPerView": "auto"}' <?php if(is_rtl()) echo ' dir="rtl"'; ?>>
                         <div class="swiper-wrapper">
                             <?php
                             foreach ($images as $key => $id ) {

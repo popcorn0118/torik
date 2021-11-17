@@ -313,7 +313,7 @@ class Esb_Class_Dashboard
                 'entity_type_id' => 28,
                 // 'entity_id'          => 2,
                 'desc'           => 'Logged in notification',
-                'noti_msg'       => _x('<i class="fal fa-sign-in-alt green-bg"></i> You have logged in to your accounts.', 'Logged in notification', 'townhub-add-ons'),
+                'noti_msg'       => _x('<i class="fal fa-sign-in-alt green-bg"></i> You have logged in to your account.', 'Logged in notification', 'townhub-add-ons'),
             ),
             'booking_cancel'  => array(
                 'entity_type_id' => 29,

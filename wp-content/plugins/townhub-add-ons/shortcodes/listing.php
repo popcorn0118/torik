@@ -193,6 +193,10 @@ function townhub_addons_maintenance_mode() {
             die();
         }
     }
+    $current_user = wp_get_current_user();
+    if( !is_admin() && townhub_addons_get_option('dis_log_reg_modal') != 'yes' && 0 == $current_user->ID ){
+        add_action( 'wp_footer', 'townhub_addons_print_login_modal' );
+    }
 }
 
 add_action( 'wp_loaded', 'townhub_addons_maintenance_mode' );
@@ -225,9 +229,9 @@ if(!function_exists('townhub_addons_login_logout_sc')){
         }
         $output = ob_get_clean();
 
-        if ( townhub_addons_get_option('dis_log_reg_modal') != 'yes' && 0 == $current_user->ID ){
-            add_action( 'wp_footer', 'townhub_addons_print_login_modal' );
-        }
+        // if ( townhub_addons_get_option('dis_log_reg_modal') != 'yes' && 0 == $current_user->ID ){
+        //     add_action( 'wp_footer', 'townhub_addons_print_login_modal' );
+        // }
 
         // add_action( 'wp_footer', 'townhub_addons_single_modal' );
         

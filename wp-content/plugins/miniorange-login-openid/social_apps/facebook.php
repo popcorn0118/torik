@@ -11,8 +11,8 @@ class mo_facebook
         $this->instructions="Go to Facebook developers console <a href=\"https://developers.facebook.com/apps/\" target=\"_blank\">https://developers.facebook.com/apps/</a>. Login with your facebook developer account.
                                 ##Click on Create a New App/Create App. Select <b>Consumer</b> on the <b>Select App type pop-up</b> CLick on <b>Continue</b>.
                                 ##Enter <b>App Display Name</b>, <b>App Contact Email</b>.
-                                ##Click on <b>Create App</b> button and complete the Security Check. 
-                                ##Under <b>Facebook Login</b> click on <b>Set Up</b> button on Add products to Your app page. 
+                                ##Click on <b>Create App</b> button and complete the Security Check.
+                                ##On add products to your app page click on setup button under facebook login option. 
                                 ##Click on <b>Web</b>. Enter <b><code id='12'>".get_option("siteurl")."</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"far fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#12', '#shortcode_url_copy')\"><span id=\"shortcode_url_copy\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i></b> into <b>Site URL</b> than click on <b>Save</b>. 
                                 ##Click on <b>Settings</b> on left side menu and select <b>Basics</b> option.
                                 ##Enter <b><code id='11'>".$_SERVER['HTTP_HOST']."</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"far fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#11', '#shortcode_url_copy1')\"><span id=\"shortcode_url_copy1\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i></b> in <b>App Domain</b>. Enter your <b>Privacy Policy URL</b>
@@ -20,6 +20,8 @@ class mo_facebook
                                 ##Select <b>Category</b> of your website. Then click on <b>Save Changes</b>. 
                                 ##On the Left side panel, Click on <b>Facebook Login</b> and select <b>Settings</b> option. 
                                 ##Scroll down and add the following URL to the <b>Valid OAuth redirect URIs</b> field <b><code id='222'>".mo_get_permalink('facebook')."</code><i style= \"width: 11px;height: 9px;padding-left:2px;padding-top:3px\" class=\"far fa-fw fa-lg fa-copy mo_copy mo_copytooltip\" onclick=\"copyToClipboard(this, '#12', '#shortcode_url_copy3')\"><span id=\"shortcode_url_copy3\" class=\"mo_copytooltiptext\">Copy to Clipboard</span></i></b> and click on <b>Save Changes</b> button. 
+                                ##Click on the App review tab from the left hand side menu and click on Permissions and Request.
+                                ##Now click on Request Advance Access for public_profile and email. If you want any extra data to be returned you can request permission for those scopes.
                                 ##In  the toolbar Change your app status from <b>In Development</b> to <b>Live</b> by clicking on the toggle button and further Click on <b>Switch Mode</b>.
                                 ##Go to <b>Settings > Basic</b>. Copy your <b>App ID</b> and <b>App Secret</b> provided by Facebook and paste them into the fields above.
                                 ##Input <b> email, public_profile </b>as scope.

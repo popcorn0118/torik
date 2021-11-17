@@ -4,7 +4,7 @@
 			<?php foreach ($testimonials as $testimonial): ?>
 				<div class="swiper-slide">
 					<div class="slick-slide">
-						<div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three slick-slide swiper-slide elementor-repeater-item-<?php echo esc_attr( $testimonial[ '_id' ] ); ?>">
+						<div class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-three elementor-repeater-item-<?php echo esc_attr( $testimonial[ '_id' ] ); ?>">
 							<?php if(isset($ekit_testimonial_wartermark_enable) && ($ekit_testimonial_wartermark_enable == 'yes')):?>
 							<div class="elementskit-watermark-icon elementskit-icon-content <?php if($ekit_testimonial_wartermark_mask_show_badge == 'yes') : ?> commentor-badge <?php endif; ?>">
 								<?php

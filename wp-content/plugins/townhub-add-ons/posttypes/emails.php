@@ -1266,6 +1266,8 @@ class Esb_Class_Emails
             'date'    => current_time(get_option('date_format')),
             'name'    => $datas['lmsg_name'],
             'phone'   => $datas['lmsg_phone'],
+            'email'   => $datas['lmsg_email'],
+            'to_email'   => $receiver->user_email,
             'listing'           => get_the_title( $datas['listing_id'] ),
         );
         $temp_args = (array) apply_filters('author_message_email_args', $temp_args, $message, $datas, $receiver );

@@ -33,6 +33,8 @@
   "OTHER:DOWNLOAD:DIRECT": false,
   "OTHER:CLI:DISABLE": false,
   "OTHER:CLI:PATH": "",
+  "OTHER:DB:QUERIES": "800",
+  "OTHER:RESTORE:SPLITTING": false,
   "CRON:ENABLED": false,
   "CRON:TYPE": "month",
   "CRON:DAY": "1",

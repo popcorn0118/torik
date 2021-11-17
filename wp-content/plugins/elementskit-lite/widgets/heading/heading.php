@@ -393,20 +393,16 @@ class ElementsKit_Widget_Heading extends Widget_Base {
 				'options'		 => [
 					'text_left'		 => [
 						'title'	 =>esc_html__( 'Left', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-left',
+						'icon'	 => 'eicon-text-align-left',
 					],
 					'text_center'	 => [
 						'title'	 =>esc_html__( 'Center', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-center',
+						'icon'	 => 'eicon-text-align-center',
 					],
 					'text_right'		 => [
 						'title'	 =>esc_html__( 'Right', 'elementskit-lite' ),
-						'icon'	 => 'fa fa-align-right',
+						'icon'	 => 'eicon-text-align-right',
 					],
-					// 'text_justify'	 => [
-					// 	'title'	 =>esc_html__( 'Justified', 'elementskit-lite' ),
-					// 	'icon'	 => 'fa fa-align-justify',
-					// ],
 				],
 				'default'		 => 'text_left',
 			]
@@ -1310,7 +1306,10 @@ class ElementsKit_Widget_Heading extends Widget_Base {
 		$subheading_outline = (isset($ekit_heading_sub_title_outline) && $ekit_heading_sub_title_outline == 'yes') ? ' ekit-heading__subtitle-has-border' : '';
 		$title_in_left = (isset($title_float_left) && $title_float_left == 'yes' ) ? ' ekit-heading__title-in-left' : '';
 
-		echo '<div class="ekit-heading elementskit-section-title-wraper '.$ekit_heading_title_align.'   ekit_heading_tablet-'. $settings['ekit_heading_title_align_tablet'] .'   ekit_heading_mobile-'. $settings['ekit_heading_title_align_mobile'] .''.$title_in_left.'">';
+		$ekit_heading_align_tablet = isset($settings['ekit_heading_title_align_tablet']) ? $ekit_heading_title_align_tablet : '';
+		$ekit_heading_align_mobile = isset($settings['ekit_heading_title_align_mobile']) ? $ekit_heading_title_align_mobile : '';
+
+		echo '<div class="ekit-heading elementskit-section-title-wraper '.$ekit_heading_title_align.'   ekit_heading_tablet-'. $ekit_heading_align_tablet .'   ekit_heading_mobile-'. $ekit_heading_align_mobile .''.$title_in_left.'">';
 
 			if(!empty($shadow_text_content) && $show_shadow_text == 'yes' ): ?>
 				<span class='ekit-heading__shadow-text'><?php echo \ElementsKit_Lite\Utils::kspan($shadow_text_content); ?></span>
@@ -1368,5 +1367,4 @@ class ElementsKit_Widget_Heading extends Widget_Base {
 
 
     }
-    protected function _content_template() { }
 }

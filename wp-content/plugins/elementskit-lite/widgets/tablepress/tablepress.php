@@ -141,15 +141,15 @@ class ElementsKit_Widget_TablePress extends Widget_Base {
                 'options' => [
                     'left'    => [
                         'title' => __( 'Left', 'elementskit-lite' ),
-                        'icon'  => 'fa fa-align-left',
+                        'icon'  => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' => __( 'Center', 'elementskit-lite' ),
-                        'icon'  => 'fa fa-align-center',
+                        'icon'  => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' => __( 'Right', 'elementskit-lite' ),
-                        'icon'  => 'fa fa-align-right',
+                        'icon'  => 'eicon-text-align-right',
                     ],
                 ],
                 'default'   => 'center',
@@ -167,15 +167,15 @@ class ElementsKit_Widget_TablePress extends Widget_Base {
                 'options' => [
                     'left'    => [
                         'title' => __( 'Left', 'elementskit-lite' ),
-                        'icon'  => 'fa fa-align-left',
+                        'icon'  => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' => __( 'Center', 'elementskit-lite' ),
-                        'icon'  => 'fa fa-align-center',
+                        'icon'  => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' => __( 'Right', 'elementskit-lite' ),
-                        'icon'  => 'fa fa-align-right',
+                        'icon'  => 'eicon-text-align-right',
                     ],
                 ],
                 'default'   => 'center',
@@ -731,6 +731,4 @@ class ElementsKit_Widget_TablePress extends Widget_Base {
 	public function render_plain_content() {
         echo $this->get_shortcode();
     }
-    
-    protected function _content_template() { }
 }

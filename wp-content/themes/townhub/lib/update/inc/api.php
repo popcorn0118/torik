@@ -35,7 +35,7 @@ class Api
 
     private function init_globals()
     {
-        $this->api_url = 'http://update.cththemes.net/wp-json/cthupdate/v1';
+        $this->api_url = 'https://update.cththemes.co/wp-json/cthupdate/v1';
         // Envato API token.
         $this->token = cththemes_auto_update()->get_envato_purchase_code_option_value();
     }

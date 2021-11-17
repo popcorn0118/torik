@@ -395,7 +395,7 @@ class CTH_Listing_Locations extends Widget_Base {
 
     }
 
-    protected function _content_template() {}
+    protected function content_template() {}
 
    
     

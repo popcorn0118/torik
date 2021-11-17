@@ -65,7 +65,7 @@ function mo_openid_show_apps()
                 <br/>
             </td>
             <div>
-                <label style="cursor: auto; margin-left: 3%;" class="mo_openid_note_style">Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>
+                <label style="cursor: auto; margin-left: 3%;" class="mo_openid_note_style">Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade or <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>
             </div>
         </tr>
         <tr>
@@ -153,7 +153,7 @@ function mo_openid_show_apps()
                     // if (result.status) {
                     if (true) {
                         if (a.checked == true) {
-                            if (app_name == 'facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble') {
+                            if (app_name == 'facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble' || app_name == 'discord') {
                                 jQuery.ajax({
                                     type: 'POST',
                                     url: '<?php echo admin_url("admin-ajax.php"); ?>',
@@ -253,7 +253,7 @@ function mo_openid_show_apps()
                                             });
                                         } else {
                                             jQuery("#mo_apps_".concat(app_name)).prop('checked', false);
-                                            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble')
+                                            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble' || app_name == 'discord')
                                             {
                                                 jQuery ("#mo_facebook_notice").show();
                                                 jQuery( "#mo_register_customer_toggle").hide();
@@ -828,7 +828,7 @@ function mo_openid_show_apps()
 
         jQuery(".mo-openid-sort-apps-open-settings-div").click(function () {
             let app_name = jQuery(this).parents(".mo-openid-sort-apps-div").attr("id");
-            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble')
+            if(app_name=='facebook' || app_name == 'twitter' || app_name == 'instagram' || app_name == 'snapchat' || app_name == 'dribbble' || app_name == 'discord')
             {
                 jQuery("#mo_facebook_notice").text("Please set custom app for "+app_name.charAt(0).toUpperCase()+app_name.substr(1));
                 jQuery ("#mo_facebook_notice").show();
@@ -873,14 +873,14 @@ function mo_openid_show_apps()
             jQuery('#mo_openid_register_new_user').hide();
             jQuery('#mo_openid_register_old_user').hide();
             jQuery("#mo_app_config_notice").text("If you face any issues in setting up " + application_name.charAt(0).toUpperCase() + application_name.substr(1) + " app then please contact us we wil help you out");
-            if(application_name == 'facebook' || application_name == 'twitter' || application_name == 'instagram' || application_name == 'snapchat' || application_name == 'dribbble') {
+            if(application_name == 'facebook' || application_name == 'twitter' || application_name == 'instagram' || application_name == 'snapchat' || application_name == 'dribbble' || application_name == 'discord') {
                 jQuery("#mo_set_pre_config_app").hide();
             }
 
             else {
                 jQuery("#mo_set_pre_config_app").show();
             }
-            if(application_name == 'facebook' ||  application_name == 'instagram'||  application_name == 'google') {
+            if(application_name == 'facebook' ||  application_name == 'instagram'||  application_name == 'google'||  application_name == 'discord') {
 
                 jQuery("#mo_ssl_notice").text("SSL certificate is required for " + application_name.charAt(0).toUpperCase() + application_name.substr(1) + " custom app");
                 jQuery("#mo_ssl_notice").show();
@@ -894,7 +894,7 @@ function mo_openid_show_apps()
                 handle_salesforce();
             }
             else if(application_name != null) {
-                var default_color= {'facebook':'#1877F2','google':'#DB4437','vkontakte':'#466482','twitter':'#2795e9','yahoo':'#430297','instagram':'#3f729b','linkedin':'#007bb6','salesforce':'#1ab7ea','windowslive':'#2672ec','dribbble':'#ee66aa','snapchat':'#fffc00'};
+                var default_color= {'facebook':'#1877F2','google':'#DB4437','vkontakte':'#466482','twitter':'#2795e9','yahoo':'#430297','instagram':'#3f729b','linkedin':'#007bb6','salesforce':'#1ab7ea','windowslive':'#2672ec','dribbble':'#ee66aa','snapchat':'#fffc00','discord':"#7289DA"};
                 var icon = application_name ;
                 if(application_name=='vkontakte'){
                     icon= 'vk';
@@ -940,10 +940,12 @@ function mo_openid_show_apps()
                         }
                         else {
                             jQuery("#custom_app_perma_inst").hide();
+                            jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto; background:#FFD868;"><span class="dashicons dashicons-info" style="vertical-align: bottom;"></span>Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade or <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label><br/>');
                             for (i = 7; i < ins.length; i++)
                                 jQuery("#custom_app_inst_steps").append('<li>' + ins[i] + '</li>');
+                            if(application_name == 'discord')
+                                jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto;"><span class="dashicons dashicons-info" style="vertical-align: bottom;"></span>If you\'re searching for unique Discord use cases like <b>Role mapping from Discord to WordPress, Discord Avatar Mapping to WordPress profile picture, Managing users and memberships, Discord Auto Post, and more,</b> <a style="cursor: pointer" href="https://plugins.miniorange.com/discord-wordpress-add-on" target="_blank">check out</a> our add-on and solution that we\'ve provided to a number of our customers.</label>');
                             jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto">If you want to display Social Login icons on your login panel then use <code id=\'1\'>[miniorange_social_login]</code><i style= "width: 11px;height: 9px;padding-left:2px;padding-top:3px" class="far fa-fw fa-lg fa-copy mo_copy mo_copytooltip" onclick="copyToClipboard(this, \'#1\', \'#shortcode_url_copy\')"><span id="shortcode_url_copy" class="mo_copytooltiptext">Copy to Clipboard</span></i> to display social icons or <a style="cursor: pointer" onclick="mo_openid_support_form(\'\')">Contact Us</a></label>');
-                            jQuery("#custom_app_inst_steps").append('<label class="mo_openid_note_style" style="cursor: auto; background:#FFD868;"><span class="dashicons dashicons-info" style="vertical-align: bottom;"></span>Are you looking for rest API solution to authorize your users for your <i style="font-size: larger" class="fab fa-android"><b> Android</b></i> or <i style="font-size: larger" class="fab fa-apple"><b> iOS</b></i> app? <a style="cursor: pointer" href="https://login.xecurify.com/moas/login?redirectUrl=https://login.xecurify.com/moas/initializepayment&requestOrigin=wp_social_login_rest_api_plan" target="_blank">Click here</a> to upgrade and <a style="cursor: pointer" href=<?php echo site_url()."/wp-admin/admin.php?page=mo_openid_general_settings&tab=rest_api_page"; ?>>Click here</a> for more details.</label>');
                         }
                         document.getElementById('mo_openid_ajax_wait_img').style.display = 'none';
                         document.getElementById('mo_openid_ajax_wait_fade').style.display = 'none';

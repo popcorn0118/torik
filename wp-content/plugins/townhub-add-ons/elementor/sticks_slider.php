@@ -122,7 +122,7 @@ class CTH_Sticks_Slider extends Widget_Base {
 
     }
 
-    // protected function _content_template() {
+    // protected function content_template() {
     //     
     //     <div class="section-title">
     //         <# if(settings.title){ #><h2>{{{settings.title}}}</h2><# } #>

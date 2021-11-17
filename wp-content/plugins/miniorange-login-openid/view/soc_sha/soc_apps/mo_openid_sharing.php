@@ -58,7 +58,7 @@ function mo_openid_share_apps()
                                 <label class="mo_openid_checkbox_container"><?php echo mo_sl('Vkontakte');?>
                                     <input type="checkbox" id="mo_openid_vkontakte_share_enable" class="app_enable"
                                            name="mo_openid_vkontakte_share_enable" value="1"
-                                           onclick="addSelectedApps(this,'vk');mo_openid_enable_share('mo_openid_vkontakte_share_enable');" <?php checked(get_option('mo_openid_vkontakte_share_enable') == 1); ?> />
+                                           onclick="addSelectedApps(this,'vkontakte');mo_openid_enable_share('mo_openid_vkontakte_share_enable');" <?php checked(get_option('mo_openid_vkontakte_share_enable') == 1); ?> />
                                     <span class="mo_openid_checkbox_checkmark"></span>
                                 </label>
 
@@ -541,7 +541,7 @@ function mo_openid_share_apps()
 
                     <div>
                         <?php
-                        $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vkontakte'=>'#466482','twitter'=>'#2795e9','digg'=>'#000000','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','pocket'=>'#ee4056','print'=>'#ee4056','whatsapp'=>'#25D366','mail'=>'#787878','amazon'=>'#ff9900','paypal'=>'#0d127a','stumble'=>'#f74425','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029','kakao'=>'#ffe812','livejournal'=>'#3c1361','naver'=>'#3EAF0E','teamsnap'=>'#ff9a1a');
+                        $default_color= array('facebook'=>'#1877F2','google'=>'#DB4437','vk'=>'#466482','twitter'=>'#2795e9','digg'=>'#000000','yahoo'=>'#430297','yandex'=>'#2795e9','instagram'=>'#3f729b','linkedin'=>'#007bb6','pocket'=>'#ee4056','print'=>'#ee4056','whatsapp'=>'#25D366','mail'=>'#787878','amazon'=>'#ff9900','paypal'=>'#0d127a','stumble'=>'#f74425','salesforce'=>'#1ab7ea','windowslive'=>'#2672ec','apple'=>'#000000','steam'=>'#000000','wordpress'=>'#587ea3','pinterest'=>'#cb2027','spotify'=>'#19bf61','tumblr'=>'#2c4762','twitch'=>'#720e9e','github'=>'#000000','dribbble'=>'#ee66aa','flickr'=>'#ff0084','stackexchange'=>'0000ff','snapchat'=>'#fffc00','reddit'=>'#ff4301','odnoklassniki'=>'#f97400','foursquare'=>'#f94877','wechat'=>'#00c300','vimeo'=>'#1ab7ea','line'=>'#00c300','hubspot'=>'#fa7820','discord'=>'#7289da','meetup'=>'#e51937','stackexchange'=>'#0000FF','wiebo'=>'#df2029','kakao'=>'#ffe812','livejournal'=>'#3c1361','naver'=>'#3EAF0E','teamsnap'=>'#ff9a1a');
 
                         $share_app=get_option('share_app');
                         
@@ -596,24 +596,7 @@ function mo_openid_share_apps()
                                 <?php
                             }
 
-                            else
-                                if ($active_app == 'vkontakte') {
-                                    ?>
-
-                                    <i class="mo_sharing_icon_preview fab fa-vk" style="display: none;text-align:center;background: <?php echo $default_color[$active_app]; ?>;color: #ffffff;"
-                                       id="mo_sharing_icon_preview_<?php echo $active_app ?>"></i>
-
-                                    <i class="mo_custom_sharing_icon_preview fab fa-<?php echo $icon ?>"
-                                       id="mo_custom_sharing_icon_preview_<?php echo $icon ?>"
-                                       style="color:#ffffff;text-align:center;margin-top:5px;"></i>
-
-
-                                    <i class="mo_custom_sharing_icon_font_preview fab fa-<?php echo $icon ?>"
-                                       id="mo_custom_sharing_icon_font_preview_<?php echo $icon ?>"
-                                       style="text-align:center;margin-top:5px;"></i>
-
-                                    <?php
-                                } else {
+                           else {
 
                                     ?>
                                     <i class="mo_sharing_icon_preview fab fa-<?php echo $icon ?>" style="display: none;text-align:center;background: <?php echo $default_color[$icon]; ?>;color: #ffffff"
@@ -643,9 +626,7 @@ function mo_openid_share_apps()
                                 check_sharing_enable_apps();
                             });
                             function myFunction(item) {
-                                if(item=="vkontakte"){
-                                  item="vk";
-                                }
+
                                 var b = '#mo_sharing_icon_preview_' + item;
                                 var c='#mo_custom_sharing_icon_preview_'+item;
                                 var d='#mo_custom_sharing_icon_font_preview_'+item;
@@ -681,9 +662,7 @@ function mo_openid_share_apps()
                                 });
                             }
                             function show_apps(apps) {
-                              if(apps=="vkontakte"){
-                                  apps="vk";
-                              }
+
                                 if(radio=="default") {
                                     jQuery('#mo_sharing_icon_preview_' + apps).show();
                                 }
@@ -722,7 +701,6 @@ function mo_openid_share_apps()
 
 
                 function addSelectedApps(e,app_name) {
-
                     var radio = "<?php echo get_option('mo_openid_share_custom_theme') ?>";
                     var flag = jQuery("#sel_apps .app_enable:checked").length + 1;
                     var value_of_app_default= ("#mo_sharing_icon_preview_" + app_name);

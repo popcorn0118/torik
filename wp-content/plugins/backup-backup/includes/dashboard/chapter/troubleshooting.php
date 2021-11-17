@@ -176,6 +176,24 @@
   </div>
 
   <div class="mm mtl semibold">
+    <?php _e("Backup/restore process issues", 'backup-backup'); ?>
+  </div>
+
+  <div class="mm mtll f16 lh28">
+    <?php _e("If you are sure the backup process is not running but you can't run it: ", 'backup-backup'); ?>
+    <a href="#!" id="bmi-force-backup-to-stop" class="nodec hoverable secondary">
+       <?php _e("Force the process to stop.", 'backup-backup'); ?>
+    </a>
+    <br>
+    <?php _e("If you are sure the restore process is not running but you can't run it: ", 'backup-backup'); ?>
+    <a href="#!" id="bmi-force-restore-to-stop" class="nodec hoverable secondary">
+       <?php _e("Force the restoration to stop.", 'backup-backup'); ?>
+    </a>
+    <br>
+    <span><?php _e('* If the process is still running after killing, that means it probably still running (for real), wait a bit for it to fail then.', 'backup-backup'); ?></span>
+  </div>
+
+  <div class="mm mtl semibold">
     <?php _e("Error: php_uname is disabled for security reasons", 'backup-backup'); ?>
   </div>
 

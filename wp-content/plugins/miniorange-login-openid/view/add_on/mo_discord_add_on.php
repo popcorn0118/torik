@@ -85,7 +85,23 @@ function mo_openid_discord_add_on_display()
             jQuery('#mo_openid_page_heading').text('<?php echo mo_sl('Discord Add On'); ?>');
             jQuery(document).ready(function($){
                 jQuery("#mosocial_purchase_dis_verify").on("click",function(){
-                    mo_verify_add_on_license_key();
+                    jQuery.ajax({
+                        url: "<?php echo admin_url("admin-ajax.php");?>", //the page containing php script
+                        method: "POST", //request type,
+                        dataType: 'json',
+                        data: {
+                            action: 'mo_register_customer_toggle_update',
+                        },
+                        success: function (result){
+                            if (result.status){
+                                mo_verify_add_on_license_key();
+                            }
+                            else{
+                                alert("Please register/login with miniOrange to verify key and use the Custom Registration Form Add on");
+                                window.location.href="<?php echo site_url()?>".concat("/wp-admin/admin.php?page=mo_openid_general_settings&tab=profile");
+                            }
+                        }
+                    });
                 });
             });
 

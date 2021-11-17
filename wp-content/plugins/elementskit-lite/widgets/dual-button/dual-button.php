@@ -72,15 +72,15 @@ class ElementsKit_Widget_Dual_Button extends Widget_Base {
                     'options' => [
                         'start' => [
                             'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                            'icon' => 'fa fa-align-left',
+                            'icon' => 'eicon-text-align-left',
                         ],
                         'center' => [
                             'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                            'icon' => 'fa fa-align-center',
+                            'icon' => 'eicon-text-align-center',
                         ],
                         'end' => [
                             'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                            'icon' => 'fa fa-align-right',
+                            'icon' => 'eicon-text-align-right',
                         ],
                     ],
                     'prefix_class' => 'elementor-widget-elementskit-dual-button%s-',
@@ -533,19 +533,19 @@ class ElementsKit_Widget_Dual_Button extends Widget_Base {
                             'options' => [
                                 'start' => [
                                     'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-left',
+                                    'icon' => 'eicon-text-align-left',
                                 ],
                                 'center' => [
                                     'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-center',
+                                    'icon' => 'eicon-text-align-center',
                                 ],
                                 'end' => [
                                     'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-right',
+                                    'icon' => 'eicon-text-align-right',
                                 ],
                                 'justify' => [
                                     'title' => esc_html__( 'Justified', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-justify',
+                                    'icon' => 'eicon-text-align-justify',
                                 ],
                             ],
                             'default' => '',
@@ -753,19 +753,19 @@ class ElementsKit_Widget_Dual_Button extends Widget_Base {
                             'options' => [
                                 'start' => [
                                     'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-left',
+                                    'icon' => 'eicon-text-align-left',
                                 ],
                                 'center' => [
                                     'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-center',
+                                    'icon' => 'eicon-text-align-center',
                                 ],
                                 'end' => [
                                     'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-right',
+                                    'icon' => 'eicon-text-align-right',
                                 ],
                                 'justify' => [
                                     'title' => esc_html__( 'Justified', 'elementskit-lite' ),
-                                    'icon' => 'fa fa-align-justify',
+                                    'icon' => 'eicon-text-align-justify',
                                 ],
                             ],
                             'selectors' => [

@@ -244,6 +244,18 @@ class Esb_Class_Claim_CPT extends Esb_Class_CPT {
                     if(ESB_DEBUG) error_log(date('[Y-m-d H:i e] '). "Update listing (ID: $lis_id) to claimed author (ID: $user_id) error: " . $lis_id->get_error_message() . PHP_EOL, 3, ESB_LOG_FILE);
                 }else{
                     update_post_meta( $listing_id, ESB_META_PREFIX.'verified',  '1'  );
+                    if( function_exists('icl_get_languages') ){
+                        $icl_langs = icl_get_languages();
+                        if( count($icl_langs) ){
+                            foreach ($icl_langs as $lng) {
+                                if( isset($lng['language_code']) ){
+                                    $tranID = apply_filters( 'wpml_object_id', $listing_id, 'listing', FALSE, $lng['language_code'] );
+                                    update_post_meta( $tranID, ESB_META_PREFIX.'verified',  '1'  );
+                                }
+                            }
+                        }
+                    }
+                    
                 }
 
                 // update image author

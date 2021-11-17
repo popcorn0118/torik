@@ -232,7 +232,7 @@ class Zip {
         $this->zip_progress->log(__("Compressed ", 'backup-backup') . $max . __(" files", 'backup-backup'), 'SUCCESS');
 
         // Log time of ZIP Process
-        $this->zip_progress->log(__("Archiving of ", 'backup-backup') . $max . __(" files took: ", 'backup-backup') . (microtime(true) - $this->start_zip) . 's');
+        $this->zip_progress->log(__("Archiving of ", 'backup-backup') . $max . __(" files took: ", 'backup-backup') . number_format(microtime(true) - $this->start_zip, 2) . 's');
 
         $this->zip_progress->log(__("Finalizing backup", 'backup-backup'), 'STEP');
         $this->zip_progress->log(__("Adding manifest...", 'backup-backup'), 'INFO');
@@ -476,7 +476,7 @@ class Zip {
         $this->zip_progress->log(__("Compressed ", 'backup-backup') . $max . __(" files", 'backup-backup'), 'SUCCESS');
 
         // Log time of ZIP Process
-        $this->zip_progress->log(__("Archiving of ", 'backup-backup') . $max . __(" files took: ", 'backup-backup') . (microtime(true) - $this->start_zip) . 's');
+        $this->zip_progress->log(__("Archiving of ", 'backup-backup') . $max . __(" files took: ", 'backup-backup') . number_format(microtime(true) - $this->start_zip, 2) . 's');
 
         $this->zip_progress->log(__("Finalizing backup", 'backup-backup'), 'STEP');
         $this->zip_progress->log(__("Adding manifest...", 'backup-backup'), 'INFO');
@@ -714,7 +714,7 @@ class Zip {
     $safe_limit = $this->smartMemory();
 
     // Extract msg
-    $this->zip_progress->log(__('Extracting files (this process can take some time)...', 'backup_migration'), 'STEP');
+    $this->zip_progress->log(__('Extracting files into temporary directory (this process can take some time)...', 'backup_migration'), 'STEP');
 
     // Force PCL Zip
     $this->lib = 2;

@@ -1491,7 +1491,6 @@ class ElementsKit_Widget_Nav_Menu extends Widget_Base {
                 'container'       => 'div',
                 'container_id'    => 'ekit-megamenu-' . $settings['elementskit_nav_menu'],
                 'container_class' => 'elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ' . $settings['elementskit_style_tab_submenu_item_arrow'] . ' ekit-nav-menu-one-page-' . $settings['elementskit_one_page_enable'],
-                'menu_id'         => 'main-menu',
                 'menu'         	  => $settings['elementskit_nav_menu'],
                 'menu_class'      => 'elementskit-navbar-nav ' . $settings['elementskit_main_menu_position'] .' submenu-click-on-'. $settings['submenu_click_area'],
                 'depth'           => 4,

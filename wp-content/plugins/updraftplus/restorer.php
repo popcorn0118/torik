@@ -3,6 +3,7 @@
 if (!defined('UPDRAFTPLUS_DIR')) die('No direct access allowed');
 
 if (!class_exists('Updraft_Restorer_Skin')) require_once(UPDRAFTPLUS_DIR.'/includes/updraft-restorer-skin.php');
+if (!class_exists('UpdraftPlus_Search_Replace')) require_once(UPDRAFTPLUS_DIR.'/includes/class-search-replace.php');
 
 class Updraft_Restorer {
 
@@ -81,6 +82,8 @@ class Updraft_Restorer {
 	private $stored_routine_supported = null;
 	
 	private $tables_to_skip = array();
+
+	public $search_replace_obj = null;
 	
 	// Constants for use with the move_backup_in method
 	// These can't be arbitrarily changed; there is legacy code doing bitwise operations and numerical comparisons, and possibly legacy code still using the values directly.
@@ -121,6 +124,8 @@ class Updraft_Restorer {
 		$this->continuation_data = $continuation_data;
 
 		$this->setup_database_objects();
+
+		$this->search_replace_obj = new UpdraftPlus_Search_Replace();
 		
 		if ($short_init) return;
 		
@@ -591,8 +596,7 @@ class Updraft_Restorer {
 					$display_log_message = sprintf(__('A PHP exception (%s) has occurred: %s', 'updraftplus'), get_class($e), $e->getMessage());
 					error_log($log_message);
 					// @codingStandardsIgnoreLine
-					if (function_exists('wp_debug_backtrace_summary')) $log_message .= ' Backtrace: '.wp_debug_backtrace_summary();
-					$updraftplus->log($log_message);
+					if (function_exists('wp_debug_backtrace_summary')) $log_message .= ' Backtrace: '.str_replace(array(ABSPATH, "\n"), array('', ', '), $e->getTraceAsString());
 					$updraftplus->log($display_log_message, 'notice-restore');
 					die();
 				// @codingStandardsIgnoreLine
@@ -600,8 +604,7 @@ class Updraft_Restorer {
 					$log_message = 'PHP Fatal error ('.get_class($e).') has occurred. Error Message: '.$e->getMessage().' (Code: '.$e->getCode().', line '.$e->getLine().' in '.$e->getFile().')';
 					error_log($log_message);
 					// @codingStandardsIgnoreLine
-					if (function_exists('wp_debug_backtrace_summary')) $log_message .= ' Backtrace: '.wp_debug_backtrace_summary();
-					$updraftplus->log($log_message);
+					if (function_exists('wp_debug_backtrace_summary')) $log_message .= ' Backtrace: '.str_replace(array(ABSPATH, "\n"), array('', ', '), $e->getTraceAsString());
 					$display_log_message = sprintf(__('A PHP fatal error (%s) has occurred: %s', 'updraftplus'), get_class($e), $e->getMessage());
 					$updraftplus->log($display_log_message, 'notice-restore');
 					die();

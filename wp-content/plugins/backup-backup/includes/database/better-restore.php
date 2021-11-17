@@ -11,6 +11,7 @@ namespace BMI\Plugin\Database;
 
 // Use
 use BMI\Plugin\BMI_Logger AS Logger;
+use BMI\Plugin\Backup_Migration_Plugin as BMP;
 use BMI\Plugin\Progress\BMI_ZipProgress AS Progress;
 
 // Exit on direct access
@@ -39,7 +40,7 @@ class BMI_Database_Importer {
    *
    * @return self
    */
-  function __construct($storage, $total_queries, $old_abspath, $old_domain, $new_domain, &$logger, $isCLI) {
+  function __construct($storage, $total_queries, $old_abspath, $old_domain, $new_domain, &$logger, $isCLI, $conversionStats) {
 
     /**
      * WP Global Database variable
@@ -63,6 +64,10 @@ class BMI_Database_Importer {
     // $this->storage = trailingslashit(__DIR__) . 'data';
     $this->storage = $storage;
     $this->total_queries = intval($total_queries);
+    // $this->total_queries = $this->conversionStats['total_queries'];
+
+    // Conversion stats
+    $this->conversionStats = $conversionStats;
 
     /**
      * Domain(s) configuration
@@ -122,7 +127,8 @@ class BMI_Database_Importer {
    */
   public function showFirstLogs() {
 
-    $this->logger->log("Memory usage after initialization: " . (memory_get_usage() / 1024 / 1024) . " MB", 'INFO');
+    $this->logger->log("Initializing database import V2 enginge...", 'INFO');
+    $this->logger->log("Initialized successfully, memory usage: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB", 'SUCCESS');
 
   }
 
@@ -134,7 +140,7 @@ class BMI_Database_Importer {
   public function showEndLogs() {
 
     $from_start = number_format(microtime(true) - $this->init_start, 4);
-    $this->logger->log("Total time to insert $this->xi queries took $from_start seconds.", 'INFO');
+    $this->logger->log("Total time to insert " . $this->xi . " queries took " . $from_start . " seconds.", 'INFO');
 
   }
 
@@ -147,7 +153,7 @@ class BMI_Database_Importer {
 
     $this->logger->log("Loading file list...", 'INFO');
     $this->load_file_list();
-    $this->logger->log("Memory usage after loading file list: " . (memory_get_usage() / 1024 / 1024) . " MB", 'INFO');
+    $this->logger->log("File list loaded, memory usage: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB", 'SUCCESS');
 
     $this->logger->log("Restoring tables using temporary name...", 'INFO');
     $this->restore_tables();
@@ -284,7 +290,7 @@ class BMI_Database_Importer {
     $this->load_file_list();
 
     if ($first_db == true) {
-      $this->logger->log("Memory usage after loading file list: " . (memory_get_usage() / 1024 / 1024) . " MB", 'INFO');
+      $this->logger->log("File list loaded, memory usage: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB", 'SUCCESS');
     }
 
     return $this->files;
@@ -348,15 +354,19 @@ class BMI_Database_Importer {
    */
   public function alter_names() {
 
+    $this->logger->log(__('Switching tables to new ones and removing old ones.', 'backup-backup'), 'STEP');
+
     foreach ($this->table_names_alter as $final_name => $tmp_name) {
 
       $sql = "DROP TABLE IF EXISTS `$final_name`;";
-      $this->run_query($sql);
+      $this->run_query($sql, true);
 
       $sql = "ALTER TABLE `$tmp_name` RENAME TO `$final_name`;";
-      $this->run_query($sql);
+      $this->run_query($sql, true);
 
     }
+
+    $this->logger->log(__('Tables replaced successfully.', 'backup-backup'), 'SUCCESS');
 
   }
 
@@ -689,7 +699,7 @@ class BMI_Database_Importer {
    *
    * Notice: Please unset($query) after this method otherwise we will lose memory
    */
-  private function run_query(&$query) {
+  private function run_query(&$query, $isAlter = false) {
 
     $this->xi++;
     if ($this->owndb === true) $this->db->query($query);
@@ -707,19 +717,39 @@ class BMI_Database_Importer {
       $queries_total = $this->total_queries;
       $queries_progress = number_format(($queries_so_far / $queries_total) * 100, 2);
 
-      $this->logger->progress(50 + ($queries_progress / 2));
-      $queries_progress .= "%";
-
-      $usg = number_format(memory_get_usage() / 1024 / 1024, 4);
-
-      if ($filename == '') {
-        $filename = $this->current_file;
-      }
-      if ($filename == '') {
-        $filename = 'control_group.sql';
+      $halfProgress = true;
+      if (isset($this->conversionStats['total_queries'])) {
+        $halfProgress = false;
       }
 
-      $this->logger->log("Finished $queries_so_far/$queries_total ($queries_progress), current file: $filename (Usage: $usg MB)", 'INFO');
+      if (!$isAlter) {
+        if ($halfProgress) {
+          $this->logger->progress(50 + ($queries_progress / 2));
+        } else {
+          $this->logger->progress(75 + ($queries_progress / 4));
+        }
+      }
+
+      $match_output = [];
+      preg_match('/(.*)_(\d+)\_of\_(\d+)/', $filename, $match_output); // 1 (table name), 2 (part), 3 (total parts)
+
+      $size = "";
+
+      if (file_exists($this->current_file)) {
+        $size = ", size: " . BMP::humanSize(filesize($this->current_file));
+      }
+
+      if (!$isAlter) {
+        if (sizeof($match_output) >= 3) {
+
+          $this->logger->log("Finished " . $queries_so_far . "/" . $queries_total . " (" . $queries_progress . "%)" . " for " . $match_output[1] . " table (part: " . $match_output[2] . "/" . $match_output[3] . $size . ").", 'INFO');
+
+        } else {
+
+          $this->logger->log("Finished " . $queries_so_far . "/" . $queries_total . " (" . $queries_progress . "%)" . " for " . $filename . " table (part: 1/1)", 'INFO');
+
+        }
+      }
 
     }
 
@@ -736,12 +766,122 @@ class BMI_Database_Importer {
     foreach ($files as $index => $filename) {
 
       if (in_array($filename, ['.', '..'])) continue;
-      if (substr($filename, -4) != '.sql') continue;
 
+      $filePath = trailingslashit($this->storage) . $filename;
+      if (is_dir($filePath)) {
+
+        $splitedFiles = scandir($filePath);
+        foreach ($splitedFiles as $splitedIndex => $splitedFilename) {
+
+          if (in_array($splitedFilename, ['.', '..', 'bmi_converted_completed_tables'])) continue;
+          if (substr($splitedFilename, -4) != '.sql') continue;
+
+          $this->files[] = trailingslashit($this->storage) . trailingslashit($filename) . $splitedFilename;
+
+        }
+
+        continue;
+
+      }
+
+      if (substr($filename, -4) != '.sql') continue;
       $this->files[] = trailingslashit($this->storage) . $filename;
 
     }
 
+    $this->sortFiles();
+
+    return $this->files;
+
+  }
+
+  private function sortFiles() {
+
+    $files = $this->files;
+
+    $tmp_files = [];
+    for ($i = 0; $i < sizeof($files); ++$i) {
+
+      $file = $files[$i];
+
+      $name = [];
+      preg_match('/^(.*)\.sql$/', basename($file), $name); // 1
+
+      $order = [];
+      $name = $name[1];
+      preg_match('/^(.*)\_((\d+)\_of\_(\d+))$/', $name, $order); // 1, 3, 4
+
+      $tablename = $name;
+
+      if (sizeof($order) >= 3) {
+        $tablename = $order[1];
+      }
+
+      if (!isset($tmp_files[$tablename])) {
+        $tmp_files[$tablename] = [];
+      }
+
+      $tmp_files[$tablename][] = $file;
+
+    }
+
+    ksort($tmp_files);
+    $files = [];
+
+    foreach ($tmp_files as $table => $sqlfiles) {
+
+      usort($sqlfiles, function ($a, $b) {
+
+        $nameA = [];
+        preg_match('/^(.*)\.sql$/', basename($a), $nameA); // 1
+
+        $nameB = [];
+        preg_match('/^(.*)\.sql$/', basename($b), $nameB); // 1
+
+        $nameA = $nameA[1];
+        $nameB = $nameB[1];
+
+        $orderA = [];
+        preg_match('/^(.*)\_((\d+)\_of\_(\d+))$/', $nameA, $orderA); // 1, 3, 4
+
+        $orderB = [];
+        preg_match('/^(.*)\_((\d+)\_of\_(\d+))$/', $nameB, $orderB); // 1, 3, 4
+
+        if (sizeof($orderA) >= 3 && sizeof($orderB) >= 3) {
+
+          if (intval($orderA[3]) > intval($orderB[3])) {
+
+            return 1;
+
+          } else if (intval($orderA[3]) < intval($orderB[3])) {
+
+            return -1;
+
+          } else {
+
+            return 0;
+
+          }
+
+        } else {
+
+          return 1;
+
+        }
+
+      });
+
+      for ($i = 0; $i < sizeof($sqlfiles); ++$i) {
+
+        $files[] = $sqlfiles[$i];
+
+      }
+
+    }
+
+    unset($tmp_files);
+
+    $this->files = $files;
     return $this->files;
 
   }

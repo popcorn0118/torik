@@ -98,6 +98,10 @@
         BMP::res($this->continueRestoreProcess());
       } elseif ($this->post['f'] == 'htaccess-litespeed') {
         BMP::res($this->fixLitespeed());
+      } elseif ($this->post['f'] == 'force-backup-to-stop') {
+        BMP::res($this->forceBackupToStop());
+      } elseif ($this->post['f'] == 'force-restore-to-stop') {
+        BMP::res($this->forceRestoreToStop());
       } elseif ($this->post['f'] == 'debugging') {
         BMP::res($this->debugging());
       } else {
@@ -552,6 +556,11 @@
         $zip_progress->log(__("Web server: Not available", 'backup-backup'), 'info');
       }
       $zip_progress->log(__("Max execution time (in seconds): ", 'backup-backup') . @ini_get('max_execution_time'), 'info');
+
+      if (defined('BMI_DB_MAX_ROWS_PER_QUERY')) {
+        $zip_progress->log(__('Max rows per query (this site): ', 'backup-backup') . BMI_DB_MAX_ROWS_PER_QUERY, 'info');
+      }
+
       $zip_progress->log(__("Checking if backup dir is writable...", 'backup-backup'), 'info');
 
       if (defined('BMI_BACKUP_PRO')) {
@@ -1009,6 +1018,8 @@
         }
       }
 
+      $migration->log(__("Restore process initialized successfully.", 'backup-backup'), 'success');
+
       // Check file size
       $zippath = BMP::fixSlashes(BMI_BACKUPS) . DIRECTORY_SEPARATOR . $this->post['file'];
       if (!$ignoreRunCheck) {
@@ -1430,6 +1441,8 @@
       $title_empty = __('Title field is required, please fill it.', 'backup-backup');
       $email_empty = __('Email field cannot be empty, please fill it.', 'backup-backup');
       $cli_no_exist = __('Path to executable that you provided for PHP CLI does not exist.', 'backup-backup');
+      $db_query_too_low = __('The value for query amount cannot be smaller than 15.', 'backup-backup');
+      $db_query_too_much = __('The value for query amount cannot be larger than 15000.', 'backup-backup');
 
       $email = trim($this->post['email']); // OTHER:EMAIL
       $email_title = trim($this->post['email_title']); // OTHER:EMAIL:TITLE
@@ -1440,6 +1453,8 @@
       $php_cli_disable_others = $this->post['php_cli_disable_others'] === 'true' ? true : false; // OTHER:CLI:DISABLE
       $normal_timeout = $this->post['normal_timeout'] === 'true' ? true : false; // OTHER:USE:TIMEOUT:NORMAL
       $insecure_download = $this->post['download_technique'] === 'true' ? true : false; // OTHER:DOWNLOAD:DIRECT
+      $db_query_size = isset($this->post['db_queries_amount']) ? trim($this->post['db_queries_amount']) : '1000'; // OTHER:DB:QUERIES
+      $db_restore_splitting = $this->post['bmi-restore-splitting'] === 'true' ? true : false; // OTHER:RESTORE:SPLITTING
       $uninstall_config = $this->post['uninstall_config'] === 'true' ? true : false; // OTHER:UNINSTALL:CONFIGS
       $uninstall_backups = $this->post['uninstall_backups'] === 'true' ? true : false; // OTHER:UNINSTALL:BACKUPS
 
@@ -1450,6 +1465,10 @@
       if ($normal_timeout === true) {
         $experiment_timeout = false;
         $experiment_timeout_hard = false;
+      }
+
+      if (!is_numeric($db_query_size) || empty($db_query_size)) {
+        $db_query_size = "1000";
       }
 
       if (strlen($email) <= 0) {
@@ -1469,6 +1488,12 @@
       }
       if ($php_cli_manual_path != '' && !file_exists($php_cli_manual_path)) {
         return ['status' => 'msg', 'why' => $cli_no_exist, 'level' => 'warning'];
+      }
+      if (intval($db_query_size) > 15000) {
+        return ['status' => 'msg', 'why' => $db_query_too_much, 'level' => 'warning'];
+      }
+      if (intval($db_query_size) < 15) {
+        return ['status' => 'msg', 'why' => $db_query_too_low, 'level' => 'warning'];
       }
 
       $error = 0;
@@ -1496,6 +1521,9 @@
       if (!Dashboard\bmi_set_config('OTHER:USE:TIMEOUT:NORMAL', $normal_timeout)) {
         $error++;
       }
+      if (!Dashboard\bmi_set_config('OTHER:DB:QUERIES', $db_query_size)) {
+        $error++;
+      }
       if (!Dashboard\bmi_set_config('OTHER:DOWNLOAD:DIRECT', $insecure_download)) {
         $error++;
       }
@@ -1503,6 +1531,9 @@
         $error++;
       }
       if (!Dashboard\bmi_set_config('OTHER:UNINSTALL:BACKUPS', $uninstall_backups)) {
+        $error++;
+      }
+      if (!Dashboard\bmi_set_config('OTHER:RESTORE:SPLITTING', $db_restore_splitting)) {
         $error++;
       }
 
@@ -2139,6 +2170,179 @@
 
     public function dismissErrorNotice() {
       delete_option('bmi_display_email_issues');
+    }
+
+    // recursive removal
+    private function rrmdir($dir) {
+
+      if (is_dir($dir)) {
+
+        $objects = scandir($dir);
+        foreach ($objects as $object) {
+
+          if ($object != "." && $object != "..") {
+
+            if (is_dir($dir . DIRECTORY_SEPARATOR . $object) && !is_link($dir . DIRECTORY_SEPARATOR . $object)) {
+
+              $this->rrmdir($dir . DIRECTORY_SEPARATOR . $object);
+
+            } else {
+
+              @unlink($dir . DIRECTORY_SEPARATOR . $object);
+
+            }
+
+          }
+
+        }
+
+        @rmdir($dir);
+
+      } else {
+
+        if (file_exists($dir) && is_file($dir)) {
+
+          @unlink($dir);
+
+        }
+
+      }
+
+    }
+
+    public function forceBackupToStop() {
+
+      $filesToBeRemoved = [];
+
+      foreach (scandir(BMI_ROOT_DIR . DIRECTORY_SEPARATOR . 'tmp') as $filename) {
+
+        if (in_array($filename, ['.', '..'])) continue;
+        $path = BMI_ROOT_DIR . DIRECTORY_SEPARATOR . 'tmp' . DIRECTORY_SEPARATOR . $filename;
+        $filesToBeRemoved[] = $path;
+
+      }
+
+      $allowedFiles = ['wp-config.php', '.htaccess', '.litespeed', '.default.json'];
+      foreach (glob(BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . '.*') as $filename) {
+
+        $basename = basename($filename);
+
+        if (in_array($basename, ['.', '..'])) continue;
+        if (is_file($filename) && !in_array($basename, $allowedFiles)) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      foreach (glob(BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . 'BMI-*', GLOB_ONLYDIR) as $filename) {
+
+        $basename = basename($filename);
+
+        if (in_array($basename, ['.', '..'])) continue;
+        if (is_dir($filename) && !in_array($filename, $allowedFiles)) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      foreach (glob(BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . 'bg-BMI-*', GLOB_ONLYDIR) as $filename) {
+
+        $basename = basename($filename);
+
+        if (in_array($basename, ['.', '..'])) continue;
+        if (is_dir($filename) && !in_array($filename, $allowedFiles)) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.backup_cli_lock';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.backup_cli_lock_ended';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.backup_cli_lock_end';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.running';
+      $filesToBeRemoved[] = BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . 'db_tables';
+      $filesToBeRemoved[] = BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . 'bmi_backup_manifest.json';
+      $filesToBeRemoved[] = BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . 'files_latest.list';
+
+      foreach ($filesToBeRemoved as $file) {
+        $this->rrmdir($file);
+      }
+
+      return ['status' => 'success'];
+
+    }
+
+    public function forceRestoreToStop() {
+
+      $filesToBeRemoved = [];
+
+      foreach (scandir(BMI_ROOT_DIR . DIRECTORY_SEPARATOR . 'tmp') as $filename) {
+
+        if (in_array($filename, ['.', '..'])) continue;
+        $path = BMI_ROOT_DIR . DIRECTORY_SEPARATOR . 'tmp' . DIRECTORY_SEPARATOR . $filename;
+        $filesToBeRemoved[] = $path;
+
+      }
+
+      foreach (glob(untrailingslashit(ABSPATH) . DIRECTORY_SEPARATOR . 'backup-migration_??????????') as $filename) {
+
+        $basename = basename($filename);
+
+        if (is_dir($filename) && !in_array($basename, ['.', '..'])) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      $allowedFiles = ['wp-config.php', '.htaccess', '.litespeed', '.default.json'];
+      foreach (glob(BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . '.*') as $filename) {
+
+        $basename = basename($filename);
+
+        if (in_array($basename, ['.', '..'])) continue;
+        if (is_file($filename) && !in_array($basename, $allowedFiles)) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      foreach (glob(BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . 'restore_scan_*') as $filename) {
+
+        $basename = basename($filename);
+
+        if (in_array($basename, ['.', '..'])) continue;
+        if (is_file($filename) && !in_array($basename, $allowedFiles)) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      foreach (glob(untrailingslashit(ABSPATH) . DIRECTORY_SEPARATOR . 'wp-config.??????????.php') as $filename) {
+
+        $basename = basename($filename);
+
+        if (in_array($basename, ['.', '..'])) continue;
+        if (is_file($filename) && !in_array($filename, $allowedFiles)) {
+          $filesToBeRemoved[] = $filename;
+        }
+
+      }
+
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.autologin';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.migration_lock';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.migration_lock_cli';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.migration_lock_cli_end';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.migration_lock_ended';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.cli_download_last';
+      $filesToBeRemoved[] = BMI_BACKUPS . '/.running';
+      $filesToBeRemoved[] = BMI_INCLUDES . DIRECTORY_SEPARATOR . 'htaccess' . DIRECTORY_SEPARATOR . '.restore_secret';
+
+      foreach ($filesToBeRemoved as $file) {
+        $this->rrmdir($file);
+      }
+
+      return ['status' => 'success'];
+
     }
 
     public function debugging() {

@@ -1,9 +1,9 @@
 === Backup Migration ===
 Contributors: Migrate
-Tags: Backup, Migration, Migrate, Backups, Restore, Duplicate
+Tags: Backup, Migration, Migrate, Backups, Restore, All In One, Duplicate, Clone, Import, Export, Transfer
 Requires at least: 4.6
-Tested up to: 5.8
-Stable tag: 1.1.3
+Tested up to: 5.8.1
+Stable tag: 1.1.5
 License: GPLv3
 Requires PHP: 5.6
 
@@ -25,7 +25,7 @@ Use a wide choice of configuration options:
 - Define where the backup will be stored (as of now, only local option is available, but we'll expand this soon)
 - Define what name your backup should have, in which instances you should receive a notification email, and much more
 
-This plugin is also ideal if you want to migrate your site to another host.
+This plugin is all in one solution if you need to migrate your site to another host or just restore the local backup.
 
 Note: This (free) version is limited to backups of 2GB in size. For unlimited sizes, please have a look at the [Premium Plugin](https://backupbliss.com).
 
@@ -117,6 +117,22 @@ Besides having the most intuitive interface and smoothest user experience, Backu
 
 
 == Changelog ==
+
+= 1.1.5 =
+* Fixed typos in tooltip about queries
+* Modified default value of queries
+
+= 1.1.4 =
+* Tested up to WordPress 5.8.1
+* Fixed warnings in PHP 8 and adjusted ob_clean functions (Thank you @jrevillini)
+* Added force stop for restoration and migration process
+* Added force stop for backup process (troubleshooting option)
+* Added splitting option for restore and migration process
+* Fixed STEP display in process window for restore and backup
+* Adjusted logs output for restore and backup process
+* Updated database engine for export and import using new technique
+* Added new option to specify export queries per file and restore batch
+* Implemented splitting n into CLI restoration (disabled by default)
 
 = 1.1.3 =
 * Fixed PHP CLI migration process (in case of different table prefix)
@@ -270,15 +286,17 @@ Besides having the most intuitive interface and smoothest user experience, Backu
 
 == Upgrade Notice ==
 
-= 1.1.3 =
-What's new in 1.1.3?
-* Fixed PHP CLI migration process (in case of different table prefix)
-* Restricted access to global logs
-* Restricted access to backup logs
-* Added censor for backup name in all log files
-* Added censor for sensitive details in global log and others
-* Randomize folder name for each site, it will rename old directory as well
-* Backup hash name will be now extended up to 16 characters including A-z
-* Decreased default database batch size to 250 from 2500 queries
-* Added constant ***ABSPATH*** for exclusion rules
-* Tested up to WordPress 5.8
+= 1.1.5 =
+What's new in 1.1.5?
+* Fixed typos in tooltip about queries
+* Modified default value of queries
+* Tested up to WordPress 5.8.1
+* Fixed warnings in PHP 8 and adjusted ob_clean functions (Thank you @jrevillini)
+* Added force stop for restoration and migration process
+* Added force stop for backup process (troubleshooting option)
+* Added splitting option for restore and migration process
+* Fixed STEP display in process window for restore and backup
+* Adjusted logs output for restore and backup process
+* Updated database engine for export and import using new technique
+* Added new option to specify export queries per file and restore batch
+* Implemented splitting n into CLI restoration (disabled by default)

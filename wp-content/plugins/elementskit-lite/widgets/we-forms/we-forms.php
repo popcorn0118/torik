@@ -585,5 +585,4 @@ class ElementsKit_Widget_We_Forms extends Widget_Base {
 		}
 
 	}
-    protected function _content_template() { }
 }

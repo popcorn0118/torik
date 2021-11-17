@@ -337,7 +337,7 @@ class CTH_Members_Grid extends Widget_Base {
 
     }
 
-    protected function _content_template() {}
+    protected function content_template() {}
 
    
     

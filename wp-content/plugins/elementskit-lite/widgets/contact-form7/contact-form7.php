@@ -48,7 +48,7 @@ class ElementsKit_Widget_Contact_Form7 extends Widget_Base {
     protected function register_controls() {
         $this->start_controls_section(
             'section_tab', [
-                'label' =>esc_html__( 'Contact form 7', 'elementskit-lite' ),
+                'label' =>esc_html__( 'Contact Form 7', 'elementskit-lite' ),
             ]
         );
 
@@ -575,15 +575,15 @@ class ElementsKit_Widget_Contact_Form7 extends Widget_Base {
 				'options'  => [
 					'left'   => [
 						'title' => esc_html__( 'Left', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-left',
+						'icon'  => 'eicon-text-align-left',
 					],
 					'center' => [
 						'title' => esc_html__( 'Center', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-center',
+						'icon'  => 'eicon-text-align-center',
 					],
 					'right'  => [
 						'title' => esc_html__( 'Right', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-right',
+						'icon'  => 'eicon-text-align-right',
 					],
 				],
 				'default'  => 'left',
@@ -883,6 +883,5 @@ class ElementsKit_Widget_Contact_Form7 extends Widget_Base {
 		echo '<div class="ekit-form">';
 				echo do_shortcode('[contact-form-7 id="'.intval($settings['ekit_contact_form7']).'"]' );
 		echo '</div>';
-}
-    protected function _content_template() { }
+	}
 }

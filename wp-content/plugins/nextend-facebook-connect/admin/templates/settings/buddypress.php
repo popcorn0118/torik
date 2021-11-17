@@ -46,21 +46,59 @@ NextendSocialLoginAdmin::showProBox();
             <fieldset>
                 <label>
                     <input type="radio" name="buddypress_register_button_style"
-                           value="fullwidth" <?php if ($settings->get('buddypress_register_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
-                    <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
-                    <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
-                </label>
-                <label>
-                    <input type="radio" name="buddypress_register_button_style"
                            value="default" <?php if ($settings->get('buddypress_register_button_style') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
                     <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
                     <img src="<?php echo plugins_url('images/buttons/default.png', NSL_ADMIN_PATH) ?>"/>
                 </label>
                 <label>
                     <input type="radio" name="buddypress_register_button_style"
+                           value="fullwidth" <?php if ($settings->get('buddypress_register_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_register_button_style"
                            value="icon" <?php if ($settings->get('buddypress_register_button_style') == 'icon') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
                     <span><?php _e('Icon', 'nextend-facebook-connect'); ?></span><br/>
                     <img src="<?php echo plugins_url('images/buttons/icon.png', NSL_ADMIN_PATH) ?>"/>
+                </label><br>
+            </fieldset>
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row"><?php _e('Register layout', 'nextend-facebook-connect'); ?></th>
+        <td>
+            <fieldset>
+                <label>
+                    <input type="radio" name="buddypress_register_form_layout"
+                           value="default" <?php if ($settings->get('buddypress_register_form_layout') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/default.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_register_form_layout"
+                           value="below" <?php if ($settings->get('buddypress_register_form_layout') == 'below') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Below', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/below.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_register_form_layout"
+                           value="below-separator" <?php if ($settings->get('buddypress_register_form_layout') == 'below-separator') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Below with separator', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/below-separator.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_register_form_layout"
+                           value="above" <?php if ($settings->get('buddypress_register_form_layout') == 'above') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Above', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/above.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_register_form_layout"
+                           value="above-separator" <?php if ($settings->get('buddypress_register_form_layout') == 'above-separator') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Above with separator', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/above-separator.png', NSL_ADMIN_PATH) ?>"/>
                 </label><br>
             </fieldset>
         </td>
@@ -101,15 +139,15 @@ NextendSocialLoginAdmin::showProBox();
             <fieldset>
                 <label>
                     <input type="radio" name="buddypress_login_button_style"
-                           value="fullwidth" <?php if ($settings->get('buddypress_login_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
-                    <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
-                    <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
-                </label>
-                <label>
-                    <input type="radio" name="buddypress_login_button_style"
                            value="default" <?php if ($settings->get('buddypress_login_button_style') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
                     <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
                     <img src="<?php echo plugins_url('images/buttons/default.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_login_button_style"
+                           value="fullwidth" <?php if ($settings->get('buddypress_login_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
                 </label>
                 <label>
                     <input type="radio" name="buddypress_login_button_style"

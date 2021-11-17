@@ -101,11 +101,13 @@ if( $has_nosidebar ){
 
 
                     <?php 
-                    if(is_front_page()) {
-                        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
-                    } else {
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    }
+                    // if(is_front_page()) {
+                    //     $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+                    // } else {
+                    //     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    // }
+                    $paged = get_query_var( 'lpage' ) ? get_query_var( 'lpage' ) : 1;
+
                     $post_args = array(
                         'post_type' => 'listing',
                         'author' => $laumember->ID,
@@ -148,8 +150,38 @@ if( $has_nosidebar ){
                             ?>
                             </div>
                             <?php
-                                townhub_addons_custom_pagination($posts_query->max_num_pages,$range = 2, $posts_query);
-                            ?>                                
+                                // townhub_addons_custom_pagination($posts_query->max_num_pages,$range = 2, $posts_query);
+                            ?>  
+
+                            <?php 
+                            $range = 2;
+                            $showitems = ($range * 2) + 1;
+                            $pages = $posts_query->max_num_pages;
+                            $urlBased = get_author_posts_url($laumember->ID);
+                            echo '<nav class="navigation pagination custom-pagination" role="navigation">
+                                <h2 class="screen-reader-text">'.__( 'Posts navigation',  'townhub-add-ons' ).'</h2>
+                                <div class="nav-links">';
+
+                                    if ($paged > 1) 
+                                        echo '<a href="' . add_query_arg( 'lpage', $paged - 1, $urlBased ) . '" class="prev page-numbers">'.__('<i class="fas fa-caret-left" aria-hidden="true"></i><span>Prev</span>','townhub-add-ons').'</a>';
+
+                                    else
+                                        echo '<a href="' . add_query_arg( 'lpage', $paged, $urlBased ) . '" class="prev page-numbers">'.__('<i class="fas fa-caret-left" aria-hidden="true"></i><span>Prev</span>','townhub-add-ons').'</a>';
+                                    
+                                    for ($i = 1; $i <= $pages; $i++) {
+                                        if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+                                            echo ($paged == $i) ? '<span aria-current="page" class="page-numbers current">' . $i . "</span>" : "<a href='" . add_query_arg( 'lpage', $i, $urlBased ) . "' class='page-numbers'>" . $i . "</a>";
+                                        }
+                                    }
+
+                                    if ($paged < $pages) 
+                                        echo '<a href="' . add_query_arg( 'lpage', $paged + 1, $urlBased ) . '" class="next page-numbers">'.__('<span>Next</span><i class="fas fa-caret-right" aria-hidden="true"></i>','townhub-add-ons').'</a>';
+                                    else
+                                        echo '<a href="' . add_query_arg( 'lpage', $paged, $urlBased ) . '" class="next page-numbers">'.__('<span>Next</span><i class="fas fa-caret-right" aria-hidden="true"></i>','townhub-add-ons').'</a>';
+                                echo'</div>
+                            </nav>';
+                             ?>
+
                         </div>
                         <!-- list-main-wrap end-->
                     </div>

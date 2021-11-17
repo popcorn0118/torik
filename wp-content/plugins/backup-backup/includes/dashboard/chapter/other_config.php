@@ -14,6 +14,8 @@
   $experimental_info_1 = __('Use this option if you have full access to your server and you know how to make basic configuration of the server. Wrong configuration may give you hick-ups without error due to e.g. web server server timeout (for small sites below 300 MB this is the best option).', 'backup-backup');
   $experimental_info_2 = __('Use this option before the third one, it should work fine on SSD/NVMe hostings even for huge backups - but still may timeout if you are running on slow drive high I/O.', 'backup-backup');
   $experimental_info_3 = __('This option will require you to not close the backup window since it will use your connection to keep the backup in parts, it will disable automatic backups. Use this only if all of the above does not work. Recommended for huge sites +100k files / 5+ GB.', 'backup-backup');
+  $db_query_info = __('Lower value means slower process but more stable restore, higher value means quicker backup and restore but it may be unstable (depends on database server performance). Default value: 800.', 'backup-backup');
+  $sqlsplitting = __('This will split the SQL files (before migration or restore) into parts, which should make the process more stable and also allows to track the progress more precisely.', 'backup-backup');
 
 ?>
 
@@ -355,6 +357,40 @@
         <span><?php _e("Use direct downloading - that will remove .htaccess protection right before download (can solve download issues).", 'backup-backup'); ?></span>
       </label>
     </div>
+  </div>
+
+  <!--  -->
+  <div class="mm mbl mtl">
+
+    <div class="f20 bold">
+      <?php _e("Database export settings", 'backup-backup'); ?>
+    </div>
+    <div class="mtll">
+      <span class="relative">
+        <?php _e("Adjust queries amount per batch for your ", 'backup-backup'); ?> <b><?php _e("database", 'backup-backup'); ?></b>
+        <span class="bmi-info-icon tooltip" tooltip="<?php echo $db_query_info; ?>"></span>
+      </span>
+    </div>
+
+    <div class="lh40 cf">
+      <div class="left mw250 lh65">
+        <?php _e("Queries per batch for import/export: ", 'backup-backup'); ?>&nbsp;
+      </div>
+      <div class="left">
+        <?php $query_amount = sanitize_text_field(bmi_get_config('OTHER:DB:QUERIES')); ?>
+        <label for="db_queries_amount">
+          <input type="number" id="db_queries_amount" class="bmi-text-input small" value="<?php echo $query_amount; ?>" placeholder="800" min="15" max="15000" />
+        </label>
+      </div>
+    </div>
+
+    <div class="lh40">
+      <label for="bmi-restore-splitting">
+        <input type="checkbox" id="bmi-restore-splitting"<?php bmi_try_checked('OTHER:RESTORE:SPLITTING'); ?> />
+        <span class="relative"><?php _e("Enable SQL-Splitting for migration process.", 'backup-backup'); ?> <span class="bmi-info-icon tooltip" tooltip="<?php echo $sqlsplitting; ?>"></span></span>
+      </label>
+    </div>
+
   </div>
 
   <!--  -->

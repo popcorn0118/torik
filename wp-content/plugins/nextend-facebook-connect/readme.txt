@@ -3,8 +3,8 @@ Contributors: nextendweb
 Tags: social login, facebook, google, twitter, linkedin, register, login, social, nextend facebook connect, social sign in
 Donate link: https://www.facebook.com/nextendweb
 Requires at least: 4.9
-Tested up to: 5.7.2
-Stable tag: 3.0.29
+Tested up to: 5.8.1
+Stable tag: 3.1.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,13 +43,18 @@ Providers are the services which the visitors can use to register and log in to 
 #### Additional features in the [Pro addon](https://nextendweb.com/social-login/)
 
 * WooCommerce compatibility
-* Pro providers: LinkedIn, Amazon, VKontakte, WordPress.com, Yahoo, PayPal, Disqus, Apple and more coming soon
+* BuddyPress compatibility
+* UserPro compatibility
+* Ultimate Member compatibility
+* Easy Digital Downloads compatibility
+* Pro providers: LinkedIn, Amazon, VKontakte, WordPress.com, Yahoo, PayPal, Disqus, Apple, GitHub, Microsoft, Line, Discord and more coming soon
 * Configure whether email address should be asked on registration at each provider
 * Configure whether username should be asked on registration at each provider
 * Choose from icons or wide buttons
 * Several login layouts
 * Restrict specific user roles from using the social logins. (You can restrict different roles for each provider.)
 * Assign specific user roles to the newly registered users who use any social login provider. (You can set different roles for each provider.)
+* Show the name of the linked providers in the Users table
 
 #### Usage
 
@@ -70,11 +75,11 @@ You can use Nextend Social Login's widget and shortcodes if you need to display 
 = 2. How can I get the email address from the Twitter users? =
 After you set up your APP go to the Settings tab and enter the URL of your Terms of Service and Privacy Policy page. Then hit the Update your settings button. Then go to the Permissions tab and check the "Request email addresses from users" under "Additional Permissions". [There's a documentation](https://nextendweb.com/nextend-social-login-docs/provider-twitter/#get-email) that explains the process with screenshots.
 
-= 3. Why are random email addresses generated for users registering with their FaceBook account? =
-When the user tries to register with their Facebook account Facebook pops up a window where each user can view what kind of access they give for the app. In this modal they can chose not to share their email address. When they're doing so we generate a random email address for them. They can of course change this at their profile.
-If the permission is given to the app, there are still [other factors](https://nextendweb.com/nextend-social-login-docs/provider-facebook/#get-email) which can result Facebook not sending back any email address.
+= 3. Why are random usernames generated? =
+When a user tries to register with a social account, Nextend Social Login will try to generate a username from the name that comes from the provider. If this name contains special characters, then we won't be able to generate a username that is valid for WordPress, as WordPress doesn't allow special characters in usernames either.
+For this reason we will need to generate a unique and random username for the registered account.
 
-In the Pro Addon it's possible to ask an email address if it's not returned by Facebook.
+In the Pro Addon it's possible to ask an username if we can not generate a valid username, so you can avoid random usernames.
 
 = 4. What should I do when I experience any problems? =
 [Contact us](https://nextendweb.com/contact-us/nextend-social-login-support/) via email and explain the issue you have.
@@ -119,6 +124,42 @@ Using the Pro Addon you can set where the login buttons should appear on the Reg
 4. The Settings page of the Facebook provider.
 
 == Changelog ==
+
+= 3.1.2 =
+* Improvement: If there is a slow server or a poor internet connection, the redirect after the authentication with social login might take some time. During this time we will display a loading spinner, so the visitor will know that something is about to happen.
+
+* PRO: New provider: [Discord](https://nextendweb.com/nextend-social-login-docs/provider-discord/)
+* PRO: Fix: The Microsoft provider used a wrong redirect url, when the Frontend and the Backend URL of the site were different.
+* PRO: Improvement: New options for the Line provider: [Force reauthorization on each login](https://nextendweb.com/nextend-social-login-docs/provider-line/#force-reauth) and [Add LINE Official Account as a friend](https://nextendweb.com/nextend-social-login-docs/provider-line/#add-friend)
+* PRO: Improvement: New options for the Microsoft provider: [Audience](https://nextendweb.com/nextend-social-login-docs/provider-microsoft/#audience) and [Authorization Prompt](https://nextendweb.com/nextend-social-login-docs/provider-microsoft/#auth-prompt)
+* PRO: Feature: Integration for Easy Digital Downloads [Checkout](https://nextendweb.com/nextend-social-login-docs/global-settings-easy-digital-downloads/#edd-checkout-form) form.
+* PRO: Feature: Display social buttons with layouts on [Custom Actions](https://nextendweb.com/nextend-social-login-docs/global-settings-custom-actions/)
+
+
+= 3.1.1 =
+* Improvement: string paths from the language files have been removed.
+
+* PRO: Improvement: VKontakte provider – we will use the API version 5.131 for the endpoints, as API version 5.74 is deprecated.
+* PRO: Feature: Easy Digital Downloads login and register form support.
+
+
+= 3.1.0 =
+* Fix: Display error message for logged out users, when they try to login with a social media account that's email address matches with a WordPress account email address, that has a linked provider from the same kind.
+* Fix: WooRewards will be able to generate points on registration with Nextend Social Login
+* Improvement: nsl_already_linked_error_message filter added to modify the error message when a WordPress account with the same email address has another social media account already linked
+* Improvement: Separate autologin from registerComplete function
+* Improvement: nsl_autologin_priority filter added to control the priority of the autologin after the registration with Nextend Social Login
+* Improvement: [Facebook Getting Started](https://nextendweb.com/nextend-social-login-docs/provider-facebook/#configuration) Update
+* Improvement: [WPML](https://nextendweb.com/nextend-social-login-docs/how-to-make-nextend-social-login-compatible-with-wpml/) compatibility
+
+* PRO: New provider: [Microsoft](https://nextendweb.com/nextend-social-login-docs/provider-microsoft/)
+* PRO: New provider: [Line](https://nextendweb.com/nextend-social-login-docs/provider-line/)
+* PRO: Improvement: Optimized Light and Dark SVG for Apple
+* PRO: Improvement: [Apple Getting Started](https://nextendweb.com/nextend-social-login-docs/provider-apple/#configuration) Update
+* PRO: Improvement: [PayPal Getting Started](https://nextendweb.com/nextend-social-login-docs/provider-paypal/#configuration) Update
+* PRO: Improvement: New [Facebook Sync data](https://nextendweb.com/nextend-social-login-docs/provider-facebook/#sync_data) field: Quote ( requires user_likes permission )
+* PRO: Feature: [BuddyPress](https://nextendweb.com/nextend-social-login-docs/global-settings-buddypress/) Layout options added for registration form
+
 
 = 3.0.29 =
 * Fix: We added clear: both; on .nsl-container to make floated elements before the buttons not to mess up the layout.

@@ -417,15 +417,15 @@ class ElementsKit_Widget_Post_Tab extends Widget_Base {
                 'options' => [
                     'left'    => [
                         'title' =>esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' =>esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' =>esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'selectors' => [
@@ -476,14 +476,18 @@ class ElementsKit_Widget_Post_Tab extends Widget_Base {
                         'cat'    => $cat,
                         'posts_per_page' => $post_count,
 					);
+
+					$count_col_tablet = isset( $settings['count_col_tablet'] ) ? $settings['count_col_tablet'] : '';
+					$count_col_mobile = isset( $settings['count_col_mobile'] ) ? $settings['count_col_mobile'] : '';
+
 					$this->add_render_attribute(
 						[
 							'ekit-single-item' => [
 								'class' => [
 									'tab__post__single--item',
 									$count_col,
-									'tablet-' . $settings['count_col_tablet'],
-									'mobile-' . $settings['count_col_mobile'],
+									'tablet-' . $count_col_tablet,
+									'mobile-' . $count_col_mobile,
 									'post-count-' . $post_count
 								],
 							],
@@ -515,6 +519,6 @@ class ElementsKit_Widget_Post_Tab extends Widget_Base {
             </div>
         </div>
 
-    <?php }
-    protected function _content_template() { }
+    <?php
+	}
 }

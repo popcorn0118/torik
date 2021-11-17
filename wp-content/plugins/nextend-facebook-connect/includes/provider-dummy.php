@@ -6,6 +6,8 @@ abstract class NextendSocialProviderDummy {
     protected $label;
     protected $path;
 
+    protected $hasRedirectRESTRoute = false;
+
     protected $color = '#fff';
 
     protected $popupWidth = 600;

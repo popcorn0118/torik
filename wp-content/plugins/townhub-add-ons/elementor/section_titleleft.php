@@ -112,7 +112,7 @@ class CTH_Section_Titleleft extends Widget_Base {
         <?php
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <div class="ab_text-title fl-wrap">
             <# if(settings.title){ #><h3>{{{settings.title}}}</h3><# } #>

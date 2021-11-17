@@ -108,9 +108,9 @@ class Items
      */
     public function update_check( $request, $url ) {
 
-        // string(97) "http://update.cththemes.net/wp-json/cthupdate/v1/themes/171.224.179.183||kak-v-dubae.ru||25019571" 
+        // string(97) "https://update.cththemes.co/wp-json/cthupdate/v1/themes/171.224.179.183||kak-v-dubae.ru||25019571" 
         // string(50) "https://api.wordpress.org/themes/update-check/1.1/" 
-        // string(97) "http://update.cththemes.net/wp-json/cthupdate/v1/themes/171.224.179.183||kak-v-dubae.ru||25019571" 
+        // string(97) "https://update.cththemes.co/wp-json/cthupdate/v1/themes/171.224.179.183||kak-v-dubae.ru||25019571" 
         // string(180) "https://api.wordpress.org/core/version-check/1.7/?version=5.5.3&php=7.3.6&locale=en_US&mysql=5.7.27&local_package=ru_RU&blogs=1&users=1&multisite_enabled=0&initial_db_version=47018" 
 
         // Theme update request.

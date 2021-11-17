@@ -26,6 +26,7 @@ if($el_id!=''){
 if(( $hide_widget_on_check = townhub_addons_is_hide_on_plans($hide_widget_on) ) !== 'true') :
 $latitude = get_post_meta( get_the_ID(), ESB_META_PREFIX.'latitude', true );
 $longitude = get_post_meta( get_the_ID(), ESB_META_PREFIX.'longitude', true );
+$pov_heading = get_post_meta( get_the_ID(), ESB_META_PREFIX.'pov_heading', true );
 if ( !empty($latitude) && !empty($longitude) ) {
 ?>
 <div class="<?php echo $classes; ?> authplan-hide-<?php echo $hide_widget_on_check;?>" <?php echo $el_id;?>>
@@ -39,7 +40,7 @@ if ( !empty($latitude) && !empty($longitude) ) {
         <?php endif; ?>
         <div class="lsingle-block-content">
             <div class="lsingle-streetview">
-                <div class="lstreet-view lstreet--<?php echo esc_attr( townhub_addons_get_option('map_provider') );?>" id="<?php echo uniqid('street-view'); ?>" data-lat="<?php echo esc_attr( $latitude );?>" data-lng="<?php echo esc_attr( $longitude );?>" data-zoom="<?php echo townhub_addons_get_option('gmap_single_zoom');?>"></div>
+                <div class="lstreet-view lstreet--<?php echo esc_attr( townhub_addons_get_option('map_provider') );?>" id="<?php echo uniqid('street-view'); ?>" data-lat="<?php echo esc_attr( $latitude );?>" data-lng="<?php echo esc_attr( $longitude );?>" data-zoom="<?php echo townhub_addons_get_option('gmap_single_zoom');?>" data-heading="<?php echo esc_attr($pov_heading); ?>"></div>
             </div>
         </div>
     </div>

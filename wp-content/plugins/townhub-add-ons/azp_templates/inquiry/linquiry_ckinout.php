@@ -2,7 +2,7 @@
 /* add_ons_php */
 
 //$azp_attrs,$azp_content,$azp_element
-$azp_mID = $el_id = $el_class = $label = $icon = $format = '';
+$azp_mID = $el_id = $el_class = $label = $icon = $format = $max = '';
 
 // var_dump($azp_attrs);
 extract($azp_attrs);
@@ -36,6 +36,7 @@ $default_value = !empty($checkin_get) && !empty($checkout_get) ? esc_attr($check
             data-label="<?php echo esc_attr( $label ); ?>" 
             data-icon="<?php echo $icon;?>" 
             data-selected="general_daterange"
+            data-max="<?php echo esc_attr($max);?>"
         ></div>
     </div>
 </div>

@@ -71,7 +71,7 @@ class mo_openid_login_wid extends WP_Widget {
         }
 
         $selected_theme = esc_attr(get_option('mo_openid_login_theme'));
-        $appsConfigured = get_option('mo_openid_google_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_facebook_enable') | get_option('mo_openid_linkedin_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_amazon_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_yahoo_enable') | get_option('mo_openid_snapchat_enable') | get_option('mo_openid_dribbble_enable');
+        $appsConfigured = get_option('mo_openid_google_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_facebook_enable') | get_option('mo_openid_linkedin_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_amazon_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_yahoo_enable') | get_option('mo_openid_snapchat_enable') | get_option('mo_openid_dribbble_enable') | get_option('mo_openid_discord_enable');
         $spacebetweenicons = esc_attr(get_option('mo_login_icon_space'));
         $customWidth = esc_attr(get_option('mo_login_icon_custom_width'));
         $customHeight = esc_attr(get_option('mo_login_icon_custom_height'));
@@ -200,7 +200,7 @@ class mo_openid_login_wid extends WP_Widget {
         $selected_theme = isset( $atts['shape'] )? esc_attr($atts['shape']) : esc_attr(get_option('mo_openid_login_theme'));
         $selected_apps = isset( $atts['apps'] )? esc_attr($atts['apps']) : "";
         $application_pos = get_option('app_pos');
-        $appsConfigured = get_option('mo_openid_facebook_enable') | get_option('mo_openid_google_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_linkedin_enable') |  get_option('mo_openid_amazon_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_yahoo_enable') | get_option('mo_openid_snapchat_enable') | get_option('mo_openid_dribbble_enable');
+        $appsConfigured = get_option('mo_openid_facebook_enable') | get_option('mo_openid_google_enable') | get_option('mo_openid_vkontakte_enable') | get_option('mo_openid_twitter_enable') | get_option('mo_openid_instagram_enable') | get_option('mo_openid_linkedin_enable') |  get_option('mo_openid_amazon_enable') | get_option('mo_openid_salesforce_enable') | get_option('mo_openid_windowslive_enable') | get_option('mo_openid_yahoo_enable') | get_option('mo_openid_snapchat_enable') | get_option('mo_openid_dribbble_enable') | get_option('mo_openid_discord_enable');
         $spacebetweenicons = isset( $atts['space'] )? esc_attr(intval($atts['space'])) : esc_attr(intval(get_option('mo_login_icon_space')));
         $customWidth = isset( $atts['width'] )? esc_attr(intval($atts['width'])) : esc_attr(intval(get_option('mo_login_icon_custom_width')));
         $customHeight = isset( $atts['height'] )? esc_attr(intval($atts['height'])) : esc_attr(intval(get_option('mo_login_icon_custom_height')));
@@ -544,6 +544,11 @@ class mo_openid_login_wid extends WP_Widget {
                 $app_dis = $this->check_capp_reg_cust($customer_register, $custom_app);
                 $html = $this->add_apps("wpress", $customTheme, $gdpr_setting, $spacebetweenicons, $customWidth, $customHeight, $customBoundary, $buttonText, $dis, $customTextofTitle, $customSize, $selected_theme, $custom_app, $html, $view, $customBackground, $app_dis);
                 break;
+            case 'discord':
+                $custom_app = esc_attr($this->if_custom_app_exists('discord'));
+                $app_dis = $this->check_capp_reg_cust($customer_register, $custom_app);
+                $html = $this->add_apps("discord", $customTheme, $gdpr_setting, $spacebetweenicons, $customWidth, $customHeight, $customBoundary, $buttonText, $dis, $customTextofTitle, $customSize, $selected_theme, $custom_app, $html, $view, $customBackground, $app_dis);
+                break;
         }
         return $html;
     }
@@ -770,6 +775,23 @@ class mo_openid_login_wid extends WP_Widget {
                 }
                 return $html;
             }
+            else if($app_name=="discord")
+            {
+                if ($selected_theme == 'longbutton') {
+                    $html .= "<a  rel='nofollow' " . $gdpr_setting . " style='margin-left: " . $spacebetweenicons . "px !important;width: " . $customWidth . " !important;padding-top:" . ($customHeight - 29) . "px !important;padding-bottom:" . ($customHeight - 29) . "px !important;margin-bottom: " . ($spacebetweenicons - 5) . "px !important;border-radius: " . $customBoundary . "px !important;'";
+                    if ($view == "horizontal") {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block-inline mo_btn-social mo_btn-discord mo_openid_mo_btn-custom-dec login-button'";
+                    } else {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-discord mo_openid_mo_btn-custom-dec login-button'";
+                    }
+                    if($app_dis!="disable")
+                        $html .= "onClick=\"moOpenIdLogin('discord','" . $custom_app . "');\"";
+                    $html.="> <img  class='fa'  style='margin-top:" . ($customHeight - 35) . "px !important; margin-top: 0' src='" . plugins_url('includes/images/icons/discords.png', __FILE__) . "'>" . $buttonText . " Discord</a>";
+                } else {
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Discord'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('discord','" . $custom_app . "');\""; $html.=" title= ' " . $customTextofTitle . "  discord'><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:".$default_color['discord'].";font-size: " . ($customSize - 16) . "px !important;text-align:center; padding-top: 8px;color:white'  class='fab fa-discord  mo_btn-mo mo_openid-login-button login-button " . $selected_theme . "' ></i></a>";
+                }
+                return $html;
+            }
         }
 
         else if($theme=="custom"){
@@ -950,6 +972,21 @@ class mo_openid_login_wid extends WP_Widget {
                     $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-dribbble'></i> " . $buttonText . " Dribbble</a>";
                 } else {
                     $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Dribbble'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('dribbble','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-dribbble custom-login-button  " . $selected_theme . "' ></i></a>";
+                }
+                return $html;
+            }
+            else if($app_name=="discord")
+            {
+                if ($selected_theme == 'longbutton') {
+                    $html .= "<a rel='nofollow'   " . $gdpr_setting . ""; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('discord','" . $custom_app . "');\""; $html.=" style='margin-left: " . $spacebetweenicons . "px !important;width:" . ($customWidth) . " !important;padding-top:" . ($customHeight - 29) . "px !important;padding-bottom:" . ($customHeight - 29) . "px !important;margin-bottom:" . ($spacebetweenicons - 5) . "px !important; background:#" . $customBackground . "!important;border-radius: " . $customBoundary . "px !important;'";
+                    if ($view == "horizontal") {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block-inline mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
+                    } else {
+                        $html .= "class='mo_btn mo_btn-mo mo_btn-block mo_btn-social mo_btn-customtheme mo_btn-custom-dec login-button'";
+                    }
+                    $html .= "> <i style='padding-top:" . ($customHeight - 35) . "px !important' class='fab fa-discord'></i> " . $buttonText . " Discord</a>";
+                } else {
+                    $html .= "<a class='" . $dis . " login-button' rel='nofollow' title= ' " . $customTextofTitle . " Discord'"; if($app_dis!="disable") $html.=" onClick=\"moOpenIdLogin('discord','" . $custom_app . "');\""; $html.=" ><i style='margin-top:10px;width:" . $customSize . "px !important;height:" . $customSize . "px !important;margin-left:" . ($spacebetweenicons) . "px !important;background:#" . $customBackground . " !important;font-size: " . ($customSize - 16) . "px !important;'  class='fab mo_btn-mo fa-discord custom-login-button  " . $selected_theme . "' ></i></a>";
                 }
                 return $html;
             }

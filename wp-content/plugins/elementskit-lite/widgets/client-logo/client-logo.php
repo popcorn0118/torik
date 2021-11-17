@@ -364,6 +364,17 @@ class ElementsKit_Widget_Client_Logo extends Widget_Base {
 			]
         );
         $this->add_control(
+			'ekit_client_logo_loop',
+			[
+				'label' => esc_html__( 'Enable Loop?', 'elementskit-lite' ),
+				'type' =>   Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Yes', 'elementskit-lite' ),
+				'label_off' => esc_html__( 'No', 'elementskit-lite' ),
+				'return_value' => 'yes',
+				'default' => '',
+			]
+        );
+        $this->add_control(
             'ekit_client_logo_left_arrow_icon',
             [
                 'label' => esc_html__( 'Left arrow Icon', 'elementskit-lite' ),
@@ -1465,7 +1476,8 @@ class ElementsKit_Widget_Client_Logo extends Widget_Base {
             'slidesPerView'		=> !empty($settings['ekit_client_logo_slidetosho']['size']) ? $settings['ekit_client_logo_slidetosho']['size'] : 4,
             'slidesPerGroup'	=> !empty($settings['ekit_client_logo_slidesToScroll']['size']) ? $settings['ekit_client_logo_slidesToScroll']['size'] : 1,
             'pauseOnHover'	    => !empty($settings['ekit_client_logo_pause_on_hover']),
-            'slidesPerColumn'	            => (int) $settings['ekit_client_logo_rows'],
+            'slidesPerColumn'	            => !empty($settings['ekit_client_logo_rows']) ? (int) $settings['ekit_client_logo_rows'] : 1,
+            'loop'  => ( !empty($ekit_client_logo_loop) && $ekit_client_logo_loop == 'yes' && !empty($ekit_client_logo_rows) && $ekit_client_logo_rows == 1 ) ? true : false,
             'breakpoints'		=> [
                 320 => [
                     'slidesPerView'      => !empty($settings['ekit_client_logo_slidetosho_mobile']['size']) ? $settings['ekit_client_logo_slidetosho_mobile']['size'] : 1,
@@ -1562,8 +1574,6 @@ class ElementsKit_Widget_Client_Logo extends Widget_Base {
             <?php endif; ?>
         </div>
 
-   <?php
-
+    <?php
     }
-    protected function _content_template() { }
 }

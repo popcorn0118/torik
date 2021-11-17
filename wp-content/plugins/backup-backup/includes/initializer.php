@@ -820,7 +820,7 @@
 
               // Prevent parent directory downloading
               if (file_exists($file) && $this->fixSlashes(dirname($file)) == $this->fixSlashes(BMI_BACKUPS)) {
-                ob_clean();
+                if (ob_get_contents()) ob_end_clean();
 
                 @ignore_user_abort(true);
                 @set_time_limit(16000);
@@ -854,7 +854,7 @@
                 exit;
               }
             } else {
-              ob_clean();
+              if (ob_get_contents()) ob_end_clean();
               header('HTTP/1.0 423 Locked');
               if (ob_get_level()) ob_end_clean();
               echo __("Backup download is restricted (allowed for admins only).", 'backup-backup');
@@ -865,7 +865,7 @@
             // Only Admin can download backup logs
             if (!(current_user_can('administrator') || current_user_can('do_backups'))) return;
 
-            ob_clean();
+            if (ob_get_contents()) ob_end_clean();
             $backupname = $get_bid;
             $file = $this->fixSlashes(BMI_BACKUPS . DIRECTORY_SEPARATOR . $backupname);
 
@@ -919,7 +919,7 @@
               header('Content-Type: text/plain');
               header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
               http_response_code(200);
-              ob_clean();
+              if (ob_get_contents()) ob_end_clean();
               if ($get_pid == 'complete_logs.log') {
                 $file = BMI_CONFIG_DIR . DIRECTORY_SEPARATOR . 'complete_logs.log';
                 if (ob_get_level()) ob_end_clean();

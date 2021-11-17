@@ -2,6 +2,8 @@
 defined('ABSPATH') || die();
 /** @var $this NextendSocialProviderAdmin */
 
+$lastUpdated = '2021-09-09';
+
 $provider = $this->getProvider();
 ?>
 
@@ -9,6 +11,8 @@ $provider = $this->getProvider();
     <h2 class="title"><?php _e('Getting Started', 'nextend-facebook-connect'); ?></h2>
 
     <p style="max-width:55em;"><?php printf(__('To allow your visitors to log in with their %1$s account, first you must create a %1$s App. The following guide will help you through the %1$s App creation process. After you have created your %1$s App, head over to "Settings" and configure the given "%2$s" and "%3$s" according to your %1$s App.', 'nextend-facebook-connect'), "Google", "Client ID", "Client secret"); ?></p>
+
+    <p><?php do_action('nsl_getting_started_warnings', $provider, $lastUpdated); ?></p>
 
     <h2 class="title"><?php printf(_x('Create %s', 'App creation', 'nextend-facebook-connect'), 'Google App'); ?></h2>
 
@@ -33,7 +37,16 @@ $provider = $this->getProvider();
         <li><?php printf(__('Choose the "<b>%1$s</b>" option.', 'nextend-facebook-connect'), 'OAuth client ID'); ?></li>
         <li><?php printf(__('Select the "<b>%1$s</b>" under Application type.', 'nextend-facebook-connect'), 'Web application'); ?></li>
         <li><?php printf(__('Enter a "<b>%1$s</b>" for your OAuth client ID.', 'nextend-facebook-connect'), 'Name'); ?></li>
-        <li><?php printf(__('Under the "<b>%1$s</b>" section click "<b>%2$s</b>" and add the following URL: <b>%3$s</b>', 'nextend-facebook-connect'), 'Authorised redirect URIs', 'Add URI', $provider->getLoginUrl()); ?></li>
+        <li><?php
+            $loginUrls = apply_filters('nsl_redirect_uri_override', array($provider->getLoginUrl()), $provider, true);
+            printf(__('Under the "<b>%1$s</b>" section click "<b>%2$s</b>" and add the following URL:', 'nextend-facebook-connect'), 'Authorised redirect URIs', 'Add URI');
+            echo "<ul>";
+            foreach ($loginUrls as $loginUrl) {
+                echo "<li><strong>" . $loginUrl . "</strong></li>";
+            }
+            echo "</ul>";
+            ?>
+        </li>
         <li><?php printf(__('Click on the "<b>%1$s</b>" button', 'nextend-facebook-connect'), 'Create'); ?></li>
         <li><?php printf(__('A modal should pop up with your credentials. If that doesn\'t happen, go to the %1$s in the left hand menu and select your app by clicking on its name and you\'ll be able to copy-paste the "<b>%2$s</b>" and "<b>%3$s</b>" from there.', 'nextend-facebook-connect'), 'Credentials', 'Client ID', 'Client Secret'); ?></li>
     </ol>

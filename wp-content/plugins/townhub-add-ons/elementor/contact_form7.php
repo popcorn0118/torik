@@ -99,7 +99,7 @@ class CTH_Contact_Form7 extends Widget_Base {
         <?php
     }
 
-    // protected function _content_template() {}
+    // protected function content_template() {}
 
    
     

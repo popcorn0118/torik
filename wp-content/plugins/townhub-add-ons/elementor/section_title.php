@@ -178,7 +178,7 @@ class CTH_Section_Title extends Widget_Base {
 
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <div class="section-title">
             <# if(settings.title){ #><h2><span>{{{settings.title}}}</span></h2><# } #>

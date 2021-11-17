@@ -253,7 +253,7 @@ class CTH_Time_Line extends Widget_Base {
         endif;
     }
 
-    // protected function _content_template() {}
+    // protected function content_template() {}
     // end _content_template
 
 

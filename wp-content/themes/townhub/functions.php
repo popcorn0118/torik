@@ -1,6 +1,15 @@
 <?php
+/* banner-php */
+/**
+ * TownHub functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ */
 
-if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
+/**
+ * TownHub only works in WordPress 5.0 or later.
+ */
+if ( version_compare( $GLOBALS['wp_version'], '5.2', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
@@ -145,6 +154,8 @@ function townhub_setup() {
  	 */
 	add_editor_style( array( 'assets/css/editor-style.css', townhub_fonts_url() ) );
 
+    // deactivate new block editor
+    remove_theme_support( 'widgets-block-editor' );
 	
 }
 add_action( 'after_setup_theme', 'townhub_setup' );
@@ -678,18 +689,18 @@ function townhub_register_required_plugins() {
             'class_to_check'            => 'RegenerateThumbnails'
         ),
 
-        array('name' => esc_html__('WP Facebook Login for WordPress','townhub'),
-             // The plugin name.
-            'slug' => 'wp-facebook-login',
-             // The plugin slug (typically the folder name).
-            'required' => false,
-             // If false, the plugin is only 'recommended' instead of required.
-            'external_url' => esc_url(townhub_relative_protocol_url().'://wordpress.org/plugins/wp-facebook-login/' ),
-             // If set, overrides default API URL and points to an external URL.
+        // array('name' => esc_html__('WP Facebook Login for WordPress','townhub'),
+        //      // The plugin name.
+        //     'slug' => 'wp-facebook-login',
+        //      // The plugin slug (typically the folder name).
+        //     'required' => false,
+        //      // If false, the plugin is only 'recommended' instead of required.
+        //     'external_url' => esc_url(townhub_relative_protocol_url().'://wordpress.org/plugins/wp-facebook-login/' ),
+        //      // If set, overrides default API URL and points to an external URL.
 
-            'function_to_check'         => 'run_facebook_login',
-            'class_to_check'            => 'Facebook_Login'
-        ),
+        //     'function_to_check'         => 'run_facebook_login',
+        //     'class_to_check'            => 'Facebook_Login'
+        // ),
 
         array('name' => esc_html__('WordPress Social Login (Facebook, Google, Twitter)','townhub'),
              // The plugin name.

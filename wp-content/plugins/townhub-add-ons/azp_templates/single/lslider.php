@@ -59,9 +59,10 @@ if( !empty($images) && !is_array($images) ) {
                     </div>
                 </div>
                 <div class="listing-carousel_pagination">
-                    <div class="listing-carousel_pagination-wrap">
+                    <div class="ss-slider-pagination"></div>
+                    <!-- <div class="listing-carousel_pagination-wrap">
                         <div class="ss-slider-pagination"></div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="ss-slider-cont ss-slider-cont-prev color2-bg"><i class="fal fa-long-arrow-left"></i></div>
                 <div class="ss-slider-cont ss-slider-cont-next color2-bg"><i class="fal fa-long-arrow-right"></i></div>

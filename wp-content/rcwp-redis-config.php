@@ -1,7 +1,7 @@
 <?php 
 return array (
   'type' => 'single_domain',
-  'domain' => 'torik.com.tw',
+  'domain' => 'torik.eoscreative.co',
   'path' => '',
   'status' => 0,
   'prefix' => '7a69414e129391',

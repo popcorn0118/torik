@@ -3,12 +3,12 @@
 Plugin Name: TownHub Woo Payments
 Plugin URI: https://townhub.cththemes.com
 Description: A custom plugin for TownHub - Directory & Listing WordPress Theme
-Version: 1.5.9
+Version: 1.6.5
 Author: CTHthemes
 Author URI: http://themeforest.net/user/cththemes
 Text Domain: townhub-woo-payments
 Domain Path: /languages/
-Copyright: ( C ) 2014 - 2020 cththemes.com . All rights reserved.
+Copyright: ( C ) 2014 - 2021 cththemes.com . All rights reserved.
 License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */

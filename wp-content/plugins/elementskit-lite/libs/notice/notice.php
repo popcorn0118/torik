@@ -12,7 +12,7 @@ class Notice{
      *
      * @var string
      */
-    protected $script_version = '2.1.0';
+    protected $script_version = '2.1.1';
 
     /**
      * Unique ID to identify each notice
@@ -417,7 +417,7 @@ class Notice{
             </script>
             <style>
                 .wpmet-notice{
-                    margin: 5px 0 15px;
+                    margin-bottom: 15px;
                     padding: 0!important;
                     display: flex;
                     flex-direction: row;
@@ -433,7 +433,11 @@ class Notice{
                     width:100%!important;
                 }
                 
-                .wpmet-notice.no-gutter, .wpmet-notice.no-gutter .notice-right-container{
+                .wpmet-notice.no-gutter{
+                    padding: 0!important;
+                    border-width: 0!important;
+                }
+                .wpmet-notice.no-gutter .notice-right-container{
                     padding: 0!important;
                     margin: 0!important;
                 }
@@ -448,7 +452,7 @@ class Notice{
                 }
 
                 .wpmet-notice .notice-logo{
-                    padding: .8rem;
+                    padding: 3px;
                     max-width: 110px;
                     max-height: 110px;
                 }

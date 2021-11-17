@@ -6,7 +6,7 @@ $azp_mID = $el_id = $el_class = $hide_widget_on = $title = $dformat = $tformat =
 $checkin_show = $checkout_show = $tpicker_show = $slots_show = $bprice = '';
 $adult_show = $adult_lbl = $adult_desc = $child_show = $child_lbl = $child_desc = $infant_show = $infant_lbl = $infant_desc = '';
 $show_lservices = $quanity_lservices = $show_quantity = $qtt_lbl = $qtt_desc = $qtt_default = $show_menu = $menu_lbl = $menu_desc = '';
-$slots_single = $hide_dfdate = $hide_if_no_price = $hide_dfdate = $ckin_required = $hide_not_claimed = $cin_plhd = $dates_source = $ad_note = $hide_dmetas = '';
+$slots_single = $hide_dfdate = $hide_if_no_price = $hide_dfdate = $ckin_required = $hide_not_claimed = $cin_plhd = $dates_source = $ad_note = $hide_dmetas = $max = '';
 $ticket_lbl = $show_tickets = '';
 // var_dump($azp_attrs);
 extract($azp_attrs);
@@ -83,6 +83,7 @@ if(( $hide_widget_on_check = townhub_addons_is_hide_on_plans($hide_widget_on) ) 
                             data-action="<?php echo $dates_source;?>" 
                             data-postid="<?php the_ID();?>" 
                             data-mnights="<?php echo intval( $min_nights ); ?>"
+                            data-max="<?php echo esc_attr($max);?>"
                         ></div>
                         
                         <?php elseif( $checkin_show === '1' ): ?>

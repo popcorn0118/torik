@@ -338,10 +338,59 @@ add_action( 'woocommerce_order_status_changed', 'townhub_addons_woo_order_status
 function townhub_addons_woo_order_status_changed($order_id, $from_status, $to_status){
     // error_log('woocommerce_order_status_changed');
     if(ESB_DEBUG) error_log(date('[Y-m-d H:i e] '). "woocommerce_order_status_changed action" . PHP_EOL, 3, ESB_LOG_FILE);
-    
+    error_log(date('[Y-m-d H:i e] '). "woocommerce_order_status_changed $to_status" . PHP_EOL );
     $woo_order  = new WC_Order( $order_id );
+    if ($woo_order->get_type() === 'wcdp_payment') {
+        return;
+    }
     if ( count( $woo_order->get_items() ) > 0 ) {
         $check_completed = get_post_meta( $order_id, '_cth_check_earning', true );
+        error_log(date('[Y-m-d H:i e] '). "check_completed $check_completed" . PHP_EOL );
+        // check for woo deposit
+        if( $to_status == 'partially-paid' && $check_completed == 'partially-paid' ){
+            error_log(date('[Y-m-d H:i e] '). "order is partially-paid already" .PHP_EOL);
+            return;
+        }
+        // $order->add_meta_data('_wc_deposits_payment_schedule', $sorted_schedule, true);
+        // $order->add_meta_data('_wc_deposits_order_version', WC_DEPOSITS_VERSION, true);
+        // $order->add_meta_data('_wc_deposits_order_has_deposit', 'yes', true);
+        // $order->add_meta_data('_wc_deposits_deposit_paid', 'no', true);
+        // $order->add_meta_data('_wc_deposits_second_payment_paid', 'no', true);
+        // $order->add_meta_data('_wc_deposits_deposit_amount', $deposit, true);
+        // $order->add_meta_data('_wc_deposits_second_payment', $second_payment, true);
+        // $order->add_meta_data('_wc_deposits_deposit_breakdown', $deposit_breakdown, true);
+        // $order->add_meta_data('_wc_deposits_deposit_payment_time', ' ', true);
+        // $order->add_meta_data('_wc_deposits_second_payment_reminder_email_sent', 'no', true);
+        $_wc_deposits_payment_schedule = $woo_order->get_meta( '_wc_deposits_payment_schedule', true );
+        $_wc_deposits_order_version = $woo_order->get_meta( '_wc_deposits_order_version', true );
+        $_wc_deposits_order_has_deposit = $woo_order->get_meta( '_wc_deposits_order_has_deposit', true );
+        $_wc_deposits_deposit_paid = $woo_order->get_meta( '_wc_deposits_deposit_paid', true );
+        $_wc_deposits_second_payment_paid = $woo_order->get_meta( '_wc_deposits_second_payment_paid', true );
+        $_wc_deposits_deposit_amount = $woo_order->get_meta( '_wc_deposits_deposit_amount', true );
+        $_wc_deposits_second_payment = $woo_order->get_meta( '_wc_deposits_second_payment', true );
+        $_wc_deposits_deposit_breakdown = $woo_order->get_meta( '_wc_deposits_deposit_breakdown', true );
+        $_wc_deposits_deposit_payment_time = $woo_order->get_meta( '_wc_deposits_deposit_payment_time', true );
+        $_wc_deposits_second_payment_reminder_email_sent = $woo_order->get_meta( '_wc_deposits_second_payment_reminder_email_sent', true );
+
+        // logs
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_payment_schedule " .json_encode($_wc_deposits_payment_schedule) . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_order_version $_wc_deposits_order_version" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_order_has_deposit $_wc_deposits_order_has_deposit" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_deposit_paid $_wc_deposits_deposit_paid" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_second_payment_paid $_wc_deposits_second_payment_paid" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_deposit_amount $_wc_deposits_deposit_amount" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_second_payment $_wc_deposits_second_payment" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_deposit_breakdown " .json_encode($_wc_deposits_deposit_breakdown) . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_deposit_payment_time $_wc_deposits_deposit_payment_time" . PHP_EOL);
+        error_log(date('[Y-m-d H:i e] '). "_wc_deposits_second_payment_reminder_email_sent $_wc_deposits_second_payment_reminder_email_sent" . PHP_EOL);
+
+        $product_id = false;
+        $listing_id = false;
+        $listing_author_id = false;
+        
+        // woocommerce_order_status_partially-paid
+
+        
         
         if( $check_completed == 'completed' ) return;
         update_post_meta( $order_id, '_cth_check_earning', $to_status );
@@ -353,18 +402,32 @@ function townhub_addons_woo_order_status_changed($order_id, $from_status, $to_st
                     update_post_meta( $product_id, ESB_META_PREFIX.'woo_order',  $order_id  );
                     if(ESB_DEBUG) error_log(date('[Y-m-d H:i e] '). 'Insert lbooking woo_order value success.' . PHP_EOL, 3, ESB_LOG_FILE);
                 }
+                $listing_id = get_post_meta( $product_id, ESB_META_PREFIX.'listing_id', true );
+                $listing_author_id = get_post_field( 'post_author', $listing_id );
 
+                if($to_status == 'partially-paid'){
+                    update_post_meta( $product_id, ESB_META_PREFIX.'lb_status',  'partially-paid'  );
+                    update_post_meta( $product_id, ESB_META_PREFIX.'payment_method',  'woo'  ); 
+                    Esb_Class_Booking::update_cth_booking_status($product_id, 1);    
+                }
                 // check if order is completed
                 if($to_status == 'completed'){
                     update_post_meta( $product_id, ESB_META_PREFIX.'lb_status',  'completed'  );
                     update_post_meta( $product_id, ESB_META_PREFIX.'payment_method',  'woo'  );                    
-                    $listing_id = get_post_meta( $product_id, ESB_META_PREFIX.'listing_id', true );
-                    // update author earning
-                    $listing_author_id = get_post_field( 'post_author', $listing_id );
-                    if($listing_author_id){
-                        $inserted_earning = Esb_Class_Earning::insert($product_id, $listing_author_id, $listing_id);
-                    }
                     
+                    // update author earning
+                    
+                    if($listing_author_id){
+                        if( $_wc_deposits_order_has_deposit == 'yes' ){
+                            if( $_wc_deposits_second_payment_paid == 'yes' ){
+                                $inserted_earning = Esb_Class_Earning::insert($product_id, $listing_author_id, $listing_id, false, $_wc_deposits_second_payment);
+                            }
+                        }else{
+                            $inserted_earning = Esb_Class_Earning::insert($product_id, $listing_author_id, $listing_id);
+                        }
+                    }
+                    // update cth_booking status: 0 - insert - 1 - active and 1 for partially paid
+                    Esb_Class_Booking::update_cth_booking_status($product_id, 1);
                     // push customer notification
                     $customer = get_user_by( 'email', get_post_meta( $product_id, ESB_META_PREFIX.'lb_email', true ) );
                     if ( ! empty( $customer ) ) {
@@ -387,12 +450,13 @@ function townhub_addons_woo_order_status_changed($order_id, $from_status, $to_st
 
             // woo product
             if( $product_id > 0 && 'product' == get_post_type( $product_id ) ){ 
-                
+                $listing_id = get_post_meta( $product_id, ESB_META_PREFIX.'for_listing_id', true );
+                $listing_author_id = get_post_field( 'post_author', $listing_id );
                 // check if order is completed
                 if($to_status == 'completed'){                   
-                    $listing_id = get_post_meta( $product_id, ESB_META_PREFIX.'for_listing_id', true );
+                    
                     // update author earning
-                    $listing_author_id = get_post_field( 'post_author', $listing_id );
+                    
                     if($listing_author_id){
                         $inserted_earning = Esb_Class_Earning::insert($product_id, $listing_author_id, $listing_id, true);
                     }
@@ -432,6 +496,18 @@ function townhub_addons_woo_order_status_changed($order_id, $from_status, $to_st
 
                 }
             }// end claim listing order
+        } // end loop order items
+        // error_log(date('[Y-m-d H:i e] '). "to_status $to_status" . PHP_EOL);
+        // error_log(date('[Y-m-d H:i e] '). "_wc_deposits_order_has_deposit $_wc_deposits_order_has_deposit" . PHP_EOL);
+        // error_log(date('[Y-m-d H:i e] '). "_wc_deposits_deposit_paid $_wc_deposits_deposit_paid" . PHP_EOL);
+        // error_log(date('[Y-m-d H:i e] '). "listing_id $listing_id" . PHP_EOL);
+        // error_log(date('[Y-m-d H:i e] '). "listing_author_id $listing_author_id" . PHP_EOL);
+        // error_log(date('[Y-m-d H:i e] '). "product_id $product_id" . PHP_EOL);
+        if( $to_status == 'partially-paid' && $_wc_deposits_order_has_deposit == 'yes' && $_wc_deposits_deposit_paid == 'yes' && $listing_id ){
+            if($listing_author_id){
+                // $inserted_earning = Esb_Class_Earning::insert($product_id, $listing_author_id, $listing_id, false, $_wc_deposits_deposit_amount + $_wc_deposits_second_payment );
+                $inserted_earning = Esb_Class_Earning::insert($product_id, $listing_author_id, $listing_id, false, $_wc_deposits_deposit_amount );
+            }
         }
     }
 }
@@ -1204,6 +1280,70 @@ add_filter( 'woocommerce_get_item_data', function($item_data, $cart_item){
                     );
                 }
             }
+            
+
+            $rooms_persons = get_post_meta( $booking_id, ESB_META_PREFIX.'rooms_person_data', true );
+            if( is_array($rooms_persons) && !empty($rooms_persons) ) {
+                foreach ( $rooms_persons as $rdata ) {
+                    if( !empty($rdata['title']) ){
+                        $item_data[] = array(
+                            'key'   => _x( 'Room Title','Woo cart', 'townhub-add-ons' ),
+                            'value' => $rdata['title'],
+                        );
+                    }
+                    if( !empty($rdata['adults']) ){
+                        $item_data[] = array(
+                            'key'   => _x( 'Room Adults','Woo cart', 'townhub-add-ons' ),
+                            'value' => $rdata['adults'],
+                        );
+                    }
+                    if( !empty($rdata['children']) ){
+                        $item_data[] = array(
+                            'key'   => _x( 'Room Children','Woo cart', 'townhub-add-ons' ),
+                            'value' => $rdata['children'],
+                        );
+                    }
+                }
+            }
+
+            $rooms = get_post_meta( $booking_id, ESB_META_PREFIX.'rooms', true );
+            if( is_array($rooms) && !empty($rooms) ) {
+                foreach ($rooms as $key => $room) {
+                    $item_data[] = array(
+                        'key'   => _x( 'Room Title','Woo cart', 'townhub-add-ons' ),
+                        'value' => $rdata['title'],
+                    );
+                }
+            }
+
+            if( townhub_addons_get_option('woo_hide_adults') != 'yes' ){
+                $adults = get_post_meta( $booking_id, ESB_META_PREFIX.'adults', true );
+                if( !empty($adults) ){
+                    $item_data[] = array(
+                        'key'   => _x( 'Adults','Woo cart', 'townhub-add-ons' ),
+                        'value' => $adults,
+                    );
+                }
+            }
+            if( townhub_addons_get_option('woo_hide_children') != 'yes' ){
+                $children = get_post_meta( $booking_id, ESB_META_PREFIX.'children', true );
+                if( !empty($children) ){
+                    $item_data[] = array(
+                        'key'   => _x( 'Children','Woo cart', 'townhub-add-ons' ),
+                        'value' => $children,
+                    );
+                }
+            }
+            if( townhub_addons_get_option('woo_hide_infants') != 'yes' ){
+                $infants = get_post_meta( $booking_id, ESB_META_PREFIX.'infants', true );
+                if( !empty($infants) ){
+                    $item_data[] = array(
+                        'key'   => _x( 'Infants','Woo cart', 'townhub-add-ons' ),
+                        'value' => $infants,
+                    );
+                }
+            }
+            
             $tSlots = get_post_meta( $booking_id, ESB_META_PREFIX.'time_slots', true );
             if( !empty($tSlots) ){
                 $slots_text = array();

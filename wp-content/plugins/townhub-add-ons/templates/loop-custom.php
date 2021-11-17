@@ -26,6 +26,11 @@ if( townhub_addons_get_option('hide_past_events') == 'yes' && ( !isset($_GET['pa
                             ),
                         );
 }
+if(townhub_addons_get_option('listings_orderby') == 'event_start_date'){
+    $post_args['meta_key'] = ESB_META_PREFIX.'eventdate_start';
+    $post_args['meta_type'] = 'DATE';
+    $post_args['orderby'] = 'meta_value';
+}
 if( !empty($past_events_query) ){
     if( !empty($post_args['meta_query']) && is_array($post_args['meta_query']) ){
         $post_args['meta_query'][] = $past_events_query;

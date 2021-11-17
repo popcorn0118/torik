@@ -108,7 +108,7 @@ table#wp-calendar a:hover,
 .btn-unlock-month,
 input.button-primary,
 .price-head,
-.lstatus-started {
+.lstatus-started, .mb-btns-wrap {
   background: #4DB7FE; }
 
 .submit-sec-title:before,

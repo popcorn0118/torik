@@ -65,6 +65,7 @@ class REST {
 
         return $user;
     }
+
 }
 
 new REST();

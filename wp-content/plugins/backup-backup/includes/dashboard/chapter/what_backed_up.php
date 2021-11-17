@@ -22,6 +22,10 @@
   $tooltip_exclude_file = __("Enter the paths to the files you want to exclude from your backup (one per line).", 'backup-backup');
   $tooltip_exclude_path = __("Enter the paths to the directories/folders you want to exclude from your backup (one per line).", 'backup-backup');
   $tooltip_premium_details = __("You can already exclude files based on filters (click on “Yes” below), however in the premium plugin you’ll also be able to browse through them.", 'backup-backup') . "<br><br>";
+
+  $tooltip_files = str_replace('"', '“', $tooltip_files);
+  $tooltip_premium_details = str_replace('"', '“', $tooltip_premium_details);
+
   if (defined('BMI_PREMIUM_TOOLTIP')) {
     $tooltip_premium_details .= str_replace('"', "'", BMI_PREMIUM_TOOLTIP);
     $tooltip_smart_exclusion = str_replace('"', "'", BMI_PREMIUM_TOOLTIP);

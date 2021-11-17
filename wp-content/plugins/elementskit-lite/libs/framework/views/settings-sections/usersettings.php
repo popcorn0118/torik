@@ -17,7 +17,7 @@ $pro_active = (in_array('elementskit/elementskit.php', apply_filters('active_plu
                        data-parent="#accordion"
                        href="#mail_chimp_data_control" aria-expanded="true"
                        aria-controls="mail_chimp_data_control">
-                        <span><?php esc_html_e('Mail Chimp Data', 'elementskit-lite'); ?></span>
+                        <span><?php esc_html_e('MailChimp Data', 'elementskit-lite'); ?></span>
                     </a>
                 </div>
 
@@ -484,6 +484,9 @@ $pro_active = (in_array('elementskit/elementskit.php', apply_filters('active_plu
 
 						$user_id = (!isset($user_data['instragram']['user_id'])) ? '' : ($user_data['instragram']['user_id']);
 						$insta_token = (!isset($user_data['instragram']['token'])) ? '' : ($user_data['instragram']['token']);
+						$insta_time = (!isset($user_data['instragram']['token_expire'])) ? '' : intval($user_data['instragram']['token_expire']);
+						$insta_gen = (!isset($user_data['instragram']['token_generated'])) ? '' :
+                            date('Y-m-d', strtotime($user_data['instragram']['token_generated']));
 
 						$this->utils->input(
 							[
@@ -504,6 +507,29 @@ $pro_active = (in_array('elementskit/elementskit.php', apply_filters('active_plu
 								'value'       => $insta_token,
 							]
 						);
+
+						$this->utils->input(
+							[
+								'type'        => 'text',
+								'name'        => 'user_data[instragram][token_expire]',
+								'label'       => esc_html__('Token expires time', 'elementskit-lite'),
+								'placeholder' => 'This is needed for automatically refreshing the token...',
+								'value'       => $insta_time,
+							]
+						);
+
+						$this->utils->input(
+							[
+								'type'        => 'date',
+								'name'        => 'user_data[instragram][token_generated]',
+								'label'       => esc_html__('Token generation date', 'elementskit-lite'),
+								'placeholder' => 'This is needed for automatically refreshing the token...',
+								'value'       => $insta_gen,
+								'info'       => esc_html__('This is need to calculate the remaining time for token', 'elementskit-lite'),
+							]
+						);
+
+
 						?>
 
 

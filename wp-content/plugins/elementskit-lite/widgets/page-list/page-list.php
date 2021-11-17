@@ -935,11 +935,11 @@ class ElementsKit_Widget_Page_List extends Widget_Base {
 				'options' => [
 					'ekit_badge_left' => [
 						'title' => esc_html__( 'Left', 'elementskit-lite' ),
-						'icon' => 'fa fa-align-left',
+						'icon' => 'eicon-text-align-left',
 					],
 					'ekit_badge_right' => [
 						'title' => esc_html__( 'Right', 'elementskit-lite' ),
-						'icon' => 'fa fa-align-right',
+						'icon' => 'eicon-text-align-right',
 					],
 				],
 				'default' => 'ekit_badge_left',

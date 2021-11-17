@@ -156,7 +156,7 @@ to link to here" target="_blank"><i class="fa fa-behance"></i></a></li>
 
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <div class="team-holder section-team fl-wrap">
             <div class="team-box-image">

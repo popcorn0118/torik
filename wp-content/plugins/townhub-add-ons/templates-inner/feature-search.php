@@ -11,7 +11,7 @@ if(!isset($fea)) $fea = false;
 <!-- end listing-feature-wrap -->
 <?php else : ?>
 <div class="listing-feature-wrap">
-    <input id="features_<?php echo $fea['value'];?>" type="checkbox" value="<?php echo $fea['value'];?>" name="lfeas[]">
+    <input id="features_<?php echo $fea['value'];?>" type="checkbox" value="<?php echo $fea['value'];?>" name="lfeas[]" <?php checked( $fea['checked'], true, true );?>>
     <label for="features_<?php echo $fea['value'];?>"><?php echo $fea['label'];?></label>
 </div>
 <!-- end listing-feature-wrap -->

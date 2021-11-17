@@ -185,3 +185,31 @@
 [10-Nov-2021 10:40:12 UTC] PHP Warning:  Error while sending QUERY packet. PID=880475 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
 [11-Nov-2021 07:28:48 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
 [11-Nov-2021 07:28:48 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[12-Nov-2021 06:57:26 UTC] PHP Warning:  Error while sending QUERY packet. PID=354848 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[12-Nov-2021 06:57:28 UTC] PHP Warning:  Error while sending QUERY packet. PID=355115 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[13-Nov-2021 16:52:09 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[13-Nov-2021 16:52:09 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[13-Nov-2021 16:56:58 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[13-Nov-2021 16:56:58 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[13-Nov-2021 17:04:41 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[13-Nov-2021 17:04:41 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[14-Nov-2021 04:17:14 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[14-Nov-2021 04:17:14 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[14-Nov-2021 08:40:05 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[14-Nov-2021 08:40:05 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[14-Nov-2021 15:10:14 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[14-Nov-2021 15:10:14 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[14-Nov-2021 15:12:49 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[14-Nov-2021 15:12:49 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[14-Nov-2021 15:26:13 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[14-Nov-2021 15:26:13 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[14-Nov-2021 15:35:51 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[14-Nov-2021 15:35:51 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[15-Nov-2021 08:32:12 UTC] PHP Warning:  preg_match() expects parameter 2 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 417
+[15-Nov-2021 08:32:12 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/class-wp-block-parser.php on line 489
+[16-Nov-2021 02:19:22 UTC] PHP Warning:  Error while sending QUERY packet. PID=92266 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[16-Nov-2021 02:20:50 UTC] PHP Warning:  Error while sending QUERY packet. PID=91220 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[16-Nov-2021 02:20:51 UTC] PHP Warning:  Error while sending QUERY packet. PID=91875 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[16-Nov-2021 06:06:59 UTC] PHP Warning:  Error while sending QUERY packet. PID=269363 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[16-Nov-2021 06:08:21 UTC] PHP Warning:  Error while sending QUERY packet. PID=268027 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056
+[16-Nov-2021 06:08:22 UTC] PHP Warning:  Error while sending QUERY packet. PID=268462 in /home4/estellewang/public_html/eoscreative/case/torik/wp-includes/wp-db.php on line 2056

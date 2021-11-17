@@ -115,7 +115,7 @@ class CTH_Popup_Video extends Widget_Base {
         <?php
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <div class="popup-video-ele">
             <div class="list-single-main-media fl-wrap">

@@ -328,9 +328,20 @@ function townhub_addons_get_socials_list(){
         'youtube' => __( 'Youtube',  'townhub-add-ons' ),
         'vimeo-v' => __( 'Vimeo',  'townhub-add-ons' ),
         'instagram' => __( 'Instagram',  'townhub-add-ons' ),
+        'vk' => __( 'Vkontakte',  'townhub-add-ons' ),
+        'reddit' => __( 'Reddit',  'townhub-add-ons' ),
+        'pinterest-p' => __( 'Pinterest',  'townhub-add-ons' ),
+        'vine' => __( 'Vine Camera',  'townhub-add-ons' ),
+        'tumblr' => __( 'Tumblr',  'townhub-add-ons' ),
         'flickr' => __( 'Flickr',  'townhub-add-ons' ),
+        'google-plus-g' => __( 'Google+',  'townhub-add-ons' ),
+        'linkedin-in' => __( 'LinkedIn',  'townhub-add-ons' ),
         'whatsapp' => __( 'Whatsapp',  'townhub-add-ons' ),
+        'meetup' => __( 'Meetup',  'townhub-add-ons' ),
+        'odnoklassniki' => _x( 'Odnoklassniki', 'Socials List',  'townhub-add-ons' ),
+        'envelope' => __( 'Email',  'townhub-add-ons' ),
         'telegram' => __( 'Telegram',  'townhub-add-ons' ),
+        'custom_icon' => __( 'Custom',  'townhub-add-ons' ),
     );
 
     $socials = (array)apply_filters( 'cth_socials_list', $socials );
@@ -1071,10 +1082,12 @@ function townhub_addons_get_currency_array(){
         'JMD' => 'Jamaica Dollar',
         'JPY' => 'Japan Yen',
         'JEP' => 'Jersey Pound',
+        'JOD' => 'Jordanian dinar',
         'KZT' => 'Kazakhstan Tenge',
         'KPW' => 'Korea (North) Won',
         'KRW' => 'Korea (South) Won',
         'KGS' => 'Kyrgyzstan Som',
+        'KWD'   => 'Kuwaiti Dinars',
         'LAK' => 'Laos Kip',
         'LVL' => 'Latvia Lat',
         'LBP' => 'Lebanon Pound',
@@ -1248,7 +1261,10 @@ function townhub_addons_get_currency_attrs($currency = null){
 function townhub_addons_get_stripe_amount($amount=0){
     // The amount (in cents) that's shown to the user. Note that you will still have to explicitly include the amount when you create a charge using the API.
     // $20 -> 2000
-    return floatval($amount)*100;
+    if( townhub_addons_get_option('currency','USD') != 'JPY' ){
+        return floatval($amount)*100;
+    }
+    return floatval($amount);
 }
 function townhub_addons_get_price_formated($price = 0, $show_currency = true){
     $price = floatval($price);

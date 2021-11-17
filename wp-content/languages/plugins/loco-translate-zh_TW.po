@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Loco Translate - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-22 16:49:00+0000\n"
+"PO-Revision-Date: 2021-09-30 23:53:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,14 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: zh_TW\n"
 "Project-Id-Version: Plugins - Loco Translate - Stable (latest release)\n"
+
+#: tpl/admin/file/head.php:10
+msgid "Edit file headers"
+msgstr "編輯檔案標頭"
+
+#: tpl/admin/file/conf.php:23
+msgid "Relative path to template file"
+msgstr "範本檔案相對路徑"
 
 #: tpl/admin/file/conf.php:57 tpl/admin/file/head.php:34
 msgid "Save"
@@ -522,6 +530,7 @@ msgstr "外掛設定不允許對已安裝的檔案進行修改"
 msgid "Revisions are identical, you can delete %s"
 msgstr "內容修訂相同，可以刪除 %s"
 
+#. translators: Where %s is the name of the invalid POT file
 #. translators: Where %s is the name of the invalid POT file
 #: src/admin/file/EditController.php:121 src/ajax/SyncController.php:72
 msgid "Translation template is invalid (%s)"
@@ -1634,7 +1643,7 @@ msgstr "網頁伺服器"
 msgid "%s already exists in this folder"
 msgstr "%s 已存在於這個資料夾中"
 
-#: src/ajax/XgettextController.php:62
+#: src/ajax/XgettextController.php:67
 msgid "Template file created"
 msgstr "譯文範本檔案已建立"
 
@@ -1650,7 +1659,7 @@ msgstr "PO 檔已儲存且已編譯為 MO 檔"
 msgid "Failed to create backup file in \"%s\". Check file permissions or disable backups"
 msgstr "無法於 %s 建立備份檔案。請檢查檔案權限或停用備份功能"
 
-#: src/ajax/MsginitController.php:60
+#: src/ajax/MsginitController.php:63
 msgid "MO file exists for this language already. Delete it first"
 msgstr "這個語言的 MO 檔已存在，請先予以刪除"
 

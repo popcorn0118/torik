@@ -31,15 +31,15 @@ NextendSocialLoginAdmin::showProBox();
                 <fieldset>
                     <label>
                         <input type="radio" name="login_form_button_style"
-                               value="fullwidth" <?php if ($settings->get('login_form_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
-                        <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
-                        <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
-                    </label>
-                    <label>
-                        <input type="radio" name="login_form_button_style"
                                value="default" <?php if ($settings->get('login_form_button_style') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
                         <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
                         <img src="<?php echo plugins_url('images/buttons/default.png', NSL_ADMIN_PATH) ?>"/>
+                    </label>
+                    <label>
+                        <input type="radio" name="login_form_button_style"
+                               value="fullwidth" <?php if ($settings->get('login_form_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                        <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
+                        <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
                     </label>
                     <label>
                         <input type="radio" name="login_form_button_style"
@@ -93,15 +93,15 @@ NextendSocialLoginAdmin::showProBox();
                 <fieldset>
                     <label>
                         <input type="radio" name="embedded_login_form_button_style"
-                               value="fullwidth" <?php if ($settings->get('embedded_login_form_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
-                        <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
-                        <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
-                    </label>
-                    <label>
-                        <input type="radio" name="embedded_login_form_button_style"
                                value="default" <?php if ($settings->get('embedded_login_form_button_style') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
                         <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
                         <img src="<?php echo plugins_url('images/buttons/default.png', NSL_ADMIN_PATH) ?>"/>
+                    </label>
+                    <label>
+                        <input type="radio" name="embedded_login_form_button_style"
+                               value="fullwidth" <?php if ($settings->get('embedded_login_form_button_style') == 'fullwidth') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                        <span><?php _e('Fullwidth', 'nextend-facebook-connect'); ?></span><br/>
+                        <img src="<?php echo plugins_url('images/buttons/fullwidth.png', NSL_ADMIN_PATH) ?>"/>
                     </label>
                     <label>
                         <input type="radio" name="embedded_login_form_button_style"

@@ -34,6 +34,11 @@ if( is_tax('listing_cat') ){
         $features = $term_meta['features'];
     }
 }
+$sterm_id = '';
+$sterm_included = false;
+if( is_tax( 'listing_feature' ) ){
+    $sterm_id = get_queried_object_id();
+}
 ?>
 <div class="<?php echo $classes; ?>" <?php echo $el_id;?>>
     <div class="filter-item-inner">
@@ -49,10 +54,12 @@ if( is_tax('listing_cat') ){
             foreach ($features as $fid) {
                 $term = get_term( $fid, 'listing_feature' );
                 if ( $term != null && ! is_wp_error( $term ) ){
+                    if( $sterm_id == $term->term_id ) $sterm_included = true;
                     $option_features[] = array(
                         'type' => 'feature', // is features field
                         'label' => $term->name,
-                        'value' => $term->term_id
+                        'value' => $term->term_id,
+                        'checked'   => $sterm_id == $term->term_id,
                         // 'lvalue' => ''
                     );
                 }
@@ -74,6 +81,9 @@ if( is_tax('listing_cat') ){
         <div class="listing-features-view loading-feas">
             <div class="listing-features"></div>
         </div>
+        <?php endif; ?>
+        <?php if($sterm_id && !$sterm_included): ?>
+            <input type="checkbox" value="<?php echo $sterm_id;?>" name="lfeas[]" checked="checked" style="display: none;">
         <?php endif; ?>
     </div>
 </div>

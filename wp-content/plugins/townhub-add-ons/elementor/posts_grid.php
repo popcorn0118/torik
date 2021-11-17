@@ -458,7 +458,7 @@ class CTH_Posts_Grid extends Widget_Base {
 
     }
 
-    protected function _content_template() {}
+    protected function content_template() {}
 
    
     

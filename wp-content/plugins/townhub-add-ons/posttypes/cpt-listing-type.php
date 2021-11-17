@@ -115,6 +115,7 @@ class Esb_Class_Listing_Type_CPT extends Esb_Class_CPT
                                 'compare'   => 'LIKE',
                             );
                         }
+                        // var_dump($likeQR);
                         if( !empty($likeQR) ){
                             if( count( $likeQR ) > 1 ){
                                 if( $fargs['compare'] == 'IN' ) 
@@ -126,6 +127,7 @@ class Esb_Class_Listing_Type_CPT extends Esb_Class_CPT
                                 $queries[] = $likeQR[0];
                             }
                         }
+                        // var_dump($queries);
                     }else{
                         $queries[] = array(
                             'key'       => ESB_META_PREFIX.$fname,
@@ -334,7 +336,32 @@ class Esb_Class_Listing_Type_CPT extends Esb_Class_CPT
                 
             </tbody>
         </table>
+        <table class="form-table add-room-title">
+            <tbody>
 
+                <tr class="hoz">
+                    <th class="w20 align-left"><?php _e( 'Add Room Title', 'townhub-add-ons' ); ?></th>
+                    <td>
+                        <input type="text" class="input-text" name="add_room_title" value="<?php echo get_post_meta($post->ID, ESB_META_PREFIX.'add_room_title', true); ?>">
+                        <p><?php _e( 'Top heading text on add new room page', 'townhub-add-ons' ); ?></p>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <table class="form-table edit-room-title">
+            <tbody>
+
+                <tr class="hoz">
+                    <th class="w20 align-left"><?php _e( 'Edit Room Title', 'townhub-add-ons' ); ?></th>
+                    <td>
+                        <input type="text" class="input-text" name="edit_room_title" value="<?php echo get_post_meta($post->ID, ESB_META_PREFIX.'edit_room_title', true); ?>">
+                        <p><?php _e( 'Top heading text on edit room page', 'townhub-add-ons' ); ?></p>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
         <?php
     }
 
@@ -638,6 +665,12 @@ $single_css         = '';
         }
         if ( isset($_POST['whour_slots']) ) {
             update_post_meta($post_id, ESB_META_PREFIX . 'whour_slots', $_POST['whour_slots'] );
+        }
+        if ( isset($_POST['add_room_title']) ) {
+            update_post_meta($post_id, ESB_META_PREFIX . 'add_room_title', $_POST['add_room_title'] );
+        }
+        if ( isset($_POST['edit_room_title']) ) {
+            update_post_meta($post_id, ESB_META_PREFIX . 'edit_room_title', $_POST['edit_room_title'] );
         }
         
 
@@ -1441,7 +1474,7 @@ $single_css         = '';
                 'desc_opt'    => false,
                 // 'show_admin'           => true,
                 'noFName'     => false,
-                
+                'addtext'           => 'Add Room',
             ),
 
             // array(
@@ -1815,7 +1848,27 @@ $single_css         = '';
                 'hideVField'    => true,
                 'hideDVField'   => true,
                 
-            )
+            ),
+            array(
+                'admin_label' => _x('Street View Point-of-View', 'Listing type field', 'townhub-add-ons'),
+                'type'        => 'number',
+                'fieldName'   => 'pov_heading',
+                'label' => _x('Street View Point-of-View ( 0 - 360 )', 'Listing type field', 'townhub-add-ons'),
+                'desc'        => 'Defines the rotation angle around the camera locus in degrees relative from true north. Headings are measured clockwise (90 degrees is true east)',
+                'icon'        => '',
+                'fwidth'      => '12',
+                'removable'   => true,
+                'options'     => array(),
+                'value'       => '0',
+                'default'     => '0',
+                'required'    => false,
+                'desc_opt'    => false,
+                // 'show_admin'           => true,
+                'noFName'     => true,
+                
+            ),
+            
+
 
         );
 
@@ -2619,6 +2672,8 @@ function townhub_addons_get_listing_type_fields($listing_type_id = 0, $room_fiel
                     case 'socials':
                     case 'facts':
                     case 'add_rooms':
+                    case 'rooms':
+                    case 'listing_rooms':
                     case 'checkbox':
                     case 'muti':
                     case 'gallery_imgs':

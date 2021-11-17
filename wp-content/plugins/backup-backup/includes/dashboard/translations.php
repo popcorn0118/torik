@@ -130,6 +130,15 @@
   <div id="bmi-loading-translation">
     <?php _e("Loading...", 'backup-backup') ?>
   </div>
+  <div id="failed-to-stop">
+    <?php _e("We could not stop the process due to some issues on your server (maybe file permissions).", 'backup-backup') ?>
+  </div>
+  <div id="bmi-force-stop-in-progress">
+    <?php _e("Stopping the process, it will be confirmed...", 'backup-backup') ?>
+  </div>
+  <div id="bmi-force-stop-success">
+    <?php _e("The process should be stopped now.", 'backup-backup') ?>
+  </div>
   <div id="BMI_URL_ROOT"><?php echo plugin_dir_url(BMI_ROOT_FILE); ?></div>
   <div id="BMI_BLOG_URL"><?php echo get_site_url(); ?></div>
   <div id="BMI_REV"><?php echo BMI_REV; ?></div>

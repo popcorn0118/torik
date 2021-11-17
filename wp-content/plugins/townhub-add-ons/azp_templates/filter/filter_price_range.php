@@ -42,7 +42,7 @@ $currency_attrs = townhub_addons_get_currency_attrs();
             </div>
             <?php endif;?>
             <div class="price-rage-item fl-wrap">
-                <input type="text" class="price-range" data-min="0" data-max="4"  name="price_range"  data-step="1" value="$$">
+                <input type="range" class="price-range full-width-wrap" min="0" max="4" step="1" data-min="0" data-max="4"  name="price_range"  data-step="1" value="$$">
             </div>
         </div>
     </div>

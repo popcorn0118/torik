@@ -32,17 +32,17 @@ function townhub_addons_options_get_general(){
                 'desc'  => '',
             ),
 
-            array(
-                "type" => "field",
-                "field_type" => "checkbox",
-                'id' => 'use_clock_24h',
-                'args'=> array(
-                    'default' => 'yes',
-                    'value' => 'yes',
-                ),
-                "title" => __('Use 24-hour format', 'townhub-add-ons'),
-                'desc'  => '',
-            ),
+            // array(
+            //     "type" => "field",
+            //     "field_type" => "checkbox",
+            //     'id' => 'use_clock_24h',
+            //     'args'=> array(
+            //         'default' => 'yes',
+            //         'value' => 'yes',
+            //     ),
+            //     "title" => __('Use 24-hour format', 'townhub-add-ons'),
+            //     'desc'  => '',
+            // ),
             
             
             

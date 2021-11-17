@@ -4,8 +4,8 @@ Theme URI: https://townhub.cththemes.com/
 Author: CTHthemes
 Author URI: http://themeforest.net/user/cththemes
 Description: Directory & Listing WordPress Theme
-Version: 1.5.9
-Copyright: ( C ) 2014 - 2020 cththemes.com . All rights reserved.
+Version: 1.6.5
+Copyright: ( C ) 2014 - 2021 cththemes.com . All rights reserved.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: townhub
@@ -4428,8 +4428,7 @@ input[type=number] {
 
 .category-carousel .swiper-slide, .single-carousel-wrap .swiper-slide, .category-carousel .swiper-slide img, .single-carousel-wrap .swiper-slide img {
   width: auto !important;
-  height: 190px; 
-}
+  height: 190px !important; }
 
 .category-carousel .swiper-slide, .single-carousel-wrap .swiper-slide {
   display: inherit !important; }
@@ -12423,6 +12422,10 @@ body.cth-reset-pwd-page .logreg-modal-open {
   .card-verified i {
     margin-right: 10px; }
 
+.nice-select.has-multiple .multiple-options {
+  overflow: hidden;
+  height: 100%; }
+
 .single-head-top-right {
   margin-left: auto; }
 
@@ -12792,6 +12795,9 @@ body.cth-reset-pwd-page .logreg-modal-open {
   color: #878C9F;
   position: relative;
   top: 10px; }
+
+.range-slider-wrap {
+  position: relative; }
 
 .review-range-item .range-slider-wrap {
   width: 80%; }

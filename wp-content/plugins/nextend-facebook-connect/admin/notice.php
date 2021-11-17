@@ -23,42 +23,6 @@ if ($current <= mktime(0, 0, 0, 7, 28, 2021)) {
                     </p>
                 </div>
                 <?php
-            } else {
-                //Pro Addon
-                if (true === apply_filters('nsl-pro', false)) {
-                    //license is active
-                    ?>
-                    <div class="notice notice-info is-dismissible" data-nsldismissable="nsl_summer_2021" style="display:grid;grid-template-columns: 100px auto;padding-top: 25px; padding-bottom: 22px;">
-                        <img alt="Nextend Social Login" src="<?php echo plugins_url('images/notice/nslnotice.png', NSL_ADMIN_PATH) ?>" width="64" height="64" style="grid-row: 1 / 4; align-self: center;justify-self: center">
-                        <h3 style="margin:0;">Need more license? If the answer is yes, then you may be interested in our
-                            Summer Sale.</h3>
-                        <p style="margin:0 0 2px;">
-                            We are excited to offer a <b>30% discount on all Nextend Social Login Premium plans!</b>
-                            Limited time offer expires on July 27.</p>
-                        <p style="margin:0;">
-                            <a class="button button-primary" href="https://nextendweb.com/social-login/?coupon=SUMMER21&utm_source=wpprou&utm_medium=wp&utm_campaign=summer21#pricing" target="_blank">
-                                Buy Now</a>
-                            <a class="button button-dismiss" href="#">Dismiss</a>
-                        </p>
-                    </div>
-                    <?php
-                } else {
-                    //license is not active
-                    ?>
-                    <div class="notice notice-info is-dismissible" data-nsldismissable="nsl_summer_2021" style="display:grid;grid-template-columns: 100px auto;padding-top: 25px; padding-bottom: 22px;">
-                        <img alt="Nextend Social Login" src="<?php echo plugins_url('images/notice/nslnotice.png', NSL_ADMIN_PATH) ?>" width="64" height="64" style="grid-row: 1 / 4; align-self: center;justify-self: center">
-                        <h3 style="margin:0;">Activate your Nextend Social Login Pro Addon now and save 30%</h3>
-                        <p style="margin:0 0 2px;">
-                            We are excited to offer a <b>30% discount on all Nextend Social Login Premium plans!</b>
-                            Limited time offer expires on July 27.</p>
-                        <p style="margin:0;">
-                            <a class="button button-primary" href="https://nextendweb.com/social-login/?coupon=SUMMER21&utm_source=wpprona&utm_medium=wp&utm_campaign=summer21#pricing" target="_blank">
-                                Buy Now</a>
-                            <a class="button button-dismiss" href="#">Dismiss</a>
-                        </p>
-                    </div>
-                    <?php
-                }
             }
         });
 

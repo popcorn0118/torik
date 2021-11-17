@@ -555,7 +555,7 @@ class CTH_Listings_Slider extends Widget_Base {
             ?>
             
             <div class="listing-slider fl-wrap listing-slider-editor-col-<?php echo esc_attr( $editor_col ); ?>">
-                <div class="swiper-container" data-options='<?php echo json_encode($slider_args); ?>'>
+                <div class="swiper-container" data-options='<?php echo json_encode($slider_args); ?>' <?php if(is_rtl()) echo ' dir="rtl"'; ?>>
                     <div class="swiper-wrapper">
 
                         <?php 

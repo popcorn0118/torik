@@ -43,7 +43,7 @@ class BMI_Checker {
     $this->logs(__('Requires at least ', 'backup-backup') . $size . __(' bytes.', 'backup-backup') . ' [' . BMP::humanSize($size) . ']');
     if ($this->is_enabled('disk_free_space') && intval(disk_free_space(BMI_BACKUPS)) > 100) {
 
-      $this->logs(__('Disk free space function is not disabled - using...', 'backup-backup'));
+      $this->logs(__('Disk free space function is not disabled - using it...', 'backup-backup'));
       $this->logs(__('Checking this path/partition: ', 'backup-backup') . BMI_BACKUPS);
       $free = intval(disk_free_space(BMI_BACKUPS));
       $this->logs(__('There is ', 'backup-backup') . number_format($free / 1024 / 1024, 2) . __(' MB free.', 'backup-backup') . ' [' . BMP::humanSize($free) . ']', 'SUCCESS');

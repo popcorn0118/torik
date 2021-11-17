@@ -456,13 +456,13 @@ class CTH_Listings_Grid_New extends Widget_Base
 
         if ($settings['order_by'] == 'listing_featured') {
             $post_args['meta_key'] = ESB_META_PREFIX . 'featured';
-            $post_args['orderby']  = 'meta_value_num';
+            $post_args['orderby']  = 'meta_value_num date';
 
             // $filter_args['meta_key'] = ESB_META_PREFIX . 'featured';
             // $filter_args['orderby']  = 'meta_value_num';
         }
 
-        if ($settings['order_by'] == 'listing_featured') {
+        if ($settings['order_by'] == 'event_start_date') {
             $post_args['meta_key'] = ESB_META_PREFIX . 'eventdate_start';
             $post_args['orderby']  = 'meta_value';
         }
@@ -622,7 +622,7 @@ class CTH_Listings_Grid_New extends Widget_Base
                             endif; //end showfillter
                             ?>
 
-                                <div class="cthiso-items cthiso-small-pad cthiso-<?php echo esc_attr($settings['columns_grid']);?>-cols clearfix cthiso-flex">
+                                <div class="cthiso-items cthiso-small-pad cthiso-<?php echo esc_attr($settings['columns_grid']);?>-cols clearfix cthiso-flexes">
                                     <div class="cthiso-sizer"></div>
                                     <?php
 $action_args = array(
@@ -755,6 +755,6 @@ $url    = $settings['view_all_link']['url'];
 
     }
 
-    // protected function _content_template() {}
+    // protected function content_template() {}
 
 }

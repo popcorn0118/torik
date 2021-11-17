@@ -1,18 +1,18 @@
 ﻿=== WordPress Social Login (Discord, Google, Twitter, LinkedIn) ===
 Contributors: sociallogin, vkontakte, cyberlord92
 Donate link: https://www.miniorange.com
-Tags: social login, facebook login, google login, social sharing, twitter login, linkedIn, user login, vkontakte login, social comments, social commenting, woocommerce login, facebook, twitter, google, social connect, social network login, social plugin, windows, microsoft,
+Tags: social login, facebook login, google login, social sharing, twitter login, linkedIn, user login, vkontakte login, social comments, social commenting, woocommerce login, facebook, twitter, google, social connect, social network login, social plugin, windows, microsoft, discord login. 
 Requires at least: 2.0.2
-Tested up to: 5.7
-Stable tag: 7.5.1
+Tested up to: 5.8
+Stable tag: 7.5.5
 License: GPLv2 or later
 License URI: http://miniorange.com/usecases/miniOrange_User_Agreement.pdf
 
-Social Login with Facebook, Google, Twitter, LinkedIn and 40+ apps. Social login with social share and comments. Free, fast & easy! WooCommerce Integration.
+Social Login with Discord, Facebook, Google, Twitter, LinkedIn and 40+ apps. Social login with social share and comments. Free, fast & easy! WooCommerce Integration.
 
 == Description ==
 
-WordPress Social Login Plugin allows social login, social share & commenting using widely used apps like Facebook, Google, LinkedIn, Twitter, Apple, Discord, Twitch, Line, Wechat, 40 other apps available. Instead of requiring your visitors to waste time filling out the typical registration form, it allows them to register/login to your website using their socila media profiles.
+WordPress Social Login Plugin allows social login, social share & commenting using widely used apps like Facebook, Google, LinkedIn, Twitter, Apple, Discord, Twitch, Line, Wechat, 40 other apps available. Instead of requiring your visitors to waste time filling out the typical registration form, it allows them to register/login to your website using their social media profiles.
 
 Integrations with popular plugins like WooCommerce, BuddyPress, MailChimp, Paid Memberships Pro, Ultimate Member, and applications like Discord & Hubspot.
 
@@ -25,7 +25,7 @@ We provide different display options with beautiful login button customizations 
 
 = Free Social Login Features =
 
-*   Social Login with <a href="https://plugins.miniorange.com/configure-facebook-social-login-in-wordpress" target="_blank">Facebook</a>, <a href="https://plugins.miniorange.com/login-with-google-using-wordpress-social-login" target="_blank">Google</a>, <a href="https://plugins.miniorange.com/configure-twitter-with-social-login-in-wordpress" target="_blank">Twitter</a>, <a href="http://plugins.miniorange.com/configure-vkontakte-with-social-login-in-wordpress" target="_blank">Vkontakte</a>, <a href="https://plugins.miniorange.com/configure-linkedin-with-social-login-in-wordpress" target="_blank">LinkedIn</a>, <a href="http://plugins.miniorange.com/configure-amazon-with-social-login-in-wordpress" target="_blank">Amazon</a>, <a href="https://plugins.miniorange.com/configure-windowslive-with-social-login-in-wordpress" target="_blank">Windows Live</a>, Salesforce & <a href="https://plugins.miniorange.com/guide-to-configure-yahoo-social-login-in-wordpress" target="_blank">Yahoo</a>,etc.
+*   Social Login with <a href="https://plugins.miniorange.com/configure-facebook-social-login-in-wordpress" target="_blank">Facebook</a>, <a href="https://plugins.miniorange.com/login-with-google-using-wordpress-social-login" target="_blank">Google</a>, <a href="https://plugins.miniorange.com/configure-discord-with-social-login-in-wordpress" target="_blank">Discord</a>, <a href="https://plugins.miniorange.com/configure-twitter-with-social-login-in-wordpress" target="_blank">Twitter</a>, <a href="http://plugins.miniorange.com/configure-vkontakte-with-social-login-in-wordpress" target="_blank">Vkontakte</a>, <a href="https://plugins.miniorange.com/configure-linkedin-with-social-login-in-wordpress" target="_blank">LinkedIn</a>, <a href="http://plugins.miniorange.com/configure-amazon-with-social-login-in-wordpress" target="_blank">Amazon</a>, <a href="https://plugins.miniorange.com/configure-windowslive-with-social-login-in-wordpress" target="_blank">Windows Live</a>, Salesforce & <a href="https://plugins.miniorange.com/guide-to-configure-yahoo-social-login-in-wordpress" target="_blank">Yahoo</a>,etc.
 *   **One-click** activation for Login with Google, Amazon, Vkontakte, LinkedIn, Windows Live (Microsoft login), Yahoo, Salesforce, Snapchat and Dribbble.
 *   **Flexible display** - Display Social login icons anywhere on your websites.
 *   **Sync user data** - Sync user data from multiple social network providers like Facebook, Google, Microsoft into one social login account.
@@ -100,7 +100,7 @@ We provide different display options with beautiful login button customizations 
 *   **24 / 7 Support** - Using email and in-plugin support form.
 
 = Why miniOrange Social Login =
-* **12 Free Social Login apps** - Login with popular social network providers namely Facebook, Google, Twitter, LinkedIn, Instagram, Vkontakte, Windows Live, Amazon, Salesforce, Yahoo, Snapchat and Dribbble all available in the free plan.
+* **13 Free Social Login apps** - Login with popular social network providers namely Facebook, Google, Discord, Twitter, LinkedIn, Instagram, Vkontakte, Windows Live, Amazon, Salesforce, Yahoo, Snapchat and Dribbble all available in the free plan.
 * **No Setup required** - Simply register with us and use our pre-configured application. We will handle everything for you.
 * **24 / 7 Support** - If you face any issues or if you simply require assistance with the Social Login plugin then please contact us. Whatever it may be we will solve the issue for you and get everything working as soon as possible.
 * **Tons of Free Features** - We have a huge roster of free features. With other plugins, you will have to pay for these features.
@@ -140,7 +140,7 @@ We provide different display options with beautiful login button customizations 
 
 = Paid Social Login Features =
 
-*   **40+ Social Login Providers** - Choose from 40+ applications for social login and user registration. Many social network providers added continuously.
+*   **40+ Social Login Providers** - Choose from 40+ applications (Facebook Login, Google Login, Discord Login etc.) for social login and user registration. Many social network providers added continuously.
 *   **One-click activation** - For Login with Discord, Apple, Facebook, Google, Amazon, Vkontakte, LinkedIn, Windows Live (Microsoft login), WordPress, Yahoo and Salesforce.
 *   **Social login Integrations** - Social integrations with popular WordPress plugins like <a href="https://plugins.miniorange.com/guide-to-configure-woocommerce-with-wordpress-social-login" target="_blank">WooCommerce</a>, <a href="https://plugins.miniorange.com/guide-to-configure-paid-membership-pro-with-wordpress-social-login" target="_blank">Paid Memberships Pro</a>, <a href="https://plugins.miniorange.com/guide-to-configure-buddypress-with-wordpress-social-login" target="_blank">BuddyPress</a>, <a href="https://plugins.miniorange.com/guide-to-configure-mailchimp-integration-with-wordpress-social-login" target="_blank">MailChimp</a> and HubSpot.
 *   **Social Login Integrations** - Social login icons on WooCommerce pages, BuddyPress pages, Paid Memberships Pro pages, MemberPress pages, Ultimate Member pages.
@@ -272,6 +272,28 @@ Please email us at info@miniorange.com. You can also submit your query from the 
 12. Social Sharing icons without background.
 
 ==Changelog==
+= 7.5.5 =
+* Added meeting scheduler in support section.
+* Fix the discord profile picture mapping issue.
+* Fix the avatar size issue with the buddypress plugin.
+* Fix the avatar loading issue on buddypress members page.
+* Fixed Discord avatar issue.
+
+= 7.5.4 =
+* Updated Vkontakte API to the latest version 5.131.
+
+= 7.5.3 =
+* Updated Facebook application setup Instructions.
+* Added Discord application in free version.
+* Updated Font awesome file.
+* Fixed sharing app url issue.
+* Minor UI changes.
+* Added Slack application in Premium and All-inclusive version.
+
+= 7.5.2 =
+* Compatible with WordPress 5.8
+* Minor UI changes.
+
 = 7.5.1 =
 * Minor bug fix.
 
@@ -933,6 +955,28 @@ SECURITY FIXES
 * First version of Social Login, Social Sharing plugin.
 
 == Upgrade Notice ==
+= 7.5.5 =
+* Added meeting scheduler in support section.
+* Fix the discord profile picture mapping issue.
+* Fix the avatar size issue with the buddypress plugin.
+* Fix the avatar loading issue on buddypress members page.
+* Fixed Discord avatar issue.
+
+= 7.5.4 =
+* Updated Vkontakte API to the latest version 5.131.
+
+= 7.5.3 =
+* Updated Facebook application setup Instructions.
+* Added Discord application in free version.
+* Updated Font awesome file.
+* Fixed sharing app url issue.
+* Minor UI changes.
+* Added Slack application in Premium and All-inclusive version.
+
+= 7.5.2 =
+* Compatible with WordPress 5.8
+* Minor UI changes.
+
 = 7.5.1 =
 * Minor bug fix.
 

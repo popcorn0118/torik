@@ -51,6 +51,11 @@ class NextendSocialProviderFacebook extends NextendSocialProvider {
             'label' => 'Gender',
             'node'  => 'me',
             'scope' => 'user_gender'
+        ),
+        'quotes'    => array(
+            'label' => 'Quotes',
+            'node'  => 'me',
+            'scope' => 'user_likes'
         )
     );
 

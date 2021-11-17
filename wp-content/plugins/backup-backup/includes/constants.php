@@ -24,15 +24,30 @@
   if (!defined('BMI_CONFIG_DIR')) {
     define('BMI_CONFIG_DIR', dirname(BMI_CONFIG_PATH));
   }
-  if (!defined('BMI_DB_MAX_ROWS_PER_QUERY')) {
-    define('BMI_DB_MAX_ROWS_PER_QUERY', 250);
-  }
   if (!defined('BMI_REV')) {
     define('BMI_REV', 2);
   }
 
   // Load configuration
   require_once BMI_INCLUDES . DIRECTORY_SEPARATOR . 'config.php';
+
+  // Database queries amount
+  if (!defined('BMI_DB_MAX_ROWS_PER_QUERY')) {
+    $db_queries = Dashboard\bmi_get_config('OTHER:DB:QUERIES');
+    if (is_numeric($db_queries)) {
+      $db_queries = intval($db_queries);
+
+      if ($db_queries > 15000 || $db_queries < 15) {
+        $db_queries = 1000;
+      }
+    }
+
+    if (!isset($db_queries) || is_null($db_queries) || !is_numeric($db_queries)) {
+      $db_queries = 1000;
+    }
+
+    define('BMI_DB_MAX_ROWS_PER_QUERY', $db_queries);
+  }
 
   // Default constants
   if (!defined('BMI_CLI_EXECUTABLE')) {

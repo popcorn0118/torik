@@ -143,11 +143,16 @@
         });
         //   scroll to------------------
         $(".custom-scroll-link").on("click", function() {
-            var a = 70 + $(".scroll-nav-wrapper").height() + adminbarheight;
+            var a = 70 + adminbarheight;
+            if ($(".scroll-nav-wrapper").length) {
+                a += $(".scroll-nav-wrapper").height()
+            }
             if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") || location.hostname == this.hostname) {
                 var b = $(this.hash);
                 b = b.length ? b : $("[name=" + this.hash.slice(1) + "]");
                 if (b.length) {
+                    // console.log(b.offset().top)
+                    // console.log(a)
                     $("html,body").animate({
                         scrollTop: b.offset().top - a
                     }, {
@@ -568,6 +573,18 @@
             setTimeout( adjustScrollClass, 500 );
         });
     }
+    window.addEventListener('listingsChanged', (e)=>{
+        if( e.detail == 'ajax_search' ){
+            if( $('.act-hiddenpanel').length > 0 ){
+                var mtext = $('.act-hiddenpanel').data('mtext');
+                $('.act-hiddenpanel').toggleClass("active-hidden-opt-btn").find("span").text( mtext );
+            }
+            if( $('.hidden-listing-filter').length > 0 ) $(".hidden-listing-filter").slideToggle(400);
+        }
+    })
+    document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+    });
 })(jQuery);
 // open login modal when site loaded
 // (function($) {

@@ -648,7 +648,7 @@ class CTH_Listings_Grid extends Widget_Base {
 
     }
 
-    // protected function _content_template() {}
+    // protected function content_template() {}
 
    
     

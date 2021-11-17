@@ -97,7 +97,7 @@ class BMI_Database_Exporter {
 
     $this->table_prefix = time();
     $this->init_start = microtime(true);
-    $this->logger->log("Memory usage after initialization: " . (memory_get_usage() / 1024 / 1024) . " MB", 'INFO');
+    $this->logger->log("Memory usage after initialization: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB", 'INFO');
 
   }
 
@@ -111,25 +111,25 @@ class BMI_Database_Exporter {
     // Table names
     $this->get_table_names_and_sizes();
     $this->logger->log("Scan found $this->total_tables tables ($this->total_rows rows), estimated total size: $this->total_size MB.", 'INFO');
-    $this->logger->log("Memory usage after getting table names: " . (memory_get_usage() / 1024 / 1024) . " MB ", 'INFO');
+    $this->logger->log("Memory usage after getting table names: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB ", 'INFO');
 
     // Recipes
     $this->logger->log("Getting table recipes...", 'INFO');
     $this->table_recipes();
     $this->logger->log("Table recipes have been exported.", 'INFO');
-    $this->logger->log("Memory usage after loading recipes: " . (memory_get_usage() / 1024 / 1024) . " MB ", 'INFO');
+    $this->logger->log("Memory usage after loading recipes: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB ", 'INFO');
 
     // Save Recipes
     $this->logger->log("Saving recipes...", 'INFO');
     $this->save_recipes();
     $this->logger->log("Recipes saved.", 'INFO');
-    $this->logger->log("Memory usage after recipe off-load: " . (memory_get_usage() / 1024 / 1024) . " MB", 'INFO');
+    $this->logger->log("Memory usage after recipe off-load: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB", 'INFO');
 
     // Tables data
     $this->logger->log("Exporting table data...", 'INFO');
     $this->get_tables_data();
     $this->logger->log("Table data exported.", 'INFO');
-    $this->logger->log("Memory usage after data export: " . (memory_get_usage() / 1024 / 1024) . " MB", 'INFO');
+    $this->logger->log("Memory usage after data export: " . number_format(memory_get_usage() / 1024 / 1024, 2) . " MB", 'INFO');
 
     $end = number_format(microtime(true) - $this->init_start, 4);
     $this->logger->log("Entire process took: $end s", 'INFO');

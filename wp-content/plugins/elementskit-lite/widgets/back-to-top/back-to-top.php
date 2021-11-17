@@ -102,15 +102,15 @@ class ElementsKit_Widget_Back_To_Top extends Widget_Base {
 				'options'   => [
 					'left'   => [
 						'description' => esc_html__('Left', 'elementskit-lite'),
-						'icon'        => 'fa fa-align-left',
+						'icon'        => 'eicon-text-align-left',
 					],
 					'center' => [
 						'description' => esc_html__('Center', 'elementskit-lite'),
-						'icon'        => 'fa fa-align-center',
+						'icon'        => 'eicon-text-align-center',
 					],
 					'right'  => [
 						'description' => esc_html__('Right', 'elementskit-lite'),
-						'icon'        => 'fa fa-align-right',
+						'icon'        => 'eicon-text-align-right',
 					],
 				],
 				'selectors' => [

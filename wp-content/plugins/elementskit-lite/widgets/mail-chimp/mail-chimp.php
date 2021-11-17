@@ -92,6 +92,29 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 			]
 		);	
 
+		$this->add_control(
+            'ekit_mail_chimp_double_opt_in',
+            [
+                'label' => esc_html__( 'Double Opt-in', 'elementskit-lite' ),
+                'type' => Controls_Manager::SWITCHER,
+                'default' => 'no',
+                'description' => esc_html__('If you enable this feature , then you must need to enable it inside Mailchimp campaign settings. Otherwise please disable it.', 'elementskit-lite')
+            ]
+        );
+ 
+        $this->add_control(
+            'ekit_mail_chimp_opt_in_success_message',
+            [
+                'label' => esc_html__( 'Opt-in Success Message', 'elementskit-lite' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__( 'Please check your mail and confirm subscribe', 'elementskit-lite' ),
+                'placeholder' => esc_html__( 'Type your title here', 'elementskit-lite' ),
+                'condition' => [
+                    'ekit_mail_chimp_double_opt_in' => 'yes',
+                ],
+            ]
+        );
+
 		// show name control
 		$this->add_control(
 			'ekit_mail_chimp_section_form_name_show',
@@ -1358,8 +1381,9 @@ class ElementsKit_Widget_Mail_Chimp extends Widget_Base {
 		);
 		?>
 		<div class="ekit-mail-chimp">
-			<form method="post" class="ekit-mailChimpForm" data-listed="<?php echo esc_attr($ekit_mail_chimp_select_listed_id);?>" data-success-message="<?php echo esc_attr($ekit_mail_chimp_success_message); ?>">
+		<form method="post" class="ekit-mailChimpForm" data-listed="<?php echo esc_attr($ekit_mail_chimp_select_listed_id);?>" data-success-message="<?php echo esc_attr($ekit_mail_chimp_success_message); ?>" data-success-opt-in-message="<?php echo esc_attr($ekit_mail_chimp_opt_in_success_message)?>">
 			<div class="ekit-mail-message"></div>
+			<input type="hidden" name="double_opt_in" value="<?php echo esc_attr($ekit_mail_chimp_double_opt_in)?>">
 
 				<div <?php echo $this->get_render_attribute_string('content_wrapper'); ?>>
 				<?php if(isset($ekit_mail_chimp_section_form_name_show) && $ekit_mail_chimp_section_form_name_show == 'yes'):?>

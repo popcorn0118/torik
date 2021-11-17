@@ -255,15 +255,15 @@ class ElementsKit_Widget_Image_Box extends Widget_Base {
                 'options' => [
                     'left' => [
                         'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-left',
+                        'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
                         'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-center',
+                        'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
                         'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                        'icon' => 'fa fa-align-right',
+                        'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'default' => 'center',
@@ -1179,7 +1179,7 @@ class ElementsKit_Widget_Image_Box extends Widget_Base {
             [
                 'name' => 'ekit_image_box_title_typography',
                 'label' => esc_html__( 'Typography', 'elementskit-lite' ),
-                'selector' => '{{WRAPPER}} .elementskit-info-image-box .elementskit-info-box-title, {{WRAPPER}} .elementskit-info-image-box .elementskit-info-box-title a',
+                'selector' => '{{WRAPPER}} .elementskit-info-image-box .elementskit-box-content :is(.elementskit-info-box-title, .elementskit-info-box-title a )',
             ]
         );
         
@@ -1716,8 +1716,6 @@ class ElementsKit_Widget_Image_Box extends Widget_Base {
                 <?php endif; ?>
             </div>
             </div>
-        <?php
-
-        }
-    protected function _content_template() { }
+    <?php
+    }
 }

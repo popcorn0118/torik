@@ -16,6 +16,8 @@ class NextendSocialUser {
 
     protected $user_id;
 
+    protected $shouldAutoLogin = false;
+
     /**
      * NextendSocialUser constructor.
      *
@@ -338,6 +340,13 @@ class NextendSocialUser {
             'registerComplete'
         ), 31);
 
+        $autoLoginPriority = apply_filters('nsl_autologin_priority', 40);
+        add_action('user_register', array(
+            $this,
+            'doAutoLogin'
+        ), $autoLoginPriority);
+
+
         $this->userExtraData = $userData;
 
         $user_data = array(
@@ -478,7 +487,7 @@ class NextendSocialUser {
             update_user_meta($user_id, 'wcemailverified', 'true');
         }
 
-        $this->login($user_id);
+        $this->shouldAutoLogin = true;
 
         return true;
     }
@@ -602,6 +611,12 @@ class NextendSocialUser {
         $this->provider->redirectToLoginForm();
     }
 
+    public function doAutoLogin($user_id) {
+        if ($this->shouldAutoLogin) {
+            $this->login($user_id);
+        }
+    }
+
     public function wp_redirect_filter($redirect) {
         $this->finishLogin();
         exit;
@@ -658,7 +673,14 @@ class NextendSocialUser {
         $isAutoLinkAllowed = true;
         $isAutoLinkAllowed = apply_filters('nsl_' . $this->provider->getId() . '_auto_link_allowed', $isAutoLinkAllowed, $this->provider, $user_id);
         if ($isAutoLinkAllowed) {
-            return $this->provider->linkUserToProviderIdentifier($user_id, $providerUserID);
+            $isLinkSuccessful = $this->provider->linkUserToProviderIdentifier($user_id, $providerUserID);
+            if ($isLinkSuccessful) {
+                return $isLinkSuccessful;
+            } else {
+                $this->provider->deleteLoginPersistentData();
+                $alreadyLinkedMessage = apply_filters('nsl_already_linked_error_message', sprintf(__('We found a user with your %1$s email address. Unfortunately it belongs to a different %1$s account, so we are unable to log you in. Please use the linked %1$s account or log in with your password!', 'nextend-facebook-connect'), $this->provider->getLabel()));
+                Notices::addError($alreadyLinkedMessage);
+            }
         }
 
         return false;

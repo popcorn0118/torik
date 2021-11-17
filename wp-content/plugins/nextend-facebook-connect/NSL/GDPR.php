@@ -32,27 +32,27 @@ class GDPR {
 
         $content = '';
         $content .= '<h2>' . __('What personal data we collect and why we collect it') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s collects data when a visitor register, login or link the account with with any of the enabled social provider. It collects the following data: email address, name, social provider identifier and access token. Also it can collect profile picture and more fields with the Pro Addon\'s sync data feature.'), 'Nextend Social Login') . '</p>';
+        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s collects data when a visitor register, login or link the account with with any of the enabled social provider. It collects the following data: email address, name, social provider identifier and access token. Also it can collect profile picture and more fields with the Pro Addon\'s sync data feature.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
         $content .= '<h2>' . __('Who we share your data with') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s stores the personal data on your site and does not share it with anyone except the access token which used for the authenticated communication with the social providers.'), 'Nextend Social Login') . '</p>';
+        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s stores the personal data on your site and does not share it with anyone except the access token which used for the authenticated communication with the social providers.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
-        $content .= '<h2>' . __('Does the plugin share personal data with third parties') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s use the access token what the social provider gave to communicate with the providers to verify account and securely access personal data.'), 'Nextend Social Login') . '</p>';
+        $content .= '<h2>' . __('Does the plugin share personal data with third parties', 'nextend-facebook-connect') . '</h2>';
+        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s use the access token what the social provider gave to communicate with the providers to verify account and securely access personal data.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
-        $content .= '<h2>' . __('How long we retain your data') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s removes the collected personal data when the user deleted from WordPress.'), 'Nextend Social Login') . '</p>';
+        $content .= '<h2>' . __('How long we retain your data', 'nextend-facebook-connect') . '</h2>';
+        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s removes the collected personal data when the user deleted from WordPress.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
-        $content .= '<h2>' . __('Does the plugin use personal data collected by others?') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s use the personal data collected by the social providers to create account on your site when the visitor authorize it.'), 'Nextend Social Login') . '</p>';
+        $content .= '<h2>' . __('Does the plugin use personal data collected by others?', 'nextend-facebook-connect') . '</h2>';
+        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('%1$s use the personal data collected by the social providers to create account on your site when the visitor authorize it.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
-        $content .= '<h2>' . __('Does the plugin store things in the browser?') . '</h2>';
-        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('Yes, %1$s must create a cookie for visitors who use the social login authorization flow. This cookie required for every provider to secure the communication and to redirect the user back to the last location.'), 'Nextend Social Login') . '</p>';
+        $content .= '<h2>' . __('Does the plugin store things in the browser?', 'nextend-facebook-connect') . '</h2>';
+        $content .= '<p class="privacy-policy-tutorial">' . sprintf(__('Yes, %1$s must create a cookie for visitors who use the social login authorization flow. This cookie required for every provider to secure the communication and to redirect the user back to the last location.', 'nextend-facebook-connect'), 'Nextend Social Login') . '</p>';
 
-        $content .= '<h2>' . __('Does the plugin collect telemetry data, directly or indirectly?') . '</h2>';
+        $content .= '<h2>' . __('Does the plugin collect telemetry data, directly or indirectly?', 'nextend-facebook-connect') . '</h2>';
         $content .= '<p class="privacy-policy-tutorial">' . __('No') . '</p>';
 
-        $content .= '<h2>' . __('Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a third party?') . '</h2>';
+        $content .= '<h2>' . __('Does the plugin enqueue JavaScript, tracking pixels or embed iframes from a third party?', 'nextend-facebook-connect') . '</h2>';
         $content .= '<p class="privacy-policy-tutorial">' . __('No') . '</p>';
 
 
@@ -88,7 +88,7 @@ class GDPR {
 
         $user_data_to_export = array();
 
-        foreach (NextendSocialLogin::$allowedProviders AS $provider) {
+        foreach (NextendSocialLogin::$allowedProviders as $provider) {
             $user_data_to_export = array_merge($user_data_to_export, $provider->exportPersonalData($user->ID));
         }
 

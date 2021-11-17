@@ -34,7 +34,7 @@
         >
 
         <label class="ekit-admin-control-label"  for="ekit-admin-switch__<?php echo esc_attr(self::strify($name) . $value); ?>">
-        <?php echo esc_html($label); ?>
+            <span class="ekit-admin-control-label-text"><?php echo esc_html($label); ?></span>
             <span class="ekit-admin-control-label-switch" data-active="ON" data-inactive="OFF"></span>
         </label>
 

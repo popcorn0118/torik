@@ -64,7 +64,7 @@
 
 
 						<div class="ekit-switch-group">
-							<label class="attr-input-label"><?php esc_html_e('Activition:', 'elementskit-lite'); ?></label>
+							<label class="attr-input-label"><?php esc_html_e('Activate/Deactivate:', 'elementskit-lite'); ?></label>
 							<div class="ekit-admin-input-switch">
 								<input checked="" type="checkbox" value="yes"
 									class="ekit-admin-control-input ekit-template-modalinput-activition"

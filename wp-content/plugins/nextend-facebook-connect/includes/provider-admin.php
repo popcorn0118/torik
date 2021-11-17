@@ -267,16 +267,47 @@ class NextendSocialProviderAdmin {
 
 
         <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                let testContainer = document.getElementById('nsl-test-configuration'),
+                    requiredFieldNames = <?php echo wp_json_encode(array_keys($provider->getRequiredFields())); ?>,
+                    requiredFieldNameSelectors = [],
+                    events = ['keyup', 'change'];
 
-            jQuery(document).on('ready', function () {
-                var $test = jQuery('#nsl-test-configuration');
-                if ($test.length) {
-                    jQuery(<?php echo wp_json_encode('#' . implode(',#', array_keys($provider->getRequiredFields()))); ?>)
-                        .on('keyup.test', function () {
-                            jQuery('#nsl-test-button').remove();
-                            jQuery('#nsl-test-please-save').css('display', 'inline');
-                            jQuery('input').off('keyup.test');
+                if (testContainer && requiredFieldNames && requiredFieldNames.length) {
+                    requiredFieldNames.forEach(function (requiredFieldName) {
+                        let selector = "[name='" + requiredFieldName + "']";
+                        requiredFieldNameSelectors.push(selector);
+                    });
+
+                    if (requiredFieldNameSelectors.length) {
+                        let requiredFieldNodes = document.querySelectorAll(requiredFieldNameSelectors.join(','));
+                        requiredFieldNodes.forEach(function (requiredFieldNode) {
+                            events.forEach(function (event) {
+                                requiredFieldNode.addEventListener(event, displayProviderSaveMessage);
+                            });
+
                         });
+
+                    }
+                }
+
+                function displayProviderSaveMessage() {
+                    let testButton = document.getElementById('nsl-test-button'),
+                        saveMessage = document.getElementById('nsl-test-please-save');
+
+                    if (testButton) {
+                        testButton.remove();
+                    }
+                    if (saveMessage) {
+                        saveMessage.style.display = 'inline';
+                    }
+
+                    let requiredFieldNodes = document.querySelectorAll(requiredFieldNameSelectors.join(','));
+                    requiredFieldNodes.forEach(function (requiredFieldNode) {
+                        events.forEach(function (event) {
+                            requiredFieldNode.removeEventListener(event, displayProviderSaveMessage);
+                        });
+                    });
                 }
             });
         </script>

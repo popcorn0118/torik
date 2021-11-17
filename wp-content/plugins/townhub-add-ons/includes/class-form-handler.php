@@ -319,7 +319,41 @@ class Esb_Class_Form_Handler{
                 }
 
                 $bkdatas['rooms_person_data'] = $rooms_person_data;
+                // new rooms
+                $cth_booking_datas = array(
+                    'booking_id'                => $booking_id,
+                    'listing_id'                => $listing_id,
+                    'guest_id'                  => $buser_id,
+                    'status'                    => 0,
+                );
+                if(isset($bkdatas['checkin'])) $cth_booking_datas['date_from'] = Esb_Class_Date::format($bkdatas['checkin']);
+                if(isset($bkdatas['checkout'])) $cth_booking_datas['date_to'] = Esb_Class_Date::format($bkdatas['checkout']);
 
+                if( !empty($rooms_person_data) ){
+                    foreach ($rooms_person_data as $cart_room) {
+                        if( isset($cart_room['ID']) ){
+                            $cth_booking_datas['room_id'] = $cart_room['ID'];
+                            $cth_booking_datas['quantity'] = 1;
+                            Esb_Class_Ajax_Handler::insert_cth_booking($cth_booking_datas);
+                        }
+                        
+                    }
+                }
+
+                // if(isset($cart_data['rooms']) && !empty($cart_data['rooms'])){
+                //     foreach ((array)$cart_data['rooms'] as $cart_room) {
+                //         if(isset($cart_room['ID']) && isset($cart_room['quantity']) && (int)$cart_room['quantity'] > 0){
+                //             $cth_booking_datas['room_id'] = $cart_room['ID'];
+                //             $cth_booking_datas['quantity'] = (int)$cart_room['quantity'];
+                //             Esb_Class_Ajax_Handler::insert_cth_booking($cth_booking_datas);
+                //         }
+                        
+                //     }
+                // }
+
+                
+
+                
                 // for rooms with date prices
                 $rooms_old_price = 0;
                 $rooms_old_data = array();
@@ -351,7 +385,17 @@ class Esb_Class_Form_Handler{
                 }
 
                 $bkdatas['rooms_old_data'] = $rooms_old_data;
-
+                // new rooms
+                if( !empty($rooms_old_data) ){
+                    foreach ($rooms_old_data as $cart_room) {
+                        if( isset($cart_room['ID']) && isset($cart_room['quantity']) && (int)$cart_room['quantity'] > 0 ){
+                            $cth_booking_datas['room_id'] = $cart_room['ID'];
+                            $cth_booking_datas['quantity'] = $cart_room['quantity'];
+                            Esb_Class_Ajax_Handler::insert_cth_booking($cth_booking_datas);
+                        }
+                        
+                    }
+                }
 
                 if( !empty($rooms_person_price) ){
                     $listing_price = $rooms_person_price;

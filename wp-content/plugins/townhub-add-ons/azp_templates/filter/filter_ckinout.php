@@ -2,7 +2,7 @@
 /* add_ons_php */
 
 //$azp_attrs,$azp_content,$azp_element
-$azp_mID = $el_id = $el_class = $icon = $title = $width = $dformat = ''; 
+$azp_mID = $el_id = $el_class = $icon = $title = $width = $dformat = $max = ''; 
 
 // var_dump($azp_attrs);
 extract($azp_attrs);
@@ -39,6 +39,7 @@ $default_value = !empty($checkin_get) && !empty($checkout_get) ? esc_attr($check
             data-label="<?php echo esc_attr( $title ); ?>" 
             data-icon="<?php echo esc_attr($icon);?>" 
             data-selected="slot_date"
+            data-max="<?php echo esc_attr($max);?>"
         ></div>
         <!-- <span class="clear-singleinput"><i class="fal fa-times"></i></span> -->
     </div>

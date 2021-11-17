@@ -31,6 +31,10 @@ class ElementsKit_Widget_Ninja_Forms extends Widget_Base {
         return '';
     }
 
+    public function is_reload_preview_required() {
+        return true;
+    }
+
     protected function register_controls() {
         $this->start_controls_section(
             'ekit_ninja_section_tab', [
@@ -73,15 +77,15 @@ class ElementsKit_Widget_Ninja_Forms extends Widget_Base {
 				'options'               => [
 					'left'      => [
 						'title' => __( 'Left', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-left',
+						'icon'  => 'eicon-text-align-left',
 					],
 					'center'    => [
 						'title' => __( 'Center', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-center',
+						'icon'  => 'eicon-text-align-center',
 					],
 					'right'     => [
 						'title' => __( 'Right', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-right',
+						'icon'  => 'eicon-text-align-right',
 					],
 				],
 				'default'               => '',
@@ -241,15 +245,15 @@ class ElementsKit_Widget_Ninja_Forms extends Widget_Base {
 				'options'               => [
 					'left'      => [
 						'title' => __( 'Left', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-left',
+						'icon'  => 'eicon-text-align-left',
 					],
 					'center'    => [
 						'title' => __( 'Center', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-center',
+						'icon'  => 'eicon-text-align-center',
 					],
 					'right'     => [
 						'title' => __( 'Right', 'elementskit-lite' ),
-						'icon'  => 'fa fa-align-right',
+						'icon'  => 'eicon-text-align-right',
 					],
 				],
 				'default'               => '',
@@ -916,5 +920,4 @@ class ElementsKit_Widget_Ninja_Forms extends Widget_Base {
        <?php 
        }
 	}
-    protected function _content_template() { }
 }

@@ -390,6 +390,7 @@ function townhub_addons_add_query_vars_filter( $vars ){
   $vars[] = "listing_id";
   $vars[] = "dashboard";
   // $vars[] = "ls_type";
+  $vars[] = "lpage";
   return $vars;
 }
 add_filter( 'query_vars', 'townhub_addons_add_query_vars_filter' );  
@@ -631,11 +632,20 @@ function townhub_addons_listing_search_result($query) {
                             }
                         }
                         $post__in_sum = array_merge($post__in_sum, $post__in);
+                    }
+                    // else{
+                    //     // do not return any listing if has no rooms
+                    //     if( townhub_addons_get_option('inout_rooms_only', 'yes') == 'yes' ){
+                    //         $query->set('s', 'donotreturnanylistingifnoroomavailableABCDEFGHIJKLMNOPQRSTUVWXYZ' );
+                    //     }else{
+                    //         $post__in_sum = array_merge($post__in_sum, townhub_addons_listing_available_date( $_GET['checkin'] ) );
+                    //     }
+                    // } 
+                    if( townhub_addons_get_option('inout_rooms_only', 'yes') == 'yes' ){
+                        if( empty($post__in_sum) ) $query->set('s', 'donotreturnanylistingifnoroomavailableABCDEFGHIJKLMNOPQRSTUVWXYZ' );
                     }else{
-                        // do not return any listing if has no rooms
-                        $query->set('s', 'donotreturnanylistingifnoroomavailableABCDEFGHIJKLMNOPQRSTUVWXYZ' );
-                        
-                    } 
+                        $post__in_sum = array_merge($post__in_sum, townhub_addons_listing_available_date( $_GET['checkin'] ) );
+                    }
                 }else{
                     $post__in_sum = array_merge($post__in_sum, townhub_addons_listing_available_date( $_GET['checkin'] ) );
                 }
@@ -1018,6 +1028,8 @@ function townhub_addons_get_booking_statuses_array($defauls = array() ) {
             // paypal
             'pending'=> __('Pending','townhub-add-ons'), 
             'completed'=> __('Completed','townhub-add-ons'), 
+            'partially-paid'=> __('Partially paid - WooCommerce Deposit','townhub-add-ons'), 
+
             'failed'=> __('Failed','townhub-add-ons'), 
             'refunded'=> __('Refunded','townhub-add-ons'), 
             'partially_refunded'=> __('Partially Refunded','townhub-add-ons'), 
@@ -1477,6 +1489,8 @@ function townhub_addons_get_google_contry_codes($country = '', $lowercase = fals
         'SA' => __("Saudi Arabia", 'townhub-add-ons'),
         'SN' => __("Senegal", 'townhub-add-ons'),
         'CS' => __("Serbia and Montenegro", 'townhub-add-ons'),
+        'ME' => __("Montenegro", 'townhub-add-ons'),
+        'RS' => __("Serbia", 'townhub-add-ons'),
         'SC' => __("Seychelles", 'townhub-add-ons'),
         'SL' => __("Sierra Leone", 'townhub-add-ons'),
         'SG' => __("Singapore", 'townhub-add-ons'),
@@ -2791,4 +2805,29 @@ add_filter( 'townhub_addons_custom_loop_args', function($args){
     }
     return $args;
 } );
+/**
+ * Add iFrame to allowed wp_kses_post tags
+ *
+ * @param array  $tags Allowed tags, attributes, and/or entities.
+ * @param string $context Context to judge allowed tags by. Allowed values are 'post'.
+ *
+ * @return array
+ */
+function townhub_addons_wpkses_post_tags( $tags, $context ) {
+
+    if ( 'post' === $context ) {
+        $tags['iframe'] = array(
+            'src'             => true,
+            'height'          => true,
+            'width'           => true,
+            'frameborder'     => true,
+            'allowfullscreen' => true,
+        );
+    }
+
+    return $tags;
+}
+
+add_filter( 'wp_kses_allowed_html', 'townhub_addons_wpkses_post_tags', 10, 2 );
+
 

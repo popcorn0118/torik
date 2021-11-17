@@ -106,6 +106,16 @@ if(!empty($value)):
                             <span class="lcfield-value"><?php echo do_shortcode( $value ); ?></span>
                         <?php
                             break;
+                        case 'date':
+                        ?>
+                            <span class="lcfield-value"><?php echo Esb_Class_Date::format_new( $value ); ?></span>
+                        <?php
+                            break;
+                        case 'datetime':
+                        ?>
+                            <span class="lcfield-value"><?php echo Esb_Class_Date::format_new( $value, '', true ); ?></span>
+                        <?php
+                            break;
                         default:
                         ?>
                             <span class="lcfield-value"><?php echo wp_kses_post( $value ); ?></span>

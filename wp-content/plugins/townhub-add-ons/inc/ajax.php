@@ -575,20 +575,33 @@ function townhub_addons_fetch_weather_callback(){
 
         if(isset($_POST['view']) && $_POST['view'] == 'simple') $api_url = "https://api.openweathermap.org/data/2.5/weather?{$params}"; // -> https://prntscr.com/m3z1hb
 
-        // $json['url'] = $api_url;
+        $json['url_db'] = $api_url;
 
-        $result = file_get_contents_stream($api_url, 'application/json'); // JSON - Content-Type: application/json | JSONP = Content-Type: application/javascript
-        
-        // if( ESB_DEBUG ) error_log(date('[Y-m-d H:i e] - '). "openweathermap - current: " . $result . PHP_EOL, 3, './openweathermap-current.log');
-        // if( ESB_DEBUG ) error_log(date('[Y-m-d H:i e] - '). "openweathermap - forecast: " . $result . PHP_EOL, 3, './openweathermap-forecast.log');
-
-        if($result === false){
+        $response = wp_remote_get( $api_url );
+ 
+        if ( is_array( $response ) && ! is_wp_error( $response ) ) {
+            // $headers = $response['headers']; // array of http header lines
+            // $body    = $response['body']; // use the content
+            // error_log(json_encode($response));
+            $json['success'] = true;
+            $json['result'] = json_decode($response['body']);
+        }else{
+            // $json['debug'] = true;
             $json['error'] = __( 'Weather request error. Please make sure that your api is entered.', 'townhub-add-ons' );
         }
-        else{
-            $json['success'] = true;
-            $json['result'] = json_decode($result);
-        }
+
+        // $result = file_get_contents_stream($api_url, 'application/json'); // JSON - Content-Type: application/json | JSONP = Content-Type: application/javascript
+        
+        // // if( ESB_DEBUG ) error_log(date('[Y-m-d H:i e] - '). "openweathermap - current: " . $result . PHP_EOL, 3, './openweathermap-current.log');
+        // // if( ESB_DEBUG ) error_log(date('[Y-m-d H:i e] - '). "openweathermap - forecast: " . $result . PHP_EOL, 3, './openweathermap-forecast.log');
+
+        // if($result === false){
+        //     $json['error'] = __( 'Weather request error. Please make sure that your api is entered.', 'townhub-add-ons' );
+        // }
+        // else{
+        //     $json['success'] = true;
+        //     $json['result'] = json_decode($result);
+        // }
 
         // $json['yahoo'] = self::featch_yahoo_weather(); // current return false
         // 'success' => false,

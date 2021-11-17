@@ -154,7 +154,7 @@ class CTH_On_Page_Scroll extends Widget_Base {
         // end if if(!empty($repeateritems))
     }
 
-    protected function _content_template() {
+    protected function content_template() {
         ?>
         <# if(settings.repeateritems){ #>
         <div class="on-page-scroll-ele">

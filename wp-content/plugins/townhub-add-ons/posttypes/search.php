@@ -138,10 +138,20 @@ function townhub_addons_ajax_search_callback() {
                     }
                 }
                 $post__in_sum = array_merge($post__in_sum, $post__in);
+            }
+            // }else{
+            //     // do not return any listing if has no rooms
+            //     if( townhub_addons_get_option('inout_rooms_only', 'yes') == 'yes' ){
+            //         $post_args['s'] = 'donotreturnanylistingifnoroomavailableABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            //     }else{
+            //         $post__in_sum = array_merge($post__in_sum, townhub_addons_listing_available_date( $checkin_arg ) );
+            //     }
+            // } 
+            if( townhub_addons_get_option('inout_rooms_only', 'yes') == 'yes' ){
+                if( empty($post__in_sum) ) $post_args['s'] = 'donotreturnanylistingifnoroomavailableABCDEFGHIJKLMNOPQRSTUVWXYZ';
             }else{
-                // do not return any listing if has no rooms
-                $post_args['s'] = 'donotreturnanylistingifnoroomavailableABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            } 
+                $post__in_sum = array_merge($post__in_sum, townhub_addons_listing_available_date( $checkin_arg ) );
+            }
         }else{
             $post__in_sum = array_merge($post__in_sum, townhub_addons_listing_available_date( $checkin_arg ) );
         }

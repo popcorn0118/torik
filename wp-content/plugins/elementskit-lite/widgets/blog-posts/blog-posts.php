@@ -121,11 +121,11 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                'options'   => [
                    'left'  => [
                        'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-left',
+                       'icon'  => 'eicon-text-align-left',
                    ],
                    'right' => [
                        'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-right',
+                       'icon'  => 'eicon-text-align-right',
                    ],
                ],
                'condition' => [
@@ -581,15 +581,15 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                'options' => [
                    'left'    => [
                        'title' =>esc_html__( 'Left', 'elementskit-lite' ),
-                       'icon' => 'fa fa-align-left',
+                       'icon' => 'eicon-text-align-left',
                    ],
                    'center' => [
                        'title' =>esc_html__( 'Center', 'elementskit-lite' ),
-                       'icon' => 'fa fa-align-center',
+                       'icon' => 'eicon-text-align-center',
                    ],
                    'right' => [
                        'title' =>esc_html__( 'Right', 'elementskit-lite' ),
-                       'icon' => 'fa fa-align-right',
+                       'icon' => 'eicon-text-align-right',
                    ],
                ],
                'selectors'=> [
@@ -1043,15 +1043,15 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                'options'  => [
                    'left'   => [
                        'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-left',
+                       'icon'  => 'eicon-text-align-left',
                    ],
                    'center' => [
                        'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-center',
+                       'icon'  => 'eicon-text-align-center',
                    ],
                    'right'  => [
                        'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-right',
+                       'icon'  => 'eicon-text-align-right',
                    ],
                ],
                'default'  => 'left',
@@ -1987,19 +1987,19 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                'options' => [
                    'left'   => [
                        'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-left',
+                       'icon'  => 'eicon-text-align-left',
                    ],
                    'center'  => [
                        'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-center',
+                       'icon'  => 'eicon-text-align-center',
                    ],
                    'right'   => [
                        'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-right',
+                       'icon'  => 'eicon-text-align-right',
                    ],
                    'justify' => [
                        'title' => esc_html__( 'justify', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-justify',
+                       'icon'  => 'eicon-text-align-justify',
                    ],
                ],
                'default'   => 'left',
@@ -2198,19 +2198,19 @@ class ElementsKit_Widget_Blog_Posts extends Widget_Base {
                'options' => [
                    'left'    => [
                        'title' => esc_html__( 'Left', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-left',
+                       'icon'  => 'eicon-text-align-left',
                    ],
                    'center'  => [
                        'title' => esc_html__( 'Center', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-center',
+                       'icon'  => 'eicon-text-align-center',
                    ],
                    'right'   => [
                        'title' => esc_html__( 'Right', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-right',
+                       'icon'  => 'eicon-text-align-right',
                    ],
                    'justify' => [
                        'title' => esc_html__( 'justify', 'elementskit-lite' ),
-                       'icon'  => 'fa fa-align-justify',
+                       'icon'  => 'eicon-text-align-justify',
                    ],
                ],
                'default'   => 'left',

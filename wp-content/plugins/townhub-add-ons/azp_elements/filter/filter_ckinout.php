@@ -78,6 +78,14 @@ azp_add_element(
                 ),
             ),
             array(
+                'type'          => 'text',
+                'param_name'    => 'max',
+                'show_in_admin' => false,
+                'label'         => __('Maximum months shown in picker', 'townhub-add-ons'),
+                // 'desc'                  => '',
+                'default'       => '12',
+            ),
+            array(
                 'type'       => 'text',
                 'param_name' => 'el_id',
                 'label'      => __('Element ID', 'townhub-add-ons'),

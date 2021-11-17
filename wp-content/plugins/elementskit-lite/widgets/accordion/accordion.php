@@ -784,7 +784,7 @@ class ElementsKit_Widget_Accordion extends Widget_Base {
 
                 <div class="elementskit-card">
                     <div class="elementskit-card-header" id="primaryHeading-<?php echo esc_attr($i); ?>-<?php echo esc_attr($this->get_id()); ?>">
-                        <a href="#Collapse-<?php echo esc_attr($accorion_content['_id'].$acc_id)?>" class="ekit-accordion--toggler elementskit-btn-link collapsed" data-ekit-toggle="collapse" data-target="#Collapse-<?php echo esc_attr($accorion_content['_id'].$acc_id)?>" aria-expanded="<?php echo esc_attr($is_active == ' collapse' ? 'false' : 'true');  ?>" aria-controls="Collapse-<?php echo esc_attr($accorion_content['_id'].$acc_id)?>">
+                        <a href="#collapse-<?php echo esc_attr($accorion_content['_id'].$acc_id)?>" class="ekit-accordion--toggler elementskit-btn-link collapsed" data-ekit-toggle="collapse" data-target="#Collapse-<?php echo esc_attr($accorion_content['_id'].$acc_id)?>" aria-expanded="<?php echo esc_attr($is_active == ' collapse' ? 'false' : 'true');  ?>" aria-controls="Collapse-<?php echo esc_attr($accorion_content['_id'].$acc_id)?>">
                             <?php if(($ekit_accordion_icon_pos_style == 'left') || ($ekit_accordion_icon_pos_style == 'bothside')) :  ?>
                                 <div class="ekit_accordion_icon_left_group">
 
@@ -899,6 +899,6 @@ class ElementsKit_Widget_Accordion extends Widget_Base {
 
                 <?php endforeach; ?>
         </div>
-    <?php }
-    protected function _content_template() { }
+    <?php
+    }
 }

@@ -7,7 +7,7 @@
    *  Author URI: https://backupbliss.com/
    *  Plugin URI: https://backupbliss.com
    * Text Domain: backup-backup
-   *     Version: 1.1.3
+   *     Version: 1.1.5
    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   // Exit on direct access
@@ -21,7 +21,7 @@
     define('BMI_DEBUG', false);
   }
   if (!defined('BMI_VERSION')) {
-    define('BMI_VERSION', '1.1.3');
+    define('BMI_VERSION', '1.1.5');
   }
   if (!defined('BMI_ROOT_DIR')) {
     define('BMI_ROOT_DIR', __DIR__);
