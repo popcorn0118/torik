@@ -50,8 +50,8 @@ if( !empty($images) && !is_array($images) ) {
                             ?>
                             <!-- swiper-slide-->   
                             <div class="swiper-slide">
-                                <div class="box-item">
-                                    <?php echo wp_get_attachment_image( $id, 'townhub-lgal' ); ?>
+                                <div class="box-item aaaaaaaa">
+                                    <?php echo wp_get_attachment_image( $id, 'full' ); ?>
                                     <a href="<?php echo wp_get_attachment_url( $id );?>" class="gal-link popup-image" data-sub-html="#<?php echo esc_attr( $galCaptionID );?>">
                                         <i class="fa fa-search"></i>
                                         <?php 
