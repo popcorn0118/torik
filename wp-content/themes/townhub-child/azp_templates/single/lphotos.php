@@ -42,7 +42,7 @@ if( !empty($images) && !is_array($images) ) {
                 <div class="sc-next sc-btn color2-bg"><i class="fas fa-caret-right"></i></div>
                 <div class="sc-prev sc-btn color2-bg"><i class="fas fa-caret-left"></i></div>
                 <div class="single-carousel fl-wrap full-height">
-                    <div class="swiper-container" data-options='{"loop":false, "freeMode": false, "slidesPerView": "auto"}' <?php if(is_rtl()) echo ' dir="rtl"'; ?>>
+                    <div class="swiper-container" data-options='{"loop":false, "freeMode": true, "slidesPerView": "auto"}' <?php if(is_rtl()) echo ' dir="rtl"'; ?>>
                         <div class="swiper-wrapper">
                             <?php
                             foreach ($images as $key => $id ) {
@@ -51,7 +51,7 @@ if( !empty($images) && !is_array($images) ) {
                             <!-- swiper-slide-->   
                             <div class="swiper-slide">
                                 <div class="box-item">
-                                    <?php echo wp_get_attachment_image( $id, 'townhub-lgal' ); ?>
+                                    <?php echo wp_get_attachment_image( $id, 'full' ); ?>
                                     <a href="<?php echo wp_get_attachment_url( $id );?>" class="gal-link popup-image" data-sub-html="#<?php echo esc_attr( $galCaptionID );?>">
                                         <i class="fa fa-search"></i>
                                         <?php 

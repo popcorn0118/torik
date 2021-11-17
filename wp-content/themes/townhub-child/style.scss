@@ -975,6 +975,11 @@ p {
 .lsingle-block-content .listing-features li i {
     display: none;
 }
+ //"造型師介紹頁(listing)"的照片輪播
+.category-carousel-wrap, .single-carousel-wrap,
+.category-carousel .swiper-slide, .single-carousel-wrap .swiper-slide, .category-carousel .swiper-slide img, .single-carousel-wrap .swiper-slide img {
+    height: 378px !important;
+}
 
 //服務項目詳細頁
 .single {
