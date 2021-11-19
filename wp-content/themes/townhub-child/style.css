@@ -1029,6 +1029,7 @@ p {
 }
 
 .archive .list-main-wrap .geodir_status_date {
+  display: none;
   background: #FF8300;
   color: #fff;
   font-weight: bold;

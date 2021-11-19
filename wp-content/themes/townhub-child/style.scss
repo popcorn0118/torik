@@ -931,6 +931,8 @@ p {
             }
         }
         .geodir_status_date {
+            // 隱藏"開放預訂"按鈕
+            display: none;
             background: $primary;
             color: #fff;
             font-weight: bold;
