@@ -1245,6 +1245,10 @@ p {
   display: none;
 }
 
+.author .grid-opt-toggle-map {
+  display: none;
+}
+
 .blog .breadcrumbs-wrapper, .category-news .breadcrumbs-wrapper {
   background: transparent;
   margin-bottom: 0;
