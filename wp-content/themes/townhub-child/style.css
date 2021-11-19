@@ -1241,6 +1241,10 @@ p {
   color: #fff;
 }
 
+.author .user-profile-header_stats {
+  display: none;
+}
+
 .blog .breadcrumbs-wrapper, .category-news .breadcrumbs-wrapper {
   background: transparent;
   margin-bottom: 0;

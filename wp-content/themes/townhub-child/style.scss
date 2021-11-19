@@ -1233,6 +1233,10 @@ p {
             color: #fff;
         }
     }
+    .user-profile-header_stats {
+        //隱藏作者(author)頁面的訊息(服務項目、追蹤...)
+        display: none;
+    }
 }
 //部落格
 .blog, .category-news {
