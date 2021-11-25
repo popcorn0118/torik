@@ -1053,6 +1053,11 @@ p {
 
 .archive .list-main-wrap .listing-item .geodir-category-text {
   min-height: 72px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  white-space: normal;
 }
 
 .archive .list-main-wrap .listing-item .listing-cats-wrap {

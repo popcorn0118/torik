@@ -955,6 +955,12 @@ p {
             }
             .geodir-category-text {
                 min-height: 72px;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                white-space: normal;
             }
             .listing-cats-wrap {
                 word-break: break-all;

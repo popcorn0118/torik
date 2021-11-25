@@ -37,7 +37,7 @@ if( $disable_address_url != 'yes' && !empty($latitude) && !empty($longitude) ) $
     
     <div class="geodir-category-content-title fl-wrap">
         <div class="geodir-category-content-title-item">
-            <h3 class="title-sin_map">
+            <h3 class="title-sin_map" style="-webkit-box-orient: vertical;">
                 <?php if( $GLOBALS['is_lad'] ) echo '<span class="litem-ad">'.__( 'AD', 'townhub-add-ons' ).'</span>'; ?>
                 <a href="<?php the_permalink(  ); ?>"><?php 
                     the_title(); 
@@ -55,7 +55,7 @@ if( $disable_address_url != 'yes' && !empty($latitude) && !empty($longitude) ) $
             ?></a></div><?php endif; ?>
         </div>
     </div>
-    <div class="geodir-category-text fl-wrap">
+    <div class="geodir-category-text fl-wrap" style="-webkit-box-orient: vertical">
         <?php 
         // the_excerpt();
         if( $hide_excerpt != 'yes') townhub_addons_the_excerpt_max_charlength( townhub_addons_get_option('excerpt_length','55') );
@@ -127,7 +127,7 @@ if( $disable_address_url != 'yes' && !empty($latitude) && !empty($longitude) ) $
         if( $hide_cats != 'yes'){
         $cats = get_the_terms(get_the_ID(), 'listing_cat');
         if ( $cats && ! is_wp_error( $cats ) ){ ?>
-            <div class="listing-cats-wrap dis-flex">
+            <div class="listing-cats-wrap dis-flex" style="-webkit-box-orient: vertical">
                 <?php 
                 foreach( $cats as $key => $cat){
                     $term_metas = townhub_addons_custom_tax_metas($cat->term_id); 
