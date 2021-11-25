@@ -1240,6 +1240,17 @@ p {
     .grid-opt-toggle-map {
         display: none;
     }
+    .breadcrumb-current {
+        color: transparent !important;
+        > span {
+            margin-left: -55px;
+        }
+    }
+    .user-profile-header_media_title {
+        > h3 {
+            display: none;
+        }
+    }
 }
 .box-widget-author-title_opt {
     display: none;

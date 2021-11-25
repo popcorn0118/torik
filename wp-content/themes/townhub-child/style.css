@@ -1249,6 +1249,18 @@ p {
   display: none;
 }
 
+.author .breadcrumb-current {
+  color: transparent !important;
+}
+
+.author .breadcrumb-current > span {
+  margin-left: -55px;
+}
+
+.author .user-profile-header_media_title > h3 {
+  display: none;
+}
+
 .box-widget-author-title_opt {
   display: none;
 }
