@@ -155,7 +155,7 @@ if( $disable_address_url != 'yes' && !empty($latitude) && !empty($longitude) ) $
         <?php endif; 
         endif; ?>
         <div class="geodir-opt-list dis-flex">
-            <ul class="no-list-style">
+            <ul class="no-list-style rrr">
                 <?php 
                     // <li class="lcard-bot-view"><i class="fal fa-eye"></i> echo Esb_Class_LStats::get_stats(get_the_ID()); </li>
                 ?>
@@ -185,15 +185,18 @@ if( $disable_address_url != 'yes' && !empty($latitude) && !empty($longitude) ) $
         if( $hide_contacts != 'yes'): 
             $phone = get_post_meta( get_the_ID(), ESB_META_PREFIX.'phone', true );
             $email = get_post_meta( get_the_ID(), ESB_META_PREFIX.'email', true );
-            
-            if($phone != '' || $email != '' || $website != '' ):
+            $line = get_post_meta( get_the_ID(), ESB_META_PREFIX.'field_LINEID', true );
+            // var_dump(get_post_meta( get_the_ID() ));
+            // echo ESB_META_PREFIX;
+            if($phone != '' || $email != '' || $website != '' || $line != '' ):
         ?>
         <div class="geodir-category_contacts">
             <div class="close_gcc"><i class="fal fa-times-circle"></i></div>
             <ul class="no-list-style">
-                <?php if($phone != '' ): ?><li><span><i class="fal fa-phone"></i><?php _e( ' Call : ', 'townhub-add-ons' ); ?></span><a href="tel:<?php echo esc_attr( $phone );?>"><?php echo $phone ?></a></li><?php endif; ?>
+                <?php if($phone != '' ): ?><li><span><i class="fal fa-phone"></i>&nbsp;<?php _e( ' Call : ', 'townhub-add-ons' ); ?></span><a href="tel:<?php echo esc_attr( $phone );?>"><?php echo $phone ?></a></li><?php endif; ?>
                 <?php if($email != '' ): ?><li><span><i class="fal fa-envelope"></i><?php _e( ' Write : ', 'townhub-add-ons' ); ?></span><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo $email ?></a></li><?php endif; ?>
-                <?php if($website != '' ): ?><li><span><i class="fal fa-link"></i></span><a href="<?php echo esc_url( $website ); ?>"><?php _e( 'Visit website', 'townhub-add-ons' ); ?></a></li><?php endif; ?>
+                <?php if($line != '' ): ?><li><span><i class="fab fa-line "></i><?php _e( ' Line  : ', 'townhub-add-ons' ); ?></span><?php echo $line ?></li><?php endif; ?>
+                <!-- <?php if($website != '' ): ?><li><span><i class="fal fa-link"></i></span><a href="<?php echo esc_url( $website ); ?>"><?php _e( 'Visit website', 'townhub-add-ons' ); ?></a></li><?php endif; ?> -->
             </ul>
         </div>
         <?php endif; 

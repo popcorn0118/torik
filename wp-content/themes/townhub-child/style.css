@@ -1075,6 +1075,16 @@ p {
   display: inline-block;
 }
 
+.archive .geodir-category_contacts {
+  min-width: 270px;
+  max-width: none;
+}
+
+.archive .geodir-category_contacts .no-list-style li i {
+  width: 15px;
+  display: inline-block;
+}
+
 .listing-item-category,
 .lsingle-block-content .listing-features li i {
   display: none;

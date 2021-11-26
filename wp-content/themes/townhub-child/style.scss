@@ -977,6 +977,19 @@ p {
                 }
             }
         }
+    }
+    // 列表點開信封icon的資訊
+    .geodir-category_contacts {
+        min-width: 270px;
+        max-width: none;
+        .no-list-style {
+            li {
+                i {
+                    width: 15px;
+                    display: inline-block;
+                }
+            }
+        }
     } 
 }
 // 移除“服務項目分類”顯示於前台（造型師介紹、造型師介紹詳細頁）、“基本服務”顯示於前台（造型師介紹詳細頁-貼心服務）無用的 fa icon 圈圈
