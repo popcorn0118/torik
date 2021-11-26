@@ -1058,6 +1058,7 @@ p {
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   white-space: normal;
+  margin-bottom: 10px;
 }
 
 .archive .list-main-wrap .listing-item .listing-cats-wrap {
