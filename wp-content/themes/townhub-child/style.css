@@ -858,6 +858,10 @@ p {
   font-size: 24px;
 }
 
+.archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .price-opt {
+  display: none;
+}
+
 .archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .price-opt-title, .archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt i, .archive .list-main-wrap-headers .list-main-wrap-header .list-main-wrap-opt .current {
   color: #fff;
 }

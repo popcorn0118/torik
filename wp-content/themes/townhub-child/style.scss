@@ -781,6 +781,9 @@ p {
                 font-size: 24px;
             }
             .list-main-wrap-opt {
+                .price-opt {
+                    display: none;
+                }
                 .price-opt-title, i, .current {
                     color: #fff;
                 }
