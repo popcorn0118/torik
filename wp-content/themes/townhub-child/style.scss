@@ -1280,7 +1280,7 @@ p {
 }
 
 
-//部落格
+//部落格/最新消息
 .blog, .category-news {
     .breadcrumbs-wrapper {
         background: transparent;
@@ -1311,6 +1311,10 @@ p {
             color: #fff;
         }
     }
+}
+// 拿掉觀看次數
+.postl-views, .spost-views{
+    display: none;
 }
 .search-widget {
     input {
