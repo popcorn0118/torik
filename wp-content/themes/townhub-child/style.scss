@@ -748,7 +748,6 @@ p {
         }
     }
 }
-
 //服務項目(首頁點搜尋進到此頁)/造型師介紹
 .archive {
     .tabs-wrapper .filter-sidebar-header,
@@ -995,6 +994,19 @@ p {
         }
     } 
 }
+//下拉選單隱藏搜尋(首頁, 造型師服務介紹)
+.nice-select-search-box {
+    display: none;
+}
+.nice-select  {
+    .nice-select-search {
+        color: #333 !important;
+    }
+    .list {
+        padding: 10px 0 0 !important;
+    }
+}
+
 // 移除“服務項目分類”顯示於前台（造型師介紹、造型師介紹詳細頁）、“基本服務”顯示於前台（造型師介紹詳細頁-貼心服務）無用的 fa icon 圈圈
 .listing-item-category, 
 .lsingle-block-content .listing-features li i {
