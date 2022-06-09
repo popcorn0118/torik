@@ -1101,6 +1101,10 @@ p {
   padding: 10px 0 0 !important;
 }
 
+.bookmark-counter {
+  display: none !important;
+}
+
 .listing-item-category,
 .lsingle-block-content .listing-features li i {
   display: none;
