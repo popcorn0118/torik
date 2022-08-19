@@ -1272,6 +1272,7 @@ p {
     .follow-btn, .author-msg-submit {
         i {
             color: #fff;
+            background-color: red;
         }
     }
     .user-profile-header_stats {
@@ -1686,6 +1687,10 @@ p {
             border-left: 0;
         }
     }
+}
+// 隱藏-頭像與"建立新的服務項目"按鈕中間的輪播資訊(已上架的服務、被瀏覽次數、評價次數、服務被蒐藏次數)
+.dashboard-header-stats-wrap {
+    display: none;
 }
 
 
