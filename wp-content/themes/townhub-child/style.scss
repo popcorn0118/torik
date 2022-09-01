@@ -1692,6 +1692,19 @@ p {
 .dashboard-header-stats-wrap {
     display: none;
 }
+.dashboard-card {
+    flex-wrap: wrap;
+    .booking-list-contr {
+        @media (max-width: 768px) {
+            border-radius: 38px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 100%;
+            position: relative;
+        }
+    }
+}
 
 
 

@@ -1766,7 +1766,23 @@ p {
   display: none;
 }
 
-/* line 1699, style.scss */
+/* line 1695, style.scss */
+.dashboard-card {
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  /* line 1697, style.scss */
+  .dashboard-card .booking-list-contr {
+    border-radius: 38px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* line 1712, style.scss */
 .footer-gradual {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b49c5b+0,fcf3dc+33,e1c987+65,b49c5b+100 */
   background: #b49c5b;
