@@ -1483,8 +1483,26 @@ p {
 }
 
 //控制面板
+.esb_msg-error {
+    color: yellow;
+    background-color: red;
+    border-color: red;
+}
 .gradient-bg {
     background: -webkit-linear-gradient(top,$primary,$sec) !important;
+}
+.dashboard-card {
+    flex-wrap: wrap;
+    .booking-list-contr {
+        @media (max-width: 768px) {
+            border-radius: 38px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            width: 100%;
+            position: relative;
+        }
+    }
 }
 .dashboard-header-sec {
     .dashboard-breadcrumbs {
@@ -1692,21 +1710,6 @@ p {
 .dashboard-header-stats-wrap {
     display: none;
 }
-.dashboard-card {
-    flex-wrap: wrap;
-    .booking-list-contr {
-        @media (max-width: 768px) {
-            border-radius: 38px;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            width: 100%;
-            position: relative;
-        }
-    }
-}
-
-
 
 // footer 
 .footer-gradual {

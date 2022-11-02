@@ -1542,47 +1542,70 @@ p {
 }
 
 /* line 1486, style.scss */
+.esb_msg-error {
+  color: yellow;
+  background-color: red;
+  border-color: red;
+}
+
+/* line 1491, style.scss */
 .gradient-bg {
   background: -webkit-linear-gradient(top, #FF8300, #402020) !important;
 }
 
-/* line 1491, style.scss */
+/* line 1494, style.scss */
+.dashboard-card {
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  /* line 1496, style.scss */
+  .dashboard-card .booking-list-contr {
+    border-radius: 38px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* line 1509, style.scss */
 .dashboard-header-sec .dashboard-breadcrumbs a, .dashboard-header-sec .dashboard-breadcrumbs span {
   color: #fff;
 }
-/* line 1495, style.scss */
+/* line 1513, style.scss */
 .dashboard-header-sec .dashboard-breadcrumbs a:hover {
   color: #402020;
 }
-/* line 1498, style.scss */
+/* line 1516, style.scss */
 .dashboard-header-sec .dashboard-breadcrumbs a::before {
   color: #cfcfcf !important;
 }
-/* line 1503, style.scss */
+/* line 1521, style.scss */
 .dashboard-header-sec .tfp-btn {
   background-color: rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid #fff;
   border-radius: 0px;
   color: rgba(255, 255, 255, 0.7);
 }
-/* line 1508, style.scss */
+/* line 1526, style.scss */
 .dashboard-header-sec .tfp-btn strong {
   color: #fff;
 }
-/* line 1511, style.scss */
+/* line 1529, style.scss */
 .dashboard-header-sec .tfp-btn::before {
   color: #fff;
 }
-/* line 1517, style.scss */
+/* line 1535, style.scss */
 .dashboard-header-sec .dashboard-header-stats .swiper-slide .dashboard-header-stats-item {
   color: #444;
 }
-/* line 1519, style.scss */
+/* line 1537, style.scss */
 .dashboard-header-sec .dashboard-header-stats .swiper-slide .dashboard-header-stats-item i {
   background: #FFFCF4;
   color: #FF8300;
 }
-/* line 1526, style.scss */
+/* line 1544, style.scss */
 .dashboard-header-sec .add_new-dashboard {
   background-color: #FF8300;
   box-shadow: 0px 0px 0px 8px #FF8300;
@@ -1597,40 +1620,40 @@ p {
   color: #fff;
   font-weight: normal;
 }
-/* line 1539, style.scss */
+/* line 1557, style.scss */
 .dashboard-header-sec .add_new-dashboard i {
   color: #fff;
 }
-/* line 1542, style.scss */
+/* line 1560, style.scss */
 .dashboard-header-sec .add_new-dashboard:hover {
   box-shadow: 0px 0px 0px 0px transparent;
 }
 
-/* line 1547, style.scss */
+/* line 1565, style.scss */
 .dashboard-sidebar-col {
   box-shadow: 0 0 15px 0px #00000026;
   border-radius: 5px;
   padding: 0 0 30px 0;
 }
-/* line 1552, style.scss */
+/* line 1570, style.scss */
 .dashboard-sidebar-col #dash_menu h3 {
   color: #402020;
 }
-/* line 1557, style.scss */
+/* line 1575, style.scss */
 .dashboard-sidebar-col #dash_menu .no-list-style .dashboard-menu-li a {
   color: #444;
   font-size: 14px;
   font-weight: normal;
 }
-/* line 1561, style.scss */
+/* line 1579, style.scss */
 .dashboard-sidebar-col #dash_menu .no-list-style .dashboard-menu-li a::before {
   background-color: #FF8300;
 }
-/* line 1564, style.scss */
+/* line 1582, style.scss */
 .dashboard-sidebar-col #dash_menu .no-list-style .dashboard-menu-li a i {
   color: #777;
 }
-/* line 1571, style.scss */
+/* line 1589, style.scss */
 .dashboard-sidebar-col .logout_btn, .dashboard-sidebar-col .dashboard-to-top {
   background-color: #FF8300;
   box-shadow: 0px 0px 0px 8px #FF8300;
@@ -1651,43 +1674,43 @@ p {
   color: #fff;
   font-weight: normal;
 }
-/* line 1590, style.scss */
+/* line 1608, style.scss */
 .dashboard-sidebar-col .logout_btn i, .dashboard-sidebar-col .dashboard-to-top i {
   color: #fff !important;
 }
-/* line 1593, style.scss */
+/* line 1611, style.scss */
 .dashboard-sidebar-col .logout_btn:hover, .dashboard-sidebar-col .dashboard-to-top:hover {
   box-shadow: 0px 0px 0px 0px transparent;
 }
-/* line 1597, style.scss */
+/* line 1615, style.scss */
 .dashboard-sidebar-col .dashboard-to-top {
   background-color: #9C9C9C;
   box-shadow: 0px 0px 0px 8px #9C9C9C;
 }
 
-/* line 1604, style.scss */
+/* line 1622, style.scss */
 .dashboard-main-col .dashboard-title h3 {
   color: #444;
   padding-left: 50px;
 }
-/* line 1608, style.scss */
+/* line 1626, style.scss */
 .dashboard-main-col .dashboard-title::before {
   left: 0;
   background: #FF8300;
 }
-/* line 1613, style.scss */
+/* line 1631, style.scss */
 .dashboard-main-col label {
   color: #444;
 }
-/* line 1616, style.scss */
+/* line 1634, style.scss */
 .dashboard-main-col input {
   color: #444 !important;
 }
-/* line 1618, style.scss */
+/* line 1636, style.scss */
 .dashboard-main-col input::placeholder {
   color: #a7a7a7 !important;
 }
-/* line 1622, style.scss */
+/* line 1640, style.scss */
 .dashboard-main-col .btn.color2-bg {
   background-color: #FF8300;
   box-shadow: 0px 0px 0px 8px #FF8300;
@@ -1702,87 +1725,71 @@ p {
   color: #fff;
   font-weight: normal;
 }
-/* line 1635, style.scss */
+/* line 1653, style.scss */
 .dashboard-main-col .btn.color2-bg i {
   color: #fff !important;
 }
-/* line 1638, style.scss */
+/* line 1656, style.scss */
 .dashboard-main-col .btn.color2-bg:hover {
   box-shadow: 0px 0px 0px 0px transparent;
 }
-/* line 1643, style.scss */
+/* line 1661, style.scss */
 .dashboard-main-col .color-bg:hover {
   color: #fff;
 }
-/* line 1648, style.scss */
+/* line 1666, style.scss */
 .dashboard-main-col .page-numbers.current, .dashboard-main-col .page-numbers:hover {
   background: #FF8300;
 }
-/* line 1652, style.scss */
+/* line 1670, style.scss */
 .dashboard-main-col .dashboard-chat-app-header {
   background: #f1f1f1;
 }
-/* line 1655, style.scss */
+/* line 1673, style.scss */
 .dashboard-main-col .delete-bookmark-btn {
   background: #FF8300;
 }
-/* line 1658, style.scss */
+/* line 1676, style.scss */
 .dashboard-main-col .delete-bookmark-btn:hover i {
   color: #fff;
   margin-top: 12px;
 }
-/* line 1664, style.scss */
+/* line 1682, style.scss */
 .dashboard-main-col .del-bg::after {
   background: #FF8300 !important;
 }
-/* line 1668, style.scss */
+/* line 1686, style.scss */
 .dashboard-main-col .btn-noicon:hover {
   color: #fff;
 }
-/* line 1673, style.scss */
+/* line 1691, style.scss */
 .dashboard-main-col .room-item {
   min-height: 62px !important;
   margin-top: 10px;
 }
-/* line 1676, style.scss */
+/* line 1694, style.scss */
 .dashboard-main-col .room-item .room-footer {
   background: #ffffff !important;
   border: 1px solid #e6e6e6 !important;
 }
-/* line 1680, style.scss */
+/* line 1698, style.scss */
 .dashboard-main-col .room-item .room-title {
   font-size: 1.4em;
   font-weight: 500;
 }
-/* line 1684, style.scss */
+/* line 1702, style.scss */
 .dashboard-main-col .room-item .room-delete {
   line-height: 37px;
   background: #b4b4b4;
   border-left: 0;
 }
 
-/* line 1692, style.scss */
+/* line 1710, style.scss */
 .dashboard-header-stats-wrap {
   display: none;
 }
 
-/* line 1695, style.scss */
-.dashboard-card {
-  flex-wrap: wrap;
-}
-@media (max-width: 768px) {
-  /* line 1697, style.scss */
-  .dashboard-card .booking-list-contr {
-    border-radius: 38px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    width: 100%;
-    position: relative;
-  }
-}
-
-/* line 1712, style.scss */
+/* line 1715, style.scss */
 .footer-gradual {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b49c5b+0,fcf3dc+33,e1c987+65,b49c5b+100 */
   background: #b49c5b;
